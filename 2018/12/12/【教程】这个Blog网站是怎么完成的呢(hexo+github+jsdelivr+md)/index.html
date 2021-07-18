@@ -324,7 +324,7 @@
 
   <div class="pattern-center single-center">
     <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/banner/resources.jpg);" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/banner/resources.jpg">
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/dog1.jpg);" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/dog1.jpg">
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
@@ -380,11 +380,15 @@
 </li>
 <li><p>cdn加速</p>
 <p>由于blog采用GitHub+hexo 因此不科学上网的话 图片加载会比较缓慢 放在本地也并非一个安全的选择 因而此处<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/76951130">采用jsdelivr进行cdn加速</a> 从而提升访问体验 当然又拍云也是不错</p>
+<p>此处提示一点：</p>
+<p>jsdelivr的缓存机制目前未知 可能存在一定的时间差 所以release某个版本后 可能存在24h内的缓存时间 简单说便是</p>
 </li>
 <li><p>绑定域名</p>
 <p>此时你已可以直接访问<strong>username.github.io</strong>来查看blog 当然亦可尝试在腾讯云等网站上进行购买域名 由于怕我三分钟热度 还是先不购买了（逃</p>
 </li>
-<li><p>在尝试使用jsdelivr进行图床 但是还没成功 而且我想睡觉了..</p>
+<li><p><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000020240864">GitHub+jsdelivr+PicGo实现图床</a> 提升写作体验</p>
+<p>值得一提的是 在GitHub中建立项目时 默认branch名称为main 而在PicGo中branch名称则提示为master 本人因为这个问题一开始一直提示error404 找不到服务器……将二者名称统一即可</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20210718110822.png" alt=""></p>
 </li>
 <li><p>Aplayer 尝试中.. 不知道为什么一直是戴佩妮的歌单..</p>
 </li>
@@ -392,19 +396,23 @@
 <p>配置完成后 日常写作便轻松不少：</p>
 <ul>
 <li><p>创建：</p>
-<pre><code>hexo new &quot;title&quot;
-</code></pre></li>
+<pre><code class="bash">hexo new &quot;title&quot;
+</code></pre>
+</li>
 <li><p>进入source/_posts/找到对应的md 进行修改</p>
 </li>
 <li><p>先清理本地缓存</p>
-<pre><code>hexo clean
-</code></pre></li>
+<pre><code class="bash">hexo clean
+</code></pre>
+</li>
 <li><p>产生对应文件</p>
-<pre><code>hexo g
-</code></pre></li>
+<pre><code class="bash">hexo g
+</code></pre>
+</li>
 <li><p>布置到远端</p>
-<pre><code>hexo d
-</code></pre></li>
+<pre><code class="bash">hexo d
+</code></pre>
+</li>
 </ul>
 <p>只消掌握<a target="_blank" rel="noopener" href="https://www.runoob.com/markdown/md-tutorial.html">MarkDown</a> 便可配合<a target="_blank" rel="noopener" href="https://typora.io">Typora</a>拥有极佳的写作体验</p>
 <hr>
@@ -741,7 +749,7 @@ links:
           
             <a href="/2021/07/17/%E5%85%B3%E4%BA%8E%E9%9A%8F%E6%83%B3%E7%9A%84%E8%AF%B4%E6%98%8E/" rel="prev">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/dog2.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/dog2.jpg">
               </div>
               <span class="label">
               Previous Post</span>
@@ -781,7 +789,7 @@ links:
           </div>
         </div>
         <hr>
-        <p><i class="iconfont icon-write"></i>一个好奇的人</p>
+        <p><i class="iconfont icon-write"></i></p>
       </section>
     </main><!-- #main -->
   </div><!-- #primary -->
@@ -1112,7 +1120,7 @@ $(document).ready(function() {
 
     fixed="true"
 
-    autoplay="false"
+    autoplay="true"
 
     loop="all"
 
