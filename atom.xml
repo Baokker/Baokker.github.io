@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://baokker.github.io/"/>
-  <updated>2021-07-19T09:47:30.594Z</updated>
+  <updated>2021-07-20T05:54:51.842Z</updated>
   <id>http://baokker.github.io/</id>
   
   <author>
@@ -17,11 +17,91 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>对自己说的话</title>
+    <link href="http://baokker.github.io/2021/07/20/%E5%AF%B9%E8%87%AA%E5%B7%B1%E8%AF%B4%E7%9A%84%E8%AF%9D/"/>
+    <id>http://baokker.github.io/2021/07/20/对自己说的话/</id>
+    <published>2021-07-20T05:21:13.000Z</published>
+    <updated>2021-07-20T05:54:51.842Z</updated>
+    
+    <summary type="html">
+    
+      对自己说的话
+    
+    </summary>
+    
+      <category term="随想" scheme="http://baokker.github.io/categories/%E9%9A%8F%E6%83%B3/"/>
+    
+    
+      <category term="随想" scheme="http://baokker.github.io/tags/%E9%9A%8F%E6%83%B3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>意义</title>
+    <link href="http://baokker.github.io/2021/07/20/%E6%84%8F%E4%B9%89/"/>
+    <id>http://baokker.github.io/2021/07/20/意义/</id>
+    <published>2021-07-20T05:20:58.000Z</published>
+    <updated>2021-07-20T05:53:39.463Z</updated>
+    
+    <summary type="html">
+    
+      自我的审问
+    
+    </summary>
+    
+      <category term="随想" scheme="http://baokker.github.io/categories/%E9%9A%8F%E6%83%B3/"/>
+    
+    
+      <category term="随想" scheme="http://baokker.github.io/tags/%E9%9A%8F%E6%83%B3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《没有人给他写信的上校》读后感</title>
+    <link href="http://baokker.github.io/2021/07/20/%E3%80%8A%E6%B2%A1%E6%9C%89%E4%BA%BA%E7%BB%99%E4%BB%96%E5%86%99%E4%BF%A1%E7%9A%84%E4%B8%8A%E6%A0%A1%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/"/>
+    <id>http://baokker.github.io/2021/07/20/《没有人给他写信的上校》读后感/</id>
+    <published>2021-07-20T05:17:44.000Z</published>
+    <updated>2021-07-20T05:56:03.425Z</updated>
+    
+    <summary type="html">
+    
+      马尔克斯
+    
+    </summary>
+    
+      <category term="书单" scheme="http://baokker.github.io/categories/%E4%B9%A6%E5%8D%95/"/>
+    
+    
+      <category term="书单" scheme="http://baokker.github.io/tags/%E4%B9%A6%E5%8D%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《算法图解》笔记简单整理</title>
+    <link href="http://baokker.github.io/2021/07/19/%E3%80%8A%E7%AE%97%E6%B3%95%E5%9B%BE%E8%A7%A3%E3%80%8B%E7%AC%94%E8%AE%B0%E7%AE%80%E5%8D%95%E6%95%B4%E7%90%86/"/>
+    <id>http://baokker.github.io/2021/07/19/《算法图解》笔记简单整理/</id>
+    <published>2021-07-19T11:17:43.000Z</published>
+    <updated>2021-07-20T05:55:40.298Z</updated>
+    
+    <summary type="html">
+    
+      尝试整理笔记 可能会很草率
+    
+    </summary>
+    
+      <category term="技术" scheme="http://baokker.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="技术" scheme="http://baokker.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
     <title>【自用】Markdown写作常用语法整理</title>
     <link href="http://baokker.github.io/2021/07/19/%E3%80%90%E8%87%AA%E7%94%A8%E3%80%91Markdown%E5%86%99%E4%BD%9C%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E6%95%B4%E7%90%86/"/>
     <id>http://baokker.github.io/2021/07/19/【自用】Markdown写作常用语法整理/</id>
     <published>2021-07-19T09:21:01.000Z</published>
-    <updated>2021-07-19T09:47:30.594Z</updated>
+    <updated>2021-07-19T09:54:04.205Z</updated>
     
     <summary type="html">
     
@@ -79,6 +159,28 @@
   </entry>
   
   <entry>
+    <title>关于书单的说明</title>
+    <link href="http://baokker.github.io/2021/07/17/%E5%85%B3%E4%BA%8E%E4%B9%A6%E5%8D%95%E7%9A%84%E8%AF%B4%E6%98%8E/"/>
+    <id>http://baokker.github.io/2021/07/17/关于书单的说明/</id>
+    <published>2021-07-17T11:01:00.000Z</published>
+    <updated>2021-07-20T05:20:35.156Z</updated>
+    
+    <summary type="html">
+    
+      如题
+    
+    </summary>
+    
+      <category term="书单" scheme="http://baokker.github.io/categories/%E4%B9%A6%E5%8D%95/"/>
+    
+    
+      <category term="书单" scheme="http://baokker.github.io/tags/%E4%B9%A6%E5%8D%95/"/>
+    
+      <category term="初始" scheme="http://baokker.github.io/tags/%E5%88%9D%E5%A7%8B/"/>
+    
+  </entry>
+  
+  <entry>
     <title>关于资源的说明</title>
     <link href="http://baokker.github.io/2021/07/17/%E5%85%B3%E4%BA%8E%E8%B5%84%E6%BA%90%E7%9A%84%E8%AF%B4%E6%98%8E/"/>
     <id>http://baokker.github.io/2021/07/17/关于资源的说明/</id>
@@ -94,31 +196,9 @@
       <category term="资源" scheme="http://baokker.github.io/categories/%E8%B5%84%E6%BA%90/"/>
     
     
+      <category term="初始" scheme="http://baokker.github.io/tags/%E5%88%9D%E5%A7%8B/"/>
+    
       <category term="资源" scheme="http://baokker.github.io/tags/%E8%B5%84%E6%BA%90/"/>
-    
-      <category term="初始" scheme="http://baokker.github.io/tags/%E5%88%9D%E5%A7%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于书单的说明</title>
-    <link href="http://baokker.github.io/2021/07/17/%E5%85%B3%E4%BA%8E%E4%B9%A6%E5%8D%95%E7%9A%84%E8%AF%B4%E6%98%8E/"/>
-    <id>http://baokker.github.io/2021/07/17/关于书单的说明/</id>
-    <published>2021-07-17T11:01:00.000Z</published>
-    <updated>2021-07-18T12:59:50.699Z</updated>
-    
-    <summary type="html">
-    
-      如题
-    
-    </summary>
-    
-      <category term="书单" scheme="http://baokker.github.io/categories/%E4%B9%A6%E5%8D%95/"/>
-    
-    
-      <category term="书单" scheme="http://baokker.github.io/tags/%E4%B9%A6%E5%8D%95/"/>
-    
-      <category term="初始" scheme="http://baokker.github.io/tags/%E5%88%9D%E5%A7%8B/"/>
     
   </entry>
   
@@ -149,7 +229,7 @@
     <link href="http://baokker.github.io/2018/12/12/%E3%80%90%E6%95%99%E7%A8%8B%E3%80%91%E8%BF%99%E4%B8%AABlog%E7%BD%91%E7%AB%99%E6%98%AF%E6%80%8E%E4%B9%88%E5%AE%8C%E6%88%90%E7%9A%84%E5%91%A2(hexo+github+jsdelivr+md)/"/>
     <id>http://baokker.github.io/2018/12/12/【教程】这个Blog网站是怎么完成的呢(hexo+github+jsdelivr+md)/</id>
     <published>2018-12-12T14:16:01.000Z</published>
-    <updated>2021-07-18T07:22:24.394Z</updated>
+    <updated>2021-07-20T05:20:21.067Z</updated>
     
     <summary type="html">
     
