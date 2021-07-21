@@ -41,7 +41,7 @@
     <link href="http://baokker.github.io/2021/07/21/%E6%88%91%E6%83%B3%E6%88%91%E8%AF%A5%E5%AD%A6%E4%B9%A0%E5%AD%A6%E4%B9%A0%E5%A6%82%E4%BD%95%E5%86%99%E4%BD%9C/"/>
     <id>http://baokker.github.io/2021/07/21/我想我该学习学习如何写作/</id>
     <published>2021-07-21T06:54:36.000Z</published>
-    <updated>2021-07-21T07:09:27.183Z</updated>
+    <updated>2021-07-21T09:09:41.546Z</updated>
     
     <summary type="html">
     
@@ -221,28 +221,6 @@
   </entry>
   
   <entry>
-    <title>关于资源的说明</title>
-    <link href="http://baokker.github.io/2021/07/17/%E5%85%B3%E4%BA%8E%E8%B5%84%E6%BA%90%E7%9A%84%E8%AF%B4%E6%98%8E/"/>
-    <id>http://baokker.github.io/2021/07/17/关于资源的说明/</id>
-    <published>2021-07-17T11:01:00.000Z</published>
-    <updated>2021-07-18T08:44:40.712Z</updated>
-    
-    <summary type="html">
-    
-      资源
-    
-    </summary>
-    
-      <category term="资源" scheme="http://baokker.github.io/categories/%E8%B5%84%E6%BA%90/"/>
-    
-    
-      <category term="资源" scheme="http://baokker.github.io/tags/%E8%B5%84%E6%BA%90/"/>
-    
-      <category term="初始" scheme="http://baokker.github.io/tags/%E5%88%9D%E5%A7%8B/"/>
-    
-  </entry>
-  
-  <entry>
     <title>关于书单的说明</title>
     <link href="http://baokker.github.io/2021/07/17/%E5%85%B3%E4%BA%8E%E4%B9%A6%E5%8D%95%E7%9A%84%E8%AF%B4%E6%98%8E/"/>
     <id>http://baokker.github.io/2021/07/17/关于书单的说明/</id>
@@ -261,6 +239,28 @@
       <category term="书单" scheme="http://baokker.github.io/tags/%E4%B9%A6%E5%8D%95/"/>
     
       <category term="初始" scheme="http://baokker.github.io/tags/%E5%88%9D%E5%A7%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于资源的说明</title>
+    <link href="http://baokker.github.io/2021/07/17/%E5%85%B3%E4%BA%8E%E8%B5%84%E6%BA%90%E7%9A%84%E8%AF%B4%E6%98%8E/"/>
+    <id>http://baokker.github.io/2021/07/17/关于资源的说明/</id>
+    <published>2021-07-17T11:01:00.000Z</published>
+    <updated>2021-07-18T08:44:40.712Z</updated>
+    
+    <summary type="html">
+    
+      资源
+    
+    </summary>
+    
+      <category term="资源" scheme="http://baokker.github.io/categories/%E8%B5%84%E6%BA%90/"/>
+    
+    
+      <category term="初始" scheme="http://baokker.github.io/tags/%E5%88%9D%E5%A7%8B/"/>
+    
+      <category term="资源" scheme="http://baokker.github.io/tags/%E8%B5%84%E6%BA%90/"/>
     
   </entry>
   
