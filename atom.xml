@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://baokker.github.io/"/>
-  <updated>2021-07-23T01:46:25.303Z</updated>
+  <updated>2021-07-26T07:15:03.801Z</updated>
   <id>http://baokker.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>量化</title>
+    <link href="http://baokker.github.io/2021/07/26/%E9%87%8F%E5%8C%96/"/>
+    <id>http://baokker.github.io/2021/07/26/量化/</id>
+    <published>2021-07-26T06:56:21.000Z</published>
+    <updated>2021-07-26T07:15:03.801Z</updated>
+    
+    <summary type="html">
+    
+      量化也许有什么坏处 但是我写的时候还没想到
+    
+    </summary>
+    
+      <category term="随想" scheme="http://baokker.github.io/categories/%E9%9A%8F%E6%83%B3/"/>
+    
+    
+      <category term="随想" scheme="http://baokker.github.io/tags/%E9%9A%8F%E6%83%B3/"/>
+    
+  </entry>
   
   <entry>
     <title>少用成语</title>
@@ -43,11 +63,11 @@
     <link href="http://baokker.github.io/2021/07/22/%E5%AF%B9%E4%BA%8E%E5%93%AA%E4%BA%9B%E4%B9%A6%E4%B8%8D%E5%80%BC%E5%BE%97%E7%9C%8B%E7%9A%84%E7%9C%8B%E6%B3%95/"/>
     <id>http://baokker.github.io/2021/07/22/对于哪些书不值得看的看法/</id>
     <published>2021-07-22T13:31:52.000Z</published>
-    <updated>2021-07-23T03:53:11.951Z</updated>
+    <updated>2021-07-23T11:39:44.089Z</updated>
     
     <summary type="html">
     
-      有些事确实很垃圾
+      有些书确实很垃圾
     
     </summary>
     
@@ -63,7 +83,7 @@
     <link href="http://baokker.github.io/2021/07/22/%E5%B0%9D%E8%AF%95%E6%95%B4%E7%90%86%E4%B8%80%E4%B8%AA%E7%B4%A0%E6%9D%90%E5%BA%93/"/>
     <id>http://baokker.github.io/2021/07/22/尝试整理一个素材库/</id>
     <published>2021-07-22T13:24:51.000Z</published>
-    <updated>2021-07-23T03:43:29.500Z</updated>
+    <updated>2021-07-23T11:41:16.294Z</updated>
     
     <summary type="html">
     
