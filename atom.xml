@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://baokker.github.io/"/>
-  <updated>2021-10-12T15:11:57.900Z</updated>
+  <updated>2021-10-15T05:05:17.750Z</updated>
   <id>http://baokker.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【个人】Word使用tips摘记</title>
+    <link href="http://baokker.github.io/2021/10/15/%E3%80%90%E4%B8%AA%E4%BA%BA%E3%80%91Word%E4%BD%BF%E7%94%A8tips%E6%91%98%E8%AE%B0/"/>
+    <id>http://baokker.github.io/2021/10/15/【个人】Word使用tips摘记/</id>
+    <published>2021-10-15T04:53:09.000Z</published>
+    <updated>2021-10-15T05:05:17.750Z</updated>
+    
+    <summary type="html">
+    
+      Word有点点高级
+    
+    </summary>
+    
+      <category term="技术" scheme="http://baokker.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="技术" scheme="http://baokker.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="Word" scheme="http://baokker.github.io/tags/Word/"/>
+    
+  </entry>
   
   <entry>
     <title>《佩德罗·巴拉莫》读后感</title>
@@ -97,24 +119,18 @@
     <link href="http://baokker.github.io/2021/09/13/Reread%E3%80%8A%E5%AD%A6%E4%BC%9A%E6%8F%90%E9%97%AE%E3%80%8B/"/>
     <id>http://baokker.github.io/2021/09/13/Reread《学会提问》/</id>
     <published>2021-09-13T06:30:19.000Z</published>
-    <updated>2021-09-13T06:30:56.451Z</updated>
+    <updated>2021-10-15T05:08:53.213Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;ul&gt;
-&lt;li&gt;淘金式思维 海绵式思维&lt;/li&gt;
-&lt;li&gt;强势批判性思维
-        
-      
+      估计是更不完了
     
     </summary>
     
-      <category term="随想" scheme="http://baokker.github.io/categories/%E9%9A%8F%E6%83%B3/"/>
+      <category term="书单" scheme="http://baokker.github.io/categories/%E4%B9%A6%E5%8D%95/"/>
     
+    
+      <category term="学会提问" scheme="http://baokker.github.io/tags/%E5%AD%A6%E4%BC%9A%E6%8F%90%E9%97%AE/"/>
     
   </entry>
   
@@ -395,28 +411,6 @@
       <category term="随想" scheme="http://baokker.github.io/tags/%E9%9A%8F%E6%83%B3/"/>
     
       <category term="睡不着" scheme="http://baokker.github.io/tags/%E7%9D%A1%E4%B8%8D%E7%9D%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CSS笔记简单整理</title>
-    <link href="http://baokker.github.io/2021/07/29/CSS%E7%AC%94%E8%AE%B0%E7%AE%80%E5%8D%95%E6%95%B4%E7%90%86/"/>
-    <id>http://baokker.github.io/2021/07/29/CSS笔记简单整理/</id>
-    <published>2021-07-29T09:14:17.000Z</published>
-    <updated>2021-07-29T13:30:19.513Z</updated>
-    
-    <summary type="html">
-    
-      我太菜了呜呜呜
-    
-    </summary>
-    
-      <category term="技术" scheme="http://baokker.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="技术" scheme="http://baokker.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
-    
-      <category term="CSS" scheme="http://baokker.github.io/tags/CSS/"/>
     
   </entry>
   
