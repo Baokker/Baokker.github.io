@@ -408,6 +408,16 @@
 <li><p>c++的文件读入（istream）输出（ostream）一段文字</p>
 <p>最后我先用了cin.get()将输入的文字输出到ostream 然后读取时用getline将istream内数据读取</p>
 </li>
+<li><p>经过一番探索后我发现<br>将带模板的类的声明和定义放在.h和.cpp中 另外加上main.cpp是不对的行为<br>因为template function will be compiled only when it is used<br>而main中只包含了头文件而不包含.cpp 会导致其”invisible to the implementation”\<br>所以 要么都写在头文件中 要么就在h末尾加上#include”…cpp”</p>
+</li>
+<li><pre><code class="cpp">if (a=1) cout&lt;&lt;&quot;..&quot;;
+// equal to
+// 1. a=1;
+// if (a) ..
+// cause the = operator will return this integer
+</code></pre>
+</li>
+<li></li>
 </ul>
 <h1 id="开学之前"><a href="#开学之前" class="headerlink" title="开学之前"></a>开学之前</h1><h2 id="AES算法"><a href="#AES算法" class="headerlink" title="AES算法"></a>AES算法</h2><ul>
 <li><p>对称加密算法（advanced encryption standard）（即可逆）</p>
