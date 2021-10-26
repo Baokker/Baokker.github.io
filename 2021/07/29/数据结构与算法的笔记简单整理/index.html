@@ -410,11 +410,15 @@
 </li>
 <li><p>经过一番探索后我发现<br>将带模板的类的声明和定义放在.h和.cpp中 另外加上main.cpp是不对的行为<br>因为template function will be compiled only when it is used<br>而main中只包含了头文件而不包含.cpp 会导致其”invisible to the implementation”\<br>所以 要么都写在头文件中 要么就在h末尾加上#include”…cpp”</p>
 </li>
-<li><pre><code class="cpp">if (a=1) cout&lt;&lt;&quot;..&quot;;
+<li><pre><code class="cpp">if (a = 1) cout &lt;&lt; &quot;..&quot;;
 // equal to
 // 1. a=1;
 // if (a) ..
 // cause the = operator will return this integer
+</code></pre>
+</li>
+<li><pre><code class="cpp">int a = 3 &lt;&lt; 4; // a = 3 * (2 ^ 4) = 48 左移运算符
+int b = 8 &gt;&gt; 1; // b = 8 / (2 ^ 1) = 4  右移运算符
 </code></pre>
 </li>
 <li></li>
