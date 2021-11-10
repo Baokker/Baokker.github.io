@@ -373,6 +373,8 @@
 <li>双指针</li>
 <li>链表→递归&amp;迭代</li>
 <li>dummyHead</li>
+<li>循环不变量的确定</li>
+<li>不变量（例如区间，在写之前就应当确定是[a,b]或者[a,b)）</li>
 </ul>
 <h2 id="编写中遇到的c-语法问题"><a href="#编写中遇到的c-语法问题" class="headerlink" title="编写中遇到的c++语法问题"></a>编写中遇到的c++语法问题</h2><ul>
 <li><pre><code class="cpp">template &lt;class Type&gt; // == template &lt;typename Type&gt;   
@@ -421,7 +423,17 @@
 int b = 8 &gt;&gt; 1; // b = 8 / (2 ^ 1) = 4  右移运算符
 </code></pre>
 </li>
-<li></li>
+<li><p>vector的几种赋值or拷贝方法：</p>
+<pre><code class="cpp">vector&lt;int&gt; example=&#123;1,2,3,4&#125;;
+vector&lt;int&gt; target1(example);
+vector&lt;int&gt; target2(example.begin(),example.begin()+2);
+vector&lt;int&gt; target3;
+target3.assign(2,2);
+target3.assign(example.begin(),example.begin()+2); //[a,b)
+vector&lt;int&gt; target4;
+target4.swap(example);//example=&#123;&#125;
+</code></pre>
+</li>
 </ul>
 <h1 id="开学之前"><a href="#开学之前" class="headerlink" title="开学之前"></a>开学之前</h1><h2 id="AES算法"><a href="#AES算法" class="headerlink" title="AES算法"></a>AES算法</h2><ul>
 <li><p>对称加密算法（advanced encryption standard）（即可逆）</p>
