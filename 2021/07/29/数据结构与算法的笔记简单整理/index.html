@@ -363,11 +363,64 @@
         
         <div class="entry-content">
           <h1 id="开学学习内容"><a href="#开学学习内容" class="headerlink" title="开学学习内容"></a>开学学习内容</h1><h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><ul>
-<li>[快速转置算法][<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq845579063/article/details/51354847]">https://blog.csdn.net/qq845579063/article/details/51354847]</a></li>
-<li>[KMP算法详解][<a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2013/05/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm.html]">https://www.ruanyifeng.com/blog/2013/05/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm.html]</a></li>
-<li>BM算法</li>
-<li><strong>带头结点</strong>的链表（dummyHead？）</li>
-<li>双向循环链表</li>
+<li><p>[快速转置算法][<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq845579063/article/details/51354847]">https://blog.csdn.net/qq845579063/article/details/51354847]</a></p>
+</li>
+<li><p>[KMP算法详解][<a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2013/05/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm.html]">https://www.ruanyifeng.com/blog/2013/05/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm.html]</a></p>
+</li>
+<li><p>BM算法</p>
+</li>
+<li><p><strong>带头结点</strong>的链表（dummyHead？）</p>
+</li>
+<li><p>双向循环链表</p>
+</li>
+<li><p>邻接表表示的是出度（从顶点A连接到B和C，因而链表结构为A-&gt;B-&gt;C；反之，在逆邻接表中为B-&gt;A和C-&gt;A）</p>
+</li>
+<li><p>连通图：删去任意一个节点，所有顶点仍然互相连通的图。</p>
+<p>反之，若删去则分为两个图，则称为关节点。</p>
+<p>删去K个节点后无法保证连通图，则称连通图的连通度为K。</p>
+<p>待解决~~</p>
+</li>
+<li><p>最小生成树</p>
+<ul>
+<li>kruskal算法（按边加）</li>
+<li>prim算法（按顶点加）</li>
+</ul>
+</li>
+<li><p>AOE AOV（？未解决）</p>
+</li>
+<li><p>最短路径算法：</p>
+<ul>
+<li><p><strong>Dijkstra算法</strong></p>
+<ul>
+<li>单源最短路径（只能算出一个顶点到其他顶点的最短路径）</li>
+<li>不能有负权值，不能有环</li>
+</ul>
+</li>
+<li><p><strong>Floyd算法</strong></p>
+<ul>
+<li><p>没有负权值的顾虑，可计算任意两点之间距离。</p>
+</li>
+<li><p>本质是动态规划</p>
+</li>
+<li><pre><code>1 let dist be a |V| × |V| array of minimum distances initialized to ∞ (infinity)
+2 for each vertex v
+3    dist[v][v] ← 0
+4 for each edge (u,v)
+5    dist[u][v] ← w(u,v)  // the weight of the edge (u,v)
+6 for k from 1 to |V|
+7    for i from 1 to |V|
+8       for j from 1 to |V|
+9          if dist[i][j] &gt; dist[i][k] + dist[k][j] 
+10             dist[i][j] ← dist[i][k] + dist[k][j]
+11         end if
+</code></pre></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>拓扑排序（？未解决）</li>
 </ul>
 <h2 id="LeetCode"><a href="#LeetCode" class="headerlink" title="LeetCode"></a>LeetCode</h2><ul>
 <li>双指针</li>
@@ -436,7 +489,43 @@ target4.swap(example);//example=&#123;&#125;
 </li>
 <li><p><code>sizeof(bool)==1 byte</code></p>
 </li>
-<li></li>
+<li><p>c++ closure</p>
+<blockquote>
+<p>In <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Programming_language">programming languages</a>, a <strong>closure</strong>, also <strong>lexical closure</strong> or <strong>function closure</strong>, is a technique for implementing <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Lexically_scoped">lexically scoped</a> <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Name_binding">name binding</a> in a language with <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/First-class_function">first-class functions</a>.</p>
+</blockquote>
+</li>
+<li><p>自己编写的一个用于获得任意要求的整数值的函数：</p>
+<p>本来想使用template 但是经过研究发现 <strong>lambda不能用在template函数中</strong> 见如下说明：</p>
+<blockquote>
+<p>The evaluation of a lambda-expression results in a prvalue temporary (12.2). This temporary is called the closure object. <strong>A lambda-expression shall not appear in an unevaluated operand</strong> (Clause 5). [ Note: A closure object behaves like a function object (20.8).—end note ] <em>(emphasis mine)</em></p>
+</blockquote>
+<p>换言之，lambda是一个<strong>闭包</strong>，有类型也有状态（state），而template是动态的，未编译的，不可能接受包容state。</p>
+<p>（这个问题貌似在c20里得到了解决）</p>
+<pre><code class="cpp">//用function来闭包处理lambda函数
+int getIntValue(const function&lt;bool(int)&gt;&amp; judgeFunc) &#123;//for freely customizing the int value you want
+    int value;
+    while (true)
+    &#123;
+        cin &gt;&gt; value;
+        if (cin.fail()) &#123;
+            cerr &lt;&lt; &quot;input error\n&quot;;
+            cin.clear();
+            cin.ignore(1024, &#39;\n&#39;);
+        &#125;
+        else if (!judgeFunc(value)) &#123;//对这句进行灵活定制
+            cerr &lt;&lt; &quot;dont meet the command\n&quot;;
+        &#125;
+        else
+            break;
+    &#125;
+
+    return value;
+&#125;
+</code></pre>
+</li>
+</ul>
+<h2 id="other"><a href="#other" class="headerlink" title="other"></a>other</h2><ul>
+<li><strong>拓扑</strong>是研究几何图形或空间在连续改变形状后还能保持不变的一些性质的一个学科。 它只考虑物体间的位置关系而不考虑它们的形状和大小。 拓扑英文名是Topology，直译是地志学，最早指研究地形、地貌相类似的有关学科。</li>
 </ul>
 <h1 id="开学之前"><a href="#开学之前" class="headerlink" title="开学之前"></a>开学之前</h1><h2 id="AES算法"><a href="#AES算法" class="headerlink" title="AES算法"></a>AES算法</h2><ul>
 <li><p>对称加密算法（advanced encryption standard）（即可逆）</p>
