@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">对自己说的话 | Baokker&#39;s Blog</title>
+  <title itemprop="name">二叉搜索树删除算法 | Baokker&#39;s Blog</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -332,11 +332,11 @@
 
   <div class="pattern-center single-center">
     <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg);" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg">
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/pexels-kübra-arslaner-8358577.jpg);" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/pexels-kübra-arslaner-8358577.jpg">
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
-      对自己说的话</h1>
+      二叉搜索树删除算法</h1>
       <p class="entry-census">
         <span>
           <a href="Baokker.github.io">
@@ -348,7 +348,7 @@
         </span>
         <span class="bull">
         ·</span>
-        2021-7-20<span class="bull">
+        2021-11-8<span class="bull">
         ·</span>
       <span id="busuanzi_value_page_pv"></span>次阅读</p>
     </header>
@@ -362,7 +362,80 @@
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <p>待更新</p>
+          <h1 id="未讲课时，自己结合网上相关教程做出来的版本"><a href="#未讲课时，自己结合网上相关教程做出来的版本" class="headerlink" title="未讲课时，自己结合网上相关教程做出来的版本"></a>未讲课时，自己结合网上相关教程做出来的版本</h1><p>运用递归原理实现二叉搜索树有序删除。首先判断传入地址是否为空；</p>
+<p>之后判断pos内的val值，若大于参数val，则删除目标只可能在左子树中，对左子树节点进行重新赋值（若大于则对右子树重新赋值）。若左（右）子树节点数据为参数val，则返回删除后的新节点，反之返回原节点。</p>
+<p>接下来对数据val等于参数val的节点pos的情况进行分类讨论：</p>
+<ol>
+<li><p>若pos为叶节点，则与第2（或3）种情况并为一类讨论。</p>
+</li>
+<li><p>若pos仅有右子树，则将pos赋值为pos右子树（对情况1而言，即为nullptr，亦符合要求），删除原pos变量。</p>
+</li>
+<li><p>若pos仅有左子树，则将pos赋值为pos左子树，删除原pos变量。</p>
+</li>
+<li><p>若pos既有左子树又有右子树，此时应当<strong>将pos的左子树移动到pos右子树中的最左边的左子树（即中序遍历的下一个位置）之左</strong>，随后将pos赋值为pos的右子树节点。最后删除原pos。</p>
+</li>
+</ol>
+<p>分类讨论完成操作后，返回pos值作为双亲节点的子节点。</p>
+<p><strong>核心代码</strong></p>
+<pre><code class="cpp">template&lt;typename Type&gt;
+BinNode&lt;Type&gt;* BST&lt;Type&gt;::DeleteNode(Type val, BinNode&lt;Type&gt;*&amp; pos) 
+&#123;
+ if (!pos) return nullptr;
+
+ if (pos-&gt;val &gt; val)
+   pos-&gt;left = DeleteNode(val, pos-&gt;left);
+ else if (pos-&gt;val &lt; val)
+   pos-&gt;right = DeleteNode(val, pos-&gt;right);
+ else
+ &#123;
+   if (!pos-&gt;left) //leaf node or only have right child
+   &#123;
+    auto temp = pos;
+    pos = pos-&gt;right;
+    delete temp;
+   &#125;
+
+   else if (!pos-&gt;right) // only have left child
+   &#123;
+    auto temp = pos;
+    pos = pos-&gt;left;
+    delete temp;
+   &#125;
+
+   else // both
+   &#123;
+    auto cursor = pos-&gt;right;
+    while (cursor-&gt;left!=nullptr)
+       cursor = cursor-&gt;left; //完成后，cursor即为中序遍历情况下的下一个位置
+
+    cursor-&gt;left = pos-&gt;left;
+    auto temp = pos;
+    pos = pos-&gt;right;
+    delete temp;
+   &#125;
+ &#125;
+
+ return pos;
+&#125;
+</code></pre>
+<h1 id="课本上的版本"><a href="#课本上的版本" class="headerlink" title="课本上的版本"></a>课本上的版本</h1><p>后来阅读课本时，发现课本上的另外一种更为精妙的方法。</p>
+<p>对于前三种情况，课本上的处理方式也没有多大的差别，即：</p>
+<ol>
+<li>若pos为叶节点，则与第2（或3）种情况并为一类讨论。</li>
+<li>若pos仅有右子树，则将pos赋值为pos右子树（对情况1而言，即为nullptr，亦符合要求），删除原pos变量。</li>
+<li>若pos仅有左子树，则将pos赋值为pos左子树，删除原pos变量。</li>
+</ol>
+<p>不同的是第4种情况。课本上是怎么做的呢？一句话来说，就是<strong>先找到该位置A在<em>中序遍历</em>下的下一个节点B，并将两者数据内容互换。接下来，将目标转换为，在右子树里查找并删除A。</strong>假设二叉排序树升序排序，则B必定为右子树之下最小的元素，而A在中序遍历中位于B之前，必然比B更小，故交换位置后，右子树的二叉排序树性质依然未变。</p>
+<p>接下来继续查找删除，直到删除A的情况满足1~3中任意一个即可。</p>
+<p>贴出伪代码：</p>
+<pre><code>def del(val,startPos):
+    pos = find(val)
+    // ..other conditions
+    if pos-&gt;left != null and pos-&gt;right != null:
+        nextPos = nextInorderPos(pos)
+        swap(pos.data, nextpos.data)
+        del(val,pos-&gt;right)
+</code></pre><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>相比之下，个人认为第二种方法更为精妙。第一种方法可能更好理解一些，但是在处理情况4时，会在无形之中增加树的高度，导致其分布不均匀，这样子会导致查找的性能降低。而后者则维护了树的整体结构，很好地避免了这一情况。</p>
 
         </div>
         <!-- .entry-content -->
@@ -397,15 +470,15 @@
           
             <div class="post-nepre half previous">
           
-            <a href="/2021/07/20/%E3%80%8A%E5%A4%A7%E8%AF%9D%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E3%80%8B%E7%AC%94%E8%AE%B0%E7%AE%80%E5%8D%95%E6%95%B4%E7%90%86/" rel="prev">
+            <a href="/2021/11/09/%E7%B3%BB%E7%BB%9F%E5%8C%96%E5%92%8C%E7%A2%8E%E7%89%87%E5%8C%96/" rel="prev">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/defaultImages.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/defaultImages.jpg">
               </div>
               <span class="label">
               Previous Post</span>
               <div class="info">
                 <h3>
-                《大话数据结构》笔记简单整理</h3>
+                系统化和碎片化</h3>
                 <hr>
               </div>
             </a>
@@ -415,15 +488,15 @@
           
             <div class="post-nepre half next">
           
-            <a href="/2021/07/20/%E6%84%8F%E4%B9%89/" rel="next">
+            <a href="/2021/11/06/%E5%8D%83%E4%B8%87%E4%B8%8D%E8%A6%81%E9%9A%8F%E4%BE%BF%E5%8D%B8%E8%BD%BD%E8%BD%AF%E4%BB%B6%EF%BC%81%EF%BC%81/" rel="next">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/defaultImages.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/defaultImages.jpg">
               </div>
               <span class="label">
               Next Post</span>
               <div class="info">
                 <h3>
-                意义</h3>
+                千万不要随便卸载软件！！</h3>
                 <hr>
               </div>
             </a>
