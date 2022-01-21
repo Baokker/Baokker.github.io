@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://baokker.github.io/"/>
-  <updated>2022-01-21T08:04:00.747Z</updated>
+  <updated>2022-01-21T11:54:12.444Z</updated>
   <id>http://baokker.github.io/</id>
   
   <author>
@@ -15,6 +15,55 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux运行数据结构课设感想</title>
+    <link href="http://baokker.github.io/2022/01/21/Linux%E8%BF%90%E8%A1%8C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%AF%BE%E8%AE%BE%E6%84%9F%E6%83%B3/"/>
+    <id>http://baokker.github.io/2022/01/21/Linux运行数据结构课设感想/</id>
+    <published>2022-01-21T11:54:12.000Z</published>
+    <updated>2022-01-21T11:54:12.444Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;数据结构课设加分项，使代码能够在linux下使用G++编译通过，并上传makefile。&lt;/p&gt;
+&lt;h2 id=&quot;VMware安装&quot;&gt;&lt;a href=&quot;#VMware安装&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="随想" scheme="http://baokker.github.io/categories/%E9%9A%8F%E6%83%B3/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>换手机风云</title>
+    <link href="http://baokker.github.io/2022/01/21/%E6%8D%A2%E6%89%8B%E6%9C%BA%E9%A3%8E%E4%BA%91/"/>
+    <id>http://baokker.github.io/2022/01/21/换手机风云/</id>
+    <published>2022-01-21T09:54:01.000Z</published>
+    <updated>2022-01-21T09:54:01.784Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;高中毕业的时候换手机，从原来的红米note 4x换到了红米K30
+        
+      
+    
+    </summary>
+    
+      <category term="随想" scheme="http://baokker.github.io/categories/%E9%9A%8F%E6%83%B3/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>《实用性阅读指南》读后感</title>
@@ -383,7 +432,7 @@
     <link href="http://baokker.github.io/2021/11/20/%E3%80%8A%E6%96%AD%E5%A2%A8%E5%AF%BB%E5%BE%84%E3%80%8B%E3%80%8A%E5%AD%A6%E4%B9%A0%E8%A7%82%E3%80%8B%E7%9B%B8%E5%85%B3%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86/"/>
     <id>http://baokker.github.io/2021/11/20/《断墨寻径》《学习观》相关笔记整理/</id>
     <published>2021-11-20T14:57:45.000Z</published>
-    <updated>2021-12-29T13:09:40.489Z</updated>
+    <updated>2022-01-21T09:03:57.836Z</updated>
     
     <summary type="html">
     
@@ -395,46 +444,6 @@
     
     
       <category term="学习观" scheme="http://baokker.github.io/tags/%E5%AD%A6%E4%B9%A0%E8%A7%82/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【随想】总是容易丢东西为什么啊啊啊啊</title>
-    <link href="http://baokker.github.io/2021/11/15/%E3%80%90%E9%9A%8F%E6%83%B3%E3%80%91%E6%80%BB%E6%98%AF%E5%AE%B9%E6%98%93%E4%B8%A2%E4%B8%9C%E8%A5%BF%E4%B8%BA%E4%BB%80%E4%B9%88%E5%95%8A%E5%95%8A%E5%95%8A%E5%95%8A/"/>
-    <id>http://baokker.github.io/2021/11/15/【随想】总是容易丢东西为什么啊啊啊啊/</id>
-    <published>2021-11-15T08:30:43.000Z</published>
-    <updated>2021-11-16T10:52:07.122Z</updated>
-    
-    <summary type="html">
-    
-      总结一下
-    
-    </summary>
-    
-      <category term="随想" scheme="http://baokker.github.io/categories/%E9%9A%8F%E6%83%B3/"/>
-    
-    
-      <category term="随想" scheme="http://baokker.github.io/tags/%E9%9A%8F%E6%83%B3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【自用】吃饭礼仪的一些记录</title>
-    <link href="http://baokker.github.io/2021/11/15/%E3%80%90%E8%87%AA%E7%94%A8%E3%80%91%E5%90%83%E9%A5%AD%E7%A4%BC%E4%BB%AA%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%B0%E5%BD%95/"/>
-    <id>http://baokker.github.io/2021/11/15/【自用】吃饭礼仪的一些记录/</id>
-    <published>2021-11-15T08:29:47.000Z</published>
-    <updated>2021-11-16T10:32:23.480Z</updated>
-    
-    <summary type="html">
-    
-      学习一下
-    
-    </summary>
-    
-      <category term="随想" scheme="http://baokker.github.io/categories/%E9%9A%8F%E6%83%B3/"/>
-    
-    
-      <category term="随想" scheme="http://baokker.github.io/tags/%E9%9A%8F%E6%83%B3/"/>
     
   </entry>
   

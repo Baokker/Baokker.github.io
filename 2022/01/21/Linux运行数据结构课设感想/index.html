@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">Baokker&#39;s Blog</title>
+  <title itemprop="name">Linux运行数据结构课设感想 | Baokker&#39;s Blog</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -326,493 +326,183 @@
   </div>
 </header>
 
-      <div class="blank" style="padding-top: 0px;"></div>
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/defaultImages.jpg);" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/defaultImages.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      Linux运行数据结构课设感想</h1>
+      <p class="entry-census">
+        <span>
+          <a href="Baokker.github.io">
+            <img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="Baokker.github.io">Baokker</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2022-1-21<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
+  </div>
+
 <div id="content" class="site-content">
-  
-  <div class="notice" style="margin-top:60px">
-    <i class="iconfont icon-notification">
-    </i>
-    <div class="notice-content">这里是我的blog！不定期更新：随想/读书笔记/书单/教程/.. 当然也可能不更（</div>
-  </div>
-  
-  <div class="top-feature-row">
-  <h1 class="fes-title" style="font-family: 'Ubuntu', sans-serif;">
-  <i class="fa fa-anchor" aria-hidden="true">
-  </i>
-  START:DASH!!</h1>
-  
-  <div class="top-feature-v2">
-    <div class="the-feature square from_left_and_right">
-      <a href="/theme-sakura/" target="_blank">
-        <div class="img">
-          <img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/startdash/sakura.md.png">
-        </div>
-        <div class="info">
-          <h3>Sakura</h3>
-          <p>本站 hexo 主题</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  
-  <div class="top-feature-v2">
-    <div class="the-feature square from_left_and_right">
-      <a href="http://space.bilibili.com/441978000" target="_blank">
-        <div class="img">
-          <img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/startdash/bilibili.jpg">
-        </div>
-        <div class="info">
-          <h3>Bilibili</h3>
-          <p>My bilibili</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  
-  <div class="top-feature-v2">
-    <div class="the-feature square from_left_and_right">
-      <a href="/" target="_blank">
-        <div class="img">
-          <img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/startdash/wangshiwu.jpg">
-        </div>
-        <div class="info">
-          <h3>Baokker的blog</h3>
-          <p>技术服务</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  
-</div>
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-      <h1 class="main-title" style="font-family: 'Ubuntu', sans-serif;">
-      <i class="fa fa-envira" aria-hidden="true"></i>
-      Discovery</h1>
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <p>数据结构课设加分项，使代码能够在linux下使用G++编译通过，并上传makefile。</p>
+<h2 id="VMware安装"><a href="#VMware安装" class="headerlink" title="VMware安装"></a>VMware安装</h2><p>难度不大，去官网<a target="_blank" rel="noopener" href="https://www.vmware.com/cn/products/workstation-pro/workstation-pro-evaluation.html">下载</a>，然后找个pojiema即可。记得安装软件和虚拟机的时候要注意C盘的剩余空间，最好还是分装在别的系统盘上。</p>
+<h2 id="CentOS安装"><a href="#CentOS安装" class="headerlink" title="CentOS安装"></a>CentOS安装</h2><p>可参考这个<a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_46855648/article/details/111365163">链接</a></p>
+<p>建议安装时先选择最小安装（minimum install），之后加上图形化：</p>
+<pre><code class="bash">yum groupinstall &quot;Server with GUI&quot; -y # install
+systemctl set-default graphical # set GUI interface as default
+</code></pre>
+<h2 id="安装g"><a href="#安装g" class="headerlink" title="安装g++"></a>安装g++</h2><p>先是安装：</p>
+<pre><code class="bash">sudo dnf group install &quot;Development Tools&quot; # gcc g++ make,etc will be installed
+sudo dnf install man-pages # optional for manual pages
+</code></pre>
+<p>之后可以对文件编译。可以通过与主机文件传输，也可以直接在Linux里编写（这样的话，另外需要学一点vim的知识）</p>
+<pre><code class="bash">g++ -o output_file_name input_file.cpp
+</code></pre>
+<p>其中<code>output_file_name</code>是一个可执行文件，直接在shell里运行<code>./output_file_name</code>即可。</p>
+<h2 id="与主机文件共享"><a href="#与主机文件共享" class="headerlink" title="与主机文件共享"></a>与主机文件共享</h2><p>这个难关非常难啃，我捣腾了非常久..也没解决。</p>
+<p>最后得出的解决方案是，每次在开机时，都要先输入如下指令：</p>
+<pre><code class="bash">sudo vmhgfs-fuse .host:/ /mnt/hgfs -o subtype=vmhgfs-fuse,allow_other
+</code></pre>
+<p>这样，在<code>/mnt/hgfs/</code>中会显示共享文件夹。（暂时没能实现开机自动挂载，知识还是太浅薄了）</p>
+<h2 id="字符编码"><a href="#字符编码" class="headerlink" title="字符编码"></a>字符编码</h2><p>一开始直接将VS下的cpp传入centos用g++编译，结果报了错。debug后发现是编码的问题。VS里默认的是GB2312编码（并且不支持UTF-8，而只能支持UTF-8 with BOM，很离谱），而g++默认为UTF-8。可以选择转换编码，也可以在编译时加入新的选项。</p>
+<p>最后的选择是把所有cpp都使用notepad++转为了UTF-8 with BOM格式。</p>
+<h2 id="code-debug"><a href="#code-debug" class="headerlink" title="code debug"></a>code debug</h2><ul>
+<li><blockquote>
+<p>free(): double free detected in tcache 2<br>Aborted (core dumped)</p>
+</blockquote>
+<p>这个bug我遇着了两回，全都被VS强大的编译防过去了（）</p>
+<p>核心在于new完的变量被delete了多回</p>
+</li>
+<li><p>.hpp是.h和.cpp的结合，即将声明和定义包括在一个文件中，从而使得文件更加清晰。个人认为这样尤其有利于含template的函数，因为template的声明和定义最好放在一起，找不到定义的话就会报错。</p>
+</li>
+</ul>
+<h2 id="linux相关操作新得"><a href="#linux相关操作新得" class="headerlink" title="linux相关操作新得"></a>linux相关操作新得</h2><ul>
+<li><p>vim不保存退出:<code>Esc</code>回到normal模式，然后输入<code>:q!</code></p>
+</li>
+<li><p>cd</p>
+<ol>
+<li>To navigate into the root directory, use “cd /“</li>
+<li>To navigate to your home directory, use “cd” or “cd ~”</li>
+<li>To navigate up one directory level, use “cd ..”</li>
+<li>To navigate to the previous directory (or back), use “cd -“</li>
+</ol>
+</li>
+<li><p>vim</p>
+<ul>
+<li>:w 保存文件但不退出vi</li>
+<li>:w file 将修改另外保存到file中，不退出vi</li>
+<li>:w! 强制保存，不推出vi</li>
+<li>:wq 保存文件并退出vi</li>
+<li>:wq! 强制保存文件，并退出vi</li>
+<li>q: 不保存文件，退出vi</li>
+<li>:q! 不保存文件，强制退出vi</li>
+<li>:e! 放弃所有修改，从上次保存文件开始再编辑</li>
+</ul>
+</li>
+</ul>
+<h2 id="VS的编码特性"><a href="#VS的编码特性" class="headerlink" title="VS的编码特性"></a>VS的编码特性</h2><p>在release的文件夹里找到了<code>.pdb</code>之类的文件，查阅后发现是VS的数据文件</p>
+<h2 id="make-makefile-cmake"><a href="#make-makefile-cmake" class="headerlink" title="make makefile cmake"></a>make makefile cmake</h2><p>只简单地阐述一下关系：make通过makefile来对指定的文件进行编码等操作，生成可执行文件；cmake则是另外一套语法，用于生成Makefile。具体教程不阐述了，我觉得我也只是学个皮毛。</p>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/donate/AliPayQR.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/donate/WeChanSQ.jpg"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+
+
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+          
+            <div class="post-nepre full next">
+          
+            <a href="/2022/01/21/%E6%8D%A2%E6%89%8B%E6%9C%BA%E9%A3%8E%E4%BA%91/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/defaultImages.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/defaultImages.jpg">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                换手机风云</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
       
-  <!-- 首页默认取最最新文章集 -->
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
+        appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
 
-  <div class="post-thumb">
-    <a href="/2022/01/17/Retrieval-Practice/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/defaultImages.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2022-1-17 00:01</div>
-      <a href="/2022/01/17/Retrieval-Practice/" class="post-title">
-        <h3>Retrieval Practice</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/%E9%9A%8F%E6%83%B3/">随想</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p></p>
-        <div class="post-bottom">
-          <a href="/2022/01/17/Retrieval-Practice/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="Baokker.github.io" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg" itemprop="image" alt="Baokker" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="Baokker.github.io" itemprop="url" rel="author">Baokker</a>
+            </h3>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2022/01/17/%E5%85%B3%E4%BA%8E%E6%8C%91%E8%A1%A3%E6%9C%8D%E8%BF%99%E4%BB%B6%E4%BA%8B/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/defaultImages.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2022-1-17 00:01</div>
-      <a href="/2022/01/17/%E5%85%B3%E4%BA%8E%E6%8C%91%E8%A1%A3%E6%9C%8D%E8%BF%99%E4%BB%B6%E4%BA%8B/" class="post-title">
-        <h3>关于挑衣服这件事</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/%E9%9A%8F%E6%83%B3/">随想</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p></p>
-        <div class="post-bottom">
-          <a href="/2022/01/17/%E5%85%B3%E4%BA%8E%E6%8C%91%E8%A1%A3%E6%9C%8D%E8%BF%99%E4%BB%B6%E4%BA%8B/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2022/01/16/%E6%80%8E%E6%A0%B7%E6%89%8D%E7%AE%97%E6%98%AF%E6%9C%89%E6%95%88%E5%AE%89%E6%85%B0/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/defaultImages.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2022-1-16 23:01</div>
-      <a href="/2022/01/16/%E6%80%8E%E6%A0%B7%E6%89%8D%E7%AE%97%E6%98%AF%E6%9C%89%E6%95%88%E5%AE%89%E6%85%B0/" class="post-title">
-        <h3>怎样才算是有效安慰</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/%E9%9A%8F%E6%83%B3/">随想</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p></p>
-        <div class="post-bottom">
-          <a href="/2022/01/16/%E6%80%8E%E6%A0%B7%E6%89%8D%E7%AE%97%E6%98%AF%E6%9C%89%E6%95%88%E5%AE%89%E6%85%B0/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2021/12/02/%E8%A7%89%E5%BE%97%E8%87%AA%E5%B7%B1%E7%9A%84%E6%96%87%E5%AD%97%E5%8F%A5%E5%AD%90%E6%80%BB%E6%98%AF%E5%81%8F%E9%95%BF/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/animal-g4c80354c3_1920.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2021-12-2 18:12</div>
-      <a href="/2021/12/02/%E8%A7%89%E5%BE%97%E8%87%AA%E5%B7%B1%E7%9A%84%E6%96%87%E5%AD%97%E5%8F%A5%E5%AD%90%E6%80%BB%E6%98%AF%E5%81%8F%E9%95%BF/" class="post-title">
-        <h3>觉得自己的文字句子总是偏长</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/%E5%86%99%E4%BD%9C/">写作<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/%E9%9A%8F%E6%83%B3/">随想</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>就这么长</p>
-        <div class="post-bottom">
-          <a href="/2021/12/02/%E8%A7%89%E5%BE%97%E8%87%AA%E5%B7%B1%E7%9A%84%E6%96%87%E5%AD%97%E5%8F%A5%E5%AD%90%E6%80%BB%E6%98%AF%E5%81%8F%E9%95%BF/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2021/12/02/%E3%80%8A%E4%B8%80%E4%B9%9D%E5%85%AB%E5%85%AD%E5%B9%B4%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/pexels-edson-de-assis-8030860.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2021-12-2 18:12</div>
-      <a href="/2021/12/02/%E3%80%8A%E4%B8%80%E4%B9%9D%E5%85%AB%E5%85%AD%E5%B9%B4%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/" class="post-title">
-        <h3>《一九八六年》读后感</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/%E4%B9%A6%E5%8D%95/">书单<em>·</em></a>
-          
-            <a href="/tags/%E4%B8%80%E4%B9%9D%E5%85%AB%E5%85%AD%E5%B9%B4/">一九八六年<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/%E9%9A%8F%E6%83%B3/">随想</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>余华ptsd get√</p>
-        <div class="post-bottom">
-          <a href="/2021/12/02/%E3%80%8A%E4%B8%80%E4%B9%9D%E5%85%AB%E5%85%AD%E5%B9%B4%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2021/12/02/%E6%B2%A1%E8%AF%BB%E5%AE%8C%E3%80%8A%E6%B5%B7%E6%B5%AA%E3%80%8B%E6%9C%89%E6%84%9F/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/bird-g97f61f4e7_1920.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2021-12-2 15:12</div>
-      <a href="/2021/12/02/%E6%B2%A1%E8%AF%BB%E5%AE%8C%E3%80%8A%E6%B5%B7%E6%B5%AA%E3%80%8B%E6%9C%89%E6%84%9F/" class="post-title">
-        <h3>没读完《海浪》有感</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/%E4%B9%A6%E5%8D%95/">书单<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/%E4%B9%A6%E5%8D%95/">书单</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>太前卫了，还需要时间慢慢看</p>
-        <div class="post-bottom">
-          <a href="/2021/12/02/%E6%B2%A1%E8%AF%BB%E5%AE%8C%E3%80%8A%E6%B5%B7%E6%B5%AA%E3%80%8B%E6%9C%89%E6%84%9F/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2021/12/01/%E3%80%90%E8%87%AA%E7%94%A8%E3%80%91%E5%85%AD%E7%BA%A7%E5%86%99%E4%BD%9C%E7%9B%B8%E5%85%B3%E6%95%B4%E7%90%86/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/defaultImages.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2021-12-1 21:12</div>
-      <a href="/2021/12/01/%E3%80%90%E8%87%AA%E7%94%A8%E3%80%91%E5%85%AD%E7%BA%A7%E5%86%99%E4%BD%9C%E7%9B%B8%E5%85%B3%E6%95%B4%E7%90%86/" class="post-title">
-        <h3>【自用】六级写作相关整理</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/%E5%85%AD%E7%BA%A7/">六级<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/%E9%9A%8F%E6%83%B3/">随想</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>自用</p>
-        <div class="post-bottom">
-          <a href="/2021/12/01/%E3%80%90%E8%87%AA%E7%94%A8%E3%80%91%E5%85%AD%E7%BA%A7%E5%86%99%E4%BD%9C%E7%9B%B8%E5%85%B3%E6%95%B4%E7%90%86/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2021/11/23/%E5%85%AD%E7%BA%A7%E7%9B%B8%E5%85%B3%E5%A4%87%E6%88%98%E6%84%9F%E6%83%B3/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/defaultImages.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2021-11-23 20:11</div>
-      <a href="/2021/11/23/%E5%85%AD%E7%BA%A7%E7%9B%B8%E5%85%B3%E5%A4%87%E6%88%98%E6%84%9F%E6%83%B3/" class="post-title">
-        <h3>六级相关备战感想</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/%E5%85%AD%E7%BA%A7/">六级<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/%E9%9A%8F%E6%83%B3/">随想</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>四六级什么的都去死吧！！</p>
-        <div class="post-bottom">
-          <a href="/2021/11/23/%E5%85%AD%E7%BA%A7%E7%9B%B8%E5%85%B3%E5%A4%87%E6%88%98%E6%84%9F%E6%83%B3/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2021/11/22/%E3%80%90%E9%9A%8F%E6%83%B3%E3%80%91%E6%8A%84%E4%B9%A6%E4%B9%9F%E6%9C%AA%E5%BF%85%E4%B8%8D%E5%A5%BD/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/caricature-gfb1aac7e7_1920.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2021-11-22 16:11</div>
-      <a href="/2021/11/22/%E3%80%90%E9%9A%8F%E6%83%B3%E3%80%91%E6%8A%84%E4%B9%A6%E4%B9%9F%E6%9C%AA%E5%BF%85%E4%B8%8D%E5%A5%BD/" class="post-title">
-        <h3>【随想】抄书也未必不好</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/%E6%8A%BD%E8%B1%A1%E6%A6%82%E5%BF%B5/">抽象概念<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/%E9%9A%8F%E6%83%B3/">随想</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>离散数学太难了</p>
-        <div class="post-bottom">
-          <a href="/2021/11/22/%E3%80%90%E9%9A%8F%E6%83%B3%E3%80%91%E6%8A%84%E4%B9%A6%E4%B9%9F%E6%9C%AA%E5%BF%85%E4%B8%8D%E5%A5%BD/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2021/11/20/%E3%80%8A%E6%96%AD%E5%A2%A8%E5%AF%BB%E5%BE%84%E3%80%8B%E3%80%8A%E5%AD%A6%E4%B9%A0%E8%A7%82%E3%80%8B%E7%9B%B8%E5%85%B3%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/animal-g4c80354c3_1920.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2021-11-20 22:11</div>
-      <a href="/2021/11/20/%E3%80%8A%E6%96%AD%E5%A2%A8%E5%AF%BB%E5%BE%84%E3%80%8B%E3%80%8A%E5%AD%A6%E4%B9%A0%E8%A7%82%E3%80%8B%E7%9B%B8%E5%85%B3%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86/" class="post-title">
-        <h3>《断墨寻径》《学习观》相关笔记整理</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/%E5%AD%A6%E4%B9%A0%E8%A7%82/">学习观<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/%E9%9A%8F%E6%83%B3/">随想</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>关于知识的知识</p>
-        <div class="post-bottom">
-          <a href="/2021/11/20/%E3%80%8A%E6%96%AD%E5%A2%A8%E5%AF%BB%E5%BE%84%E3%80%8B%E3%80%8A%E5%AD%A6%E4%B9%A0%E8%A7%82%E3%80%8B%E7%9B%B8%E5%85%B3%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-
-
-    </main>
-      <!-- 首页默认取最最新文章集 -->
-    <!-- 
-      <nav class="navigator">
-        
-        <a class="extend prev" rel="prev" href="/">&lt;i class&#x3D;&quot;iconfont icon-back&quot;&gt;&lt;&#x2F;i&gt;</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/3/">&lt;i class&#x3D;&quot;iconfont icon-right&quot;&gt;&lt;&#x2F;i&gt;</a>
-      </nav>
-     -->
-  </div>
-  
-    <div id="pagination"><a href="/page/3/" class="">Previous</a></div>
-  
+        <hr>
+        <p><i class="iconfont icon-write"></i></p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
 </div>
+
+
 
     </div>    
     <div class="ins-search">
