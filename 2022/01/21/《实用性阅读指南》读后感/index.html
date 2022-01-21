@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">const char(&amp;p)[a]是什么意思？ | Baokker&#39;s Blog</title>
+  <title itemprop="name">《实用性阅读指南》读后感 | Baokker&#39;s Blog</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -332,11 +332,11 @@
 
   <div class="pattern-center single-center">
     <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/pexels-akshay-mehra-7959153.jpg);" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/pexels-akshay-mehra-7959153.jpg">
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/pexels-livier-garcia-1459331.jpg);" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/pexels-livier-garcia-1459331.jpg">
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
-      const char(&p)[a]是什么意思？</h1>
+      《实用性阅读指南》读后感</h1>
       <p class="entry-census">
         <span>
           <a href="Baokker.github.io">
@@ -348,7 +348,7 @@
         </span>
         <span class="bull">
         ·</span>
-        2022-1-18<span class="bull">
+        2022-1-21<span class="bull">
         ·</span>
       <span id="busuanzi_value_page_pv"></span>次阅读</p>
     </header>
@@ -362,109 +362,18 @@
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <blockquote>
-<pre><code class="cpp">template&lt;int a&gt;
-
-void foo(const char(&amp;p)[a])&#123;//..&#125;
-</code></pre>
-<p><code>const char(&amp;p)[a]</code>是什么意思？</p>
-</blockquote>
-<p>是在看我的一位室友的时候发现了这个非常非常高级的用法，我也是在Stack Overflow等平台上查了好多了解相关的知识。以下的代码其实，也是我室友给的，但是他写得真的很好，我也要留一份（）</p>
-<pre><code class="cpp">#if 1
-#include &lt;iostream&gt;
-using namespace std;
-
-//int* p ; int (&amp;i_ref)[] ; char* p; char (&amp;c_ref)[]
-void fooCharP(char* str1, const char* str2) &#123;
-    std::cout &lt;&lt; &quot;char pointer:\n&quot;;
-    std::cout &lt;&lt; &quot;char*: &quot; &lt;&lt; sizeof(str1) / sizeof(str1[0]) &lt;&lt; &quot;\n&quot;;
-    std::cout &lt;&lt; &quot;const char*: &quot; &lt;&lt; sizeof(str2) / sizeof(str2[0]) &lt;&lt; &quot;\n&quot;;
-&#125;
-
-void fooCharP_Ref(char* (&amp;str1), const char* (&amp;str2)) &#123;
-    std::cout &lt;&lt; &quot;char pointer reference:\n&quot;;
-    std::cout &lt;&lt; &quot;char* ref: &quot; &lt;&lt; sizeof(str1) / sizeof(str1[0]) &lt;&lt; &quot;\n&quot;;
-    std::cout &lt;&lt; &quot;const char* ref: &quot; &lt;&lt; sizeof(str2) / sizeof(str2[0]) &lt;&lt; &quot;\n&quot;;
-&#125;
-
-template &lt;int size&gt;
-void fooCharArrayRef(char (&amp;str1)[size], const char (&amp;str2)[size]) &#123;
-    std::cout &lt;&lt; &quot;char array reference:\n&quot;;
-    std::cout &lt;&lt; &quot;char (&amp;str1)[]: &quot; &lt;&lt; sizeof(str1) / sizeof(str1[0]) &lt;&lt; &quot;\n&quot;;
-    std::cout &lt;&lt; &quot;const char (&amp;str2)[]: &quot; &lt;&lt; sizeof(str2) / sizeof(str2[0]) &lt;&lt; &quot;\n&quot;;
-&#125;
-
-void fooIntP(int* int1) &#123;
-    std::cout &lt;&lt; &quot;int pointer:\n&quot;  ;
-    std::cout &lt;&lt; &quot;int*: &quot; &lt;&lt; sizeof(int1) / sizeof(int1[0]) &lt;&lt; &quot;\n&quot;;
-&#125;
-
-void fooIntP_Ref(int* (&amp;str1)) &#123;
-    std::cout &lt;&lt; &quot;int pointer reference:\n&quot;;
-    std::cout &lt;&lt; &quot;int* ref: &quot; &lt;&lt; sizeof(str1) / sizeof(str1[0]) &lt;&lt; &quot;\n&quot;;
-&#125;
-
-template &lt;int size&gt;
-void fooIntArrayRef(int(&amp;str1)[size]) &#123;
-    std::cout &lt;&lt; &quot;int array reference:\n&quot;;
-    std::cout &lt;&lt; &quot;int (&amp;int1)[]: &quot; &lt;&lt; sizeof(str1) / sizeof(str1[0]) &lt;&lt; &quot;\n&quot;;
-&#125;
-
-int main()
-&#123;
-    char* pChar = new char[6]; 
-    for (int i = 0; i &lt; 5; i++) &#123;
-        pChar[i] = &#39;2&#39;;
-    &#125;
-    pChar[5] = &#39;\0&#39;;
-
-    const char* constPChar = &quot;Main Voice&quot;;
-
-    char aChar[] = &quot;Voice Main&quot;;
-    const char constAChar[] = &quot;Voice Main&quot;;
-
-    int* pInt = new int[8];
-    for (int i = 0; i &lt; 8; i++) &#123;
-        pInt[i] = 2;
-    &#125;
-    int arrInt[] = &#123; 1,2,3,4,5,6 &#125;;
-
-    std::cout &lt;&lt; &quot;the correct length: char:6, const char:11, int: 8, int array: 6\n&quot;;
-    std::cout &lt;&lt; &quot;Begin:\n&quot;;
-    std::cout &lt;&lt; &quot;STRING:\n&quot;;
-    fooCharP(pChar, constPChar);
-    std::cout &lt;&lt; &quot;=====\n&quot;;
-    fooCharP_Ref(pChar, constPChar);
-    std::cout &lt;&lt; &quot;=====\n&quot;;
-    fooCharArrayRef(aChar, constAChar);
-
-    std::cout &lt;&lt; &quot;\nINT:\n&quot;;
-    fooIntP(pInt);
-    std::cout &lt;&lt; &quot;=====\n&quot;;
-    fooIntP_Ref(pInt);
-    std::cout &lt;&lt; &quot;=====\n&quot;;
-    fooIntArrayRef(arrInt);
-
-    std::cout &lt;&lt; &quot;end\n&quot;;
-
-    std::cin.get();
-
-    delete pInt;
-    delete pChar;
-    return 0;
-&#125;
-
-
-#endif
-</code></pre>
-<p>简单地说，在传参时，如果直接以<code>char*</code>传参，那么在进入函数时，原先的数组会<strong>degenerate</strong>，即从数组退化为指针（节省空间），因此，此时对其进行<code>sizeof</code>，求得的值也是这个指针而非数组的大小，这个大小仅仅由机子自身的硬件条件决定。而如果采用<code>const char(&amp;p)[a]</code>的话，会有以下好处：</p>
-<ul>
-<li>整个char数组不会作为指针，而是<strong>作为数组被引用</strong></li>
-<li>因而，<code>sizeof</code>可以获得整个数组的长度</li>
-<li>template会动态编译，自动推断a的大小，由于已经知道了数组的长度，因此该函数可以自动推断出字符串的长度</li>
-<li>const确保可以引用右值，同时不会修改源字符串内容</li>
-<li>传入NULL会报错，避免了char*的缺陷</li>
-</ul>
+          <p>写课程论文写得脖子都酸了，来书架旁边转了转，在“语言学”的相关书架上找到了这本书？？</p>
+<p>总的来说，这本书的内容，就如同书里讲的一句话一样：<strong>对于商务型的书籍，并不是所有的内容都要看完</strong>。（汗）</p>
+<p>摘几个自己有想法的点子吧。</p>
+<h1 id="看书并不一定要全部理解"><a href="#看书并不一定要全部理解" class="headerlink" title="看书并不一定要全部理解"></a>看书并不一定要全部理解</h1><p>是的。这句话我特别想送给自己。自己难免会有一点完美主义的劲头，看书的时候卡住了，容易会挡住自己的脚步。一方面来说，现在看不懂的知识，可能需要后面阅读的知识的结合，方能得到更好的理解；另一方面，可能会因此错过后面对自己更受益的知识。再者，有些知识并非你不能理解，只是还没有相应的阅历和经验。总之，<strong>没有必要抱着全部都吸收的态度去读书；采取重点突击的方法效果往往更好，心流体验也更佳。</strong></p>
+<h1 id="对于商务性的书籍来说，明确目的后再看书效率更高"><a href="#对于商务性的书籍来说，明确目的后再看书效率更高" class="headerlink" title="对于商务性的书籍来说，明确目的后再看书效率更高"></a>对于商务性的书籍来说，明确目的后再看书效率更高</h1><p>原文并没有这么强调商务性，这是我加的罢了。</p>
+<p>换言之，在翻开<em>实用性</em>的书籍前，不妨先问自己几句：我想通过这本书学会什么？带着这样的目的去阅读，得到的结果会更给自己带来启发，阅读的思路也会清晰，</p>
+<p>当然，对这个观点我不敢苟同。私以为在阅读小说/诗歌时，抱着这样的心态，难以真正地沉入到小说的氛围之中。</p>
+<h1 id="只摘取自己需要的信息"><a href="#只摘取自己需要的信息" class="headerlink" title="只摘取自己需要的信息"></a>只摘取自己需要的信息</h1><p>一般来说，对实用性的书来说，抓取重点的阅读效率高于通篇泛读。所以，如果你的目的是<strong>得到这本书最核心最关键的内容</strong>的话，没必要去关注细枝末节的东西，而是直接摘取自己需要的信息即可。</p>
+<h1 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h1><p>个人很喜欢用思维导图来整理思绪。它的适用范围非常广，从思考论文/文章的写作大纲，到课程笔记/读书笔记的逻辑整理，都是很有用的tool。整理的时候带来的抽象与逻辑思辨能力的提升也是很有用处的。</p>
+<p>我读到的有启发性的一点是，要区分<strong>对重要信息的思维导图和对整本书的全部思维导图</strong>。前者更加精简，制作起来也更加快捷，但必然意味着其他信息的损失；后者的效用，如同对整本书进行精读，不放过每一个细节，虽然是费时间，但是对整本书会有更完整的把握。</p>
+<p>落实到方法论上，就是说，在对眼前的信息（例如，某本书）进行思维导图归纳时，应该先想想自己阅读的目的。如果自己仅仅是为了快速获取书的主旨和大意，那么，大多数书的主旨都可以在半张纸内搞定，你需要的是尽可能快地找到核心段落，了解其大意；但是如果是真的值得细细品味，字字珠玑的阅读材料，那不妨，慢慢看，欣赏啊。</p>
+<p>想来其实和《如何阅读一本书》前边的内容讲的很像，读书的时候带着目的去读，效率往往会更高（但个人不推荐将这个方法应用在小说等文学上，大概是文艺青年的一点固执罢？）</p>
 
         </div>
         <!-- .entry-content -->
@@ -496,36 +405,19 @@ int main()
       <div class="toc" style="background: none;"></div>
       <section class="post-squares nextprev">
         
-          
-            <div class="post-nepre half previous">
-          
-            <a href="/2022/01/18/QQ%E7%BC%93%E5%AD%98%E6%B8%85%E7%90%86/" rel="prev">
-              <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/pexels-francesco-ungaro-3172277.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/pexels-francesco-ungaro-3172277.jpg">
-              </div>
-              <span class="label">
-              Previous Post</span>
-              <div class="info">
-                <h3>
-                QQ缓存清理</h3>
-                <hr>
-              </div>
-            </a>
-          </div>
-        
         
           
-            <div class="post-nepre half next">
+            <div class="post-nepre full next">
           
-            <a href="/2022/01/18/cpp%E4%B8%AD%E7%9A%84%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E5%BA%94%E8%AF%A5%E5%9C%A8%E5%93%AA%E9%87%8C%E5%AE%9A%E4%B9%89%EF%BC%9F/" rel="next">
+            <a href="/2022/01/20/%E6%AF%8F%E5%A4%A9%E5%8F%AF%E4%BB%A5%E8%AF%BB%E4%B8%80%E7%82%B9%E8%AE%BA%E6%96%87and%E6%89%80%E8%B0%93%E5%90%8E%E7%8E%B0%E4%BB%A3%E6%96%87%E5%AD%A6%E7%9A%84%E5%86%85%E5%90%91%E6%80%A7/" rel="next">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/defaultImages.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/defaultImages.jpg">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/pexels-mikhael-mayim-8826427.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/pexels-mikhael-mayim-8826427.jpg">
               </div>
               <span class="label">
               Next Post</span>
               <div class="info">
                 <h3>
-                cpp中的全局变量应该在哪里定义？</h3>
+                每天可以读一点论文and所谓后现代文学的内向性</h3>
                 <hr>
               </div>
             </a>
