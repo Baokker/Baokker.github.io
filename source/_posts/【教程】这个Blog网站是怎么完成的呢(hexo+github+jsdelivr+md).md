@@ -99,8 +99,18 @@ photos: https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/dog1.jpg
   ```bash
   hexo d
   ```
+  
+* （2021.11.15更新）学会了使用草稿功能：
 
+  ```
+  hexo new draft <draftTitle> // stored in sources/_drafts/draftTitle.md
+  // write it
+  hexo publish draftTitle // move it to sources/_posts
+  hexo g
+  hexo d // follow the post style
+  ```
 
+  
 
 只消掌握[MarkDown](https://www.runoob.com/markdown/md-tutorial.html) 便可配合[Typora](https://typora.io)拥有极佳的写作体验
 

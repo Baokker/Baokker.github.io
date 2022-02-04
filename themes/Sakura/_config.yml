@@ -38,7 +38,7 @@ menus:
     # Lab: {path: /lab/, fa: fa-cogs },
   } }
   # 客户端: { path: /client/, fa: fa-android faa-vertical }
-  # RSS: { path: /atom.xml, fa: fa-rss faa-pulse }
+  RSS: { path: /rss/, fa: fa-rss faa-pulse }
 
 # useless now 
 # menus:
@@ -97,8 +97,6 @@ startdash:
   - {url: http://space.bilibili.com/441978000,  title: Bilibili, desc: My bilibili, img: /img/startdash/bilibili.jpg}
   - {url: /, title: Baokker的blog ,  desc: 技术服务, img: /img/startdash/wangshiwu.jpg}
 
-
-
 # your site build time or founded date
 siteBuildingTime: 07/16/2021
 
@@ -147,6 +145,8 @@ aplayer:
 
 # Valine
 valine: true
-v_appId: GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz
-v_appKey: mgOpfzbkHYqU92CV4IDlAUHQ
+v_appId: 8kxJIpLP4lL5KAApW8cG8qkA-gzGzoHsz
+v_appKey: JyBmNfKUPBKm7Eead9PPFjy1
 
+ # 简易信息聚合,站点共享
+rss: /atom.xml

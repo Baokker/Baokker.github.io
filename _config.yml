@@ -93,7 +93,12 @@ backup:
     # github: https://github.com/honjun/honjun.github.io.git,backup
     coding: https://github.com/Baokker/Baokker.github.io.git,backup
 
-#RSS
+ # Extensions
+ ## Plugins: http://hexo.io/plugins/
+ #RSS订阅
+plugin:
+  hexo-generator-feed
+ #Feed Atom
 feed:
   type: atom
   path: atom.xml
