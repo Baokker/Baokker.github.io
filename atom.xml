@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://baokker.github.io/"/>
-  <updated>2022-02-12T03:55:35.722Z</updated>
+  <updated>2022-02-12T13:24:48.066Z</updated>
   <id>http://baokker.github.io/</id>
   
   <author>
@@ -15,6 +15,42 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Reread《思考，快与慢》</title>
+    <link href="http://baokker.github.io/2022/02/12/Reread%E3%80%8A%E6%80%9D%E8%80%83%EF%BC%8C%E5%BF%AB%E4%B8%8E%E6%85%A2%E3%80%8B/"/>
+    <id>http://baokker.github.io/2022/02/12/Reread《思考，快与慢》/</id>
+    <published>2022-02-12T13:23:32.000Z</published>
+    <updated>2022-02-12T13:24:48.066Z</updated>
+    
+    <summary type="html">
+    
+      系统1和系统2
+    
+    </summary>
+    
+      <category term="书单" scheme="http://baokker.github.io/categories/%E4%B9%A6%E5%8D%95/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Reread《逆向管理》</title>
+    <link href="http://baokker.github.io/2022/02/12/Reread%E3%80%8A%E9%80%86%E5%90%91%E7%AE%A1%E7%90%86%E3%80%8B/"/>
+    <id>http://baokker.github.io/2022/02/12/Reread《逆向管理》/</id>
+    <published>2022-02-12T12:47:57.000Z</published>
+    <updated>2022-02-12T12:48:42.007Z</updated>
+    
+    <summary type="html">
+    
+      先行动再思考
+    
+    </summary>
+    
+      <category term="书单" scheme="http://baokker.github.io/categories/%E4%B9%A6%E5%8D%95/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Linux通过Clash for Windows实现科学上网</title>
@@ -343,56 +379,6 @@
         
           &lt;p&gt;最近很长一段时间，因为天气过于寒冷，操场上跑步实在不舒服，一直都没有再去进行过锻炼身体。留下来的直接感觉是，某天晚上我走在路上的时候，一度觉得自己非常虚弱，马上就要生病的样子。&lt;/p&gt;
 &lt;p&gt;后来才想起来，好久没去锻炼身体，其实是脑子以上时常锻炼，脑子以下却不怎么注意，这实
-        
-      
-    
-    </summary>
-    
-      <category term="随想" scheme="http://baokker.github.io/categories/%E9%9A%8F%E6%83%B3/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>为什么变量名称前有k？</title>
-    <link href="http://baokker.github.io/2022/01/17/%E4%B8%BA%E4%BB%80%E4%B9%88%E5%8F%98%E9%87%8F%E5%90%8D%E7%A7%B0%E5%89%8D%E6%9C%89k%EF%BC%9F/"/>
-    <id>http://baokker.github.io/2022/01/17/为什么变量名称前有k？/</id>
-    <published>2022-01-16T16:17:26.000Z</published>
-    <updated>2022-01-16T16:17:26.962Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;blockquote&gt;
-&lt;p&gt;这是习惯的原因。在以前的很多编程命名规范中，c代表char，一般不用c来做前缀指示常量；德语中konstant是常量的意思，同时数学上也经常用k来代表常量，因此常用k来做常量的前缀指示。从google的c++编程规范中，也有这样的建议，用k来做前缀
-        
-      
-    
-    </summary>
-    
-      <category term="随想" scheme="http://baokker.github.io/categories/%E9%9A%8F%E6%83%B3/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Retrieval Practice</title>
-    <link href="http://baokker.github.io/2022/01/17/Retrieval-Practice/"/>
-    <id>http://baokker.github.io/2022/01/17/Retrieval-Practice/</id>
-    <published>2022-01-16T16:16:03.000Z</published>
-    <updated>2022-01-16T16:16:03.353Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;要点：1 有点遗忘（越痛苦越效果好） 2 知识or信息&lt;/p&gt;
-&lt;p&gt;可以说，&lt;code&gt;Retrieval Practice&lt;/code&gt;是我在&lt;code&gt;Learn How to
         
       
     
