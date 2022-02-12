@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://baokker.github.io/"/>
-  <updated>2022-02-04T07:22:06.028Z</updated>
+  <updated>2022-02-12T03:55:35.722Z</updated>
   <id>http://baokker.github.io/</id>
   
   <author>
@@ -15,6 +15,42 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux通过Clash for Windows实现科学上网</title>
+    <link href="http://baokker.github.io/2022/02/12/Linux%E9%80%9A%E8%BF%87Clash-for-Windows%E5%AE%9E%E7%8E%B0%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
+    <id>http://baokker.github.io/2022/02/12/Linux通过Clash-for-Windows实现科学上网/</id>
+    <published>2022-02-12T03:54:24.000Z</published>
+    <updated>2022-02-12T03:55:35.722Z</updated>
+    
+    <summary type="html">
+    
+      实现的那一刻很开心！
+    
+    </summary>
+    
+      <category term="技术" scheme="http://baokker.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>YouCompleteMe安装教程</title>
+    <link href="http://baokker.github.io/2022/02/12/YouCompleteMe%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
+    <id>http://baokker.github.io/2022/02/12/YouCompleteMe安装教程/</id>
+    <published>2022-02-12T03:54:15.000Z</published>
+    <updated>2022-02-12T03:56:09.346Z</updated>
+    
+    <summary type="html">
+    
+      非常好用的vim代码自动补全插件
+    
+    </summary>
+    
+      <category term="技术" scheme="http://baokker.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Reread《精力管理》</title>
@@ -111,7 +147,7 @@
     <link href="http://baokker.github.io/2022/01/31/Reread%E3%80%8A%E4%BA%B2%E5%AF%86%E5%85%B3%E7%B3%BB%E3%80%8B/"/>
     <id>http://baokker.github.io/2022/01/31/Reread《亲密关系》/</id>
     <published>2022-01-31T06:33:30.000Z</published>
-    <updated>2022-01-31T06:51:39.556Z</updated>
+    <updated>2022-02-10T11:23:16.521Z</updated>
     
     <summary type="html">
     
@@ -357,59 +393,6 @@
         
           &lt;p&gt;要点：1 有点遗忘（越痛苦越效果好） 2 知识or信息&lt;/p&gt;
 &lt;p&gt;可以说，&lt;code&gt;Retrieval Practice&lt;/code&gt;是我在&lt;code&gt;Learn How to
-        
-      
-    
-    </summary>
-    
-      <category term="随想" scheme="http://baokker.github.io/categories/%E9%9A%8F%E6%83%B3/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>关于挑衣服这件事</title>
-    <link href="http://baokker.github.io/2022/01/17/%E5%85%B3%E4%BA%8E%E6%8C%91%E8%A1%A3%E6%9C%8D%E8%BF%99%E4%BB%B6%E4%BA%8B/"/>
-    <id>http://baokker.github.io/2022/01/17/关于挑衣服这件事/</id>
-    <published>2022-01-16T16:00:33.000Z</published>
-    <updated>2022-01-16T16:00:33.700Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;真的是，我辛辛苦苦挑下来的灰裤子，最后还是没能hold住它，原因不在于版型不行，价格便宜，单单就是因为尺码调小了。就好像你全副武装，穿过严寒的小路，来到温暖的图书馆，却发现自己带了笔记本但没带充电线一样。&lt;/p&gt;
-&lt;p&gt;现在果断下单买一把卷尺，对我这种体型（180/60kg
-        
-      
-    
-    </summary>
-    
-      <category term="随想" scheme="http://baokker.github.io/categories/%E9%9A%8F%E6%83%B3/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>怎样才算是有效安慰</title>
-    <link href="http://baokker.github.io/2022/01/16/%E6%80%8E%E6%A0%B7%E6%89%8D%E7%AE%97%E6%98%AF%E6%9C%89%E6%95%88%E5%AE%89%E6%85%B0/"/>
-    <id>http://baokker.github.io/2022/01/16/怎样才算是有效安慰/</id>
-    <published>2022-01-16T15:57:31.000Z</published>
-    <updated>2022-01-16T15:57:31.641Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;在空间看到一个分享。觉得讲得特别好，把一整组图片都保存了下来，做个备份。&lt;/p&gt;
-&lt;p&gt;比较有感触的几个点：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;大多数的烦恼倾诉&lt;strong&gt;不是为了寻求你的高高在上的建议和教导&lt;/strong&gt;，而单纯是你的安慰和鼓励&lt;/li&gt;
-&lt;li&gt;听他人倾
         
       
     

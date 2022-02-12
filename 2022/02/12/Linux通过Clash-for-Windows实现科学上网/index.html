@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">Baokker&#39;s Blog</title>
+  <title itemprop="name">Linux通过Clash for Windows实现科学上网 | Baokker&#39;s Blog</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -336,477 +336,158 @@
   </div>
 </header>
 
-      <div class="blank" style="padding-top: 0px;"></div>
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/pexels-yuliya-kosolapova-11066975.jpg);" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/pexels-yuliya-kosolapova-11066975.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      Linux通过Clash for Windows实现科学上网</h1>
+      <p class="entry-census">
+        <span>
+          <a href="Baokker.github.io">
+            <img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="Baokker.github.io">Baokker</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2022-2-12<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
+  </div>
+
 <div id="content" class="site-content">
-  
-  <div class="notice" style="margin-top:60px">
-    <i class="iconfont icon-notification">
-    </i>
-    <div class="notice-content">这里是我的blog！不定期更新：随想/读书笔记/书单/教程/.. 当然也可能不更（</div>
-  </div>
-  
-  <div class="top-feature-row">
-  <h1 class="fes-title" style="font-family: 'Ubuntu', sans-serif;">
-  <i class="fa fa-anchor" aria-hidden="true">
-  </i>
-  START:DASH!!</h1>
-  
-  <div class="top-feature-v2">
-    <div class="the-feature square from_left_and_right">
-      <a href="/theme-sakura/" target="_blank">
-        <div class="img">
-          <img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/startdash/sakura.md.png">
-        </div>
-        <div class="info">
-          <h3>Sakura</h3>
-          <p>本站 hexo 主题</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  
-  <div class="top-feature-v2">
-    <div class="the-feature square from_left_and_right">
-      <a href="http://space.bilibili.com/441978000" target="_blank">
-        <div class="img">
-          <img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/startdash/bilibili.jpg">
-        </div>
-        <div class="info">
-          <h3>Bilibili</h3>
-          <p>My bilibili</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  
-  <div class="top-feature-v2">
-    <div class="the-feature square from_left_and_right">
-      <a href="/" target="_blank">
-        <div class="img">
-          <img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/startdash/wangshiwu.jpg">
-        </div>
-        <div class="info">
-          <h3>Baokker的blog</h3>
-          <p>技术服务</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  
-</div>
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-      <h1 class="main-title" style="font-family: 'Ubuntu', sans-serif;">
-      <i class="fa fa-envira" aria-hidden="true"></i>
-      Discovery</h1>
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>花了三四天的时间才总算迷迷糊糊地搞出了这个问题。为什么一定这么执着呢？</p>
+<ol>
+<li>最近在学习<a target="_blank" rel="noopener" href="https://www.youtube.com/playlist?list=PLyzOVJj3bHQuloKGG59rS43e29ro7I57J">a missing semester</a>这个课程，也学着运行Linux下的一些命令。</li>
+<li>遇到的两个非常严重的问题，一是在Windows上用YouTube观看course，再在虚拟机上的Ubuntu实操，来回切换很累，手一直要去拿鼠标；二是在git clone时，下载很慢，严重影响了学习的心情和效率。</li>
+</ol>
+<p>因此，捣腾了好几天，并且卡了好几天bug，总算是搞出了Ubuntu20.04下的Clash梯子。方法还算简便，但是我也不知道为什么捣腾了很久（）在此记录一下</p>
+<h1 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h1><p>总体可参考这个<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=VOlWdNZAq_o">链接</a>（额，不过是油管的）</p>
+<ol>
+<li><p>前往<a target="_blank" rel="noopener" href="https://github.com/Fndroid/clash_for_windows_pkg/releases下载最新版Clash">https://github.com/Fndroid/clash_for_windows_pkg/releases下载最新版Clash</a> for Windows的Linux安装包。clash是著名的代理软件，Clash for Windows是它的一个图形化客户端，在各大运行系统中都可以运行，不仅限于Windows（起名很有误导性）。<br><img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20220212101855.png" alt=""></p>
+</li>
+<li><p>移动安装包到Ubuntu下，到你选定的安装位置下并解压。例如我将其放在<code>Work</code>文件夹中：</p>
+<pre><code class="bash">mkdir ~/Work
+cp Clash..tar.gz ~/Work # 省略版本名
+tar -zxvf Clash..tar.gz # 解压
+mv Clash.... Clash # 简短名字
+cd Clash
+</code></pre>
+<p>（写作过程中发现，可以在搜狗输入法中调整标点设置，这样可以在中文状态下直接按`（1左边的那个键）即可实现代码块包裹，生产力大幅提升！）</p>
+</li>
+<li><p>移动到文件夹中，运行<code>./cfw</code>，即可打开客户端：<br><img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20220212103848.png" alt=""><br><img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20220212104353.png" alt=""></p>
+</li>
+<li><p>找到你的梯子订阅地址（我是用的bywave，选择第二个订阅链接）（这里注意，有些订阅链接可能需要clash不能识别，需要转换）</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20220212104712.png" alt=""></p>
+<p>（上图这个一键导入clash仅限于Windows（））<br>然后转入clash的Profiles，粘贴后Download，左侧有绿标说明下载成功并且已经应用。<br><img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20220212104848.png" alt=""></p>
+</li>
+<li><p>接下来是修改设置使clash能够代理，我在这里卡了很久，并且也不知道最后是怎么好的，就都记录一下吧。</p>
+</li>
+<li><p>修改系统设置。打开设置，选择<code>Network</code>，进行如下修改，使其端口与clash端口对应<br><img src="C:\Users\暴克尔\AppData\Roaming\Typora\typora-user-images\image-20220212111233938.png" alt="image-20220212111233938"><br>理论上，到这里就已经OK了，而且我用chrome也是直接就能翻墙了，但是之前用Firefox一直都不行。de了好久，发现在浏览器这边出了问题。</p>
+</li>
+<li><p>修改Firefox设置，使clash能对浏览器代理（后证明，在完成6后，使用系统代理设置也可翻墙）：<br><img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20220212112647.png" alt=""><br>写到这里应该懂了，Firefox一开始可能是前两个选项，所以我一直都进不去，而chrome一开始就选择使用系统代理配置，所以直接就可以访问外网了，而Firefox还要再加手动配置。</p>
+</li>
+</ol>
+<p>至此，总算是实现Ubuntu翻墙自由啦！之前下载YouCompleteMe的网速问题也马上迎刃而解，很舒服。</p>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/donate/AliPayQR.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/donate/WeChanSQ.jpg"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+
+
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+          
+            <div class="post-nepre full next">
+          
+            <a href="/2022/02/12/YouCompleteMe%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/pexels-kaju-9444064.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/pexels-kaju-9444064.jpg">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                YouCompleteMe安装教程</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
       
-  <!-- 首页默认取最最新文章集 -->
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "8kxJIpLP4lL5KAApW8cG8qkA-gzGzoHsz",
+        appKey: "JyBmNfKUPBKm7Eead9PPFjy1",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
 
-  <div class="post-thumb">
-    <a href="/2022/02/12/Linux%E9%80%9A%E8%BF%87Clash-for-Windows%E5%AE%9E%E7%8E%B0%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/pexels-yuliya-kosolapova-11066975.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2022-2-12 11:02</div>
-      <a href="/2022/02/12/Linux%E9%80%9A%E8%BF%87Clash-for-Windows%E5%AE%9E%E7%8E%B0%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" class="post-title">
-        <h3>Linux通过Clash for Windows实现科学上网</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>实现的那一刻很开心！</p>
-        <div class="post-bottom">
-          <a href="/2022/02/12/Linux%E9%80%9A%E8%BF%87Clash-for-Windows%E5%AE%9E%E7%8E%B0%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="Baokker.github.io" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg" itemprop="image" alt="Baokker" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="Baokker.github.io" itemprop="url" rel="author">Baokker</a>
+            </h3>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2022/02/12/YouCompleteMe%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/pexels-kaju-9444064.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2022-2-12 11:02</div>
-      <a href="/2022/02/12/YouCompleteMe%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/" class="post-title">
-        <h3>YouCompleteMe安装教程</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>非常好用的vim代码自动补全插件</p>
-        <div class="post-bottom">
-          <a href="/2022/02/12/YouCompleteMe%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2022/02/04/Reread%E3%80%8A%E7%B2%BE%E5%8A%9B%E7%AE%A1%E7%90%86%E3%80%8B/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/pexels-dzenina-lukac-1583884.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2022-2-4 15:02</div>
-      <a href="/2022/02/04/Reread%E3%80%8A%E7%B2%BE%E5%8A%9B%E7%AE%A1%E7%90%86%E3%80%8B/" class="post-title">
-        <h3>Reread《精力管理》</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/%E4%B9%A6%E5%8D%95/">书单</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>体能 情感 思维 意志</p>
-        <div class="post-bottom">
-          <a href="/2022/02/04/Reread%E3%80%8A%E7%B2%BE%E5%8A%9B%E7%AE%A1%E7%90%86%E3%80%8B/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2022/02/04/Reread%E3%80%8A%E6%94%BE%E7%A9%BA%E3%80%8B/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/pexels-nikita-igonkin-9945400.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2022-2-4 14:02</div>
-      <a href="/2022/02/04/Reread%E3%80%8A%E6%94%BE%E7%A9%BA%E3%80%8B/" class="post-title">
-        <h3>Reread《放空》</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/%E4%B9%A6%E5%8D%95/">书单</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>看到这里 不如先让自己放下手机 发呆一会</p>
-        <div class="post-bottom">
-          <a href="/2022/02/04/Reread%E3%80%8A%E6%94%BE%E7%A9%BA%E3%80%8B/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2022/02/02/%E3%80%8A%E7%A8%80%E7%BC%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/pexels-anna-kanifatova-4235856.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2022-2-2 16:02</div>
-      <a href="/2022/02/02/%E3%80%8A%E7%A8%80%E7%BC%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="post-title">
-        <h3>《稀缺》读书笔记</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/%E4%B9%A6%E5%8D%95/">书单</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>过度稀缺带来认知受限 需要牢记给自己留出余裕</p>
-        <div class="post-bottom">
-          <a href="/2022/02/02/%E3%80%8A%E7%A8%80%E7%BC%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2022/02/01/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84bonus%E4%BA%94%E5%AD%90%E6%A3%8B%E9%A1%B9%E7%9B%AE/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/defaultImages.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2022-2-1 23:02</div>
-      <a href="/2022/02/01/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84bonus%E4%BA%94%E5%AD%90%E6%A3%8B%E9%A1%B9%E7%9B%AE/" class="post-title">
-        <h3>数据结构bonus五子棋项目</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>直接抄文档了..</p>
-        <div class="post-bottom">
-          <a href="/2022/02/01/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84bonus%E4%BA%94%E5%AD%90%E6%A3%8B%E9%A1%B9%E7%9B%AE/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2022/02/01/%E3%80%8A%E4%BA%BA%E6%80%A7%E7%9A%84%E6%9E%B7%E9%94%81%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/pexels-alexey-demidov-10259191.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2022-2-1 23:02</div>
-      <a href="/2022/02/01/%E3%80%8A%E4%BA%BA%E6%80%A7%E7%9A%84%E6%9E%B7%E9%94%81%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/" class="post-title">
-        <h3>《人性的枷锁》读后感</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/%E4%B9%A6%E5%8D%95/">书单</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>二流的作家，一流的故事写手</p>
-        <div class="post-bottom">
-          <a href="/2022/02/01/%E3%80%8A%E4%BA%BA%E6%80%A7%E7%9A%84%E6%9E%B7%E9%94%81%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2022/01/31/Reread%E3%80%8A%E4%BA%B2%E5%AF%86%E5%85%B3%E7%B3%BB%E3%80%8B/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/pexels-ata-ebem-10863286 (1).jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2022-1-31 14:01</div>
-      <a href="/2022/01/31/Reread%E3%80%8A%E4%BA%B2%E5%AF%86%E5%85%B3%E7%B3%BB%E3%80%8B/" class="post-title">
-        <h3>Reread《亲密关系》</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/%E4%B9%A6%E5%8D%95/">书单</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>值得一看的post</p>
-        <div class="post-bottom">
-          <a href="/2022/01/31/Reread%E3%80%8A%E4%BA%B2%E5%AF%86%E5%85%B3%E7%B3%BB%E3%80%8B/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2022/01/27/Reread%E3%80%8A%E6%B2%9F%E9%80%9A%E7%9A%84%E8%89%BA%E6%9C%AF%E3%80%8B/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/pexels-nataliya-vaitkevich-8468321.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2022-1-27 19:01</div>
-      <a href="/2022/01/27/Reread%E3%80%8A%E6%B2%9F%E9%80%9A%E7%9A%84%E8%89%BA%E6%9C%AF%E3%80%8B/" class="post-title">
-        <h3>Reread《沟通的艺术》</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>整理一下OneNote的笔记</p>
-        <div class="post-bottom">
-          <a href="/2022/01/27/Reread%E3%80%8A%E6%B2%9F%E9%80%9A%E7%9A%84%E8%89%BA%E6%9C%AF%E3%80%8B/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2022/01/21/Linux%E8%BF%90%E8%A1%8C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%AF%BE%E8%AE%BE%E6%84%9F%E6%83%B3/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/defaultImages.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2022-1-21 19:01</div>
-      <a href="/2022/01/21/Linux%E8%BF%90%E8%A1%8C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%AF%BE%E8%AE%BE%E6%84%9F%E6%83%B3/" class="post-title">
-        <h3>Linux运行数据结构课设感想</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/%E6%8A%80%E6%9C%AF/">技术<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>唉 卷不动啊</p>
-        <div class="post-bottom">
-          <a href="/2022/01/21/Linux%E8%BF%90%E8%A1%8C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%AF%BE%E8%AE%BE%E6%84%9F%E6%83%B3/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-
-
-    </main>
-      <!-- 首页默认取最最新文章集 -->
-    <!-- 
-      <nav class="navigator">
-        
-        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/2/">&lt;i class&#x3D;&quot;iconfont icon-right&quot;&gt;&lt;&#x2F;i&gt;</a>
-      </nav>
-     -->
-  </div>
-  
-    <div id="pagination"><a href="/page/2/" class="">Previous</a></div>
-  
+        <hr>
+        <p><i class="iconfont icon-write"></i></p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
 </div>
+
+
 
     </div>    
     <div class="ins-search">
