@@ -1,0 +1,1700 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">【自用】MIT-Missing-Semester笔记 | Baokker&#39;s Blog</title>
+  
+    <link rel="shortcut icon" href="/images/favicon.ico">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="/css/insight.css" media="all">
+  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="/css/zoom.css" media="all">
+  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /* 
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  mashiro_option.email_domain = "";
+  mashiro_option.email_name = "";
+  mashiro_option.cookie_version_control = "";
+  mashiro_option.qzone_autocomplete = false;
+  mashiro_option.site_name = "何もできないのBaokker";
+  mashiro_option.author_name = "Baokker";
+  mashiro_option.site_url = "https://baokker.github.io";
+  mashiro_option.v_appId = "8kxJIpLP4lL5KAApW8cG8qkA-gzGzoHsz";
+  mashiro_option.v_appKey = "JyBmNfKUPBKm7Eead9PPFjy1";
+  mashiro_option.mathjax = "0";
+  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+
+  /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+  var bg = "https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/cover/(1).jpg.webp,https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/cover/(2).jpg.webp,https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/cover/(3).jpg.webp,https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/cover/(4).jpg.webp,https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/cover/(5).jpg.webp,https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/cover/(6).jpg.webp,https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/cover/(7).jpg.webp,https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/cover/(8).jpg.webp".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
+  <script src="https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/js/hititle.js"></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/xuehua.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/piao.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/canvas-nest.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/sakura.js"></script>
+
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <div class="headertop filter-dot">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="https://baokker.github.io">
+          <img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg">
+        </a>
+      </div>
+      <div class="header-info">
+        <p>回忆这理想不够理想，沿途逛世间一趟只有向上</p>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+          
+            
+              
+                <li>
+                  <a href="http://github.com/Baokker" target="_blank" class="social-github" title="github">
+                    <img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/social/github.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://weibo.com/u/6804155266/home" target="_blank" class="social-github" title="sina">
+                    <img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/social/sina.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://music.163.com/#/user/home?id=133853873" target="_blank" class="social-github" title="wangyiyun">
+                    <img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/social/wangyiyun.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://www.zhihu.com/people/fang-bi-cheng" target="_blank" class="social-github" title="zhihu">
+                    <img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/social/zhihu.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li class="wechat">
+                  <a href="/#">
+                    <img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/social/wechat.png">
+                  </a>
+                  <div class="wechatInner">
+                    <img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/wechat.jpg">
+                  </div>
+                </li>
+              
+            
+          
+          <li id="bg-next">
+            <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+    <div id="page" class="site wrapper">
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono">何もできないの</span>
+            <span class="shironeko">Baokker</span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    归档
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/%E9%9A%8F%E6%83%B3/">
+                          <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                          随想
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/%E6%8A%80%E6%9C%AF/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          技术
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/%E8%B5%84%E6%BA%90/">
+                          <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                          资源
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="javascript:;">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+                    清单
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/%E4%B9%A6%E5%8D%95/">
+                          <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                          书单
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/music/">
+                          <i class="fa fa-headphones" aria-hidden="true"></i>
+                          歌单
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                    留言板
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/links/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+                    友人帐
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/donate/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+                    赞赏
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+                    关于
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/about/">
+                          <i class="fa fa-meetup" aria-hidden="true"></i>
+                          我？
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/theme-sakura/">
+                          <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                          主题
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/rss/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
+                    RSS
+                  </span>
+                </a>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/peanuts-6919261_1920.jpg);" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/peanuts-6919261_1920.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      【自用】MIT-Missing-Semester笔记</h1>
+      <p class="entry-census">
+        <span>
+          <a href="Baokker.github.io">
+            <img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="Baokker.github.io">Baokker</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2022-2-13<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h1 id="MIT-Missing-Semester"><a href="#MIT-Missing-Semester" class="headerlink" title="MIT-Missing-Semester"></a>MIT-Missing-Semester</h1><blockquote>
+<p>在csdiy上被安利的首个课程，虽然是全英文，而且整个课程比较硬核，但是确实是如标题所言，讲到了很多息息相关但是在课程里未曾涉及的知识，对我整个知识体系的完善有了很大帮。（还锻炼了点英语）</p>
+<p>观看的时候，也不必强求理解所有东西，正如课程的一位教师所言，<strong>仅仅是知道有这样的东西存在</strong>，已经足够了。</p>
+<p>另外，课后练习还是很推荐做的，有助于知识的巩固。</p>
+<p>好啦，继续加油！</p>
+<p><a target="_blank" rel="noopener" href="https://missing.csail.mit.edu/2020/">https://missing.csail.mit.edu/2020/</a></p>
+</blockquote>
+<h1 id="Lecture-1-Shell"><a href="#Lecture-1-Shell" class="headerlink" title="Lecture 1 Shell"></a>Lecture 1 Shell</h1><pre><code class="bash">date # current date
+
+echo hello
+echo hello\ world
+echo &quot;hello world&quot;
+
+echo $PATH # the environment paths;the bash execute files straightforwardly which is in $PATH
+
+which echo # determine where the echo is executed
+
+pwd # present working directory
+
+cd .. # parent directory
+cd ./home # .means current path
+cd ../../../../../hgfs # traverse search
+cd ~ # ~ brings to home direc  tory
+cd - # move to the previous path
+cd /mnt/hgfs # from the root path
+
+ls
+ls -l # give you more detailed information
+
+mv [oldpath/]oldFileName [newpath/]newFileName # move or rename
+mv oldpath/* newpath # move all files in oldpath
+
+rm fileName # remove
+rm -rf fileordirName # delete all
+
+rmdir dirName # remove dir only if it&#39;s empty
+mkdir &quot;my Photos&quot; # make new dir
+
+man ls # get the manual page of ls
+
+echo hello &gt; hello.txt
+cat hello.txt
+cat &lt; hello.txt &gt; hello2.txt # rewire,the cat get the content of hello.txt and then copy it into a new one.the cat means concatenate
+cat &lt; hello.txt &gt;&gt; hello2.txt # &gt; means overwrite,and &gt;&gt; means append
+ls -l / | tail n1 &gt; ls.txt # pipe character.ls -l / as input to tail n1,and tail n1 output the last line to ls.txt
+
+sudo echo 500 &gt; brightness # super user do
+echo 1060 | sudo tee brightness # tee output the content to both std out and designated out
+
+xdg-open fileName
+</code></pre>
+<p>distinguish between absolute path/relative path</p>
+<p><code>ls -l</code> will return a string like</p>
+<pre><code class="bash">-rwxr-xr-x 1 root root xxxxxx
+</code></pre>
+<p>第一个<code>rwx</code>表示root（user）用户具有read，write，和execute的权限；第二个<code>r-x</code>表示其所在group owner能read和write；第三个<code>r-x</code>表示everyone的权限。</p>
+<p>对file来说，read、write、execute的意思很明显；对文件夹来说，read是表示能够浏览文件夹中的内容，write是表示能够重命名、创建，或删除文件；execute表示能否进入到这个文件夹中。没有execute，read和write无法进行。</p>
+<p>ctrl+L 清空屏幕</p>
+<p><code>$</code> 表示你是user而非root，root对应的是<code>#</code></p>
+<p>在试图修改某些文件时（例如，修改亮度）：</p>
+<pre><code class="bash">$ cd /sys/class/backlight/thinkpad_screen
+$ sudo echo 3 &gt; brightness
+An error occurred while redirecting file &#39;brightness&#39;
+open: Permission denied
+</code></pre>
+<p>learn from practice:</p>
+<ul>
+<li><p><code>touch</code> can change the information of files. If the file doesn’t exist,it will create one.</p>
+</li>
+<li><pre><code class="bash"># usage of chmod
+sudo chmod chmod ugo+r file1.txt # all can read
+chmod a+r file1.txt # all can read
+chmod 777 file # all can read,write,and execute it
+chmod u=rw,go= file # user can write and read,group and other don&#39;t have any power
+</code></pre>
+</li>
+</ul>
+<h1 id="Lecture-2-Shell-Tools"><a href="#Lecture-2-Shell-Tools" class="headerlink" title="Lecture 2 Shell Tools"></a>Lecture 2 Shell Tools</h1><pre><code class="bash">foo = bar # error,equal to execute &quot;foo&quot; with arguments like &#39;=&#39; and &#39;bar&#39;
+foo=bar # right.spaces are critical
+echo $foo # print bar
+
+echo &#39;value is $foo&#39; # value is $foo
+echo &quot;value is $foo&quot; # value is bar
+
+vim mcd.sh
+#mcd()&#123;
+#    mkdir -p &quot;$1&quot; # the first argv
+#    cd &quot;$1&quot;
+#&#125;
+source mcd.sh
+mcd test # move into test folder
+
+mkdir /mnt/new # error don&#39;t have permission
+sudo !! # replace !! with mkdir /mnt/new
+
+grep foobar mcd.sh
+echo $? # error code 1
+
+# the operator goes like what is in cpp 
+false || echo &quot;opps fail&quot;
+true || echo &quot;it won\&#39;t be printed&quot;
+false &amp;&amp; echo &quot;it won\&#39;t be printed&quot;
+
+foo=$(pwd) 
+echo &quot;we are now in $(pwd)&quot; # command substitution
+
+cat &lt;(ls) &lt;(ls ..) # process substitution
+
+# globbing
+ls *.sh # all length is accepted 
+ls name? # ? only supports one length 
+
+# also brackets 
+
+convert image.&#123;png,jpg&#125;
+# Will expand to
+convert image.png image.jpg
+
+cp /path/to/project/&#123;foo,bar,baz&#125;.sh /newpath
+# Will expand to
+cp /path/to/project/foo.sh /path/to/project/bar.sh /path/to/project/baz.sh /newpath
+
+# Globbing techniques can also be combined
+mv *&#123;.py,.sh&#125; folder
+# Will move all *.py and *.sh files
+
+# This creates files foo/a, foo/b, ... foo/h, bar/a, bar/b, ... bar/h
+touch &#123;foo,bar&#125;/&#123;a..h&#125;
+diff &lt; folder1 &lt; folder2
+
+# below is a Python script 
+# the first line is a shebang which indicates that the kernel should use a Python interpreter instead of a shell command
+# you can use command like #!/usr/bin/env python
+# it takes advantage of the $PATH ,which will help to search the Python 
+#!/usr/local/bin/python
+import sys
+for arg in reversed(sys.argv[1:]):
+    print(arg)
+
+
+tldr convert # tldr is a useful tool to give you practical commands example compared to manpage
+
+# find
+# Find all directories named src
+find . -name src -type d
+# Find all python files that have a folder named test in their path
+find . -path &#39;*/test/*.py&#39; -type f
+# Find all files modified in the last day
+find . -mtime -1
+# Find all zip files with size in range 500k to 10M
+find . -size +500k -size -10M -name &#39;*.tar.gz&#39;
+
+# you can also perform actions on the results of find
+# Delete all files with .tmp extension
+find . -name &#39;*.tmp&#39; -exec rm &#123;&#125; \;
+# Find all PNG files and convert them to JPG
+find . -name &#39;*.png&#39; -exec convert &#123;&#125; &#123;&#125;.jpg \;
+
+# fd is a easier 
+fd &quot;.*py&quot;
+
+# locate equals to find,but it uses inner database so it&#39;s faster but maybe not fresher than the find func.
+updatedb # update database for locate
+history
+
+# grep search for the content in the files
+grep -C 5 # Context.the result will print 5 lines before and after the match
+grep -R # recursively find all files in the folders
+
+# developed tools to take place of grep like ack ag rg is recommended
+# Find all python files where I used the requests library
+rg -t py &#39;import requests&#39;
+# Find all files (including hidden files) without a shebang line
+rg -u --files-without-match &quot;^#!&quot;
+# Find all matches of foo and print the following 5 lines
+rg foo -A 5
+# Print statistics of matches (# of matched lines and files )
+rg --stats PATTERN
+
+# fzf is a good tool combined with Ctrl+R to get the previous command you want to reuse
+
+ls -R
+# tree
+# broot
+</code></pre>
+<p>these dollars:</p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>func</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>$0</code></td>
+<td>the name of the script that we’re running</td>
+</tr>
+<tr>
+<td><code>$1</code> to <code>$9</code></td>
+<td>the first to the ninth argument</td>
+</tr>
+<tr>
+<td><code>$#</code></td>
+<td>the num of arguments</td>
+</tr>
+<tr>
+<td><code>$$</code></td>
+<td>the process ID of this command that is running</td>
+</tr>
+<tr>
+<td><code>$?</code></td>
+<td>return the code of the previous command</td>
+</tr>
+<tr>
+<td><code>$_</code></td>
+<td>last argument from the last command</td>
+</tr>
+<tr>
+<td><code>$@</code></td>
+<td>expand all arguments</td>
+</tr>
+<tr>
+<td>!!</td>
+<td>entire last command(including arguments).A usual usage is like <code>sudo !!</code></td>
+</tr>
+</tbody>
+</table>
+<p><code>Ctrl+shift+e</code> 搜狗输入法切换英文自动联想（）</p>
+<p><code>ctrl+R</code> can perform backwards search</p>
+<p>other multiple tools:</p>
+<p> <a target="_blank" rel="noopener" href="https://fishshell.com/">fish</a> <a target="_blank" rel="noopener" href="https://github.com/zsh-users/zsh-autosuggestions">zsh</a>  <a target="_blank" rel="noopener" href="https://github.com/clvv/fasd"><code>fasd</code></a> <a target="_blank" rel="noopener" href="https://github.com/wting/autojump"><code>autojump</code></a> <a target="_blank" rel="noopener" href="https://linux.die.net/man/1/tree"><code>tree</code></a>  <a target="_blank" rel="noopener" href="https://github.com/Canop/broot"><code>broot</code></a></p>
+<h1 id="Lecture-3-Editors-vim"><a href="#Lecture-3-Editors-vim" class="headerlink" title="Lecture 3 Editors(vim)"></a>Lecture 3 Editors(vim)</h1><blockquote>
+<p><strong>the Vim’s interface is a programming language</strong></p>
+<p>whenever you’re using your editor and you think “there must be a better way of doing this”, <strong>there probably is</strong>: look it up online.</p>
+</blockquote>
+<pre><code class="bash">vimtutor # offical tutor,very useful
+</code></pre>
+<ul>
+<li><p><strong>Modal Editing</strong></p>
+<ul>
+<li><p>normal mode</p>
+<ul>
+<li><code>h</code> left <code>j</code> down <code>k</code> up <code>l</code> right</li>
+<li><code>w</code> <code>b</code> <code>e</code></li>
+<li>etc(below)</li>
+</ul>
+</li>
+<li><p>(<code>i</code>)insert mode</p>
+</li>
+<li><p>(<code>r</code>)replace mode</p>
+</li>
+<li><p>(<code>v</code>)visual mode</p>
+<ul>
+<li>(<code>shift-v</code>)  visual line</li>
+<li>(<code>ctrl-v</code>) visual block</li>
+</ul>
+</li>
+<li><p>(<code>:</code>)command line mode</p>
+<pre><code class="bash">:q # quit one window
+:qa # quit all windows
+:w # write 
+:wq # write and quit 
+:e &#123;name of file&#125; # open file for editing
+:ls # show open buffers
+:help &#123;topic&#125; # open help
+:help :w # opens help for the :w command
+:help w # opens help for the w movement
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>Movement</p>
+<ul>
+<li>Basic movement: <code>hjkl</code> (left, down, up, right)</li>
+<li>Words: <code>w</code> (next word), <code>b</code> (beginning of word), <code>e</code> (end of word)</li>
+<li>Lines: <code>0</code> (beginning of line), <code>^</code> (first non-blank character), <code>$</code> (end of line)</li>
+<li>Screen: <code>H</code> (top of screen), <code>M</code> (middle of screen), <code>L</code> (bottom of screen)</li>
+<li>Scroll: <code>Ctrl-u</code> (up), <code>Ctrl-d</code> (down)</li>
+<li>File: <code>gg</code> (beginning of file), <code>G</code> (end of file)</li>
+<li>Line numbers: <code>:&#123;number&#125;&lt;CR&gt;</code> or <code>&#123;number&#125;G</code> (line {number})</li>
+<li>Misc: <code>%</code> (corresponding item)</li>
+<li><p>Find: <code>f&#123;character&#125;</code> <code>t&#123;character&#125;</code> <code>F&#123;character&#125;</code> <code>T&#123;character&#125;</code></p>
+<ul>
+<li>find/to forward/backward {character} on the current line</li>
+</ul>
+</li>
+<li><code>,</code> / <code>;</code> for navigating matches</li>
+<li>Search: <code>/&#123;regex&#125;</code>, <code>n</code> / <code>N</code> for navigating matches</li>
+<li><code>ctrl+g</code>:see the info of the file</li>
+</ul>
+</li>
+<li><p>Selection</p>
+<p>Visual modes:</p>
+<ul>
+<li>Visual: <code>v</code></li>
+<li>Visual Line: <code>V</code></li>
+<li>Visual Block: <code>Ctrl-v</code></li>
+</ul>
+</li>
+<li><p>Edit</p>
+<ul>
+<li><p><code>i</code> </p>
+<ul>
+<li><p>enter Insert mode</p>
+</li>
+<li><p>but for manipulating/deleting text, want to use something more than backspace</p>
+</li>
+</ul>
+</li>
+<li><p><code>o</code> / <code>O</code> insert line below / above</p>
+</li>
+<li><p><code>d&#123;motion&#125;</code> delete {motion}</p>
+<ul>
+<li>e.g. <code>dw</code> is delete word, <code>d$</code> is delete to end of line, <code>d0</code> is delete to beginning of line</li>
+</ul>
+</li>
+<li><p><code>c&#123;motion&#125;</code> change {motion}</p>
+<ul>
+<li>e.g. <code>cw</code> is change word</li>
+<li>like <code>d&#123;motion&#125;</code> followed by <code>i</code></li>
+</ul>
+</li>
+<li><p><code>x</code> delete character (equal do <code>dl</code>)</p>
+</li>
+<li><p><code>s</code> substitute character (equal to <code>xi</code>)</p>
+</li>
+<li><p>Visual mode + manipulation</p>
+<ul>
+<li>select text, <code>d</code> to delete it or <code>c</code> to change it</li>
+</ul>
+</li>
+<li><p><code>u</code> to undo, <code>&lt;C-r&gt;</code> to redo</p>
+</li>
+<li><p><code>y</code> to copy / “yank” (some other commands like <code>d</code> also copy)</p>
+</li>
+<li><p><code>p</code> to paste</p>
+</li>
+<li><p>Lots more to learn: e.g. <code>~</code> flips the case of a character</p>
+</li>
+</ul>
+</li>
+<li><p>Count</p>
+<ul>
+<li><code>3w</code> move 3 words forward</li>
+<li><code>5j</code> move 5 lines down</li>
+<li><code>7dw</code> delete 7 words</li>
+</ul>
+</li>
+<li><p>Modifiers</p>
+<p>Some modifiers are <code>i</code>, which means “inner” or “inside”<br>and <code>a</code>, which means “around”.</p>
+<ul>
+<li><code>ci(</code> change the contents inside the current pair of parentheses</li>
+<li><code>ci[</code> change the contents inside the current pair of square brackets</li>
+<li><code>da&#39;</code> delete a single-quoted string, including the surrounding single quotes</li>
+</ul>
+</li>
+</ul>
+<h1 id="Lecture-4-Data-Wrangling"><a href="#Lecture-4-Data-Wrangling" class="headerlink" title="Lecture 4 Data Wrangling"></a>Lecture 4 Data Wrangling</h1><p>regular expression（regexp）</p>
+<pre><code class="bash">ssh myserver journalctl
+ | grep sshd
+ | grep &quot;Disconnected from&quot;
+ | sed &#39;s/.*Disconnected from //&#39;
+</code></pre>
+<p>the format always goes like <code>s/REGEX/SUBSTITUTION/</code></p>
+<p>some syntax:</p>
+<ul>
+<li><code>.</code> means “any single character” except newline</li>
+<li><code>*</code> zero or more of the preceding match</li>
+<li><code>+</code> one or more of the preceding match</li>
+<li><code>[abc]</code> any one character of <code>a</code>, <code>b</code>, and <code>c</code></li>
+<li><code>(RX1|RX2)</code> either something that matches <code>RX1</code> or <code>RX2</code></li>
+<li><code>^</code> the start of the line</li>
+<li><code>$</code> the end of the line</li>
+</ul>
+<p>（<a target="_blank" rel="noopener" href="https://regexone.com/）">https://regexone.com/）</a></p>
+<table>
+<thead>
+<tr>
+<th>metacharacter</th>
+<th>meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\d</td>
+<td>digit</td>
+</tr>
+<tr>
+<td>\D</td>
+<td>non-digit</td>
+</tr>
+<tr>
+<td>\w \W</td>
+<td>is (or is not) digit nor an alphanumeric letter</td>
+</tr>
+<tr>
+<td>\s \S</td>
+<td>is(or is not) a whitespace</td>
+</tr>
+<tr>
+<td>\t \T</td>
+<td>is (or is not) a tab</td>
+</tr>
+<tr>
+<td>\b</td>
+<td>the boundary between a word and a non-word character</td>
+</tr>
+<tr>
+<td>\0</td>
+<td>the whole captured group</td>
+</tr>
+<tr>
+<td>\1 .. \n</td>
+<td>the sequential captured variables</td>
+</tr>
+</tbody>
+</table>
+<p>regular expression debugger</p>
+<p>and multiple pipelines</p>
+<p>这节课的知识量实在太大了..只能说，一个是学会正则表达式，另外一个是，明白linux中可以通过各种各样的指令实现很多数据提取。</p>
+<h1 id="Lecture-5-Command-line-Environment"><a href="#Lecture-5-Command-line-Environment" class="headerlink" title="Lecture 5 Command-line Environment"></a>Lecture 5 Command-line Environment</h1><p>Job Control</p>
+<p>signals</p>
+<p><code>Ctrl-C</code> means sending <code>SIGINT</code> to the process</p>
+<p><code>Ctrl-\</code> means <code>SIGQUIT</code>.</p>
+<p>you can also use <code>kill -TERM &lt;PID&gt;</code> to send <code>SIGTERM</code> to kill this command.</p>
+<p><code>Ctrl-Z</code> will send <code>SIGTSTP</code>(signal terminal stop) ,which will pause the process. you can use <code>bg</code> or <code>fg</code> to continue the job in back/foreground.</p>
+<p> jobs</p>
+<pre><code class="bash">$ sleep 1000
+^Z # stop but not terminate it 
+[1]  + 18653 suspended  sleep 1000
+
+$ nohup sleep 2000 &amp; # &amp; suffix will put it running in the background
+[2] 18745
+appending output to nohup.out
+
+$ jobs # list
+[1]  + suspended  sleep 1000
+[2]  - running    nohup sleep 2000
+
+$ bg %1 # check the first one
+[1]  - 18653 continued  sleep 1000
+
+$ jobs
+[1]  - running    sleep 1000
+[2]  + running    nohup sleep 2000
+
+$ kill -STOP %1 # stop the first
+[1]  + 18653 suspended (signal)  sleep 1000
+
+$ jobs
+[1]  + suspended (signal)  sleep 1000
+[2]  - running    nohup sleep 2000
+
+$ kill -SIGHUP %1 # kill the first
+[1]  + 18653 hangup     sleep 1000
+
+$ jobs
+[2]  + running    nohup sleep 2000
+
+$ kill -SIGHUP %2
+
+$ jobs
+[2]  + running    nohup sleep 2000
+
+$ kill %2
+[2]  + 18745 terminated  nohup sleep 2000
+
+$ jobs
+</code></pre>
+<p>terminal multiplexer(like tmux)</p>
+<p> tmux:</p>
+<ul>
+<li><p>Sessions</p>
+<ul>
+<li>window</li>
+<li>pane</li>
+</ul>
+</li>
+<li><p>Sessions</p>
+</li>
+</ul>
+<p>  - a session is an independent workspace with one or more windows</p>
+<ul>
+<li><code>tmux</code> starts a new session.</li>
+<li><code>tmux new -s NAME</code> starts it with that name.</li>
+<li><code>tmux ls</code> lists the current sessions</li>
+<li>Within <code>tmux</code> typing <code>&lt;C-b&gt; d</code> detaches the current session</li>
+<li><code>tmux a</code> attaches the last session. You can use <code>-t</code> flag to specify which</li>
+</ul>
+<ul>
+<li>Windows</li>
+</ul>
+<p>  - Equivalent to tabs in editors or browsers, they are visually separate parts of the same session</p>
+<ul>
+<li><code>&lt;C-b&gt; c</code> Creates a new window. To close it you can just terminate the shells doing <code>&lt;C-d&gt;</code></li>
+<li><code>&lt;C-b&gt; N</code> Go to the <em>N</em> th window. Note they are numbered</li>
+<li><code>&lt;C-b&gt; p</code> Goes to the previous window</li>
+<li><code>&lt;C-b&gt; n</code> Goes to the next window</li>
+<li><code>&lt;C-b&gt; ,</code> Rename the current window</li>
+<li><code>&lt;C-b&gt; w</code> List current windows</li>
+</ul>
+<ul>
+<li>Panes</li>
+</ul>
+<p>  - Like vim splits, panes let you have multiple shells in the same visual display.</p>
+<ul>
+<li><code>&lt;C-b&gt; &quot;</code> Split the current pane horizontally</li>
+<li><code>&lt;C-b&gt; %</code> Split the current pane vertically</li>
+<li><code>&lt;C-b&gt; &lt;direction&gt;</code> Move to the pane in the specified <em>direction</em>. Direction here means arrow keys.</li>
+<li><code>&lt;C-b&gt; z</code> Toggle zoom for the current pane</li>
+<li><code>&lt;C-b&gt; [</code> Start scrollback. You can then press <code>&lt;space&gt;</code> to start a selection and <code>&lt;enter&gt;</code> to copy that selection.</li>
+<li><code>&lt;C-b&gt; &lt;space&gt;</code> Cycle through pane arrangements.</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/#fnref:2">https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/#fnref:2</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.hamvocke.com/blog/a-guide-to-customizing-your-tmux-conf/">https://www.hamvocke.com/blog/a-guide-to-customizing-your-tmux-conf/</a></p>
+<p>alias(useful for mapping)</p>
+<pre><code class="bash">alias alias_name=&quot;command_to_alias arg1 arg2&quot; #no space!!
+</code></pre>
+<pre><code class="bash"># Make shorthands for common flags
+alias ll=&quot;ls -lh&quot;
+
+# Save a lot of typing for common commands
+alias gs=&quot;git status&quot;
+alias gc=&quot;git commit&quot;
+alias v=&quot;vim&quot;
+
+# Save you from mistyping
+alias sl=ls
+
+# Overwrite existing commands for better defaults
+alias mv=&quot;mv -i&quot;           # -i prompts before overwrite
+alias mkdir=&quot;mkdir -p&quot;     # -p make parent dirs as needed
+alias df=&quot;df -h&quot;           # -h prints human readable format
+
+# Alias can be composed
+alias la=&quot;ls -A&quot;
+alias lla=&quot;la -l&quot;
+
+# To ignore an alias run it prepended with \
+\ls
+# Or disable an alias altogether with unalias
+unalias la
+
+# To get an alias definition just call it with alias
+alias ll
+# Will print ll=&#39;ls -lh&#39;
+</code></pre>
+<p>dotfiles&amp;configuration</p>
+<p>(you can also search <code>dotfiles</code> on github to get configurations)</p>
+<p>there also other tools called symlink,whose concept means that you can git all your dotfiles in a folder, and the commands will point to those dotfiles like a trick.in this way, you make it possible to keep every dotfiles neat.</p>
+<p>remote machines</p>
+<p>SSH </p>
+<p>SSH keys</p>
+<p>Frameworks</p>
+<h1 id="Lecture-6-Version-Control-git"><a href="#Lecture-6-Version-Control-git" class="headerlink" title="Lecture 6 Version Control(git)"></a>Lecture 6 Version Control(git)</h1><p>before i learn this lesson,i master how to switch between tabs in chrome,using <code>ctrl 1</code>or<code>ctrl tab</code>.</p>
+<p>tree blobs</p>
+<p>merge conflicts</p>
+<hr>
+<p>notes from class notes</p>
+<p><strong>Snapshots trees blobs</strong></p>
+<pre><code>&lt;root&gt; (tree)
+|
++- foo (tree)
+|  |
+|  + bar.txt (blob, contents = &quot;hello world&quot;)
+|
++- baz.txt (blob, contents = &quot;git is wonderful&quot;)
+</code></pre><p><strong>Commit merge branch</strong></p>
+<pre><code>o &lt;-- o &lt;-- o &lt;-- o &lt;---- o
+            ^            /
+             \          v
+              --- o &lt;-- o
+</code></pre><p><strong>Data Model</strong></p>
+<pre><code>// a file is a bunch of bytes
+type blob = array&lt;byte&gt;
+
+// a directory contains named files and directories
+type tree = map&lt;string, tree | blob&gt;
+
+// a commit has parents, metadata, and the top-level tree
+type commit = struct &#123;
+    parents: array&lt;commit&gt;
+    author: string
+    message: string
+    snapshot: tree
+&#125;
+</code></pre><p><strong>Object, and content-addressing(using SHA-1 hash)</strong></p>
+<pre><code>type object = blob | tree | commit
+
+objects = map&lt;string, object&gt;
+
+def store(object):
+    id = sha1(object)
+    objects[id] = object
+
+def load(id):
+    return objects[id]
+</code></pre><p><strong>References</strong></p>
+<pre><code>references = map&lt;string, string&gt;
+
+def update_reference(name, id):
+    references[name] = id
+
+def read_reference(name):
+    return references[name]
+
+def load_reference(name_or_id):
+    if name_or_id in references:
+        return load(references[name_or_id])
+    else:
+        return load(name_or_id)
+</code></pre><p>then, repository is the combination of objects and references.</p>
+<h2 id="Basics"><a href="#Basics" class="headerlink" title="Basics"></a>Basics</h2><ul>
+<li><p><code>git help &lt;command&gt;</code>: get help for a git command</p>
+</li>
+<li><p><code>git init</code>: creates a new git repo, with data stored in the <code>.git</code> directory</p>
+</li>
+<li><p><code>git status</code>: tells you what’s going on</p>
+</li>
+<li><p><code>git add &lt;filename&gt;</code>: adds files to staging area</p>
+</li>
+<li><p><code>git commit</code></p>
+<p>: creates a new commit</p>
+<ul>
+<li>Write <a target="_blank" rel="noopener" href="https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html">good commit messages</a>!</li>
+<li>Even more reasons to write <a target="_blank" rel="noopener" href="https://chris.beams.io/posts/git-commit/">good commit messages</a>!</li>
+</ul>
+</li>
+<li><p><code>git commit -a</code>:automatically add untracked files and commit</p>
+</li>
+<li><p><code>git log</code>: shows a flattened log of history</p>
+</li>
+<li><p><code>git log --all --graph --decorate</code>: visualizes history as a DAG</p>
+</li>
+<li><p><code>git diff &lt;filename&gt;</code>: show changes you made relative to the staging area</p>
+</li>
+<li><p><code>git diff &lt;revision&gt; &lt;filename&gt;</code>: shows differences in a file between snapshots</p>
+</li>
+<li><p><code>git checkout &lt;revision&gt;</code>: updates HEAD and current branch</p>
+</li>
+<li><p><code>git mv file_from file_to</code>: rename files in git</p>
+</li>
+</ul>
+<h2 id="Branching-and-merging"><a href="#Branching-and-merging" class="headerlink" title="Branching and merging"></a>Branching and merging</h2><ul>
+<li><p><code>git branch</code>: shows branches</p>
+</li>
+<li><p><code>git branch &lt;name&gt;</code>: creates a branch</p>
+</li>
+<li><pre><code class="plaintext">git checkout -b &lt;name&gt;
+</code></pre>
+<p>: creates a branch and switches to it</p>
+<ul>
+<li>same as <code>git branch &lt;name&gt;; git checkout &lt;name&gt;</code></li>
+</ul>
+</li>
+<li><p><code>git merge &lt;revision&gt;</code>: merges into current branch</p>
+</li>
+<li><p><code>git mergetool</code>: use a fancy tool to help resolve merge conflicts</p>
+</li>
+<li><p><code>git rebase</code>: rebase set of patches onto a new base</p>
+</li>
+</ul>
+<h2 id="Remotes"><a href="#Remotes" class="headerlink" title="Remotes"></a>Remotes</h2><ul>
+<li><code>git remote</code>: list remotes</li>
+<li><code>git remote add &lt;name&gt; &lt;url&gt;</code>: add a remote</li>
+<li><code>git push &lt;remote&gt; &lt;local branch&gt;:&lt;remote branch&gt;</code>: send objects to remote, and update remote reference</li>
+<li><code>git branch --set-upstream-to=&lt;remote&gt;/&lt;remote branch&gt;</code>: set up correspondence between local and remote branch</li>
+<li><code>git fetch</code>: retrieve objects/references from a remote</li>
+<li><code>git pull</code>: same as <code>git fetch; git merge</code></li>
+<li><code>git clone</code>: download repository from remote</li>
+</ul>
+<h2 id="Undo"><a href="#Undo" class="headerlink" title="Undo"></a>Undo</h2><ul>
+<li><code>git commit --amend</code>: edit a commit’s contents/message</li>
+<li><code>git reset HEAD &lt;file&gt;</code>: unstage a file</li>
+<li><code>git checkout -- &lt;file&gt;</code>: discard changes</li>
+</ul>
+<h2 id="Advanced-Git"><a href="#Advanced-Git" class="headerlink" title="Advanced Git"></a>Advanced Git</h2><ul>
+<li><code>git config</code>: Git is <a target="_blank" rel="noopener" href="https://git-scm.com/docs/git-config">highly customizable</a></li>
+<li><code>git clone --depth=1</code>: shallow clone, without entire version history</li>
+<li><code>git add -p</code>: interactive staging</li>
+<li><code>git rebase -i</code>: interactive rebasing</li>
+<li><code>git blame</code>: show who last edited which line</li>
+<li><code>git stash</code>: temporarily remove modifications to working directory</li>
+<li><code>git bisect</code>: binary search history (e.g. for regressions)</li>
+<li><code>.gitignore</code>: <a target="_blank" rel="noopener" href="https://git-scm.com/docs/gitignore">specify</a> intentionally untracked files to ignore</li>
+</ul>
+<h2 id="gitignore"><a href="#gitignore" class="headerlink" title=".gitignore"></a>.gitignore</h2><pre><code class="text"># #表示注释 所有#和空行都会忽略
+# 遵循简单的globing原则
+
+# 忽略所有的 .a 文件
+*.a
+
+# 但跟踪所有的 lib.a，即便你在前面忽略了 .a 文件
+# !表示否
+!lib.a
+
+# 只忽略当前目录下的 TODO 文件，而不忽略 subdir/TODO
+/TODO
+
+# 忽略任何目录下名为 build 的文件夹
+build/
+
+# 忽略 doc/notes.txt，但不忽略 doc/server/arch.txt
+doc/*.txt
+
+# 忽略 doc/ 目录及其所有子目录下的 .pdf 文件
+doc/**/*.pdf
+</code></pre>
+<p>除此以外，可以在GitHub上找到别的gitignore文件。</p>
+<h1 id="Lecture-7-Debugging-and-Profiling"><a href="#Lecture-7-Debugging-and-Profiling" class="headerlink" title="Lecture 7 Debugging and Profiling"></a>Lecture 7 Debugging and Profiling</h1><p><a target="_blank" rel="noopener" href="https://askubuntu.com/questions/29284/how-do-i-mount-shared-folders-in-ubuntu-using-vmware-tools">https://askubuntu.com/questions/29284/how-do-i-mount-shared-folders-in-ubuntu-using-vmware-tools</a></p>
+<pre><code>sudo vmhgfs-fuse .host:/ /mnt/ -o allow_other -o uid=1000
+sudo vmhgfs-fuse .host:/ /mnt/hgfs/ -o allow_other -o uid=1000
+</code></pre><p>logging </p>
+<p>debugging</p>
+<p><code>python -m ipdb myprogram.py</code></p>
+<p>different static analyzer</p>
+<p>flame graph</p>
+<blockquote>
+<p>you don’t need to understand everything here, and even only be aware of these tools is useful enough.    </p>
+</blockquote>
+<hr>
+<p>这节课实在是太难了..挑了些自己觉得现阶段能搞定的。</p>
+<ul>
+<li>shell check</li>
+<li>pdb调试器 for python</li>
+<li>静态检查工具/自动补全</li>
+</ul>
+<h1 id="Lecture-8-Metaprogramming"><a href="#Lecture-8-Metaprogramming" class="headerlink" title="Lecture 8 Metaprogramming"></a>Lecture 8 Metaprogramming</h1><p>a build system</p>
+<p>make(how to use make from .dat to .png and finally to .pdf)</p>
+<pre><code class="makefile">paper.pdf: paper.tex plot-data.png
+    pdflatex paper.tex
+
+plot-%.png: %.dat plot.py
+    ./plot.py -i $*.dat -o $@
+</code></pre>
+<p>repository</p>
+<p>semantic versioning(avoiding the version conflicts.for example,the function in older versions may be deleted in newer ones.)</p>
+<p><strong>8.1.7</strong></p>
+<p><strong>major version.minor version.patch version.</strong></p>
+<p>incompatible change.compatible adds or changes.bug fixes</p>
+<p>(ex.Python2 vs Python 3.5 vs Python 3.8)</p>
+<p>therefore,the lower the version is, maybe the better the compatibility is.</p>
+<p>lock file</p>
+<p>(lock some key files to avoid conflicts)</p>
+<blockquote>
+<p>A lock file is simply a file that lists the exact version you are <em>currently</em> depending on of each dependency. Usually, you need to explicitly run an update program to upgrade to newer versions of your dependencies. There are many reasons for this, such as avoiding unnecessary recompiles, having reproducible builds, or not automatically updating to the latest version (which may be broken). An extreme version of this kind of dependency locking is <em>vendoring</em>, which is where you copy all the code of your dependencies into your own project. That gives you total control over any changes to it, and lets you introduce your own changes to it, but also means you have to explicitly pull in any updates from the upstream maintainers over time.</p>
+</blockquote>
+<p>continuous intergration</p>
+<p>（有点像自动化？）</p>
+<p>(example: github pages(also where my blog from))</p>
+<p>mocking</p>
+<p>从作业中学到的：</p>
+<ul>
+<li><p>xargs:</p>
+<pre><code class="bash">echo hello | xargs echo # hellp transfer from input to arguments
+</code></pre>
+</li>
+<li><p><code>git ls-files --others</code> # files apart from the repository</p>
+</li>
+<li><p>Phony: not really a target need to construct,but a command or a request. Examples are like <code>clean</code>:</p>
+<pre><code class="makefile">.PHONY: clean
+clean:
+        rm *.o temp
+</code></pre>
+<p>Once this is done, ‘make clean’ will run the recipe regardless of whether there is a file named clean.</p>
+</li>
+</ul>
+<h1 id="Lecture-9-Security-and-Cryptography"><a href="#Lecture-9-Security-and-Cryptography" class="headerlink" title="Lecture 9 Security and Cryptography"></a>Lecture 9 Security and Cryptography</h1><p>太累了..看不动了..</p>
+<p><strong>entropy</strong></p>
+<p>useful when determining the strength of a password.</p>
+<p><code>entropy = log_2(# of possibilities)</code></p>
+<p><strong>hash function</strong></p>
+<p>sha1(bytes)-&gt;160 bits</p>
+<pre><code class="bash">sha1sum README.md # get the sha-1 value of README in Linux
+</code></pre>
+<p>some demands:</p>
+<ul>
+<li>non-inverted: hard to get input from output</li>
+<li>collision resistant: hard to find two inputs having the same output</li>
+<li>Target collision resistant: given an input <code>m_1</code>, it’s hard to find a different input <code>m_2</code> such that <code>hash(m_1) = hash(m_2)</code>.</li>
+<li>Collision resistant: it’s hard to find two inputs <code>m_1</code> and <code>m_2</code> such that <code>hash(m_1) = hash(m_2)</code> (note that this is a strictly stronger property than target collision resistance).</li>
+</ul>
+<p>applications</p>
+<p>sha1 can also be used to test the integrity of large files downloaded from the Internet.</p>
+<p><strong>key derivation function (KDF)</strong></p>
+<p>it should be <strong>slow</strong>,for fear of brute-force attacks.</p>
+<p><strong>encryption decryption</strong></p>
+<p><strong>symmetric cryptography</strong></p>
+<pre><code>keygen() -&gt; key  (this function is randomized)
+
+encrypt(plaintext: array&lt;byte&gt;, key) -&gt; array&lt;byte&gt;  (the ciphertext)
+decrypt(ciphertext: array&lt;byte&gt;, key) -&gt; array&lt;byte&gt;  (the plaintext)
+</code></pre><p><strong>asymmetric cryptography</strong></p>
+<pre><code>keygen() -&gt; (public key, private key)  (this function is randomized)
+
+encrypt(plaintext: array&lt;byte&gt;, public key) -&gt; array&lt;byte&gt;  (the ciphertext)
+decrypt(ciphertext: array&lt;byte&gt;, private key) -&gt; array&lt;byte&gt;  (the plaintext)
+
+sign(message: array&lt;byte&gt;, private key) -&gt; array&lt;byte&gt;  (the signature)
+verify(message: array&lt;byte&gt;, signature: array&lt;byte&gt;, public key) -&gt; bool  (whether or not the signature is valid)
+</code></pre><p><a target="_blank" rel="noopener" href="https://missing.csail.mit.edu/2020/security/">https://missing.csail.mit.edu/2020/security/</a></p>
+<p>就这样吧，以后用到了再看。</p>
+<h1 id="Lecture-10-Potpourri"><a href="#Lecture-10-Potpourri" class="headerlink" title="Lecture 10 Potpourri"></a>Lecture 10 Potpourri</h1><blockquote>
+<p>some miscellaneous items</p>
+</blockquote>
+<p><strong>keyboard remapping</strong></p>
+<p>the core concept is using keyboard mostly and with the optimal usage.</p>
+<p>(for example,<code>CapsLock</code> is a rarely used key,and you can use it to remap)</p>
+<p>Some software resources to get started on the topic:</p>
+<ul>
+<li>macOS - <a target="_blank" rel="noopener" href="https://pqrs.org/osx/karabiner/">karabiner-elements</a>, <a target="_blank" rel="noopener" href="https://github.com/koekeishiya/skhd">skhd</a> or <a target="_blank" rel="noopener" href="https://folivora.ai/">BetterTouchTool</a></li>
+<li>Linux - <a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/Xmodmap">xmodmap</a> or <a target="_blank" rel="noopener" href="https://github.com/autokey/autokey">Autokey</a></li>
+<li>Windows - Builtin in Control Panel, <a target="_blank" rel="noopener" href="https://www.autohotkey.com/">AutoHotkey</a> or <a target="_blank" rel="noopener" href="https://www.randyrants.com/category/sharpkeys/">SharpKeys</a></li>
+<li>QMK - If your keyboard supports custom firmware you can use <a target="_blank" rel="noopener" href="https://docs.qmk.fm/">QMK</a> to configure the hardware device itself so the remaps works for any machine you use the keyboard with.</li>
+</ul>
+<p><strong>daemon</strong>(programs running in the background)</p>
+<p>(sshd-&gt;ssh daemon)</p>
+<p>(systemd systemctl)</p>
+<p>(cron-&gt;a daemon your system already runs to perform scheduled tasks.)   </p>
+<p>file system</p>
+<p><strong>FUSE</strong></p>
+<p>Some interesting examples of FUSE filesystems are:</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/libfuse/sshfs">sshfs</a> - Open locally remote files/folder through an SSH connection.</li>
+<li><a target="_blank" rel="noopener" href="https://rclone.org/commands/rclone_mount/">rclone</a> - Mount cloud storage services like Dropbox, GDrive, Amazon S3 or Google Cloud Storage and open data locally.</li>
+<li><a target="_blank" rel="noopener" href="https://nuetzlich.net/gocryptfs/">gocryptfs</a> - Encrypted overlay system. Files are stored encrypted but once the FS is mounted they appear as plaintext in the mountpoint.</li>
+<li><a target="_blank" rel="noopener" href="https://keybase.io/docs/kbfs">kbfs</a> - Distributed filesystem with end-to-end encryption. You can have private, shared and public folders.</li>
+<li><a target="_blank" rel="noopener" href="https://borgbackup.readthedocs.io/en/stable/usage/mount.html">borgbackup</a> - Mount your deduplicated, compressed and encrypted backups for ease of browsing.</li>
+</ul>
+<p>encrypted system</p>
+<p><strong>backups</strong></p>
+<p>google drive/RAID is not really backup(sync is not backup)</p>
+<p>offline hardware</p>
+<p>APIs</p>
+<p><code>curl</code></p>
+<p><strong>some useful common arguments</strong></p>
+<p><code>--help</code> </p>
+<p><code>--version</code> </p>
+<p><code>--verbose</code>-&gt;print more detailed info</p>
+<p> <code>--silent</code>-&gt;only print when having errors</p>
+<p><code>-i</code>-&gt;interactive mode,in which the shell will inform you every time you have a dry run(where the command couldn’t undo)</p>
+<p><code>-r</code>-&gt;recursive flag,especially useful in destructive commands like <code>rm</code> or <code>cp</code></p>
+<p>however,sometimes we meet with the situation,where the filenames are the same as the arguments, like <code>-i</code>.the solution is, using <code>--</code>:</p>
+<pre><code class="bash">rm -i # a flag
+rm -- -i # won&#39;t interpret, consider as a name
+</code></pre>
+<p>In many tools, <code>-</code> in place of a file name means “standard input” or “standard output”, depending on the argument.</p>
+<p><strong>windows manager</strong></p>
+<p>using keyboard instead of mouse</p>
+<p><strong>VPN</strong></p>
+<p>danger: being tracked,or don’t encrypted</p>
+<p><strong>Markdown</strong></p>
+<p>good for learning</p>
+<p><strong>hammerspoon</strong></p>
+<p>(a powerful desktop automation framework for MacOS)</p>
+<p><strong>boot up in a live USB</strong></p>
+<p><strong>virtual machine/Docker</strong></p>
+<p><strong>notebook programming environment</strong></p>
+<p><a target="_blank" rel="noopener" href="https://jupyter.org/try">https://jupyter.org/try</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.wolfram.com/mathematica/">https://www.wolfram.com/mathematica/</a></p>
+<p>适用于交互性的开发，比如有利于小的函数的debug和测试</p>
+<p><strong>Github</strong></p>
+<p>issue &amp; pull request</p>
+<h1 id="Lecture-11-Q-amp-A"><a href="#Lecture-11-Q-amp-A" class="headerlink" title="Lecture 11 Q&amp;A"></a>Lecture 11 Q&amp;A</h1><p>using keyboard more ,using mouse less.</p>
+<p>reduce repetitive operations</p>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/donate/AliPayQR.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/donate/WeChanSQ.jpg"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+
+
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/2022/02/18/%E7%84%A6%E8%99%91%E5%9E%8B%E4%BE%9D%E6%81%8B%E4%BA%BA%E6%A0%BC-%E3%80%8A%E5%85%B3%E7%B3%BB%E7%9A%84%E9%87%8D%E5%BB%BA%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/hungarian-parliament-building-6995487_1920.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/hungarian-parliament-building-6995487_1920.jpg">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                焦虑型依恋人格&amp;《关系的重建》读后感</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/2022/02/12/Reread%E3%80%8A%E6%80%9D%E8%80%83%EF%BC%8C%E5%BF%AB%E4%B8%8E%E6%85%A2%E3%80%8B/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/animal-6924664_1920.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/animal-6924664_1920.jpg">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                Reread《思考，快与慢》</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "8kxJIpLP4lL5KAApW8cG8qkA-gzGzoHsz",
+        appKey: "JyBmNfKUPBKm7Eead9PPFjy1",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="Baokker.github.io" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg" itemprop="image" alt="Baokker" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="Baokker.github.io" itemprop="url" rel="author">Baokker</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i></p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+
+    </div>    
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 Baokker<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #666666;">&copy 2018</p>
+    </div>
+    <div class="footer-device">
+    <p style="font-family: 'Ubuntu', sans-serif;">
+        <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a>, Powered by Hexo, Hosted by Coding Pages</a>
+        </span>
+      </p>
+    </div>
+  </div><!-- .site-info -->
+</footer>
+
+
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="/js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/InsightSearch.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="/js/zoom.min.js"></script>
+<script type="text/javascript" src="/js/sakura-app.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@1.3.4/dist/Valine.min.js'></script>
+<script src="/js/botui.js"></script>
+<!-- 不蒜子 网页计数器 -->
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
+<script type="text/javascript">
+/* <![CDATA[ */
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2","name":"Unbroken.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+} else {
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/honjun/hojun@1.2","name":"Unbroken.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+}
+/* ]]> */
+
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
+      } else {
+        $('.toc').removeClass('toc-fixed');
+      }
+    }
+  }
+});
+</script>
+
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+      <div class="site-branding search-form-submit">
+        <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+      </div>
+    </div>
+  </section>
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">何もできないのBaokker</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="http://github.com/Baokker" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="https://weibo.com/u/6804155266/home" class="fa fa-weibo" target="_blank" style="color: #dd4b39; margin-left:20px"></a>
+      
+        <a href="https://user.qzone.qq.com/1048098862" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/%E9%9A%8F%E6%83%B3/">
+                  <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                  随想
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/%E6%8A%80%E6%9C%AF/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  技术
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/%E8%B5%84%E6%BA%90/">
+                  <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                  资源
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="javascript:;">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+            清单
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/%E4%B9%A6%E5%8D%95/">
+                  <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                  书单
+                </a>
+              </li>
+            
+              <li>
+                <a href="/music/">
+                  <i class="fa fa-headphones" aria-hidden="true"></i>
+                  歌单
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/links/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+            友人帐
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/donate/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+            赞赏
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            关于
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/about/">
+                  <i class="fa fa-meetup" aria-hidden="true"></i>
+                  我？
+                </a>
+              </li>
+            
+              <li>
+                <a href="/theme-sakura/">
+                  <i class="fa iconfont icon-sakura" aria-hidden="true"></i>
+                  主题
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/rss/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-rss faa-pulse" aria-hidden="true"></i>
+            RSS
+          </span>
+        </a>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: #FF1493;
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+  }
+  .aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+  }
+</style>
+<meting-js
+
+    id="188376"
+
+    server="netease"
+
+    type="playlist"
+
+    fixed="true"
+
+    autoplay="false"
+
+    loop="all"
+
+    order="random"
+
+    preload="auto"
+
+    volume="0.7"
+
+    mutex="true"
+
+</meting-js>
+<script>
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
+</script>
+</body>
+</html>
