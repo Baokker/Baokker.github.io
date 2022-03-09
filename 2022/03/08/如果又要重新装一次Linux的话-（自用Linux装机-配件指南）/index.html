@@ -394,7 +394,7 @@
 </code></pre>
 <h1 id="clash-挂梯子"><a href="#clash-挂梯子" class="headerlink" title="clash 挂梯子"></a>clash 挂梯子</h1><ol>
 <li><p>到<a target="_blank" rel="noopener" href="https://github.com/Dreamacro/clash/releases">GitHub的release界面</a>下载clash（命令行版，如果想装clash for Windows的GUI界面，参看我<a href="https://baokker.github.io/2022/02/12/Linux%E9%80%9A%E8%BF%87Clash-for-Windows%E5%AE%9E%E7%8E%B0%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/">这篇</a>)，例如：</p>
-<pre><code class="bash">wget -O https://github.com/Dreamacro/clash/releases/download/v1.9.0/clash-linux-amd64-v1.9.0.gz
+<pre><code class="bash">wget https://github.com/Dreamacro/clash/releases/download/v1.9.0/clash-linux-amd64-v1.9.0.gz
 </code></pre>
 </li>
 <li><p>将其解压到合适的目录下（假如你解压在了<code>~/Apps</code>文件夹下），加上运行权限，并初次运行：</p>
@@ -421,7 +421,7 @@ chsh -s $(which zsh) # set as default zsh
 sudo reboot # make zsh work as default shell
 echo $SHELL # test whether zsh is rhe current shell
 
-sudo apt install build-essential # gcc
+sudo apt install build-essential # gcc and g++
 gcc --version # test whether gcc is installed successfully
 </code></pre>
 <p>一些参考链接：</p>
@@ -595,20 +595,25 @@ filetype plugin indent on    &quot; required
         
       </section>
       
-<div id="vcomments"></div>
-<script>
-  window.onload = function(){
-      var valine = new Valine();
-      valine.init({
-        el: '#vcomments',
-        appId: "8kxJIpLP4lL5KAApW8cG8qkA-gzGzoHsz",
-        appKey: "JyBmNfKUPBKm7Eead9PPFjy1",
-        path: window.location.pathname,
-        placeholder: "你是我一生只会遇见一次的惊喜 ..."
-      })
-  }
-</script>
 
+
+<!-- 来必力City版安装代码 -->
+<div id="lv-container" data-id="city" data-uid="MTAyMC81NTcwNy8zMjE3NA==">
+  <script type="text/javascript">
+  (function(d, s) {       
+    var j, e = d.getElementsByTagName(s)[0];       
+    
+    if (typeof LivereTower === 'function') { return; }
+
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');</script>
+  <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+  </div>
+  <!-- City版安装代码已完成 -->
       <section class="author-profile">
         <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
           <a href="Baokker.github.io" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg" itemprop="image" alt="Baokker" height="70" width="70"></a>
