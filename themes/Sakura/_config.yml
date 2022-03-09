@@ -144,9 +144,13 @@ aplayer:
   mutex: true
 
 # Valine
-valine: true
+valine: false
 v_appId: 8kxJIpLP4lL5KAApW8cG8qkA-gzGzoHsz
 v_appKey: JyBmNfKUPBKm7Eead9PPFjy1
 
+# new comment system using livere
+# livere: true
+# livere_uid: MTAyMC81NTcwNy8zMjE3NA==
+  
  # 简易信息聚合,站点共享
 rss: /atom.xml

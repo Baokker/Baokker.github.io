@@ -10,6 +10,3 @@ keywords:
 description: 
 photos: 
 ---
-
-
-
