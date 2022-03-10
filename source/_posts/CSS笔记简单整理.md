@@ -2,7 +2,7 @@
 title: CSS笔记简单整理
 author: Baokker
 avatar: 'https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg'
-authorLink: Baokker.github.io
+authorLink: https://Baokker.github.io
 categories: 技术
 comments: true
 date: 2021-07-29 17:14:17

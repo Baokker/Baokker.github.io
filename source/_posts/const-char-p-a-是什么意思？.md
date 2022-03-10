@@ -2,7 +2,7 @@
 title: 'const char(&p)[a]是什么意思？'
 author: Baokker
 avatar: 'https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg'
-authorLink: Baokker.github.io
+authorLink: https://Baokker.github.io
 categories: 技术
 comments: true
 photos: 'https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/pexels-akshay-mehra-7959153.jpg'

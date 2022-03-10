@@ -2,7 +2,7 @@
 title: Linux运行数据结构课设感想
 author: Baokker
 avatar: 'https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg'
-authorLink: Baokker.github.io
+authorLink: https://Baokker.github.io
 comments: true
 categories: 技术
 photos: 'https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/defaultImages.jpg'

@@ -2,7 +2,7 @@
 title: 每天可以读一点论文and所谓后现代文学的内向性
 author: Baokker
 avatar: 'https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg'
-authorLink: Baokker.github.io
+authorLink: https://Baokker.github.io
 categories: 随想
 comments: true
 photos: 'https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/pexels-mikhael-mayim-8826427.jpg'

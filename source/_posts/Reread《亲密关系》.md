@@ -2,7 +2,7 @@
 title: Reread《亲密关系》
 author: Baokker
 avatar: 'https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg'
-authorLink: Baokker.github.io
+authorLink: https://Baokker.github.io
 comments: true
 date: 2022-01-31 14:33:30
 categories: 书单

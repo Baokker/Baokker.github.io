@@ -2,7 +2,7 @@
 title: 数据结构bonus五子棋项目
 author: Baokker
 avatar: 'https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg'
-authorLink: Baokker.github.io
+authorLink: https://Baokker.github.io
 comments: true
 date: 2022-02-01 23:10:48
 categories: 技术

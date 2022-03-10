@@ -2,7 +2,7 @@
 title: Reread《精力管理》
 author: Baokker
 avatar: 'https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg'
-authorLink: Baokker.github.io
+authorLink: https://Baokker.github.io
 categories: 书单
 comments: true
 photos: https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/pexels-dzenina-lukac-1583884.jpg

@@ -2,7 +2,7 @@
 title: 如果又要重新装一次Linux的话..（自用Linux装机/配件指南）
 author: Baokker
 avatar: 'https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg'
-authorLink: Baokker.github.io
+authorLink: https://Baokker.github.io
 categories: 技术
 comments: true
 photos: >-

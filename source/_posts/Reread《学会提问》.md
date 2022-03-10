@@ -2,7 +2,7 @@
 title: Reread《学会提问》
 author: Baokker
 avatar: 'https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg'
-authorLink: Baokker.github.io
+authorLink: https://Baokker.github.io
 categories: 书单
 comments: true
 date: 2021-09-13 14:30:19

@@ -2,7 +2,7 @@
 title: Reread《思考，快与慢》
 author: Baokker
 avatar: 'https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg'
-authorLink: Baokker.github.io
+authorLink: https://Baokker.github.io
 categories: 书单
 comments: true
 photos: https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/animal-6924664_1920.jpg

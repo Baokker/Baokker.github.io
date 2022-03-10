@@ -2,7 +2,7 @@
 title: tmux自定义配置一览
 author: Baokker
 avatar: 'https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg'
-authorLink: Baokker.github.io
+authorLink: https://Baokker.github.io
 categories: 技术
 comments: true
 photos: 'https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/dog-5146351_1920.jpg'

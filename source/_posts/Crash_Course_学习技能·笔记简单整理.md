@@ -3,7 +3,7 @@
 title: Crash_Course_学习技能·笔记简单整理
 author: Baokker
 avatar: https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg
-authorLink: Baokker.github.io
+authorLink: https://Baokker.github.io
 categories: 技术
 date: 2021-07-18 15:16:01
 comments: true

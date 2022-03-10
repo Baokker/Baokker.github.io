@@ -2,7 +2,7 @@
 title: Reread《沟通的艺术》
 author: Baokker
 avatar: 'https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg'
-authorLink: Baokker.github.io
+authorLink: https://Baokker.github.io
 comments: true
 date: 2022-01-27 19:27:29
 keywords: 沟通
