@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">数据结构与算法的笔记简单整理（持续更新 | Baokker&#39;s Blog</title>
+  <title itemprop="name">《蛤蟆先生去看心理医生》读后感 | Baokker&#39;s Blog</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -342,23 +342,23 @@
 
   <div class="pattern-center single-center">
     <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/tiger-2535888_1920.jpg);" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/tiger-2535888_1920.jpg">
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/pexels-tima-miroshnichenko-6845635.jpg);" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/pexels-tima-miroshnichenko-6845635.jpg">
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
-      数据结构与算法的笔记简单整理（持续更新</h1>
+      《蛤蟆先生去看心理医生》读后感</h1>
       <p class="entry-census">
         <span>
-          <a href="Baokker.github.io">
+          <a href="https://Baokker.github.io">
             <img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg">
           </a>
         </span>
         <span>
-          <a href="Baokker.github.io">Baokker</a>
+          <a href="https://Baokker.github.io">Baokker</a>
         </span>
         <span class="bull">
         ·</span>
-        2021-7-29<span class="bull">
+        2022-3-10<span class="bull">
         ·</span>
       <span id="busuanzi_value_page_pv"></span>次阅读</p>
     </header>
@@ -372,280 +372,78 @@
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <h1 id="开学学习内容"><a href="#开学学习内容" class="headerlink" title="开学学习内容"></a>开学学习内容</h1><h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><ul>
-<li><p>[快速转置算法][<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq845579063/article/details/51354847]">https://blog.csdn.net/qq845579063/article/details/51354847]</a></p>
-</li>
-<li><p>[KMP算法详解][<a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2013/05/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm.html]">https://www.ruanyifeng.com/blog/2013/05/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm.html]</a></p>
-</li>
-<li><p>BM算法</p>
-</li>
-<li><p><strong>带头结点</strong>的链表（dummyHead？）</p>
-</li>
-<li><p>双向循环链表</p>
-</li>
-<li><p>邻接表表示的是出度（从顶点A连接到B和C，因而链表结构为A-&gt;B-&gt;C；反之，在逆邻接表中为B-&gt;A和C-&gt;A）</p>
-</li>
-<li><p>连通图：删去任意一个节点，所有顶点仍然互相连通的图。</p>
-<p>反之，若删去则分为两个图，则称为关节点。</p>
-<p>删去K个节点后无法保证连通图，则称连通图的连通度为K。</p>
-<p>待解决~~</p>
-</li>
-<li><p>最小生成树</p>
-<ul>
-<li>kruskal算法（按边加）</li>
-<li>prim算法（按顶点加）</li>
-</ul>
-</li>
-<li><p>AOE AOV</p>
-<p>其中AOV主要介绍如何通过拓扑排序判断AOV中是否存在有向环。</p>
-<p>AOE主要介绍如何计算最早开始时间和最晚结束时间</p>
-</li>
-<li><p>最短路径算法：</p>
-<ul>
-<li><p><strong>Dijkstra算法</strong></p>
-<ul>
-<li>单源最短路径（只能算出一个顶点到其他顶点的最短路径）</li>
-<li>不能有负权值，不能有环</li>
-</ul>
-</li>
-<li><p><strong>Floyd算法</strong></p>
-<ul>
-<li><p>没有负权值的顾虑，可计算任意两点之间距离。</p>
-</li>
-<li><p>本质是动态规划</p>
-</li>
-<li><pre><code>1 let dist be a |V| × |V| array of minimum distances initialized to ∞ (infinity)
-2 for each vertex v
-3    dist[v][v] ← 0
-4 for each edge (u,v)
-5    dist[u][v] ← w(u,v)  // the weight of the edge (u,v)
-6 for k from 1 to |V|
-7    for i from 1 to |V|
-8       for j from 1 to |V|
-9          if dist[i][j] &gt; dist[i][k] + dist[k][j] 
-10             dist[i][j] ← dist[i][k] + dist[k][j]
-11         end if
-</code></pre></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>拓扑排序</li>
-</ul>
-<h2 id="LeetCode"><a href="#LeetCode" class="headerlink" title="LeetCode"></a>LeetCode</h2><ul>
-<li>双指针</li>
-<li>链表→递归&amp;迭代</li>
-<li>dummyHead</li>
-<li>循环不变量的确定</li>
-<li>不变量（例如区间，在写之前就应当确定是[a,b]或者[a,b)）</li>
-</ul>
-<h2 id="编写中遇到的c-语法问题"><a href="#编写中遇到的c-语法问题" class="headerlink" title="编写中遇到的c++语法问题"></a>编写中遇到的c++语法问题</h2><ul>
-<li><pre><code class="cpp">template &lt;class Type&gt; // == template &lt;typename Type&gt;   
-</code></pre>
-</li>
-<li><p>关于&lt;&lt;和&gt;&gt;的运算符重载：</p>
-<ul>
-<li><p>一般的运算符重载可以在类内直接解决</p>
-</li>
-<li><p>但是这两个运算符 为保证和正常使用cin和cout的习惯 需要将参数列表设为(istream &amp;input,class Classname)（同时返回也要右值引用</p>
-</li>
-<li><p>但是类内声明时 <strong>会默认在参数列表首位加上this指针</strong></p>
-</li>
-<li><p>因此 这类函数只能在外部声明（假如数据全部可访问） 或者只能在类内作为友元函数来访问 因为<strong>友元函数不会加上this指针</strong></p>
-</li>
-<li><p>较为正确的方法：</p>
-<pre><code class="cpp">class Candidate:
-&#123;
-    private:
-    //..
-    public:
-    //..
-    friend ostream&amp; operator&lt;&lt;(ostream&amp; output, const Candidate candidate) // 重载输出函数
-&#125;
-</code></pre>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p>STL的stack的pop()函数不会返回弹出数据 如需使用请结合pop()</p>
-</li>
-<li><p>c++的文件读入（istream）输出（ostream）一段文字</p>
-<p>最后我先用了cin.get()将输入的文字输出到ostream 然后读取时用getline将istream内数据读取</p>
-</li>
-<li><p>经过一番探索后我发现<br>将带模板的类的声明和定义放在.h和.cpp中 另外加上main.cpp是不对的行为<br>因为template function will be compiled only when it is used<br>而main中只包含了头文件而不包含.cpp 会导致其”invisible to the implementation”\<br>所以 要么都写在头文件中 要么就在h末尾加上#include”…cpp”</p>
-</li>
-<li><pre><code class="cpp">if (a = 1) cout &lt;&lt; &quot;..&quot;;
-// equal to
-// 1. a=1;
-// if (a) ..
-// cause the = operator will return this integer
-</code></pre>
-</li>
-<li><pre><code class="cpp">int a = 3 &lt;&lt; 4; // a = 3 * (2 ^ 4) = 48 左移运算符
-int b = 8 &gt;&gt; 1; // b = 8 / (2 ^ 1) = 4  右移运算符
-</code></pre>
-</li>
-<li><p>vector的几种赋值or拷贝方法：</p>
-<pre><code class="cpp">vector&lt;int&gt; example=&#123;1,2,3,4&#125;;
-vector&lt;int&gt; target1(example);
-vector&lt;int&gt; target2(example.begin(),example.begin()+2);
-vector&lt;int&gt; target3;
-target3.assign(2,2);
-target3.assign(example.begin(),example.begin()+2); //[a,b)
-vector&lt;int&gt; target4;
-target4.swap(example);//example=&#123;&#125;
-</code></pre>
-</li>
-<li><p><code>sizeof(bool)==1 byte</code></p>
-</li>
-<li><p>c++ closure</p>
-<blockquote>
-<p>In <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Programming_language">programming languages</a>, a <strong>closure</strong>, also <strong>lexical closure</strong> or <strong>function closure</strong>, is a technique for implementing <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Lexically_scoped">lexically scoped</a> <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Name_binding">name binding</a> in a language with <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/First-class_function">first-class functions</a>.</p>
-</blockquote>
-</li>
-<li><p>自己编写的一个用于获得任意要求的整数值的函数：</p>
-<p>本来想使用template 但是经过研究发现 <strong>lambda不能用在template函数中</strong> 见如下说明：</p>
-<blockquote>
-<p>The evaluation of a lambda-expression results in a prvalue temporary (12.2). This temporary is called the closure object. <strong>A lambda-expression shall not appear in an unevaluated operand</strong> (Clause 5). [ Note: A closure object behaves like a function object (20.8).—end note ] <em>(emphasis mine)</em></p>
-</blockquote>
-<p>换言之，lambda是一个<strong>闭包</strong>，有类型也有状态（state），而template是动态的，未编译的，不可能接受包容state。</p>
-<p>（这个问题貌似在c20里得到了解决）</p>
-<pre><code class="cpp">//用function来闭包处理lambda函数
-int getIntValue(const function&lt;bool(int)&gt;&amp; judgeFunc) &#123;//for freely customizing the int value you want
-    int value;
-    while (true)
-    &#123;
-        cin &gt;&gt; value;
-        if (cin.fail()) &#123;
-            cerr &lt;&lt; &quot;input error\n&quot;;
-            cin.clear();
-            cin.ignore(1024, &#39;\n&#39;);
-        &#125;
-        else if (!judgeFunc(value)) &#123;//对这句进行灵活定制
-            cerr &lt;&lt; &quot;dont meet the command\n&quot;;
-        &#125;
-        else
-            break;
-    &#125;
-
-    return value;
-&#125;
-</code></pre>
-</li>
-</ul>
-<h2 id="other"><a href="#other" class="headerlink" title="other"></a>other</h2><ul>
-<li><strong>拓扑</strong>是研究几何图形或空间在连续改变形状后还能保持不变的一些性质的一个学科。 它只考虑物体间的位置关系而不考虑它们的形状和大小。 拓扑英文名是Topology，直译是地志学，最早指研究地形、地貌相类似的有关学科。</li>
-</ul>
-<ul>
-<li>蛇形命名法：<code>student_num</code>,<code>sum_score</code>如是。</li>
-</ul>
-<h1 id="开学之前"><a href="#开学之前" class="headerlink" title="开学之前"></a>开学之前</h1><h2 id="AES算法"><a href="#AES算法" class="headerlink" title="AES算法"></a>AES算法</h2><ul>
-<li><p>对称加密算法（advanced encryption standard）（即可逆）</p>
-</li>
-<li><p>概念</p>
-<ul>
-<li><p>密钥</p>
-<ul>
-<li>AES128/192/256</li>
-</ul>
-</li>
-<li><p>填充</p>
-<ul>
-<li>在存在不满的情况下 以一些规则来填充未满部分</li>
-</ul>
-</li>
-<li><p>模式</p>
-<p>明文加密为密文</p>
-</li>
-</ul>
-</li>
-<li><p>加密过程</p>
-<ul>
-<li><p>初始轮</p>
-<p>加轮密钥</p>
-</li>
-<li><p>普通轮</p>
-<p>字节代替</p>
-<p>行移位</p>
-<p>列混淆</p>
-<p>加轮密钥</p>
-</li>
-<li><p>最终轮</p>
-<p>字节代替</p>
-<p>行移位</p>
-<p>加轮密钥</p>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><ul>
-<li>分治法</li>
-<li>pivot的选择的几种方式<ul>
-<li>选第一个</li>
-<li>随机数</li>
-</ul>
-</li>
-<li>partition的分法<ul>
-<li>挖坑法</li>
-<li>指针交换fa</li>
-</ul>
-</li>
-</ul>
-<h2 id="优先队列"><a href="#优先队列" class="headerlink" title="优先队列"></a>优先队列</h2><ul>
-<li>最大优先队列：最大的元素优先出队</li>
-<li>最小优先队列：最小的元素优先出队</li>
-<li>实现：堆排序</li>
-</ul>
-<h2 id="跳跃表"><a href="#跳跃表" class="headerlink" title="跳跃表"></a>跳跃表</h2><p>在链表中建立索引 乃至于索引的索引 来加快查找速度</p>
-<p>插入：</p>
-<ul>
-<li>新节点和各层索引节点逐一比较，确定原链表的插入位置。O（logN）</li>
-<li>把索引插入到原链表。O（1）</li>
-<li>利用抛硬币的随机方式，决定新节点是否提升为上一级索引。结果为“正”则提升并继续抛硬币，结果为“负”则停止。O（logN）</li>
-<li>总体上，跳跃表插入操作的时间复杂度是O（logN），而这种数据结构所占空间是2N，既空间复杂度是 O（N）</li>
-</ul>
-<p>删除：</p>
-<ul>
-<li>自上而下，查找第一次出现节点的索引，并逐层找到每一层对应的节点。O（logN）</li>
-<li>删除每一层查找到的节点，如果该层只剩下1个节点，删除整个一层（原链表除外）。O（logN）</li>
-<li>总体上，跳跃表删除操作的时间复杂度是O（logN）。</li>
-</ul>
-<h2 id="HashMap"><a href="#HashMap" class="headerlink" title="HashMap"></a>HashMap</h2><ul>
-<li><p>默认初始长度为16 且每次扩容只能*2</p>
-</li>
-<li><p>均匀分布：位运算</p>
-<blockquote>
-<p><strong>index = HashCode（Key） &amp; （Length – 1）</strong> </p>
-</blockquote>
-</li>
-</ul>
-<h2 id="Chrome-脚本安装"><a href="#Chrome-脚本安装" class="headerlink" title="Chrome 脚本安装"></a>Chrome 脚本安装</h2><ol>
-<li>打开chrome扩展程序页 – chrome://extensions</li>
-<li>将刚才的自定义脚本保存为以user.js为后缀的 .js文件，例如test.user.js，拖入扩展程序页。</li>
-<li>重启浏览器。</li>
-<li>进入月饼抢购活动页面。此时脚本已自动执行。</li>
+          <p><del>本来想找一张蛤蟆的图片作为封面的，想不到pexel上关于蛤蟆的图片都太生动且有点吓人了..</del></p>
+<p>同样是看<em>跑步的人</em>公众号的时候，被安利的一本好书，据说是英国老牌的心理咨询读物。我阅读一遍下来，有如下感受：</p>
+<ol>
+<li>根据<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%9F%B3%E6%9E%97%E9%A3%8E%E5%A3%B0/22867">《柳林风声》</a>改编而来，文中的蛤蟆、獾、鼹鼠等均为原著中的人物，因此整体读起来氛围较为轻松。</li>
+<li>文中并没有涉及很多的概念，印象里只提到了例如<em>儿童型自我</em>，<em>父母型自我</em>，<em>成人自我</em>等，如果看过别的心理学相关读物的话，这本书里的概念其实是有些浅了。但好在本身故事性较强，并且蛤蟆和苍鹭的每次咨询都描写得形象生动，因而有种深入浅出的效果。</li>
 </ol>
-<p><a target="_blank" rel="noopener" href="https://www.cxyxiaowu.com/4627.html">link</a></p>
-<h2 id="空间复杂度"><a href="#空间复杂度" class="headerlink" title="空间复杂度"></a>空间复杂度</h2><p><strong>S(n)=O(f(n))</strong></p>
-<p>例如 递归的空间复杂度为n</p>
-<h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><p>分而治之 先分为一个个小块（类似于二叉树一样） 再往上溯源 合并</p>
-<h2 id="快速排序-1"><a href="#快速排序-1" class="headerlink" title="快速排序"></a>快速排序</h2><h2 id="桶排序"><a href="#桶排序" class="headerlink" title="桶排序"></a>桶排序</h2><p>伪代码（摘自Wikipedia</p>
-<pre><code class="text">function bucket-sort(array, n) is
-  buckets ← new array of n empty lists
-  for i = 0 to (length(array)-1) do
-    insert array[i] into buckets[msbits(array[i], k)]
-  for i = 0 to n - 1 do
-    next-sort(buckets[i])
-  return the concatenation of buckets[0], ..., buckets[n-1]
-</code></pre>
-<h2 id="Floyd-最短路算法"><a href="#Floyd-最短路算法" class="headerlink" title="Floyd 最短路算法"></a>Floyd 最短路算法</h2><h2 id="邻接表"><a href="#邻接表" class="headerlink" title="邻接表"></a>邻接表</h2><p>数组＋单链表</p>
-<h2 id="判断单链表是否存在环"><a href="#判断单链表是否存在环" class="headerlink" title="判断单链表是否存在环"></a>判断单链表是否存在环</h2><p>快慢法</p>
-<p>一直走法</p>
+<p>总的来说，如果该方面的书籍未曾涉猎的话，那么这本书作为<strong>入门读物</strong>是绝佳的选择。</p>
+<p>放点笔记：</p>
+<ul>
+<li><p>当獾、河鼠等人建议蛤蟆到苍鹭处做心理咨询时，苍鹭说：</p>
+<blockquote>
+<p>“你看，”咨询师说道，“你的朋友们想让我给你做咨询，以便减轻他们对你的担忧。你似乎也想得到帮助，为的是让他们高兴。所以依我看，你的那些朋友们才是我真正的来访者。”</p>
+</blockquote>
+<p>这句话真的很戳我。改变自己，明确自己的需求，始终是只有自己能做到的事情。看起来朋友出于好心让你去做心理咨询，但实质上，唯一可以确定的是，这样子做满足了他们的需求，减少了他们对你的焦虑，<strong>而你的需求是需要靠你自己去认知的</strong>。</p>
+</li>
+<li><p>三个自我：</p>
+<ul>
+<li><p>儿童自我状态。这个状态下，我们会体会我们作为小孩时经历的感受和行为。这其中有基本的情感（如喜怒哀乐），这类小孩也被称为“自然型儿童”；也有当自己想作出某些行为，但是因为强大的外界（父母）导致无法表达，最后只能通过顺从的方式习得的状态，这类孩子被称为“适应性儿童”。在这种情况下，<strong>情感无法消除，但是会通过转移的间接方法表达。</strong>例如，当孩子无法表达愤怒的时候，他便只能通过以下的方式来间接发泄：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20220310152517.png" alt=""></p>
+<p>这里面的逻辑就在于，<strong>当我们无法直接表达自己的愤怒时，我们只能通过防御性的行为来释放自己的情感。</strong></p>
+<blockquote>
+<p>“我想，真正让人惊讶的是我们成年后有多少行为是从童年学来的。你只要想一想，就会发现这其实非常明显。童年体验到的最强烈的情绪，不可避免地变成我们成年后经常有的感受。有诗人曾说’孩子是成年人的父亲 ’，或许就是这个意思。”</p>
+</blockquote>
+</li>
+<li><p>父母自我<br>是的，作为成年前朝夕相处的人，我们会从父母身上学到他们的价值观和思维方式，至于其是否能带来积极的或消极的影响，得看父母是否尽到了他们应尽的责任（不仅是不能失责，还要注意不能过度负责，乃至于操控孩子）</p>
+<blockquote>
+<p>“处于’父母自我状态 ’时，我们表现得正如自己的父母。记住，他们是我们最早接触的人，因此对我们的影响是不可估量的。’父母状态’包含了自出生起，我们从父母那里学到的所有价值观和道德观，还包含了对生活的评判标准，让我们借此判断是非对错。这些价值观来自父母，所以父母是最能左右我们行为的人。他们的言行塑造了我们童年的生活，也不可避免地对我们之后的人生产生影响。”</p>
+<p>“这让人想到孩子是多么容易受伤啊，”蛤蟆若有所思地说道，“我之前从没意识到父母其实拥有巨大的权力，可以对子女拥有绝对的控制权”</p>
+</blockquote>
+<p>例如说，文中蛤蟆对自己有着很强的自我批判意识，乃至于不断因为一点小错惩罚自己，本质上很可能是因为儿时父亲的辱骂，反映到蛤蟆的父母自我上，便成为了严酷的自我审判：</p>
+<blockquote>
+<p>“这么说也许有些残酷，蛤蟆，能帮你的人是你自己，也只有你自己。有许多问题需要你向自己发问。比如你能停止自我批判吗？你能对自己好一些吗？也许最重要的问题是，你能开始爱自己吗？ ”</p>
+</blockquote>
+</li>
+<li><p>成人自我<br>在这个状态下，我们用<strong>理性而不是情绪化</strong>的方式来行事。它让我们能应对此时此地正在发生的现实状况。<br>并且，也<strong>只有</strong>在成人自我的状态下，我们才能学到新知识。在儿童自我里，我们始终只是重复儿时的情感和行为；在父母自我里，我们一直在重复从父母那里学来的价值观。</p>
+<blockquote>
+<p>“在这个状态下，我们能计划、考虑、决定、行动，我们能理性而合理地行事。处于这个状态时，我们所有的知识和技能都能为自己所用，而不再被脑子里父母过去的声音所驱使，也不会被童年的情绪所围困。相反，我们能思考当下的状况，基于事实来决定要怎么做。”</p>
+<p>他们能管理情绪，能从悲伤和不幸中重新振作。但也许最重要的是，他们能控制冲动，也懂得延迟满足</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>PLOM<br>原文为“Poor Little Old Me”。有兴趣的不妨自己去查一下，在PLOM里，你永远会赢。（书里的话，真心很戳）</p>
+<blockquote>
+<p>“不论我做什么都要爱我’。有些人生活一团糟，或者有意无意惹上麻烦，就是想看看别人能宽容他们到什么程度，什么时候会排斥他们。接着他们就会说：’我早说过你会这样对我，证明我是真的很差劲很愚蠢。”</p>
+<p>“在我看来这些游戏很危险，因为如果你尊重或你爱的人放弃你，你肯定会觉得痛苦，孤零零一个人。”</p>
+</blockquote>
+<p>最可怕的地方还是在于，在遭遇他人的诋毁时，我们选择承认他人的诋毁，承认自己真的很弱小，以此来<strong>给自己开脱责任</strong>，获得自己的原谅。而事实上，我们因此忽视了自己真实的需求。</p>
+<blockquote>
+<p>所谓活得真实，就是真诚地回应当下的需求。</p>
+</blockquote>
+</li>
+<li><p>人生坐标<br>在早年的经历里，我们形成了对自己和对他人的看法。根据矩阵分类法，可分为四个象限：<br><img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20220310155648.png" alt=""></p>
+<ul>
+<li><p>对你好，我不好的人来说，这类人容易陷入低自尊，通常觉得生活对他们不好，却更善待别人。上文的PLOM（乃至于蛤蟆）都是这样的情况。容易抑郁。（感受到生活的无力感）</p>
+</li>
+<li><p>对你不好，我好的人来说，这类人容易评头论足，让自己高高在上，以显得自己很牛：</p>
+<blockquote>
+<p>“照这么推测，在这个坐标上玩游戏的人都处在’父母状态’？ ”蛤蟆若有所思地说。</p>
+<p>“而且永远都是’<strong>挑剔型父母状态</strong>‘。这些人动不动就指责，焦虑得随时会发脾气，还想用不可能达到的标准来评判别人。当然了，有时候他们会摆出’养育型父母’的姿态，说些诸如 ’我比你更心痛’或’我是为你好’之类的话，但大部分人都能听出这是虚情假意。不过，关于这类人的心理状态，还有一个有意思的现象，那就是他们<strong>从来不会抑郁</strong>。”<br>“因为愤怒能够非常有效地抵抗抑郁。<strong>愤怒的人从不觉得内疚</strong>，因为他们总在怪罪别人。<strong>他们自卫的方式，是把自己内在的恐惧对外投射到别人身上，这样就能把对自己的怒火转向别人</strong>。”</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<p>最后还是再重复一下全书最喜欢的两句话：</p>
+<blockquote>
+<p>所谓活得真实，就是真诚地回应当下的需求。</p>
+<p>在PLOM里，你永远会赢。</p>
+</blockquote>
 <hr>
-<p>该图片由<a target="_blank" rel="noopener" href="https://pixabay.com/zh/users/andibreit-2748383/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2535888">Andreas Breitling</a>在<a target="_blank" rel="noopener" href="https://pixabay.com/zh/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2535888">Pixabay</a>上发布</p>
+<p><strong><a target="_blank" rel="noopener" href="https://www.pexels.com/zh-cn/photo/6845635/?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Pexels</a></strong> 上的 <strong><a target="_blank" rel="noopener" href="https://www.pexels.com/zh-cn/@tima-miroshnichenko?utm_content=attributionCopyText&amp;utm_medium=referral&amp;utm_source=pexels">Tima Miroshnichenko</a></strong> 拍摄的图片</p>
 
         </div>
         <!-- .entry-content -->
@@ -680,15 +478,15 @@ int getIntValue(const function&lt;bool(int)&gt;&amp; judgeFunc) &#123;//for free
           
             <div class="post-nepre half previous">
           
-            <a href="/2021/07/29/CSS%E7%AC%94%E8%AE%B0%E7%AE%80%E5%8D%95%E6%95%B4%E7%90%86/" rel="prev">
+            <a href="/2022/03/10/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E7%9A%84%E7%AC%94%E8%AE%B0%E7%AE%80%E5%8D%95%E6%95%B4%E7%90%86/" rel="prev">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/pexels-magda-ehlers-1300975%20(1).jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/pexels-magda-ehlers-1300975%20(1).jpg">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/tiger-2535888_1920.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/tiger-2535888_1920.jpg">
               </div>
               <span class="label">
               Previous Post</span>
               <div class="info">
                 <h3>
-                CSS笔记简单整理</h3>
+                数据结构与算法的笔记简单整理（持续更新</h3>
                 <hr>
               </div>
             </a>
@@ -698,15 +496,15 @@ int getIntValue(const function&lt;bool(int)&gt;&amp; judgeFunc) &#123;//for free
           
             <div class="post-nepre half next">
           
-            <a href="/2021/07/26/%E9%87%8F%E5%8C%96/" rel="next">
+            <a href="/2022/03/08/regex%EF%BC%88%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%89%E5%9C%A8%E7%BA%BF%E5%8C%B9%E9%85%8D%E7%BD%91%E7%AB%99/" rel="next">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/tiger-2535888_1920.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/tiger-2535888_1920.jpg">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/toast-7009956_1920.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/toast-7009956_1920.jpg">
               </div>
               <span class="label">
               Next Post</span>
               <div class="info">
                 <h3>
-                量化</h3>
+                regex（正则表达式）在线匹配网站</h3>
                 <hr>
               </div>
             </a>
@@ -738,11 +536,11 @@ int getIntValue(const function&lt;bool(int)&gt;&amp; judgeFunc) &#123;//for free
   <!-- City版安装代码已完成 -->
       <section class="author-profile">
         <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
-          <a href="Baokker.github.io" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg" itemprop="image" alt="Baokker" height="70" width="70"></a>
+          <a href="https://Baokker.github.io" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg" itemprop="image" alt="Baokker" height="70" width="70"></a>
           <div class="meta">
             <span class="title">Author</span>
             <h3 itemprop="name">
-            <a href="Baokker.github.io" itemprop="url" rel="author">Baokker</a>
+            <a href="https://Baokker.github.io" itemprop="url" rel="author">Baokker</a>
             </h3>
           </div>
         </div>
