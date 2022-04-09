@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://baokker.github.io/"/>
-  <updated>2022-03-27T02:39:11.349Z</updated>
+  <updated>2022-04-09T03:13:29.847Z</updated>
   <id>http://baokker.github.io/</id>
   
   <author>
@@ -15,6 +15,42 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>自己最喜欢的几首歌</title>
+    <link href="http://baokker.github.io/2022/04/09/%E8%87%AA%E5%B7%B1%E6%9C%80%E5%96%9C%E6%AC%A2%E7%9A%84%E5%87%A0%E9%A6%96%E6%AD%8C/"/>
+    <id>http://baokker.github.io/2022/04/09/自己最喜欢的几首歌/</id>
+    <published>2022-04-09T03:12:57.000Z</published>
+    <updated>2022-04-09T03:13:29.847Z</updated>
+    
+    <summary type="html">
+    
+      粤语歌迷狂喜
+    
+    </summary>
+    
+      <category term="随想" scheme="http://baokker.github.io/categories/%E9%9A%8F%E6%83%B3/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>完美主义：0~1 vs 0~100分</title>
+    <link href="http://baokker.github.io/2022/04/09/%E5%AE%8C%E7%BE%8E%E4%B8%BB%E4%B9%89%EF%BC%9A0-1-vs-0-100%E5%88%86/"/>
+    <id>http://baokker.github.io/2022/04/09/完美主义：0-1-vs-0-100分/</id>
+    <published>2022-04-09T03:12:46.000Z</published>
+    <updated>2022-04-09T03:13:56.075Z</updated>
+    
+    <summary type="html">
+    
+      少点二极管思维啦
+    
+    </summary>
+    
+      <category term="随想" scheme="http://baokker.github.io/categories/%E9%9A%8F%E6%83%B3/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>infj-&gt;enfj</title>
@@ -212,7 +248,7 @@
     <link href="http://baokker.github.io/2022/03/08/%E5%A6%82%E6%9E%9C%E5%8F%88%E8%A6%81%E9%87%8D%E6%96%B0%E8%A3%85%E4%B8%80%E6%AC%A1Linux%E7%9A%84%E8%AF%9D-%EF%BC%88%E8%87%AA%E7%94%A8Linux%E8%A3%85%E6%9C%BA-%E9%85%8D%E4%BB%B6%E6%8C%87%E5%8D%97%EF%BC%89/"/>
     <id>http://baokker.github.io/2022/03/08/如果又要重新装一次Linux的话-（自用Linux装机-配件指南）/</id>
     <published>2022-03-08T08:27:45.000Z</published>
-    <updated>2022-03-10T02:28:48.204Z</updated>
+    <updated>2022-04-03T06:09:29.805Z</updated>
     
     <summary type="html">
     
@@ -371,42 +407,6 @@
     </summary>
     
       <category term="技术" scheme="http://baokker.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>YouCompleteMe安装教程</title>
-    <link href="http://baokker.github.io/2022/02/12/YouCompleteMe%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
-    <id>http://baokker.github.io/2022/02/12/YouCompleteMe安装教程/</id>
-    <published>2022-02-12T03:54:15.000Z</published>
-    <updated>2022-03-10T02:28:19.903Z</updated>
-    
-    <summary type="html">
-    
-      非常好用的vim代码自动补全插件
-    
-    </summary>
-    
-      <category term="技术" scheme="http://baokker.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Reread《精力管理》</title>
-    <link href="http://baokker.github.io/2022/02/04/Reread%E3%80%8A%E7%B2%BE%E5%8A%9B%E7%AE%A1%E7%90%86%E3%80%8B/"/>
-    <id>http://baokker.github.io/2022/02/04/Reread《精力管理》/</id>
-    <published>2022-02-04T07:20:20.000Z</published>
-    <updated>2022-03-10T02:28:16.854Z</updated>
-    
-    <summary type="html">
-    
-      体能 情感 思维 意志
-    
-    </summary>
-    
-      <category term="书单" scheme="http://baokker.github.io/categories/%E4%B9%A6%E5%8D%95/"/>
     
     
   </entry>
