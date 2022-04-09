@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://baokker.github.io/"/>
-  <updated>2022-04-09T03:13:29.847Z</updated>
+  <updated>2022-04-09T03:19:26.470Z</updated>
   <id>http://baokker.github.io/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>自己做了份《伯恩斯情绪疗法》的目录and电子书资源</title>
+    <link href="http://baokker.github.io/2022/04/09/%E8%87%AA%E5%B7%B1%E5%81%9A%E4%BA%86%E4%BB%BD%E3%80%8A%E4%BC%AF%E6%81%A9%E6%96%AF%E6%83%85%E7%BB%AA%E7%96%97%E6%B3%95%E3%80%8B%E7%9A%84%E7%9B%AE%E5%BD%95and%E7%94%B5%E5%AD%90%E4%B9%A6%E8%B5%84%E6%BA%90/"/>
+    <id>http://baokker.github.io/2022/04/09/自己做了份《伯恩斯情绪疗法》的目录and电子书资源/</id>
+    <published>2022-04-09T03:17:48.000Z</published>
+    <updated>2022-04-09T03:19:26.470Z</updated>
+    
+    <summary type="html">
+    
+      如果能带来一点光亮的话是极好的
+    
+    </summary>
+    
+      <category term="书单" scheme="http://baokker.github.io/categories/%E4%B9%A6%E5%8D%95/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>自己最喜欢的几首歌</title>
@@ -389,24 +407,6 @@
     </summary>
     
       <category term="书单" scheme="http://baokker.github.io/categories/%E4%B9%A6%E5%8D%95/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Linux通过Clash for Windows实现科学上网</title>
-    <link href="http://baokker.github.io/2022/02/12/Linux%E9%80%9A%E8%BF%87Clash-for-Windows%E5%AE%9E%E7%8E%B0%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
-    <id>http://baokker.github.io/2022/02/12/Linux通过Clash-for-Windows实现科学上网/</id>
-    <published>2022-02-12T03:54:24.000Z</published>
-    <updated>2022-03-10T02:28:12.163Z</updated>
-    
-    <summary type="html">
-    
-      实现的那一刻很开心！
-    
-    </summary>
-    
-      <category term="技术" scheme="http://baokker.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
   </entry>
