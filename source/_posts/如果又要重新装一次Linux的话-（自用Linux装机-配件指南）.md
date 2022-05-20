@@ -163,7 +163,16 @@ script/bootstrap
     )
     ```
     
-  -   Start a new terminal session.
+  - Start a new terminal session.
+  
+- syntax highlighting（语法高亮 有错误语法会高亮提示）
+  
+  - ```bash
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+    echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
+    ```
+  
+  - start a new terminal session
   
     
   
