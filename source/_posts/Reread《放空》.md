@@ -1,11 +1,11 @@
 ---
 title: Reread《放空》
 author: Baokker
-avatar: 'https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg'
+avatar: 'https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/img/custom/avatar.jpg'
 authorLink: https://Baokker.github.io
 categories: 书单
 comments: true
-photos: https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/pexels-nikita-igonkin-9945400.jpg
+photos: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/pexels-nikita-igonkin-9945400.jpg
 date: 2022-02-04 14:58:00
 keywords: 放空
 description: 看到这里 不如先让自己放下手机 发呆一会

@@ -4,7 +4,7 @@ date: 2018-12-20 23:14:28
 keywords: 喜欢的音乐
 description: 
 comments: false
-photos: https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/banner/music.jpg
+photos: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/img/banner/music.jpg
 ---
 {% raw %}
 <meting-js

@@ -10,15 +10,13 @@ tags:
  - 技术
 keywords: 教程
 description: hexo-sakura主题使用教程
-photos: https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/dog1.jpg
+photos: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/dog1.jpg
 ---
 # 【教程】这个Blog网站是怎么完成的呢(hexo+github+jsdelivr+md)
 
 花了两三天时间 自己的blog总算成了形 这一路摸爬滚打下来 没有诸位的优秀教程 与前辈的debug经历 恐怕我也是无能为力
 
 时间有限 不是很想做出一整个教程 就列下链接以及大致的步骤吧
-
-
 
 * 总体大纲参照的是[llt学长的blog搭建教程](https://letian.website)
 
@@ -63,10 +61,11 @@ photos: https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/dog1.jpg
   此时你已可以直接访问__username.github.io__来查看blog 当然亦可尝试在腾讯云等网站上进行购买域名 由于怕我三分钟热度 还是先不购买了（逃
 
 * [GitHub+jsdelivr+PicGo实现图床](https://segmentfault.com/a/1190000020240864) 提升写作体验
+  （2022.5.24更新：jsdelivr目前貌似是在国内挂了..不挂梯子根本访问不了，还不如不带加速。博主本人时间有限，只能用py写脚本，把`https://cdn.jsdelivr.net/gh/..../....jpg`换成了`https://raw.githubusercontent.com/..../main/....jpg`（图床是在GitHub的main分支上），暂且先这么处理了）
 
   值得一提的是 在GitHub中建立项目时 默认branch名称为main 而在PicGo中branch名称则提示为master 本人因为这个问题一开始一直提示error404 找不到服务器……将二者名称统一即可
 
-  ![](https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20210718110822.png)
+  ![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20210718110822.png)
 
 * Aplayer 尝试中.. 不知道为什么一直是戴佩妮的歌单..
 

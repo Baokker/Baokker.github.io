@@ -1,11 +1,11 @@
 ---
 title: QQ缓存清理
 author: Baokker
-avatar: 'https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg'
+avatar: 'https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/img/custom/avatar.jpg'
 authorLink: https://Baokker.github.io
 categories: 技术
 comments: true
-photos: 'https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/pexels-francesco-ungaro-3172277.jpg'
+photos: 'https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/pexels-francesco-ungaro-3172277.jpg'
 date: 2022-01-18 17:37:28
 keywords: 缓存
 description: 我的评价是不如电报（bushi

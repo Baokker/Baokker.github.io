@@ -1,11 +1,11 @@
 ---
 title: Reread《逆向管理》
 author: Baokker
-avatar: 'https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg'
+avatar: 'https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/img/custom/avatar.jpg'
 authorLink: https://Baokker.github.io
 categories: 书单
 comments: true
-photos: https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/pexels-zumrad-normatova-11123077.jpg
+photos: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/pexels-zumrad-normatova-11123077.jpg
 date: 2022-02-12 20:47:57
 keywords: 逆向管理
 description: 先行动再思考
@@ -39,7 +39,7 @@ description: 先行动再思考
 
 
 
-![](https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20220212201908.png)
+![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220212201908.png)
 
 
 

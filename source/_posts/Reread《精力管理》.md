@@ -1,11 +1,11 @@
 ---
 title: Reread《精力管理》
 author: Baokker
-avatar: 'https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg'
+avatar: 'https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/img/custom/avatar.jpg'
 authorLink: https://Baokker.github.io
 categories: 书单
 comments: true
-photos: https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/pexels-dzenina-lukac-1583884.jpg
+photos: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/pexels-dzenina-lukac-1583884.jpg
 date: 2022-02-04 15:20:20
 keywords: 精力管理
 description: 体能 情感 思维 意志
@@ -58,19 +58,19 @@ description: 体能 情感 思维 意志
 
 体能
 
-![](https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20220204151618.png)
+![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220204151618.png)
 
 情感
 
-![](https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20220204151755.png)
+![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220204151755.png)
 
 思维
 
-![](https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20220204151836.png)
+![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220204151836.png)
 
 意志
 
-![](https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20220204151926.png)
+![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220204151926.png)
 
 ---
 

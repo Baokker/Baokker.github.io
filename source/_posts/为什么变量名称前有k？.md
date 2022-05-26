@@ -1,11 +1,11 @@
 ---
 title: 为什么变量名称前有k？
 author: Baokker
-avatar: 'https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg'
+avatar: 'https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/img/custom/avatar.jpg'
 authorLink: https://Baokker.github.io
 categories: 随想
 comments: true
-photos: 'https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/defaultImages.jpg'
+photos: 'https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/defaultImages.jpg'
 date: 2022-01-17 00:17:26
 tags:
 keywords:

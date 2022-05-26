@@ -1,7 +1,7 @@
 ---
 title: yaml语法简单整理
 author: Baokker
-avatar: 'https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg'
+avatar: 'https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/img/custom/avatar.jpg'
 authorLink: https://Baokker.github.io
 categories: 随想
 comments: true
@@ -10,7 +10,7 @@ tags:
 - 技术
 keywords: yaml
 description: yaml简单整理
-photos: https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/yaml1.png
+photos: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/yaml1.png
 ---
 
 # Yaml

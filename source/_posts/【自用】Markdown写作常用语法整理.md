@@ -1,7 +1,7 @@
 ---
 title: 【自用】Markdown写作常用语法整理
 author: Baokker
-avatar: https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg
+avatar: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/img/custom/avatar.jpg
 authorLink: https://Baokker.github.io
 categories: 技术
 comments: true
@@ -10,7 +10,7 @@ tags:
  - 技术
 keywords: 教程
 description: 简单整理一下md语法
-photos: https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/md.png
+photos: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/md.png
 ---
 
 ```
@@ -44,7 +44,7 @@ ___斜体加粗___ ***斜体加粗***
 
 [链接](https://baokker.github.io)
 
-![图片](https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/md.png)
+![图片](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/md.png)
 
 ​```c
 //c语言的代码块
@@ -86,7 +86,7 @@ ___斜体加粗___ ***斜体加粗***
 
 [链接](https://baokker.github.io)
 
-![图片](https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/md.png)
+![图片](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/md.png)
 
 
 

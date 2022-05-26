@@ -1,11 +1,11 @@
 ---
 title: 【自用】MIT-Missing-Semester笔记
 author: Baokker
-avatar: 'https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg'
+avatar: 'https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/img/custom/avatar.jpg'
 authorLink: https://Baokker.github.io
 categories: 技术
 comments: true
-photos: https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/peanuts-6919261_1920.jpg
+photos: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/peanuts-6919261_1920.jpg
 date: 2022-02-13 22:33:20
 keywords: missing-semester 技术
 description: 一门很好的计算机知识补充课程

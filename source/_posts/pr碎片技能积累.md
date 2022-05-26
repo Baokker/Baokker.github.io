@@ -1,11 +1,11 @@
 ---
 title: pr碎片技能积累
 author: Baokker
-avatar: 'https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg'
+avatar: 'https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/img/custom/avatar.jpg'
 authorLink: https://Baokker.github.io
 categories: 技术
 comments: true
-photos: 'https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/pexels-fotostudio-all-eyes-on-you-10239276.jpg'
+photos: 'https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/pexels-fotostudio-all-eyes-on-you-10239276.jpg'
 date: 2022-01-20 22:21:47
 keywords: pr
 description: 很零碎，对我个人可能更有用

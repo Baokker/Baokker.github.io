@@ -1,7 +1,7 @@
 ---
 title: HTML语法简单整理
 author: Baokker
-avatar: 'https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg'
+avatar: 'https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/img/custom/avatar.jpg'
 authorLink: https://Baokker.github.io
 categories: 技术
 comments: true
@@ -11,7 +11,7 @@ tags:
  - 技术
 keywords: HTML
 description: 菜鸡
-photos: https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/desert-5720527_1920.jpg
+photos: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/desert-5720527_1920.jpg
 ---
 
 
@@ -101,10 +101,10 @@ photos: https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/desert-572052
         <p><abbr title="baokker">bke</abbr> is my abbreviation（缩写）</p>
         <br><br>
 
-        <img border="10" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg" alt="if the image fails to load ,the text will emerge instead">
+        <img border="10" src="https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/img/custom/avatar.jpg" alt="if the image fails to load ,the text will emerge instead">
         <br><br>
 
-        <img border="10" src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg" alt="if the image fails to load ,the text will emerge instead" style="float:center">居中处理
+        <img border="10" src="https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/img/custom/avatar.jpg" alt="if the image fails to load ,the text will emerge instead" style="float:center">居中处理
         <br><br>
         </p1>
 

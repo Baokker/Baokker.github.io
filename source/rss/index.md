@@ -6,7 +6,7 @@ date: 2018-12-20 23:13:05
 keywords: rss订阅！
 description: 掌握了rss订阅！
 comments: false
-photos: https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/pexels-alleksana-7430701.jpg
+photos: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/pexels-alleksana-7430701.jpg
 ---
 
 
@@ -20,7 +20,7 @@ https://baokker.github.io/atom.xml
 
 然后粘贴，即可订阅。
 
-![](https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20220131153924.png)
+![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220131153924.png)
 
 
 

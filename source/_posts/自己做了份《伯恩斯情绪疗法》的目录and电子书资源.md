@@ -1,11 +1,11 @@
 ---
 title: 自己做了份《伯恩斯情绪疗法》的目录and电子书资源
 author: Baokker
-avatar: 'https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg'
+avatar: 'https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/img/custom/avatar.jpg'
 authorLink: 'https://Baokker.github.io'
 categories: 书单
 comments: true
-photos: 'https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/pexels-madison-inouye-2821823.jpg'
+photos: 'https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/pexels-madison-inouye-2821823.jpg'
 date: 2022-04-09 11:17:48
 keywords: 书单 分享
 description: 如果能带来一点光亮的话是极好的
@@ -50,45 +50,45 @@ description: 如果能带来一点光亮的话是极好的
 
 ## 十大认知扭曲
 
-![](https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20220409110243.png)
+![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220409110243.png)
 
-![](https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20220409110303.png)
+![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220409110303.png)
 
-![](https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20220409110316.png)
+![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220409110316.png)
 
 
 
 ## 坏沟通的15种类型
 
-![](https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20220409110915.png)
+![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220409110915.png)
 
 
 
 ## 高效沟通
 
-![](https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20220409110444.png)
+![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220409110444.png)
 
 
 
 ## 阻碍倾听的十种心态
 
-![](https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20220409110530.png)
+![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220409110530.png)
 
-![](https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20220409110548.png)
+![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220409110548.png)
 
 
 
 ## 阻碍情感表达的十种心态
 
-![](https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20220409110635.png)
+![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220409110635.png)
 
-![](https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20220409110649.png)
+![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220409110649.png)
 
 
 
 ## 出了问题你也有责任吗
 
-![](https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20220409110801.png)
+![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220409110801.png)
 
 
 
@@ -98,7 +98,7 @@ description: 如果能带来一点光亮的话是极好的
 
 反正完善了一下目录，这样自查的时候也会方便些吧！
 
-![](https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20220409111156.png)
+![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220409111156.png)
 
 ## 百度网盘
 

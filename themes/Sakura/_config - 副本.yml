@@ -6,14 +6,13 @@ favicon: /images/favicon.ico
 avatar: /img/custom/avatar.jpg
 url: https://baokker.github.io
 description: 回忆这理想不够理想，沿途逛世间一趟只有向上
-# cdn: https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog
-cdn: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main
+cdn: https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog
 pjax: 1
 # 1开启
 mathjax: 0
 
 notice: 这里是我的blog！不定期更新：随想/读书笔记/书单/教程/.. 当然也可能不更（
-lazyloadImg: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/img/loader/orange.progress-bar-stripe-loader.svg
+lazyloadImg: https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/loader/orange.progress-bar-stripe-loader.svg
 
 menus:
   首页: { path: /, fa: fa-fort-awesome faa-shake }
@@ -47,14 +46,14 @@ homePageSortType: -1
 homeArticleShown: 10
 # 背景图片 更好的修改
 bg:
-  - https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/img/cover/(1).jpg.webp
-  - https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/img/cover/(2).jpg.webp
-  - https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/img/cover/(3).jpg.webp
-  - https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/img/cover/(4).jpg.webp
-  - https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/img/cover/(5).jpg.webp
-  - https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/img/cover/(6).jpg.webp
-  - https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/img/cover/(7).jpg.webp
-  - https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/img/cover/(8).jpg.webp
+  - https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/cover/(1).jpg.webp
+  - https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/cover/(2).jpg.webp
+  - https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/cover/(3).jpg.webp
+  - https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/cover/(4).jpg.webp
+  - https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/cover/(5).jpg.webp
+  - https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/cover/(6).jpg.webp
+  - https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/cover/(7).jpg.webp
+  - https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/cover/(8).jpg.webp
 
 # 背景图片样式 空 原图效果 filter-dim 阴影 filter-grid 横条 filter-dot 点点
 bgclass: filter-dot

@@ -1,11 +1,11 @@
 ---
 title: tmux自定义配置一览
 author: Baokker
-avatar: 'https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg'
+avatar: 'https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/img/custom/avatar.jpg'
 authorLink: https://Baokker.github.io
 categories: 技术
 comments: true
-photos: 'https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/dog-5146351_1920.jpg'
+photos: 'https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/dog-5146351_1920.jpg'
 date: 2022-03-04 10:27:23
 keywords: tmux
 description: 修改prefix，增加体验舒适度

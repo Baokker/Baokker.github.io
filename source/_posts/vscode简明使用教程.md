@@ -1,12 +1,12 @@
 ---
 title: vscode简明使用教程
 author: Baokker
-avatar: 'https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg'
+avatar: 'https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/img/custom/avatar.jpg'
 authorLink: 'https://Baokker.github.io'
 categories: 技术
 comments: true
 photos: >-
-  https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/pexels-picjumbocom-461077.jpg
+  https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/pexels-picjumbocom-461077.jpg
 date: 2022-03-27 10:38:51
 keywords:
 description:
@@ -76,13 +76,13 @@ gcc -v
 
 再在插件里安装两个插件，一个是vscode一开始就推荐安装的`C/C++`，还有一个是`Code Runner`：
 
-![](https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20220326115003.png)
+![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220326115003.png)
 
-![](https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20220326115032.png)
+![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220326115032.png)
 
 安装完code runner后，右上角都会出现一个运行的箭头标志，按下即可开始运行。
 
-![](https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20220326115235.png)
+![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220326115235.png)
 
 ## Python
 

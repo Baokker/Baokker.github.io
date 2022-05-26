@@ -1,12 +1,12 @@
 ---
 title: 给blog增加了LiveRe评论插件
 author: Baokker
-avatar: 'https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg'
+avatar: 'https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/img/custom/avatar.jpg'
 authorLink: 'https://Baokker.github.io'
 categories: 技术
 comments: true
 photos: >-
-  https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/rocket-ship-6489876_1920.jpg
+  https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/rocket-ship-6489876_1920.jpg
 date: 2022-03-13 16:30:16
 keywords: Livere blog 评论
 description: 可以给我的blog自由评论了！~
@@ -33,11 +33,11 @@ description: 可以给我的blog自由评论了！~
 于是捣鼓一番，找了找以前的教程，最终采用了[Livere](https://livere.com/)作为新的评论系统：
 
 1. 打开[官网](https://livere.com/)（应该还是需要梯子的）
-   ![](https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20220313162429.png)
+   ![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220313162429.png)
 2. 注册一个Livere账号（信息都是韩文的，得配合Google translation）
 3. 回到官方，点击右上角的头像登录，并打开`管理界面`
 4. 选择`代码管理`，复制该段代码
-   ![](https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20220313162350.png)
+   ![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220313162350.png)
 5. 打开你的blog目录，打开`.\themes\Sakura\layout\_partial\comment.ejs`
 6. 将原先Valine插件的代码注释，然后将刚才复制的代码粘贴（如果可以的话，其实可以加上一个逻辑，即当`post.comment == true`时显示评论，我尝试过，但是因为还不是很熟悉语法，所以被迫..其实也没什么大关系，就是在一些例如目录页这样你不希望有评论的地方也可以评论）
 7. `hexo g`and`hexo d`，大功告成！

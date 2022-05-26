@@ -1,7 +1,7 @@
 ---
 title: Reread《非暴力沟通》
 author: Baokker
-avatar: 'https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/custom/avatar.jpg'
+avatar: 'https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/img/custom/avatar.jpg'
 authorLink: https://Baokker.github.io
 categories: 书单
 comments: true
@@ -10,7 +10,7 @@ tags:
  - 非暴力沟通
 keywords: 非暴力沟通
 description: 终于是重读了一次以前读过的好书
-photos: https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/defaultImages.jpg
+photos: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/defaultImages.jpg
 
 ---
 

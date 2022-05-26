@@ -4,7 +4,7 @@ date: 2018-12-20 23:13:48
 keywords: 留言板
 description: 
 comments: true
-photos: https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/img/banner/comment.jpg
+photos: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/img/banner/comment.jpg
 ---
 {% raw %}
 <div class="entry-content">
