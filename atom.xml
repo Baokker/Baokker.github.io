@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://baokker.github.io/"/>
-  <updated>2022-05-24T05:40:41.770Z</updated>
+  <updated>2022-05-29T13:25:33.137Z</updated>
   <id>http://baokker.github.io/</id>
   
   <author>
@@ -17,31 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>数据结构与算法的笔记简单整理（持续更新</title>
-    <link href="http://baokker.github.io/2022/05/24/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E7%9A%84%E7%AC%94%E8%AE%B0%E7%AE%80%E5%8D%95%E6%95%B4%E7%90%86/"/>
-    <id>http://baokker.github.io/2022/05/24/数据结构与算法的笔记简单整理/</id>
-    <published>2022-05-24T05:40:41.770Z</published>
-    <updated>2022-05-24T05:40:41.770Z</updated>
-    
-    <summary type="html">
-    
-      好难 我都不懂 呜呜
-    
-    </summary>
-    
-      <category term="技术" scheme="http://baokker.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="技术" scheme="http://baokker.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
-    
-  </entry>
-  
-  <entry>
     <title>关于我在sh隔离这69天的一个粗略概述</title>
     <link href="http://baokker.github.io/2022/05/24/%E5%85%B3%E4%BA%8E%E6%88%91%E5%9C%A8sh%E9%9A%94%E7%A6%BB%E8%BF%9969%E5%A4%A9%E7%9A%84%E4%B8%80%E4%B8%AA%E7%B2%97%E7%95%A5%E6%A6%82%E8%BF%B0/"/>
     <id>http://baokker.github.io/2022/05/24/关于我在sh隔离这69天的一个粗略概述/</id>
     <published>2022-05-24T05:33:30.000Z</published>
-    <updated>2022-05-24T05:40:37.498Z</updated>
+    <updated>2022-05-29T13:25:33.137Z</updated>
     
     <summary type="html">
     
@@ -59,7 +39,7 @@
     <link href="http://baokker.github.io/2022/05/17/%E3%80%8A%E7%BD%AA%E4%B8%8E%E7%BD%9A%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/"/>
     <id>http://baokker.github.io/2022/05/17/《罪与罚》读后感/</id>
     <published>2022-05-17T13:20:05.000Z</published>
-    <updated>2022-05-24T05:40:29.703Z</updated>
+    <updated>2022-05-29T13:33:30.554Z</updated>
     
     <summary type="html">
     
@@ -77,7 +57,7 @@
     <link href="http://baokker.github.io/2022/04/28/%E3%80%8A%E4%BA%B2%E5%AF%86%E5%85%B3%E7%B3%BB%E3%80%8B%E2%80%94%E2%80%94%E8%87%AA%E5%B7%B1%E7%9A%84%E5%BD%92%E7%BA%B3/"/>
     <id>http://baokker.github.io/2022/04/28/《亲密关系》——自己的归纳/</id>
     <published>2022-04-28T04:14:37.000Z</published>
-    <updated>2022-05-24T05:40:24.923Z</updated>
+    <updated>2022-05-29T13:25:33.152Z</updated>
     
     <summary type="html">
     
@@ -95,7 +75,7 @@
     <link href="http://baokker.github.io/2022/04/28/%E2%80%9C%E7%8C%AA%E8%82%89%E5%88%BA%E8%BA%AB%E6%9D%AF%E2%80%9D%E7%9A%84%E4%B8%80%E7%82%B9%E5%B0%8F%E6%84%9F%E6%83%B3/"/>
     <id>http://baokker.github.io/2022/04/28/“猪肉刺身杯”的一点小感想/</id>
     <published>2022-04-28T02:12:52.000Z</published>
-    <updated>2022-05-24T05:40:24.169Z</updated>
+    <updated>2022-05-29T13:25:33.152Z</updated>
     
     <summary type="html">
     
@@ -113,7 +93,7 @@
     <link href="http://baokker.github.io/2022/04/15/%E6%96%87%E5%AD%97%E5%A4%B1%E8%AF%AD%E8%80%85/"/>
     <id>http://baokker.github.io/2022/04/15/文字失语者/</id>
     <published>2022-04-15T01:23:59.000Z</published>
-    <updated>2022-05-24T05:40:42.022Z</updated>
+    <updated>2022-05-29T13:25:33.130Z</updated>
     
     <summary type="html">
     
@@ -131,7 +111,7 @@
     <link href="http://baokker.github.io/2022/04/09/%E7%9C%8B%E5%AE%8C%E4%BA%86%E3%80%8A%E5%9B%9B%E6%9C%88%E6%98%AF%E4%BD%A0%E7%9A%84%E8%B0%8E%E8%A8%80%E3%80%8B/"/>
     <id>http://baokker.github.io/2022/04/09/看完了《四月是你的谎言》/</id>
     <published>2022-04-09T05:48:09.000Z</published>
-    <updated>2022-05-24T05:40:43.531Z</updated>
+    <updated>2022-05-29T13:25:33.130Z</updated>
     
     <summary type="html">
     
@@ -149,7 +129,7 @@
     <link href="http://baokker.github.io/2022/04/09/%E8%87%AA%E5%B7%B1%E5%81%9A%E4%BA%86%E4%BB%BD%E3%80%8A%E4%BC%AF%E6%81%A9%E6%96%AF%E6%83%85%E7%BB%AA%E7%96%97%E6%B3%95%E3%80%8B%E7%9A%84%E7%9B%AE%E5%BD%95and%E7%94%B5%E5%AD%90%E4%B9%A6%E8%B5%84%E6%BA%90/"/>
     <id>http://baokker.github.io/2022/04/09/自己做了份《伯恩斯情绪疗法》的目录and电子书资源/</id>
     <published>2022-04-09T03:17:48.000Z</published>
-    <updated>2022-05-24T05:40:44.285Z</updated>
+    <updated>2022-05-29T13:25:33.129Z</updated>
     
     <summary type="html">
     
@@ -167,7 +147,7 @@
     <link href="http://baokker.github.io/2022/04/09/%E8%87%AA%E5%B7%B1%E6%9C%80%E5%96%9C%E6%AC%A2%E7%9A%84%E5%87%A0%E9%A6%96%E6%AD%8C/"/>
     <id>http://baokker.github.io/2022/04/09/自己最喜欢的几首歌/</id>
     <published>2022-04-09T03:12:57.000Z</published>
-    <updated>2022-05-24T05:40:44.535Z</updated>
+    <updated>2022-05-29T13:25:33.129Z</updated>
     
     <summary type="html">
     
@@ -185,7 +165,7 @@
     <link href="http://baokker.github.io/2022/04/09/%E5%AE%8C%E7%BE%8E%E4%B8%BB%E4%B9%89%EF%BC%9A0-1-vs-0-100%E5%88%86/"/>
     <id>http://baokker.github.io/2022/04/09/完美主义：0-1-vs-0-100分/</id>
     <published>2022-04-09T03:12:46.000Z</published>
-    <updated>2022-05-24T05:40:39.760Z</updated>
+    <updated>2022-05-29T13:25:33.137Z</updated>
     
     <summary type="html">
     
@@ -203,19 +183,11 @@
     <link href="http://baokker.github.io/2022/03/27/infj-enfj/"/>
     <id>http://baokker.github.io/2022/03/27/infj-enfj/</id>
     <published>2022-03-27T02:39:11.000Z</published>
-    <updated>2022-05-24T05:40:19.142Z</updated>
+    <updated>2022-05-29T13:25:33.152Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;前些天，小囡给我发了个&lt;a href=&quot;https://www.16personalities.com/ch&quot;&gt;MBTI&lt;/a&gt;的人格测试。说起来很高级，其实便是通过测试，从四个维度把人的性格分成16种人格。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;
-        
-      
+      重新做了回MBTI
     
     </summary>
     
@@ -229,17 +201,11 @@
     <link href="http://baokker.github.io/2022/03/27/vscode%E7%AE%80%E6%98%8E%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"/>
     <id>http://baokker.github.io/2022/03/27/vscode简明使用教程/</id>
     <published>2022-03-27T02:38:51.000Z</published>
-    <updated>2022-05-24T05:40:23.415Z</updated>
+    <updated>2022-05-29T13:25:33.152Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h1 id=&quot;参考链接&quot;&gt;&lt;a href=&quot;#参考链接&quot; class=&quot;headerlink&quot; title=&quot;参考链接&quot;&gt;&lt;/a&gt;参考链接&lt;/h1&gt;&lt;p&gt;&lt;a
-        
-      
+      真有意思！
     
     </summary>
     
@@ -253,17 +219,11 @@
     <link href="http://baokker.github.io/2022/03/27/%E4%BB%BB%E5%8A%A1%E8%BF%87%E5%A4%9A%E6%97%A0%E4%BB%8E%E4%B8%8B%E6%89%8B%E7%9A%84%E6%97%B6%E5%80%99%EF%BC%8C%E9%97%AE%E9%97%AE%E8%87%AA%E5%B7%B1%E6%9C%80%E9%87%8D%E8%A6%81%E7%9A%84%E4%B8%89%E4%BB%B6%E4%BA%8B%E6%98%AF%E4%BB%80%E4%B9%88/"/>
     <id>http://baokker.github.io/2022/03/27/任务过多无从下手的时候，问问自己最重要的三件事是什么/</id>
     <published>2022-03-27T02:36:34.000Z</published>
-    <updated>2022-05-24T05:40:36.743Z</updated>
+    <updated>2022-05-29T13:25:33.138Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;到了大二下，学习的任务突然增重了很多。首先是专业课的比例大大上升，许多课程需要去认真学习（绝对不是之前的课都没好好听）；其次，这个学期有很多的小组项目，而我在大多数小组里担任组长，这需要我始终要保持比组员快一步未雨绸缪，看得远一些，把计划安排下去；最后，因为疫情，所有课程都
-        
-      
+      重视当下
     
     </summary>
     
@@ -277,18 +237,11 @@
     <link href="http://baokker.github.io/2022/03/27/%E3%80%90%E6%95%B4%E7%90%86%E3%80%91%E5%B0%84%E6%89%8B%E5%BA%A7%E6%98%9F%E5%BA%A7%E7%89%B9%E7%82%B9%E4%B8%80%E8%A7%88%E3%80%90%E7%AC%AC%E4%B8%80%E5%BC%B9%E3%80%91/"/>
     <id>http://baokker.github.io/2022/03/27/【整理】射手座星座特点一览【第一弹】/</id>
     <published>2022-03-27T02:36:17.000Z</published>
-    <updated>2022-05-24T05:40:31.965Z</updated>
+    <updated>2022-05-29T13:25:33.147Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;（我为什么会收集这个捏嘻嘻[窥探]）&lt;/p&gt;
-&lt;h2 id=&quot;关于阴阳怪气&quot;&gt;&lt;a href=&quot;#关于阴阳怪气&quot; class=&quot;headerlink&quot;
-        
-      
+      为什么会收集这个捏~
     
     </summary>
     
@@ -302,7 +255,7 @@
     <link href="http://baokker.github.io/2022/03/16/%E3%80%8A%E5%8E%9F%E7%94%9F%E5%AE%B6%E5%BA%AD%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     <id>http://baokker.github.io/2022/03/16/《原生家庭》读书笔记/</id>
     <published>2022-03-16T07:36:21.000Z</published>
-    <updated>2022-05-24T05:40:25.929Z</updated>
+    <updated>2022-05-29T13:25:33.152Z</updated>
     
     <summary type="html">
     
@@ -320,7 +273,7 @@
     <link href="http://baokker.github.io/2022/03/13/%E7%BB%99blog%E5%A2%9E%E5%8A%A0%E4%BA%86LiveRe%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6/"/>
     <id>http://baokker.github.io/2022/03/13/给blog增加了LiveRe评论插件/</id>
     <published>2022-03-13T08:30:16.000Z</published>
-    <updated>2022-05-24T05:40:44.033Z</updated>
+    <updated>2022-05-29T13:25:33.129Z</updated>
     
     <summary type="html">
     
@@ -338,7 +291,7 @@
     <link href="http://baokker.github.io/2022/03/10/%E3%80%8A%E8%9B%A4%E8%9F%86%E5%85%88%E7%94%9F%E5%8E%BB%E7%9C%8B%E5%BF%83%E7%90%86%E5%8C%BB%E7%94%9F%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/"/>
     <id>http://baokker.github.io/2022/03/10/《蛤蟆先生去看心理医生》读后感/</id>
     <published>2022-03-10T02:18:43.000Z</published>
-    <updated>2022-05-24T05:40:29.954Z</updated>
+    <updated>2022-05-29T13:25:33.151Z</updated>
     
     <summary type="html">
     
@@ -356,7 +309,7 @@
     <link href="http://baokker.github.io/2022/03/08/regex%EF%BC%88%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%89%E5%9C%A8%E7%BA%BF%E5%8C%B9%E9%85%8D%E7%BD%91%E7%AB%99/"/>
     <id>http://baokker.github.io/2022/03/08/regex（正则表达式）在线匹配网站/</id>
     <published>2022-03-08T08:27:59.000Z</published>
-    <updated>2022-05-24T05:40:20.651Z</updated>
+    <updated>2022-05-29T13:25:33.152Z</updated>
     
     <summary type="html">
     
@@ -374,7 +327,7 @@
     <link href="http://baokker.github.io/2022/03/08/%E5%A6%82%E6%9E%9C%E5%8F%88%E8%A6%81%E9%87%8D%E6%96%B0%E8%A3%85%E4%B8%80%E6%AC%A1Linux%E7%9A%84%E8%AF%9D-%EF%BC%88%E8%87%AA%E7%94%A8Linux%E8%A3%85%E6%9C%BA-%E9%85%8D%E4%BB%B6%E6%8C%87%E5%8D%97%EF%BC%89/"/>
     <id>http://baokker.github.io/2022/03/08/如果又要重新装一次Linux的话-（自用Linux装机-配件指南）/</id>
     <published>2022-03-08T08:27:45.000Z</published>
-    <updated>2022-05-24T05:40:39.509Z</updated>
+    <updated>2022-05-29T13:25:33.137Z</updated>
     
     <summary type="html">
     
@@ -392,7 +345,7 @@
     <link href="http://baokker.github.io/2022/03/04/%E3%80%8A%E7%AC%AC%E4%B8%80%E4%BA%BA%E7%A7%B0%E5%8D%95%E6%95%B0%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/"/>
     <id>http://baokker.github.io/2022/03/04/《第一人称单数》读后感/</id>
     <published>2022-03-04T02:36:09.000Z</published>
-    <updated>2022-05-24T05:40:28.948Z</updated>
+    <updated>2022-05-29T13:25:33.151Z</updated>
     
     <summary type="html">
     
@@ -401,6 +354,24 @@
     </summary>
     
       <category term="书单" scheme="http://baokker.github.io/categories/%E4%B9%A6%E5%8D%95/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>tmux自定义配置一览</title>
+    <link href="http://baokker.github.io/2022/03/04/tmux%E8%87%AA%E5%AE%9A%E4%B9%89%E9%85%8D%E7%BD%AE%E4%B8%80%E8%A7%88/"/>
+    <id>http://baokker.github.io/2022/03/04/tmux自定义配置一览/</id>
+    <published>2022-03-04T02:27:23.000Z</published>
+    <updated>2022-05-29T13:25:33.152Z</updated>
+    
+    <summary type="html">
+    
+      修改prefix，增加体验舒适度
+    
+    </summary>
+    
+      <category term="技术" scheme="http://baokker.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
   </entry>
