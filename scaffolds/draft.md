@@ -1,5 +1,8 @@
 ---
 title: {{ title }}
 categories: 随想
-photos: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/defaultImages.jpg
+excerpt: 
+tags: 
+index_img: https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/defaultImages.jpg
+banner_img: https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/defaultImages.jpg
 ---

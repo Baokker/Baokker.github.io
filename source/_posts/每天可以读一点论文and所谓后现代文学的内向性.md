@@ -1,15 +1,11 @@
 ---
 title: 每天可以读一点论文and所谓后现代文学的内向性
-author: Baokker
-avatar: 'https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/img/custom/avatar.jpg'
-authorLink: https://Baokker.github.io
 categories: 随想
-comments: true
-photos: 'https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/pexels-mikhael-mayim-8826427.jpg'
+index_img: 'https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/pexels-mikhael-mayim-8826427.jpg'
+banner_img: 'https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/pexels-mikhael-mayim-8826427.jpg'
 date: 2022-01-20 22:28:15
 tags:
-keywords:
-description: 发现论文/期刊也是发掘知识的一个好地方
+excerpt: 发现论文/期刊也是发掘知识的一个好地方
 ---
 
 之前看到过一个up主的日常视频，她说她每天都会坚持读1~2篇期刊/论文，坚持提升自己的知识

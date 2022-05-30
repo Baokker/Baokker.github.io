@@ -1,14 +1,10 @@
 ---
 title: 数据结构bonus五子棋项目
-author: Baokker
-avatar: 'https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/img/custom/avatar.jpg'
-authorLink: https://Baokker.github.io
-comments: true
 date: 2022-02-01 23:10:48
 categories: 技术
-keywords: 五子棋 AI
-description: 直接抄文档了..
-photos: 'https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/defaultImages.jpg'
+excerpt: 直接抄文档了..
+index_img: 'https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/defaultImages.jpg'
+banner_img: 'https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/defaultImages.jpg'
 ---
 
 

@@ -1,12 +1,9 @@
 ---
 title: {{ title }}
 date: {{ date }}
-author: Baokker
-avatar: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/img/custom/avatar.jpg
-authorLink: https://Baokker.github.io
 categories:
-comments: true
-keywords: 
-description: 
-photos: 
+tags: 
+excerpt: 
+index_img: https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/defaultImages.jpg
+bannner_img: https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/defaultImages.jpg
 ---

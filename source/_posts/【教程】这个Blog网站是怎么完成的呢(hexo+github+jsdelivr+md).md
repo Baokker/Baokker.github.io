@@ -1,17 +1,16 @@
 ---
 title: 【教程】这个Blog网站是怎么完成的呢(hexo+github+jsdelivr+md)
-author: hojun && Baokker
-avatar: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/avatar.jpg
-authorLink: hojun.cn
 categories: 技术
 date: 2018-12-12 22:16:01
-comments: true
 tags: 
  - 技术
 keywords: 教程
-description: hexo-sakura主题使用教程
-photos: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/dog1.jpg
+excerpt: hexo-sakura主题使用教程
+index_img: https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/dog1.jpg
+banner_img: https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/dog1.jpg
 ---
+
+# 本人已更换主题，之后会出新教程（2022.5.27）
 # 【教程】这个Blog网站是怎么完成的呢(hexo+github+jsdelivr+md)
 
 花了两三天时间 自己的blog总算成了形 这一路摸爬滚打下来 没有诸位的优秀教程 与前辈的debug经历 恐怕我也是无能为力
@@ -173,7 +172,7 @@ hexo-theme-sakura主题 [English document](https://github.com/honjun/hexo-theme-
 # Site
 title: 你的站点名
 subtitle:
-description: 站点简介
+excerpt: 站点简介
 keywords:
 author: 作者名
 language: zh-cn
@@ -220,7 +219,7 @@ avatar: /img/custom/avatar.jpg
 url: https://sakura.hojun.cn
 
 # 站点介绍（或者说是个人签名）【改】
-description: Live your life with passion! With some drive!
+excerpt: Live your life with passion! With some drive!
 
 # 站点cdn，没有就为空 【改】  若是cdn为空，一些图片地址就要填完整地址了，比如之前avatar就要填https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/avatar.jpg
 cdn: https://cdn.jsdelivr.net/gh/honjun/cdn@1.6
@@ -368,10 +367,11 @@ v_appKey: mgOpfzbkHYqU92CV4IDlAUHQ
 title: comment
 date: 2018-12-20 23:13:48
 keywords: 留言板
-description: 
+excerpt: 
 comments: true
 # 在这里配置单页面头部图片，自定义替换哦~
-photos: https://cdn.jsdelivr.net/gh/honjun/cdn@1.4/img/banner/comment.jpg
+index_img: https://cdn.jsdelivr.net/gh/honjun/cdn@1.4/img/banner/comment.jpg
+banner_img: https://cdn.jsdelivr.net/gh/honjun/cdn@1.4/img/banner/comment.jpg
 ---
 ```
 
@@ -388,7 +388,7 @@ title: bangumi
 comments: false
 date: 2019-02-10 21:32:48
 keywords:
-description:
+excerpt:
 bangumis:
   # 番组图片
   - img: https://lain.bgm.tv/pic/cover/l/0e/1e/218971_2y351.jpg
@@ -425,11 +425,12 @@ title: links
 date: 2018-12-19 23:11:06 
 # 图片上的标题，自定义修改
 keywords: 友人帐 
-description: 
+excerpt: 
 # true/false 开启/关闭评论
 comments: true 
 # 页面头部图片，自定义修改
-photos: https://cdn.jsdelivr.net/gh/honjun/cdn@1.4/img/banner/links.jpg 
+index_img: https://cdn.jsdelivr.net/gh/honjun/cdn@1.4/img/banner/links.jpg 
+banner_img: https://cdn.jsdelivr.net/gh/honjun/cdn@1.4/img/banner/links.jpg 
 # 友链配置
 links: 
   # 类型分组

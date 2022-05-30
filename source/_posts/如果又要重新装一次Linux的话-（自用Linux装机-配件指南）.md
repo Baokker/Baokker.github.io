@@ -1,15 +1,10 @@
 ---
 title: 如果又要重新装一次Linux的话..（自用Linux装机/配件指南）
-author: Baokker
-avatar: 'https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/img/custom/avatar.jpg'
-authorLink: https://Baokker.github.io
 categories: 技术
-comments: true
-photos: >-
-  https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/dog-5146351_1920.jpg
+index_img: https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/dog-5146351_1920.jpg
+banner_img: https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/dog-5146351_1920.jpg
 date: 2022-03-08 16:27:45
-keywords: Linux Ubuntu 装机
-description: 呕心沥血之作了属于是
+excerpt: 呕心沥血之作了属于是
 ---
 
 
@@ -74,7 +69,7 @@ sudo vmhgfs-fuse .host:/ /mnt/hgfs -o subtype=vmhgfs-fuse,allow_other
    （还是很推荐[bywave](https://bywave.art)的）
    
 3. 修改系统代理，打开右上角`Settings->Network`，将`proxy`设为`manual`，同时将其设为：
-   ![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220305233146.png)
+   ![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220305233146.png)
    
 3. 测试一下，打开www.google.com，看看行不行。
 

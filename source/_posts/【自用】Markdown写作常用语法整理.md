@@ -1,16 +1,12 @@
 ---
 title: 【自用】Markdown写作常用语法整理
-author: Baokker
-avatar: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/img/custom/avatar.jpg
-authorLink: https://Baokker.github.io
 categories: 技术
-comments: true
 date: 2021-07-19 17:21:01
 tags:
  - 技术
-keywords: 教程
-description: 简单整理一下md语法
-photos: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/md.png
+excerpt: 简单整理一下md语法
+index_img: https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/md.png
+banner_img: https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/md.png
 ---
 
 ```
@@ -44,7 +40,7 @@ ___斜体加粗___ ***斜体加粗***
 
 [链接](https://baokker.github.io)
 
-![图片](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/md.png)
+![图片](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/md.png)
 
 ​```c
 //c语言的代码块
@@ -86,7 +82,7 @@ ___斜体加粗___ ***斜体加粗***
 
 [链接](https://baokker.github.io)
 
-![图片](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/md.png)
+![图片](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/md.png)
 
 
 

@@ -1,14 +1,11 @@
 ---
 title: Linux运行数据结构课设感想
-author: Baokker
-avatar: 'https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/img/custom/avatar.jpg'
-authorLink: https://Baokker.github.io
-comments: true
+
 categories: 技术
-photos: 'https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/defaultImages.jpg'
+index_img: 'https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/defaultImages.jpg'
+banner_img: 'https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/defaultImages.jpg'
 date: 2022-01-21 19:54:12
-keywords: centos Makefile
-description: 唉 卷不动啊
+excerpt: 唉 卷不动啊
 tags: 
 - 技术
 ---

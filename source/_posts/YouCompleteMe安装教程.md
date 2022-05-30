@@ -1,14 +1,10 @@
 ---
 title: YouCompleteMe安装教程
-author: Baokker
-avatar: 'https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/img/custom/avatar.jpg'
-authorLink: https://Baokker.github.io
 categories: 技术
-comments: true
-photos: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/pexels-kaju-9444064.jpg
+index_img: https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/pexels-kaju-9444064.jpg
+banner_img: https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/pexels-kaju-9444064.jpg
 date: 2022-02-12 11:54:15
-keywords: YCM
-description: 非常好用的vim代码自动补全插件
+excerpt: 非常好用的vim代码自动补全插件
 ---
 
 
@@ -129,5 +125,5 @@ git submodule update --init --recursive
 
 差不多好了！~
 
-![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220212115145.png)
+![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220212115145.png)
 

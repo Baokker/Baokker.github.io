@@ -1,17 +1,13 @@
 ---
 title: CSS笔记简单整理
-author: Baokker
-avatar: 'https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/img/custom/avatar.jpg'
-authorLink: https://Baokker.github.io
 categories: 技术
-comments: true
 date: 2021-07-29 17:14:17
 tags:
  - 技术
  - CSS
-keywords: CSS
-description: 我太菜了呜呜呜
-photos: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/pexels-magda-ehlers-1300975%20(1).jpg
+excerpt: 我太菜了呜呜呜
+index_img: https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/pexels-magda-ehlers-1300975%20(1).jpg
+banner_img: https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/pexels-magda-ehlers-1300975%20(1).jpg
 ---
 
 > **C**ascading **S**tyle **S**heets 层叠样式表

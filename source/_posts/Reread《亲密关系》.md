@@ -1,14 +1,10 @@
 ---
 title: Reread《亲密关系》
-author: Baokker
-avatar: 'https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/img/custom/avatar.jpg'
-authorLink: https://Baokker.github.io
-comments: true
 date: 2022-01-31 14:33:30
 categories: 书单
-keywords: 亲密关系
-description: 笔记写得太多了，还是自用吧..
-photos: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/pexels-ata-ebem-10863286 (1).jpg
+excerpt: 笔记写得太多了，还是自用吧..
+index_img: https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/pexels-ata-ebem-10863286 (1).jpg
+banner_img: https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/pexels-ata-ebem-10863286 (1).jpg
 ---
 
 # 亲密关系
@@ -84,7 +80,7 @@ photos: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/pe
 
 > 一次悲痛欲绝的分手会让原本安全型的人不再安全，一段如胶似漆的恋情也能慢慢让回避亲密的人不再怀疑和戒备亲密感情（Birnie & Lydon，2011）。在两年之内，足有三分之一的依恋类型可以发生实质性变化（Davila & Cobb，2004）。
 
-![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20211120193355.png)
+![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20211120193355.png)
 
 > 单身主义：对选择独身或是不愿谈恋爱的人的偏见和歧视。
 
@@ -199,7 +195,7 @@ photos: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/pe
 
 - 随着亲密关系的增加，不同方面的相似性的重要性往往有所不同。例如伯纳德·默斯坦（Bernard Murstein）的刺激—价值观—角色（stimulus-value-role）理论（Murstein，1987）。此理论认为，在亲密关系的发展过程中，刺激、价值观、角色的相似相容的重要性在不同阶段是不一样的。
 
-  ![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20211129225820.png)
+  ![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20211129225820.png)
 
 - **致命吸引（Fatal Attraction）**：原先认为的伴侣吸引人的品质（坚强），随时间反而变为令人恼怒的特点（固执）
 
@@ -294,7 +290,7 @@ photos: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/pe
   >
   >    > 幸福的配偶对彼此的积极行为都通常给以内部的、稳定的、普遍的归因。他们也倾向于淡化彼此的过失，认为它们是偶然的、特殊的和局部的。因而，消极的行为都通过外部的、易变的、特定的归因而得到谅解。
   >
-  >    ![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20211201235558.png)
+  >    ![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20211201235558.png)
   >
   >    这些不幸的归因方式，可能源于依恋方式的不同，也可能由于不同的沮丧事件的持续发生。
 
@@ -391,7 +387,7 @@ photos: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/pe
 
 **简单沟通模型**
 
-![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20211205164253.png)
+![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20211205164253.png)
 
 如你所见，在信息传达的过程中会有内在和外在的**噪音**，而这导致了**人际隔阂**，即传递者的意图和接受者受到的影响并不相同。
 
@@ -399,7 +395,7 @@ photos: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/pe
 
 #### 五种功能
 
-![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20211205164555.png)
+![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20211205164555.png)
 
 #### 表现渠道
 
@@ -419,7 +415,7 @@ photos: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/pe
 
 - 人际距离
 
-  ![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20211205165259.png)
+  ![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20211205165259.png)
 
 - 副语言（如节奏、音调、语速等）
 
@@ -439,7 +435,7 @@ photos: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/pe
 
 **社会渗透理论**认为人际关系通过人际沟通的系统性变化而得以发展。随着人际关系的发展，自我表露的广度和深度都会增加。
 
-![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20211205170700.png)
+![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20211205170700.png)
 
 与熟人早期交往的自我表露通常会表现出明显的相互作用。换言之，你自我表露得越多，对方也会如此。当然，这最好是一个**渐进**的过程，最好保持耐心，以免留下糟糕的印象。
 
@@ -575,7 +571,7 @@ var 依赖度=结果-CLalt
 
 由是可以根据幸福程度和依赖程度，将人际关系分为四类：
 
-![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20211210185914.png)
+![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20211210185914.png)
 
 **较小利益原则**：lesser CLalt, more power in relationships.
 
@@ -589,15 +585,15 @@ var 依赖度=结果-CLalt
 
 另一方面，**奖赏和代价的作用往往是独立的。**
 
-![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20211210191532.png)
+![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20211210191532.png)
 
 再者，人们对于奖赏有**接近动机**，对于代价有**回避动机**，两者动机的强弱会存在不同，且往往**接近动机越强，越关注亲密关系中获得的奖赏，更能带来长期的好处。**
 
 **关系紊乱模型**
 
-![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20211210192424.png)
+![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20211210192424.png)
 
-![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20211210192913.png)
+![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20211210192913.png)
 
 > 哪些因素能区分婚姻幸福与欢乐减少的夫妻呢？存在若干区分因素，用心阅读前面章节的读者不难发现这些因素。满意的夫妻往往具有**低神经症**和**高自尊**的特征；即使讨论棘手的难题也带着**关爱和幽默**，**不会滋生愤怒**；他们遭遇的应激源（如经济困难和健康问题）也相对较少（Anderson et al.，2010；Lavner & Bradbury，2010）。
 >
@@ -639,7 +635,7 @@ var 依赖度=结果-CLalt
 
 **投入模型**：承诺来自于与人们的CL及CLalt有关的社会交换的所有要素
 
-![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20211222183326.png)
+![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20211222183326.png)
 
 社会学家迈克尔·约翰逊对承诺进行了三种类型的区分：
 
@@ -708,7 +704,7 @@ var 依赖度=结果-CLalt
 
 总的来说，有如下的各处通用的友谊规则：
 
-![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20211224223338.png)
+![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20211224223338.png)
 
 （也因此感慨一下，现在自己的友谊真的是很少了，一个原因是我虽然待人热情，但是刚开始处的时候我绝对是被动，哪怕是莽一些，只要是让我感知到积极的应答性和主动性，我也会投桃报李的）
 
@@ -758,7 +754,7 @@ var 依赖度=结果-CLalt
 
 而且很重要的一点是，羞怯的人给别人形成羞怯的印象，而这种印象又会进一步加深羞怯，进而容易形成恶性循环。
 
-![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220109163846.png)
+![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220109163846.png)
 
 虽然羞怯在某些情况下可以防止行为失当，但确实是弊大于利。
 
@@ -789,7 +785,7 @@ var 依赖度=结果-CLalt
 
 **爱情三角理论：**爱情由亲密（intimacy）、激情（passion）和承诺（commitment）组成。这三种成分的不同组合可以形成不同类型的爱情，例如浪漫之爱（高亲密高激情低承诺），迷恋（低亲密高激情低承诺），etc
 
-![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220124224843.png)
+![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220124224843.png)
 
 接下来主要介绍了三种具体的爱恋。
 
@@ -826,7 +822,7 @@ var 依赖度=结果-CLalt
 
 社会学家约翰·艾伦·李（John Alan Lee）提出了另外一套爱恋风格的体系：
 
-![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220206103802.png)
+![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220206103802.png)
 
 不同的爱情，可能是不同的爱恋风格的加权组合。
 
@@ -888,7 +884,7 @@ sorry,but, 浪漫激情的爱情可能是难以持久的。
 
 另外，要注意，同性恋也是有演化根源的，并不是说同性恋很少有后代所以基因无法被选择。相反，在一项相关男同的研究中，男同虽然很少养育他们自己的后代，但是他们的*姐妹们*却有更多的孩子。
 
-![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220209110648.png)
+![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220209110648.png)
 
 最后，性态度在不同文化中也会有差异。
 
@@ -943,7 +939,7 @@ sorry,but, 浪漫激情的爱情可能是难以持久的。
 
 尽管负面事件的具体表现千差万别，但它们有一个共同的特点（Leary，2005）：负面事件的出现，表明我们得不到伴侣的爱慕和尊敬。如果我们感知到的关系价值低于我们的期望，就会感觉受伤。
 
-![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220416001704.png)
+![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220416001704.png)
 
 他人温和的拒绝带来的感受通常和更大程度的拒绝一样糟糕。但他人对我们接纳的减少可能影响更大，特别是发生在矛盾情感和主动拒绝这一范围之内——也就是说，喜欢我们的人们突然变得不怎么喜欢我们了。
 
@@ -963,7 +959,7 @@ sorry,but, 浪漫激情的爱情可能是难以持久的。
 
 当人们的替代伴侣很糟糕时，就会感到非常需要当前的伴侣——即他们的CLalt很低——任何足以威胁他们亲密关系的事件或行为都是致命的。相反，那些有着合意替代伴侣的人不容易嫉妒，因为就算当前的亲密关系了结，他们的损失也较少（Hansen，1985）。在亲密关系中如果感到自身能力不足，则嫉妒会增强（White，1981）。
 
-![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220416124340.png)
+![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220416124340.png)
 
 如果嫉妒有道理，情敌也真实存在，人际专家都建议我们要努力降低亲密关系排他性和自我价值观之间的关联（Salovey & Rodin，1988）。
 

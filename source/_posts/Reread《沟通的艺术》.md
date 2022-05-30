@@ -1,13 +1,9 @@
 ---
 title: Reread《沟通的艺术》
-author: Baokker
-avatar: 'https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/img/custom/avatar.jpg'
-authorLink: https://Baokker.github.io
-comments: true
 date: 2022-01-27 19:27:29
-keywords: 沟通
-description: 整理一下OneNote的笔记
-photos: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/pexels-nataliya-vaitkevich-8468321.jpg
+excerpt: 整理一下OneNote的笔记
+index_img: https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/pexels-nataliya-vaitkevich-8468321.jpg
+banner_img: https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/pexels-nataliya-vaitkevich-8468321.jpg
 ---
 
 
@@ -53,7 +49,7 @@ photos: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/pe
 
   交流观→彼此都是沟通者 而非单纯的接受者或传送者
 
-  ![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220124103445.png)
+  ![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220124103445.png)
 
 - 沟通的原则
 
@@ -121,12 +117,12 @@ photos: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/pe
 > - 不管我们的伴侣如何表达他们的关心，我们都无法感受到确切的挚爱
 > - 如果我们并没有感受到自己值得爱的话
 
-![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220125211736.png)
+![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220125211736.png)
 
 - 五大性格特质
 
 - 幼儿在小时候具有影响力重要他人在成年期也具有影响力（同样的 文化 性别 认同也会造成影响）（文化见下 集体主义vs个人主义
-  ![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220125211830.png)
+  ![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220125211830.png)
 
 - 自我概念
 
@@ -136,7 +132,7 @@ photos: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/pe
     - 扭曲的回馈（父母/周边人刻薄的评论/过度的夸奖）
     - 过于强调完美（完美主义）（认为“一个适应良好、成功的人是不会犯错的”）
 
-- ![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220125212011.png)
+- ![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220125212011.png)
 
 - 自我实现预言（可能是自己加上的，也可能是别人强加的）
 
@@ -177,7 +173,7 @@ photos: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/pe
 
 我们察觉到的始终是一小部分
 
-![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220125212255.png)
+![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220125212255.png)
 
 知觉的步骤（不一定按顺序）
 
@@ -202,7 +198,7 @@ photos: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/pe
 
 - 自我概念
 
-![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220125212522.png)
+![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220125212522.png)
 
 知觉的倾向
 
@@ -212,7 +208,7 @@ photos: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/pe
 - 先入为主（第一印象）→光环效应
 - 以为别人的想法类似自己的错误
 
-![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220125212618.png)
+![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220125212618.png)
 
 （回忆以前的笔记，发现自己有相当多的笔墨落在低自尊的人如何产生对别人的不切实际的恶意这一方面上。这也确实是当时的自己在面对的一个问题）
 
@@ -228,9 +224,9 @@ photos: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/pe
 >
 > 总之 要意识到自己不能被很有可能是狭隘的知觉所束缚 很多时候是因为自己的性格形成了那样的倾向 害怕别人会离开之类 而事实并非如此
 
-![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220125212808.png)
+![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220125212808.png)
 
-![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220125212821.png)
+![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220125212821.png)
 
 
 
@@ -246,7 +242,7 @@ photos: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/pe
 
 - 方法：枕头法
 
-  ![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220125212943.png)
+  ![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220125212943.png)
 
 - 关键在于意识到并非绝对你对我错
   （给自己再批注一下：意识到并非非黑即白，不要让自己一棍子打死，这真的是我学到的一个很重要的道理。也没有人有那种资格这么做）
@@ -296,7 +292,7 @@ photos: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/pe
 
 
 
-![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220125214358.png)
+![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220125214358.png)
 
 （positive psychology里讲过，**it's we that co-create the reality.**我深以为然，情绪的波动，一方面是客观的事件发生，另一方面也由我们内心的主观态度决定）
 
@@ -321,7 +317,7 @@ photos: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/pe
   - 无助的谬误（类似于阿德勒从因果论过渡到目的论）
   - 灾难性预期的谬误
 
-  ![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220125214642.png)
+  ![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220125214642.png)
 
 - 如何克服：
 
@@ -365,7 +361,7 @@ photos: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/pe
 
 
 
-![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220127193146.png)
+![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220127193146.png)
 
 
 
@@ -402,7 +398,7 @@ photos: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/pe
 - 性别
 - 文化
 
- ![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220127194307.png)
+ ![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220127194307.png)
 
 非口语沟通类型:
 
@@ -505,7 +501,7 @@ some skills：
    - 观察对方对你的支持性回应
    - 要了解到支持并非永远受欢迎（有些人想要独立自主 不需要社会支持）
 
-   ![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220127200010.png)
+   ![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220127200010.png)
 
 5. 分析（注意自己的口气应当委婉 动机应当出于协助 否则反而带来问题）
 
@@ -537,7 +533,7 @@ some skills：
 
 ## chapter 8 发展关系动力
 
-![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220127200339.png)
+![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220127200339.png)
 
 影响选择伙伴的因素：
 
@@ -569,9 +565,9 @@ some skills：
              · 并不一定是线性发展
              · 并不一定只有一种元素存在
 
- ![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220127211926.png)
+ ![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220127211926.png)
 
-![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220127211938.png)
+![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220127211938.png)
 
 （特别摘录了这个停滞阶段，我想它带给我最大的启示就是，永远不要期待可以一劳永逸地去与人相处，这是一个lifelong的过程，需要lifelong的progress）
 
@@ -584,7 +580,7 @@ some skills：
 2. 公开和隐私
 3. 循例和新奇
 
- ![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220127211955.png)
+ ![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220127211955.png)
 
 
 
@@ -606,13 +602,13 @@ some skills：
 4. 社会网络
 5. 分工
 
-![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220127212514.png)
+![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220127212514.png)
 
 
 
 修复受损关系（敲黑板啦，怎么道歉，重点）
 
-![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220127212613.png)
+![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220127212613.png)
 
 俺觉滴，以俺多年来的经验教训，最重要的一点还是，学会低头，学会认错。一方面，适时的忍辱负重有利于关系的长期稳定发展；另一方面，这种技能，在哪里都能用得上的，不亏。
 
@@ -638,7 +634,7 @@ concept之后设沟通：沟通中的沟通 为以后的沟通进行的沟通（
 
 ## chapter 9 表达亲密感
 
-![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220127213657.png)
+![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220127213657.png)
 
 时隔多日，再重温叔本华的这段比喻，还是觉得绝绝子（奈何本人真的没文化呜呜呜）
 
@@ -684,13 +680,13 @@ concept之后设沟通：沟通中的沟通 为以后的沟通进行的沟通（
 
 社会穿透模式以广度和深度对自我袒露进行区分。下图是社会穿透模式的一个示例。
 
-![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220127213952.png)
+![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220127213952.png)
 
 自我袒露的模式
 
 乔哈里视窗
 
-![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220127214256.png)
+![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220127214256.png)
 
 通过这样一种矩阵思维法，可以较为清晰地明白自己究竟哪些是袒露的哪些是隐藏的。
 
@@ -732,7 +728,7 @@ concept之后设沟通：沟通中的沟通 为以后的沟通进行的沟通（
 
    （亲密关系：①包含两人 ② 放在“此时此刻”）
 
-   ![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220127215102.png)
+   ![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220127215102.png)
 
 7. 是否具有建设性的影响（勿踩雷）（明白自我袒露的目的）
 
@@ -754,7 +750,7 @@ concept之后设沟通：沟通中的沟通 为以后的沟通进行的沟通（
 
  ## chapter 10 增进沟通气氛
 
-![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220127215454.png)
+![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220127215454.png)
 
 5:1这个数字在《亲密关系》也看过，纵然负面情绪在脑海中留下的印象往往深过积极情绪，也应当注意维持在一个正面的沟通气氛中。
 
@@ -790,7 +786,7 @@ concept之后设沟通：沟通中的沟通 为以后的沟通进行的沟通（
 8. 含糊其辞
 9. 表里不一（比如一些不符合的非言语沟通）
 
-![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220127220026.png)
+![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220127220026.png)
 
 
 
@@ -923,13 +919,13 @@ ps
 1. 寻找更多信息（询问详情/推测详情/对说话者的想法予以释义/询问批评者要的是什么/询问行为的后果/询问还有哪里出错/）
 2. 同意批评者的看法（并非同意他们的观点 并非一定要道歉 而是同意事实 同意批评者的观感）
 
-![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220127224714.png)
+![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220127224714.png)
 
 
 
 ## chapter 11 处理人际冲突
 
-![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220128100936.png)
+![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220128100936.png)
 
 *乔伊斯·霍克尔（Joyce Hocker）和威廉·威尔莫特（William Wilmot）为冲突提供了广泛的定义：一种**表达出来的挣扎**，在至少**两个相互依赖的个体**之间，感觉到**不相容的目标**、**不足的资源（ex 金钱 时间）**和**达成自己目标时来自另一个个体的阻挠**。*
 
@@ -937,9 +933,9 @@ ps
 
 冲突可以是有益的 只要是建设性的
 
-![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220128101513.png)
+![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220128101513.png)
 
-![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220128101542.png)
+![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220128101542.png)
 
 - 逃避。在逃避的情况下，没有任何人会获得满足。当然，并不是说逃避是无用的，例如说，说出来存在巨大的风险，或者没什么说出来的必要，或者积极错觉也可以促进关系的和睦。
 
@@ -973,7 +969,7 @@ ps
 
 当然，并不是说，逃避一定是坏的，合作一定就是好的。依赖于关系/情境/对象/你的目标而定。
 
-![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220128104352.png)
+![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220128104352.png)
 
 关系系统中的冲突
 
@@ -1039,7 +1035,7 @@ ps
 
 讲真，这个流程很非暴力沟通：
 
-![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220128105836.png)
+![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220128105836.png)
 
 
 

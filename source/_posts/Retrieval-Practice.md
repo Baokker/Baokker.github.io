@@ -1,15 +1,10 @@
 ---
 title: Retrieval Practice
-author: Baokker
-avatar: 'https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/img/custom/avatar.jpg'
-authorLink: https://Baokker.github.io
 categories: 随想
-comments: true
-photos: 'https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/defaultImages.jpg'
+index_img: 'https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/defaultImages.jpg'
+banner_img: 'https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/defaultImages.jpg'
 date: 2022-01-17 00:16:03
-tags:
-keywords:
-description:
+excerpt: 自己去回想 效率更高！！
 ---
 
 

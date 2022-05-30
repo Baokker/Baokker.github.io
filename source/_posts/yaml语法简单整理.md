@@ -1,16 +1,12 @@
 ---
 title: yaml语法简单整理
-author: Baokker
-avatar: 'https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/img/custom/avatar.jpg'
-authorLink: https://Baokker.github.io
 categories: 随想
-comments: true
 date: 2021-07-21 15:40:04
 tags:
 - 技术
-keywords: yaml
-description: yaml简单整理
-photos: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/yaml1.png
+excerpt: yaml简单整理
+index_img: https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/yaml1.png
+banner_img: https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/yaml1.png
 ---
 
 # Yaml

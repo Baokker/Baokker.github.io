@@ -1,16 +1,12 @@
 ---
 title: Reread《学会提问》
-author: Baokker
-avatar: 'https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/img/custom/avatar.jpg'
-authorLink: https://Baokker.github.io
 categories: 书单
-comments: true
 date: 2021-09-13 14:30:19
 tags:
  - 学会提问
-keywords: 批判性思维
-description: 估计是更不完了
-photos: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/pexels-tirachard-kumtanom-601170.jpg
+excerpt: 估计是更不完了
+index_img: https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/pexels-tirachard-kumtanom-601170.jpg
+banner_img: https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/pexels-tirachard-kumtanom-601170.jpg
 ---
 
 # 待更新

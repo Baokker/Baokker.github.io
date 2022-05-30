@@ -1,14 +1,10 @@
 ---
 title: 'const char(&p)[a]是什么意思？'
-author: Baokker
-avatar: 'https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/img/custom/avatar.jpg'
-authorLink: https://Baokker.github.io
 categories: 技术
-comments: true
-photos: 'https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/pexels-akshay-mehra-7959153.jpg'
+index_img: 'https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/pexels-akshay-mehra-7959153.jpg'
+banner_img: 'https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/pexels-akshay-mehra-7959153.jpg'
 date: 2022-01-18 17:20:31
-keywords: 编程
-description: cpp风格的接收字符串的方式
+excerpt: cpp风格的接收字符串的方式
 ---
 
 

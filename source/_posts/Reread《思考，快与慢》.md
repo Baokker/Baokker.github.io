@@ -1,14 +1,10 @@
 ---
 title: Reread《思考，快与慢》
-author: Baokker
-avatar: 'https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/img/custom/avatar.jpg'
-authorLink: https://Baokker.github.io
 categories: 书单
-comments: true
-photos: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/animal-6924664_1920.jpg
+index_img: https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/animal-6924664_1920.jpg
+banner_img: https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/animal-6924664_1920.jpg
 date: 2022-02-12 21:23:32
-keywords: 思考快与慢
-description: 系统1和系统2
+excerpt: 系统1和系统2
 ---
 
 

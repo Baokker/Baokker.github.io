@@ -1,15 +1,10 @@
 ---
 title: vscode简明使用教程
-author: Baokker
-avatar: 'https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/img/custom/avatar.jpg'
-authorLink: 'https://Baokker.github.io'
 categories: 技术
-comments: true
-photos: >-
-  https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/pexels-picjumbocom-461077.jpg
+index_img: https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/pexels-picjumbocom-461077.jpg
+banner_img: https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/pexels-picjumbocom-461077.jpg
 date: 2022-03-27 10:38:51
-keywords:
-description:
+excerpt: 真有意思！
 ---
 
 
@@ -76,13 +71,13 @@ gcc -v
 
 再在插件里安装两个插件，一个是vscode一开始就推荐安装的`C/C++`，还有一个是`Code Runner`：
 
-![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220326115003.png)
+![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220326115003.png)
 
-![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220326115032.png)
+![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220326115032.png)
 
 安装完code runner后，右上角都会出现一个运行的箭头标志，按下即可开始运行。
 
-![](https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/20220326115235.png)
+![](https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220326115235.png)
 
 ## Python
 

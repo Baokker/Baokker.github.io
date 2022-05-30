@@ -1,17 +1,13 @@
 ---
 title: HTML语法简单整理
-author: Baokker
-avatar: 'https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/img/custom/avatar.jpg'
-authorLink: https://Baokker.github.io
 categories: 技术
-comments: true
 date: 2021-07-24 19:15:04
 tags:
  - HTML
  - 技术
-keywords: HTML
-description: 菜鸡
-photos: https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/desert-5720527_1920.jpg
+excerpt: 菜鸡
+index_img: https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/desert-5720527_1920.jpg
+banner_img: https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/desert-5720527_1920.jpg
 ---
 
 

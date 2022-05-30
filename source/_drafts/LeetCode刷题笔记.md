@@ -1,7 +1,7 @@
 ---
 title: LeetCode刷题笔记
 categories: 技术
-photos: 'https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/defaultImages.jpg'
+index_img: 'https://raw.githubusercontent.com/Baokker/cdn_for_blog/main/blog_imgs/defaultImages.jpg'
 ---
 
 
