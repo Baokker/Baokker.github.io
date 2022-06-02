@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://baokker.github.io/"/>
-  <updated>2022-06-02T03:09:02.503Z</updated>
+  <updated>2022-06-02T03:13:36.520Z</updated>
   <id>http://baokker.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://baokker.github.io/2022/06/02/%E4%B8%80%E4%BA%9B%E8%BF%91%E6%9C%9F%E7%9A%84%E6%84%9F%E6%83%B3/"/>
     <id>http://baokker.github.io/2022/06/02/一些近期的感想/</id>
     <published>2022-06-02T00:46:15.000Z</published>
-    <updated>2022-06-02T03:09:02.503Z</updated>
+    <updated>2022-06-02T03:13:36.520Z</updated>
     
     <summary type="html">
     
@@ -32,7 +32,11 @@
       <category term="随想" scheme="http://baokker.github.io/categories/%E9%9A%8F%E6%83%B3/"/>
     
     
-      <category term="随想 大学 精神" scheme="http://baokker.github.io/tags/%E9%9A%8F%E6%83%B3-%E5%A4%A7%E5%AD%A6-%E7%B2%BE%E7%A5%9E/"/>
+      <category term="随想" scheme="http://baokker.github.io/tags/%E9%9A%8F%E6%83%B3/"/>
+    
+      <category term="大学" scheme="http://baokker.github.io/tags/%E5%A4%A7%E5%AD%A6/"/>
+    
+      <category term="精神" scheme="http://baokker.github.io/tags/%E7%B2%BE%E7%A5%9E/"/>
     
   </entry>
   
