@@ -897,9 +897,20 @@
     
   <div id="lv-container" data-id="city" data-uid="MTAyMC81NTcwNy8zMjE3NA==">
     <script type="text/javascript">
-      Fluid.utils.loadComments('#lv-container', function() {
-        Fluid.utils.createScript('https://cdn-city.livere.com/js/embed.dist.js');
-      });
+      // Fluid.utils.loadComments('#lv-container', function() {
+      //   Fluid.utils.createScript('https://cdn-city.livere.com/js/embed.dist.js');
+      // });
+      (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
     </script>
     <noscript>Please enable JavaScript to view the comments</noscript>
   </div>
