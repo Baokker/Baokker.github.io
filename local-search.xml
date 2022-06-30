@@ -4,6 +4,147 @@
   
   
   <entry>
+    <title>零和博弈</title>
+    <link href="/2022/06/30/%E9%9B%B6%E5%92%8C%E5%8D%9A%E5%BC%88/"/>
+    <url>/2022/06/30/%E9%9B%B6%E5%92%8C%E5%8D%9A%E5%BC%88/</url>
+    
+    <content type="html"><![CDATA[<p>看中国讲大国外交，常常提到“零和博弈”“合作共赢”等若干词汇，讲各国外交之间要避开“零和博弈”思维，注重“合作思维”。</p><p>所谓“零和博弈”，便是指参与博弈的各方，在严格竞争下，一方的收益必然意味着另一方的损失，博弈各方的收益和损失相加总和永远为“零”，故双方不存在合作的可能。</p><p>想来觉得，这种思维在许多情境下，确实是toxic的。</p><p>我心里一直有个直觉上的论断，虽然尚未得证，但是我觉得颇有道理：<strong>人际关系的本质是互惠</strong>。</p><p>譬如同学A搜索能力不强，但是上课认真听讲，老师的PPT，上课讲到的考试重点，他都会及时记录下来；同学B上课摸鱼划水，但是资源获取能力极强，考试前总能获得一些往年的真题。</p><p>倘若他们俩怀有此类“零和博弈”的思维，那么为了防止自己的有效信息给别人带来好处，他们便会守口如瓶；这样对双方来说，复习的难度都增大了，效率都降低了。</p><p>但是如果他们学会“合作共赢”，A给B课上讲的重点，B给A往年的真题，这样他们既能对大致的题型有了解，又能了解到当年的重点，复习效率大大提升。</p><p>由是看来，生活里的许多地方，并非不是你赢就是我输，而往往可以通过互惠来促进双方的发展。学会利用好互惠的思维，可以帮助找到同道中人，减少信息差。</p><p>当然，出于严谨考虑，还是得说明一下，如果资源太少不能确保双方都能获利，那么互惠思维就会失效：名额只给一个，你还跟别人说？【滑稽】</p><hr><p>该图片由<a href="https://pixabay.com/zh/users/wiggijo-3628174/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1814362">Jo Wiggijo</a>在<a href="https://pixabay.com/zh/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1814362">Pixabay</a>上发布</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随想</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>随想</tag>
+      
+      <tag>零和博弈</tag>
+      
+      <tag>互惠</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>【教程】拯救blog一记</title>
+    <link href="/2022/06/30/%E3%80%90%E6%95%99%E7%A8%8B%E3%80%91%E6%8B%AF%E6%95%91blog%E4%B8%80%E8%AE%B0/"/>
+    <url>/2022/06/30/%E3%80%90%E6%95%99%E7%A8%8B%E3%80%91%E6%8B%AF%E6%95%91blog%E4%B8%80%E8%AE%B0/</url>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>刚建立Blog的时候，采用的是<a href="https://github.com/honjun/hexo-theme-sakura">Sakura</a>主题，当时的样式如下：</p><p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/1CC894DAAB4956554D0CC0307CC7A1BE.png" alt=""></p><p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/0ED852E63BECFA8D1F89A58A9F3BE707.png" alt=""></p><p>图片采用GitHub作为图床＋Jsdelivr免费图床加速，访问速度也还不错。</p><p>然而，在22年4月，Jsdelivr不幸遇难，在国内遭遇DDoS污染，再也无法访问，一时间：</p><ul><li>Blog的所有图片无法加载，或者只能通过梯子才能正常访问</li><li>原先Blog里的样式（樱花飘散，鼠标点击花朵绽放），以及作者本人在theme里使用的图片/svg等，均使用了Jsdelivr加速，现在直接无法正常加载</li><li>使用raw.githubusercontent访问缓慢</li></ul><p>原主题的开发者应该也是个人开发，无心再维护主题。GitHub上鲜有问津</p><p>无奈之下，只能选择了新的主题…</p><h1 id="前置教程"><a href="#前置教程" class="headerlink" title="前置教程"></a>前置教程</h1><p>见之前的<a href="https://baokker.github.io/2018/12/12/%E3%80%90%E6%95%99%E7%A8%8B%E3%80%91%E8%BF%99%E4%B8%AABlog%E7%BD%91%E7%AB%99%E6%98%AF%E6%80%8E%E4%B9%88%E5%AE%8C%E6%88%90%E7%9A%84%E5%91%A2(hexo+github+jsdelivr+md">教程</a>/)，这些网上有许多的流程。大概列个list吧：</p><ul><li><p>安装node.js</p></li><li><p>安装hexo</p></li><li><p>选择好文件，在对应命令行窗口输入</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo init<br></code></pre></td></tr></table></figure></li></ul><ul><li><p>在GitHub上建立<em>username.github.io</em>的repository（username-&gt;用户名）</p></li><li><p>配置GitHub的SSH Key，输入</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ssh -T git@github.com<br></code></pre></td></tr></table></figure><p>显示成功即可</p></li></ul><h1 id="hexo-blog-file-tree"><a href="#hexo-blog-file-tree" class="headerlink" title="hexo blog file tree"></a>hexo blog file tree</h1><p>以tree的形式展示<code>hexo init</code>后文件夹下的架构，尤其是需要修改的地方，会给出说明。</p><p>不必要的地方省去了</p><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs txt"><br>│  # 所有主题的单独配置均可以用_config.theme_name.yml表示<br>│  # hexo g的时候，会将其和theme文件夹下对应主题文件夹的_config.yml合并<br>│  # 生成最终的静态页面<br>│  # 考虑到更新主题时容易将theme里的_config.yml覆盖，因此<br>│  # 强烈建议在外部单独建立例如_config.fluid.yml的配置文件并自定义，避免被覆盖<br>│  _config.fluid.yml # fluid主题配置<br>│  _config.landscape.yml # landscape主题配置（自带的主题配置）<br>│  _config.yml # blog总配置（包括git remote的地址，选用的主题和语言，站点名etc）<br>├─node_modules # npm安装的包<br>├─scaffolds # 默认的post/page/draft的样式<br>├─source # 主题的资源 hexo g时也会和themes各文件夹的source合并<br>│  ├─about # about页面<br>│  ├─img<br>│  ├─_drafts # 草稿文档存储<br>│  └─_posts # 发布的post存储<br>└─themes # 主题配置文件夹<br>    ├─fluid<br>    │  │  _config.yml # fluid的主题配置文件（不建议在此配置）<br>    │  ├─languages # 语言包<br>    │  └─source # 资源包<br>    └─Sakura # sakura<br>        └─source<br></code></pre></td></tr></table></figure><h1 id="Fluid"><a href="#Fluid" class="headerlink" title="Fluid"></a>Fluid</h1><p><a href="https://fluid-dev.github.io/hexo-fluid-docs/guide/#%E5%85%B3%E4%BA%8E%E6%8C%87%E5%8D%97">Fluid</a>是一款material风格的blog主题，目前开发维护良好，团队更新效率不错，配置指南也写得不错。一开始帮我宝建blog也用了这款，而后自己也换成了fluid。</p><p>主题的大致使用指南：</p><ol><li><p>通过npm方式安装主题；或<a href="https://github.com/fluid-dev/hexo-theme-fluid">github</a>获取release，将解压后文件夹重命名为<code>fluid</code>，放到<code>themes</code>文件夹下</p></li><li><p>在blog所在文件夹新建文件<code>_config.fluid.yml</code>，将<code>themes/fluid/_config.yml</code>里的内容copy到<code>_config.fluid.yml</code>中</p></li><li><p>修改blog文件夹中<code>_config.yml</code>文件，包括：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">theme:</span> <span class="hljs-string">fluid</span>  <span class="hljs-comment"># 指定主题</span><br><span class="hljs-attr">language:</span> <span class="hljs-string">zh-CN</span>  <span class="hljs-comment"># 指定语言，会影响主题显示的语言，按需修改</span><br></code></pre></td></tr></table></figure></li></ol><ol start="4"><li>在<code>_config.fluid.yml</code>中根据<a href="https://fluid-dev.github.io/hexo-fluid-docs/guide/#%E5%85%B3%E4%BA%8E%E6%8C%87%E5%8D%97">指南</a>自定义配置（推荐使用vscode，会舒适很多）</li></ol><p>当然，原先的posts里的一些样式也需要修改，例如，原先我的post背景图片的语法为：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">photos:</span> <span class="hljs-string">link</span><br></code></pre></td></tr></table></figure><p>在fluid里，需要如此指定：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">index_img:</span> <span class="hljs-string">link</span><br><span class="hljs-attr">banner_img:</span> <span class="hljs-string">link</span><br></code></pre></td></tr></table></figure><p>在此我用了vscode里的正则替换，并且小小地用了下capture group：</p><p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220630212903.png" alt=""></p><p>减少了大约90%的手工时间~</p><h1 id="阿里云oss-PicGo"><a href="#阿里云oss-PicGo" class="headerlink" title="阿里云oss+PicGo"></a>阿里云oss+PicGo</h1><p>起初我打算通过直接引用GitHub的raw文件的方式加载图片/样式，尝试后发现，基本上得靠翻墙才能正常访问……</p><p>于是最终选择购买了aliyun的oss服务，买了40G的实例容量，一年有效期，也就花了9块左右，当然访问加载之类还会付费，但目前用了两个月，才付了4分钱（个人博客嘛，本身就没什么访问量…）</p><p>可以参考<a href="https://zhuanlan.zhihu.com/p/104152479">这篇教程</a>，最终在PicGo上效果如下：</p><p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220630213725.png" alt=""></p><p>注意存储路径如果是自定义文件夹，最后一定要加个/，不然本来是<code>blog_img</code>下的<code>img1.jpg</code>，会变成<code>blog_imgimg1.jpg</code>。</p><h1 id="后续更新…"><a href="#后续更新…" class="headerlink" title="后续更新…"></a>后续更新…</h1><p>现在你看到的blog，就是长这样啦~</p><hr><p>该图片由<a href="https://pixabay.com/zh/users/purplehorse-1826145/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1113398">Purplehorse</a>在<a href="https://pixabay.com/zh/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1113398">Pixabay</a>上发布</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>技术</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>阿里云oss</tag>
+      
+      <tag>hexo</tag>
+      
+      <tag>fluid</tag>
+      
+      <tag>blog</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>《昨日的世界》读后感</title>
+    <link href="/2022/06/30/%E3%80%8A%E6%98%A8%E6%97%A5%E7%9A%84%E4%B8%96%E7%95%8C%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/"/>
+    <url>/2022/06/30/%E3%80%8A%E6%98%A8%E6%97%A5%E7%9A%84%E4%B8%96%E7%95%8C%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/</url>
+    
+    <content type="html"><![CDATA[<p>哈哈哈哈哈哈哈哈哈哈哈哈我四月份看完的书现在还没写读后感哈哈哈哈哈快写快写</p><hr><p>在关在sh的时候看完了这本书（准确地说还是纸质版，从图书馆借来以后，就再也没有归还的机会，要等九月份开学再去还了hh）。总的来说，这篇回忆录记下了作者从青年到壮年到中年的历程，从青壮年时期的成长经历，周边习俗写起，又写到一战爆发，欧洲受到重大打击后有所恢复，又跌入到二战的漩涡中。自己从意气风发，蒸蒸日上，再到作品被禁，国破人亡。生活赋予他百般经历，又给他一枝写作的笔，叫他把这时代记录下来。整本书语言流畅（翻译很加分！），娓娓道来，读起来非常舒服。特别是恰巧处在sh静态管理的时期，读来更有感触了。</p><p>（另外提一笔，我在手机端做的划线，用Notion在手机和电脑端同步，特别舒服）</p><blockquote><p>“时代提供了图景，我无非是对这些图景加以解释而已，因为这并非我个人的经历，而是我们整整一代人的经历”</p></blockquote><blockquote><p>“今天，巨大的风暴把世界击得粉碎，我才完全明白，太平世界不过是梦幻中的宫殿” “我们不能不承认弗洛伊德是正确的，他把我们的文化、我们的文明看作薄薄的一层纸，随时都会被邪恶的力量击破”</p></blockquote><h1 id="年轻的力量"><a href="#年轻的力量" class="headerlink" title="年轻的力量"></a>年轻的力量</h1><blockquote><p>“今天，到处推崇年轻、活力、干劲和自信，而在那个太平年代，任何有进取精神的人，为了使自己看起来老成一些，都不得不打扮一下自己”</p></blockquote><p>现在的人们，哪怕是四五十岁的中年人，为了让自己显得更加有活力有创造力，都把自己打扮得像一个年轻人一样，而放在一两百年前，这种情况居然是反过来的，是由年轻人去仿效中年人老年人。个中区别可见一斑。</p><h1 id="性"><a href="#性" class="headerlink" title="性"></a>性</h1><blockquote><p>“那些在今天由于道德风尚听其自然而早已衰落的行当，在当时却悄悄地十分兴隆，特别是裸体人像摄影，写真照相业。不管在哪家酒肆饭店，都有小贩在桌下向青少年兜售裸体照片。还有地下出版色情文学的行当，印的这些书粗制滥造，纸张极差，语病甚多，可销路甚好；那些淫秽下流的杂志销路同样很好，书刊中不堪入目的色情描写，在今天找不到第二份。这是因为严肃文学不得不坚持理想主义的说教和小心翼翼的态度”</p></blockquote><blockquote><p>“说到底，假正经地不准谈性的启蒙和不许同异性无拘束相处的那一代人，实际上要比我们这一代享有自由恋爱的青年人更好色”</p></blockquote><p>一直以为若干年的社会，没有色情影片等媒介的传播，人们对性的addiction似乎没有今天这么强烈，不会有这么多的蝈蝻。然而事实上，茨威格用一章的篇幅，讲述了他青年时代所在社会对性的避之不及，对人性自由本能的压抑，和实际上地下色情行业的猖獗。表面上，社会上的上流女性都裹紧衣裳，温文尔雅，男性都绅士翩翩；而事实上，那时的色情文学/照片/行业，比现在的色情影片还要多，只是隐藏在不为人知的深处。</p><blockquote><p>“一座城市，地面上是打扫干净的道路，街道两旁是豪华的商店和优美的公园，而地下是泄泻污水的排水系统”</p></blockquote><h1 id="教育"><a href="#教育" class="headerlink" title="教育"></a>教育</h1><blockquote><p>“因此我觉得，大学对智商的普遍提高具有实际意义，是可行的和有效的；而对那些有创造能力的人来说则是无效的，甚至会起阻碍作用”</p></blockquote><p>茨威格在书里也思考了大学的教育，提出统一的课程规划反而可能会遏制那些天才的创造力，束缚他们的手脚。</p><h1 id="翻译"><a href="#翻译" class="headerlink" title="翻译"></a>翻译</h1><blockquote><p>“在这期间，我遵照戴默尔的忠告，抓紧时间从事翻译工作，至今我仍然感激他，因为文学翻译能使年轻的作家更熟练更精确地运用祖国语言，对写作大有裨益”</p></blockquote><p>以前一直觉得翻译这个行业没什么，读完茨威格后方知道，翻译是一项讲究活，既需要对外语的充分了解，又需要对祖国语言有充分的造诣，能够熟练地用自己的语言表述出原著的意思，而这其实很能提升写作的能力。</p><h1 id="名誉"><a href="#名誉" class="headerlink" title="名誉"></a>名誉</h1><blockquote><p>“荣誉是“围绕一个名字聚集起来的全部误会的总和”——那种好奇的空洞的滚滚巨浪只打湿他的名字，并没有打湿他本人的身体”</p></blockquote><p>与君共勉。</p><h1 id="艺术"><a href="#艺术" class="headerlink" title="艺术"></a>艺术</h1><blockquote><p>“罗曼·罗兰在他的整部作品中赞美了艺术的不朽，但我却从他身上感到他对世界结构的脆弱表现出加倍的悲哀。他回答我说：“艺术能使我们每个人得到满足，但它对现实生活却无能为力”</p></blockquote><p>王德峰说，哲学、艺术、宗教，是三种人类最高的精神境界活动。但是这种活动，可以充盈内心，却难以救济世人（从这个角度来说，儒学确实很伟大）。</p><h1 id="战争"><a href="#战争" class="headerlink" title="战争"></a>战争</h1><h2 id="zz宣传"><a href="#zz宣传" class="headerlink" title="zz宣传"></a>zz宣传</h2><blockquote><p>“我觉得，经过多年对德国仇恨的宣传，流毒已浸入平民百姓的心里。在这个远离大城市的小城镇，这里的市民和士兵毫无恶意，却对威廉皇帝、对德国有这么大的仇恨” “一座二百万人口的城市，一个几乎有五千万人口的国家，战争使它们一下子变成一个中心，体现一种意志，觉得自己就是世界的历史；他们在经历一个一去不复返的时刻，觉得随时都会被召唤，把渺小的“我”融化到火热的群众中去，把个人的私心消灭在其中，什么地位、语言、阶级、宗教信仰，所有差别都被暂时的兄弟情谊的巨涛淹没了”</p></blockquote><p>我因此更加讨厌zz宣传。它使人视野狭隘，无法真正地去体会问题的所在，感受共同的人性，而是为一句口号狂热，为假想的敌人愤怒。上个世纪的两场大战也已经证明，没有所谓赢家，只有共同的输家。对国家是倒退，对个人是不幸，是无法抵御的时代灾难（存在主义也是因此兴起）</p><h2 id="士兵"><a href="#士兵" class="headerlink" title="士兵"></a>士兵</h2><blockquote><p>“这些看守，跟家乡的画报上经常刊登的那些漂亮的粉头净面的穿着新军服的士兵毫无共同之处。这些士兵对待战俘根本没有半点好斗和严厉的情绪，也没有进行严格的防范，相反，他们与战俘坐在一起，像同伴一般；那些战俘也丝毫没有逃跑的意思。因为他们之间语言不通，还闹出了不少笑话。他们互相敬烟，相视微笑结成朋友”</p></blockquote><blockquote><p>“看到这个情景，我不由得产生这样的感觉，这些粗野又纯朴的人对战争的看法要比大学教授和作家深刻多了：战争是落到他们头上的一种不幸，对这种不幸他们束手无策，凡是陷入不幸命运的人，都是同病相怜的兄弟”</p></blockquote><p>海报里的士兵个个精神饱满（此处应有配图，USA的I want you征兵海报hh），斗志昂扬；然而前线的士兵，与其说是愤慨杀敌的战士，毋宁说是zz操纵下的棋子，无奈地承受时代予以ta的命运。</p><h2 id="信仰"><a href="#信仰" class="headerlink" title="信仰"></a>信仰</h2><blockquote><p>“有些东西随着战争失败而被破坏了，即我们从青年时代一度被培养起来的认为权威不会犯错误的信念被破坏了”</p></blockquote><p>与君共勉。</p><hr><p>该图片由<a href="https://pixabay.com/zh/users/martieda-999650/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2040718">Mauricio A.</a>在<a href="https://pixabay.com/zh/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2040718">Pixabay</a>上发布</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>书单</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>书单</tag>
+      
+      <tag>昨日的世界</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>python简易打包教程</title>
+    <link href="/2022/06/30/python%E7%AE%80%E6%98%93%E6%89%93%E5%8C%85%E6%95%99%E7%A8%8B/"/>
+    <url>/2022/06/30/python%E7%AE%80%E6%98%93%E6%89%93%E5%8C%85%E6%95%99%E7%A8%8B/</url>
+    
+    <content type="html"><![CDATA[<p>本学期两次操作系统的项目都采用了PyQt5作为图形化的开发界面。为了最终上交一个可以直接执行的文件，需要对源码及相关库进行打包。对此，python丰富的生态已经给出了简单的方法，即<a href="https://www.pyinstaller.org/">PyInstaller</a>。</p><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pip install pyinstaller<br></code></pre></td></tr></table></figure><h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># -F-&gt;单个文件</span><br><span class="hljs-comment"># -w-&gt;运行时不显示命令行窗口（仅对 Windows 有效）</span><br><span class="hljs-comment"># -i .\imgs\cover.ico-&gt;指定图标</span><br><span class="hljs-comment"># .\file_system_main.py # 源文件</span><br>pyinstaller -F -w -i .\imgs\cover.ico .\file_system_main.py<br></code></pre></td></tr></table></figure><p>如是操作后，便会在此文件夹生成一个<code>dist</code>文件夹，里面的可执行文件便是所需要的结果。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>技术</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>技术</tag>
+      
+      <tag>pyInstaller</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>关于“提问”的一些想法</title>
+    <link href="/2022/06/30/%E5%85%B3%E4%BA%8E%E2%80%9C%E6%8F%90%E9%97%AE%E2%80%9D%E7%9A%84%E4%B8%80%E4%BA%9B%E6%83%B3%E6%B3%95/"/>
+    <url>/2022/06/30/%E5%85%B3%E4%BA%8E%E2%80%9C%E6%8F%90%E9%97%AE%E2%80%9D%E7%9A%84%E4%B8%80%E4%BA%9B%E6%83%B3%E6%B3%95/</url>
+    
+    <content type="html"><![CDATA[<p>前些日子在GitHub上看了这篇<a href="https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md">提问的智慧</a>，里面对程序员遇到问题时合适的处理方法，如何正确地提出问题，在哪里提出问题等，都给出了详细的解释。谈两点我显著的感受。</p><h1 id="RTFM，STFW：先查查！"><a href="#RTFM，STFW：先查查！" class="headerlink" title="RTFM，STFW：先查查！"></a>RTFM，STFW：先查查！</h1><p>RTFM（Read The Fucking Manual）</p><p>STFW（Search The Fucking Web）</p><p>在遇到问题时，首先应该去看完整的手册，去Google上搜索（不是我吹，但是Baidu确实比Google拉了太多太多。举个例子，我给我宝的电脑装MATLAB，当时直接用百度搜索MATLAB，结果到第八条才找到官网，上面七条全是广告，太无语了）。确保你经过了充分的思考，经查证后还是不能解决问题，这样才出现提问的契机。</p><h1 id="earn-an-answer-with-a-good-question"><a href="#earn-an-answer-with-a-good-question" class="headerlink" title="earn an answer with a good question"></a>earn an answer with a good question</h1><p>（在开源社区and问答网站上，）一个好的答案，并非是通过提问的悬赏赚来的，而更多是通过一个优秀的问题挣来的。</p><p>也就是说，获得一个理想的答案，有两种方法：</p><ol><li>提供足够高的悬赏</li><li>提供一个足够好的问题，这个问题勾起了ta的兴趣，让ta觉得这个问题有趣味，有挑战性，那这样也可以使ta参与到这个问题的解决中（甚至可能会更热心），与你一同解决这个问题，提供优质的解答。</li></ol><p>所以，在提问题前，还是要学会三思呀。</p><hr><p>该图片由<a href="https://pixabay.com/zh/users/ajs1-13124781/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5258341">AJS1</a>在<a href="https://pixabay.com/zh/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5258341">Pixabay</a>上发布</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随想</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>随想</tag>
+      
+      <tag>提问</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>《古都》读后感</title>
     <link href="/2022/06/29/%E3%80%8A%E5%8F%A4%E9%83%BD%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/"/>
     <url>/2022/06/29/%E3%80%8A%E5%8F%A4%E9%83%BD%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/</url>

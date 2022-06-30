@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://baokker.github.io/"/>
-  <updated>2022-06-29T14:35:31.204Z</updated>
+  <updated>2022-06-30T13:48:33.767Z</updated>
   <id>http://baokker.github.io/</id>
   
   <author>
@@ -15,6 +15,122 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>零和博弈</title>
+    <link href="http://baokker.github.io/2022/06/30/%E9%9B%B6%E5%92%8C%E5%8D%9A%E5%BC%88/"/>
+    <id>http://baokker.github.io/2022/06/30/零和博弈/</id>
+    <published>2022-06-30T13:40:41.000Z</published>
+    <updated>2022-06-30T13:48:33.767Z</updated>
+    
+    <summary type="html">
+    
+      促进合作共赢
+    
+    </summary>
+    
+      <category term="随想" scheme="http://baokker.github.io/categories/%E9%9A%8F%E6%83%B3/"/>
+    
+    
+      <category term="随想" scheme="http://baokker.github.io/tags/%E9%9A%8F%E6%83%B3/"/>
+    
+      <category term="零和博弈" scheme="http://baokker.github.io/tags/%E9%9B%B6%E5%92%8C%E5%8D%9A%E5%BC%88/"/>
+    
+      <category term="互惠" scheme="http://baokker.github.io/tags/%E4%BA%92%E6%83%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【教程】拯救blog一记</title>
+    <link href="http://baokker.github.io/2022/06/30/%E3%80%90%E6%95%99%E7%A8%8B%E3%80%91%E6%8B%AF%E6%95%91blog%E4%B8%80%E8%AE%B0/"/>
+    <id>http://baokker.github.io/2022/06/30/【教程】拯救blog一记/</id>
+    <published>2022-06-30T13:40:32.000Z</published>
+    <updated>2022-06-30T13:49:42.629Z</updated>
+    
+    <summary type="html">
+    
+      奶奶滴（基础教程/hexo文件架构/fluid主题/阿里云oss）
+    
+    </summary>
+    
+      <category term="技术" scheme="http://baokker.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="阿里云oss" scheme="http://baokker.github.io/tags/%E9%98%BF%E9%87%8C%E4%BA%91oss/"/>
+    
+      <category term="hexo" scheme="http://baokker.github.io/tags/hexo/"/>
+    
+      <category term="fluid" scheme="http://baokker.github.io/tags/fluid/"/>
+    
+      <category term="blog" scheme="http://baokker.github.io/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《昨日的世界》读后感</title>
+    <link href="http://baokker.github.io/2022/06/30/%E3%80%8A%E6%98%A8%E6%97%A5%E7%9A%84%E4%B8%96%E7%95%8C%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/"/>
+    <id>http://baokker.github.io/2022/06/30/《昨日的世界》读后感/</id>
+    <published>2022-06-30T05:08:37.000Z</published>
+    <updated>2022-06-30T13:50:24.354Z</updated>
+    
+    <summary type="html">
+    
+      值得一读，感受欧洲坠入黑暗的五十年
+    
+    </summary>
+    
+      <category term="书单" scheme="http://baokker.github.io/categories/%E4%B9%A6%E5%8D%95/"/>
+    
+    
+      <category term="书单" scheme="http://baokker.github.io/tags/%E4%B9%A6%E5%8D%95/"/>
+    
+      <category term="昨日的世界" scheme="http://baokker.github.io/tags/%E6%98%A8%E6%97%A5%E7%9A%84%E4%B8%96%E7%95%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python简易打包教程</title>
+    <link href="http://baokker.github.io/2022/06/30/python%E7%AE%80%E6%98%93%E6%89%93%E5%8C%85%E6%95%99%E7%A8%8B/"/>
+    <id>http://baokker.github.io/2022/06/30/python简易打包教程/</id>
+    <published>2022-06-30T03:25:36.000Z</published>
+    <updated>2022-06-30T03:25:36.217Z</updated>
+    
+    <summary type="html">
+    
+      pyInstaller简易用法
+    
+    </summary>
+    
+      <category term="技术" scheme="http://baokker.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="技术" scheme="http://baokker.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="pyInstaller" scheme="http://baokker.github.io/tags/pyInstaller/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于“提问”的一些想法</title>
+    <link href="http://baokker.github.io/2022/06/30/%E5%85%B3%E4%BA%8E%E2%80%9C%E6%8F%90%E9%97%AE%E2%80%9D%E7%9A%84%E4%B8%80%E4%BA%9B%E6%83%B3%E6%B3%95/"/>
+    <id>http://baokker.github.io/2022/06/30/关于“提问”的一些想法/</id>
+    <published>2022-06-30T03:25:23.000Z</published>
+    <updated>2022-06-30T13:53:31.613Z</updated>
+    
+    <summary type="html">
+    
+      earn an answer with a good question
+    
+    </summary>
+    
+      <category term="随想" scheme="http://baokker.github.io/categories/%E9%9A%8F%E6%83%B3/"/>
+    
+    
+      <category term="随想" scheme="http://baokker.github.io/tags/%E9%9A%8F%E6%83%B3/"/>
+    
+      <category term="提问" scheme="http://baokker.github.io/tags/%E6%8F%90%E9%97%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>《古都》读后感</title>
@@ -318,96 +434,6 @@
     </summary>
     
       <category term="书单" scheme="http://baokker.github.io/categories/%E4%B9%A6%E5%8D%95/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>自己最喜欢的几首歌</title>
-    <link href="http://baokker.github.io/2022/04/09/%E8%87%AA%E5%B7%B1%E6%9C%80%E5%96%9C%E6%AC%A2%E7%9A%84%E5%87%A0%E9%A6%96%E6%AD%8C/"/>
-    <id>http://baokker.github.io/2022/04/09/自己最喜欢的几首歌/</id>
-    <published>2022-04-09T03:12:57.000Z</published>
-    <updated>2022-05-29T13:25:33.129Z</updated>
-    
-    <summary type="html">
-    
-      粤语歌迷狂喜
-    
-    </summary>
-    
-      <category term="随想" scheme="http://baokker.github.io/categories/%E9%9A%8F%E6%83%B3/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>完美主义：0~1 vs 0~100分</title>
-    <link href="http://baokker.github.io/2022/04/09/%E5%AE%8C%E7%BE%8E%E4%B8%BB%E4%B9%89%EF%BC%9A0-1-vs-0-100%E5%88%86/"/>
-    <id>http://baokker.github.io/2022/04/09/完美主义：0-1-vs-0-100分/</id>
-    <published>2022-04-09T03:12:46.000Z</published>
-    <updated>2022-05-29T13:25:33.137Z</updated>
-    
-    <summary type="html">
-    
-      少点二极管思维啦
-    
-    </summary>
-    
-      <category term="随想" scheme="http://baokker.github.io/categories/%E9%9A%8F%E6%83%B3/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>infj-&gt;enfj</title>
-    <link href="http://baokker.github.io/2022/03/27/infj-enfj/"/>
-    <id>http://baokker.github.io/2022/03/27/infj-enfj/</id>
-    <published>2022-03-27T02:39:11.000Z</published>
-    <updated>2022-05-29T13:25:33.152Z</updated>
-    
-    <summary type="html">
-    
-      重新做了回MBTI
-    
-    </summary>
-    
-      <category term="随想" scheme="http://baokker.github.io/categories/%E9%9A%8F%E6%83%B3/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>vscode简明使用教程</title>
-    <link href="http://baokker.github.io/2022/03/27/vscode%E7%AE%80%E6%98%8E%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"/>
-    <id>http://baokker.github.io/2022/03/27/vscode简明使用教程/</id>
-    <published>2022-03-27T02:38:51.000Z</published>
-    <updated>2022-05-29T13:25:33.152Z</updated>
-    
-    <summary type="html">
-    
-      真有意思！
-    
-    </summary>
-    
-      <category term="技术" scheme="http://baokker.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>任务过多无从下手的时候，问问自己最重要的三件事是什么</title>
-    <link href="http://baokker.github.io/2022/03/27/%E4%BB%BB%E5%8A%A1%E8%BF%87%E5%A4%9A%E6%97%A0%E4%BB%8E%E4%B8%8B%E6%89%8B%E7%9A%84%E6%97%B6%E5%80%99%EF%BC%8C%E9%97%AE%E9%97%AE%E8%87%AA%E5%B7%B1%E6%9C%80%E9%87%8D%E8%A6%81%E7%9A%84%E4%B8%89%E4%BB%B6%E4%BA%8B%E6%98%AF%E4%BB%80%E4%B9%88/"/>
-    <id>http://baokker.github.io/2022/03/27/任务过多无从下手的时候，问问自己最重要的三件事是什么/</id>
-    <published>2022-03-27T02:36:34.000Z</published>
-    <updated>2022-05-29T13:25:33.138Z</updated>
-    
-    <summary type="html">
-    
-      重视当下
-    
-    </summary>
-    
-      <category term="随想" scheme="http://baokker.github.io/categories/%E9%9A%8F%E6%83%B3/"/>
     
     
   </entry>
