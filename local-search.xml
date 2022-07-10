@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>Typora+PicGo实现markdown写作自动上传图片</title>
+    <link href="/2022/07/10/Typora-PicGo%E5%AE%9E%E7%8E%B0markdown%E5%86%99%E4%BD%9C%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87/"/>
+    <url>/2022/07/10/Typora-PicGo%E5%AE%9E%E7%8E%B0markdown%E5%86%99%E4%BD%9C%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87/</url>
+    
+    <content type="html"><![CDATA[<p>以前的写作里鲜少添加图片，这并非我本人喜好文字，又或者故作清高，不屑于写那种一步步教你xxx的小白教程。事实上，这么做单纯是因为添加图片太麻烦。</p><p>以前的保存图片步骤：</p><ol><li>保存图片到本地</li><li>打开PicGo，上传图片<br><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20220710143553597.png" alt="image-20220710143553597"></li><li>在相册里选择对应的图片，复制其链接，粘贴到md中<br><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20220710143620975.png" alt="image-20220710143620975"></li></ol><p>换言之，上传一张图片，需要经过三步操作，这实在是影响写作时的思考流，被打断的体验着实不舒服。</p><p>所幸前两天发现了Typora的保存插入图片功能，设置步骤如下：</p><ol><li>打开设置<br><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20220710143802014.png" alt="image-20220710143802014"></li><li><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20220710143840469.png" alt="image-20220710143840469"></li></ol><p>设置完成后，可以点击<code>验证图片上传选项</code>按钮测试。</p><p>之前一直没用上这个功能，因为Typora一直报错<code>Fail to fetch</code>，我以为是当时用GitHub当图床，访问太慢的原因，后来发现换成aliyun的oss还是不行，遂发现真实情况。</p><p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20220710144048132.png" alt="image-20220710144048132"></p><p>原来typora用picgo默认的36677端口，而我本地的picgo不知为何把监听端口设成了36678，所以一直没成功……</p><p>现在写作的图片会慢慢多起来啦~图文并茂才好看嘛</p><p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20220710144233660.png" alt="image-20220710144233660"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>技术</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>技术</tag>
+      
+      <tag>typora</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>零和博弈</title>
     <link href="/2022/06/30/%E9%9B%B6%E5%92%8C%E5%8D%9A%E5%BC%88/"/>
     <url>/2022/06/30/%E9%9B%B6%E5%92%8C%E5%8D%9A%E5%BC%88/</url>
