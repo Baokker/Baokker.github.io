@@ -1,0 +1,750 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/favicon.png">
+  <link rel="icon" href="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Baokker">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="快跑！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于我在sh隔离这69天的一个粗略概述">
+<meta property="og:url" content="http://baokker.github.io/2022/05/24/%E5%85%B3%E4%BA%8E%E6%88%91%E5%9C%A8sh%E9%9A%94%E7%A6%BB%E8%BF%9969%E5%A4%A9%E7%9A%84%E4%B8%80%E4%B8%AA%E7%B2%97%E7%95%A5%E6%A6%82%E8%BF%B0/index.html">
+<meta property="og:site_name" content="Baokker&#39;s Blog">
+<meta property="og:description" content="快跑！">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/pexels-vasilis-koudas-927816.jpg">
+<meta property="article:published_time" content="2022-05-24T05:33:30.000Z">
+<meta property="article:modified_time" content="2022-10-08T12:53:57.252Z">
+<meta property="article:author" content="Baokker">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/pexels-vasilis-koudas-927816.jpg">
+  
+  
+  
+  <title>关于我在sh隔离这69天的一个粗略概述 - Baokker&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"baokker.github.io","root":"/","version":"1.9.0","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Baokker&#39;s Blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/pexels-vasilis-koudas-927816.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="关于我在sh隔离这69天的一个粗略概述"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-05-24 13:33" pubdate>
+          2022年5月24日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          4.3k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          36 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">关于我在sh隔离这69天的一个粗略概述</h1>
+            
+            <div class="markdown-body">
+              
+              <p>在pyq看到润回家的同学发了九张长图的plog，看完一时感慨万分，恰好自己明日也即将润回魂牵梦萦的家乡，顿时也想对自己这三个月的生活做个粗糙的纪录。比经历更可怕的是遗忘，我想明年今日的我可能在浪潮里很难再记起今日的心境，所以有必要将其诉诸文字，分享一些自己关注的细节和想法。再者，现在我的blog在国内不挂梯子难以访问，那我反倒可以写得更加轻松和张扬了。</p>
+<h1 id="历程的简单梳理"><a href="#历程的简单梳理" class="headerlink" title="历程的简单梳理"></a>历程的简单梳理</h1><h2 id="之前"><a href="#之前" class="headerlink" title="之前"></a>之前</h2><p>2月28号是我的生日。生日前的周六，我和小囡一起出去庆祝生日，路上我们还在讨论接下来日子的安排。我刚好在学期初，没什么特别紧要的事要做，她忙完期末考也有相当一段时间空闲。我们想着3月初去踏青，共青公园，滴水湖，乃至于迪士尼，还可以拍不少vlog。</p>
+<p>次日周末，我又和室友一起去了南翔印象城。搬迁校区后，我们一直在上海与江苏的交界处，地处郊区，周边的确环境优美，树木长得郁郁葱葱，周边分布着平房和高楼，平房一般是某某村落居民的住所，而高楼往往是买不起内环的居民群居的地方。那天我们豪爽地在手机上打车，直接从学校西北门开八公里公路到印象城里。虽然没有当年五角场的层楼林立，然而商场里仍然人来人往，各种商店也一应俱全。我们在绿茶餐厅里饱食一顿，其中的豆腐羹我们仨都称赞为全场MVP。而后两个月的某天，当一位室友在手机里翻出那几张菜肴的照片（有些菜我们当时甚至还指指点点，觉得这个不好那个不好）给我们看时，大家都发出了类似于和妈妈相依为命十年结果街头走散若干年后重聚时发出的那种叫声。</p>
+<p>情绪是越写越高，句子也越写越长，反而是显得有些臃肿了。总之，生活的美好画卷，仿佛正徐徐在我面前展开。现在的我回忆当时的心境时，总是能感受到这股由衷的期待。</p>
+<h2 id="封校"><a href="#封校" class="headerlink" title="封校"></a>封校</h2><p>没想到这次生日见面，反而成了我和小囡这学期最后一次出去玩的经历。回去后没过多久，sh产生了本土疫情，并且情况比之前都要严重，今天是这个区出现中风险，明天又是那个区出现中风险。我去找小囡时坐地铁路过的铜川路，和室友坐11号线回来的马陆，都成了疫情的爆破点。小囡那边情况更是严重，几个校车司机被确诊，学校直接进入封闭管理，近两个礼拜的时间，她连宿舍楼都出不来（那时我恐怕还没意识到这样的情况有天也会落在我头上）。此后数天，sh各大高校纷纷转入准封闭管理，我们学校也不例外。3.13，学校发布准封闭通知，校区之间不得同行，所有课程转为线上，不能离开校门（等我再次有机会离开校门，已经是现在写文撰稿的时候了）。大家都知道这次疫情需要一些时间渡过，但之前的动态清零都很好地解决了问题，我也期待着与小囡再次春日出游。</p>
+<p>然而情况不容乐观。每日新增有增无减，确诊患者的居住地址越列越长，起先我还会去查看各个地址的位置，看是否靠近我们俩学校；到后来我只是草草地手指一划，扫一下有没有熟悉的街道（；再到后来我只是看我们学校有没有上榜了）。、</p>
+<p>在此期间，发生过不少有趣的事情。</p>
+<p>一件事情是没衣服穿了。返校前我算好了小算盘，先带秋冬的衣服，等气温上升时，让爸妈把打包好的夏天衣服寄过来。然而还没来得及寄衣服，学校的大门便已锁上，快递也很早就关闭了。面对衣柜里的若干件大衣、羽绒服和棉裤，我一筹莫展。最后我灵机一动，想到学校里唯一一处可以买短袖的地方——纪念品商店。我去里面买了两件还算好看的tj纪念服，这一穿就轮着穿了近两个月。小囡在火车站一见到我就跟我说：“你的衣服好臭啊！“我竟对此浑然不知，不过转念一想，这两件每天作我的贴身衣物，洗衣机也是关了很久以后才开放，再加上寝室里盒饭的酸味可能早已盖过了这股汗臭味，倒也觉得有情可原了。</p>
+<p>再一件事情是，学校里的<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1TL411P7N8">花开了</a>。病毒在四处传播，但是生命的活力从未消失，生命自身的张力，仍然能在我内心深处引起共振。爱美的女孩在樱花树下拍照，小情侣手挽手走在小河边。和大自然短暂的接触时间，是我这段封闭时期极少数能聊以慰藉的东西。</p>
+<p>3.25，我意识到，我可能接下来在相当长一段不确定的时间里，无法再见到小囡了。甚至那时我便悲观地意识到，下次我和小囡相见的地方，可能不是sh，而是我们俩一同润回去的家乡。那个时候我开始给小囡写信，断断续续地写，有空便写，想到什么便写。其实我觉得我写得不是很频繁，可是这一封便是两个月，我收拾行李时数了数，自己竟然写了14面纸。</p>
+<h2 id="封楼"><a href="#封楼" class="headerlink" title="封楼"></a>封楼</h2><p>前面说过，我的校区位置偏僻，无论是出行还是玩耍都很困难。然而在这特殊的阶段，这反而成为了一种优势，在众多高校（包括四平本部）纷纷出现阳性病例，全部下令足不出户时，我在校区里反而”享受“了一个月的封校生活。虽然课程由于别的校区出现异常，统一从线下转成了线上，然而图书馆照旧开馆，教学楼可以自习，校内的店铺也正常开放，甚至因为无法外出，生意更加火爆。每次路过理发店，店里都有五六个小伙子等着修理头发；蜜雪冰城尽管售卖饮品有限，然而每天来排队领取的人，依然能把门前的路挤得水泄不通；除了食堂，吉祥馄饨、小拌同学等餐馆客流量大大增加，常常是去晚了就根本没地方坐下吃饭（我至今仍记得在小拌同学常点的番茄烤鱼&#x2F;番茄牛蛙的味道，那是我在食堂吃得最饱的套餐，是我逝去的青春（悲））</p>
+<p>说起图书馆，特别想提一本《防风林的外边》，寒假前一时被后现代文学吸引，借了这本代表作，奈何本人注意力早已不如以前那么专注，假期里看到一半便心生乏味看不下去，塞在行李箱准备开学放回图书馆。然而到开学时有心想，万一我又提起兴趣，可以把它看完呢？于是又续借了两周。结果没过多久图书馆就闭馆了，而这本书的到期日期也发生了戏剧性的变化，先是变成四月底，再是变成6.10，现在变成了9.30。</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220524132534.png" srcset="/img/loading.gif" lazyload></p>
+<p>4.4，学校发布通知，进一步落实校园封控管理。自此以后，我开始长达一月的封楼生活，除了做核酸，我不会出门；下楼只是为了领取抢购的物资，或者打开水之用。泡面囤了七八包，吃不下饭的时候就用来解馋；宿舍群里常有以物换物的交易。马蹄酥风波的时候，我给我一位即将生日的同学也购置了一份相同的礼物，并尊称其为“领导”。整个月我花费的钱不超过300块，我爸打给我生活费时，我说，我真的不需要，因为我没地方花钱【捂脸】。所幸我在的宿舍有独卫独浴，基本的生活都有所保障（除了强子哥后来时常拜访寝室）。其他校区的宿舍很多只有公厕公浴，情况严重的宿舍楼连拉shi都要排队。</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220524132444.png" srcset="/img/loading.gif" lazyload></p>
+<p>还有一些文章，我也不是想贬低这些撰写者的良苦用心，但是我真心觉得，如是这般空洞无味，矫揉造作的文字，是文言文转变为白话文路上的倒退，是对白话文文体本身的一种侮辱。</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220524132507.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220524132121.png" srcset="/img/loading.gif" lazyload></p>
+<p>无法出校也使得我和小囡无法见面。从庆祝生日时的见面，到火车站再次相聚一同回家，竟然过去了整整85天。站在阳台上，总是能望见明媚的阳光，茂密的树林，总是能想像到出行时的场景，沐浴在春风里享受游玩与美景。但是春天就这样过去了，在这样日复一日的等待里溜走了。有次和小囡吵架，吵到一半，自己就感觉眼睛一湿，独自走在阳台上哭了好久。空间上的距离，意味着两人的相处需要更多的耐心，彼此之间多了解对方的想法，愿意多从对方的角度理解对方的感受，加强彼此的沟通和需求满足。</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220524132608.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="猪肉刺身、65742、出圈"><a href="#猪肉刺身、65742、出圈" class="headerlink" title="猪肉刺身、65742、出圈"></a>猪肉刺身、65742、出圈</h2><p>关于出圈的事情，我在之前一篇<a href="https://baokker.github.io/2022/04/28/%E2%80%9C%E7%8C%AA%E8%82%89%E5%88%BA%E8%BA%AB%E6%9D%AF%E2%80%9D%E7%9A%84%E4%B8%80%E7%82%B9%E5%B0%8F%E6%84%9F%E6%83%B3/">post</a>里已经谈过相关看法了。思虑再三还是不把当天自己的午饭展示出来，有兴趣的朋友可以寻找方式联系我，我会先确认你现在是否吃过饭，再把那两张精彩的图片发给你。</p>
+<h2 id="减缓，归途"><a href="#减缓，归途" class="headerlink" title="减缓，归途"></a>减缓，归途</h2><p>每日2w例的高峰总算过去，学校也逐渐有所放开，不再让一群二十几岁的青年都关在几十平米的宿舍里，有时晚上可以在校园里健步走，有时白天可以早起去网格区放风（说起这个orz这个学期的早八几乎全被我睡过去了，尤其是早八的毛概，课本也不在手边，真的是挂上课接着睡过去，不过我倒是觉得借此减少一些思想灌输也是一件好事）。接下来的若干天，陆续有高校允许放人出校，自行组织交通方式，联系家乡社区提前返乡。</p>
+<p>这之中让我印象深刻的是亲眼见证的灰色地带和地下交易。一些学校比较早放宽离校政策，但是社会上的交通运力尚未完全恢复。很多地区一开始每天只有一班高铁能直达（中转的就更麻烦，而且中转政策变化极快，容易翻车），为了抢到这回家的票，需要钻研怎么用软件抢票，或者砸钱给黄牛，等黄牛的消息；抢到票以后，还要给学校审批，倘若抢到的票时间太急，又容易赶不上；从校门放出来后，还得自行想办法到火车站，而早先道路上只允许有通行证的车辆行驶，很多人为了这通行证，又砸了不少钱下去；上述的材料全都准备好，倘若家乡不同意接收，或者学校里突然冒出一个羊性，那之前的努力全都泡汤；最后到达家乡，各地的隔离政策也各有不同，有时隔离费用也是一笔不小的开支。还有些人直接选择包车回家，我了解到的价格都高达几千块，黑心钱赚得是盆满钵满。</p>
+<p>包括准备跑路时，为了避免校车出现什么情况，我也加了别的一些外面组织的拼车群，里面的群主常发布一些信息，吸引学生来坐他家的大巴。例如，他会给学生发火车站排长队的情况，跟学生说排队需要半小时左右（据我经验，图中的长度十分钟足矣），以此建议学生购买更早的四点的班车（这样可以捞更多钱）；要求学生必须交五十元定金以免被放鸽子。然而临走那天，我看到他在群里发收费通知，原先的大巴报名了13人，结果最后只来了3人（这是显然的，有学校的免费包车，谁还来坐你的车子啊），原先13个人平摊的费用，现在不得不由这三个可怜儿分担，他们一人得付五百块钱。我心善，看不得这些吸大学生血的孬种，于是在校车到站前退出了所有拼车群。</p>
+<p>我和小囡趁着后面情况转好，赶紧润了回来。这些天上海疫情转好，12306放票也增加了；各自学校也都开始放宽政策，并且提供了校车（我当时坐的五点的班车，一点睡四点起床，真的刺激）；家乡的隔离政策也有所改善。不过我想促使我们这么快回来的，其实是<strong>对政府的不信任感，对未来情况的相当不确定感，和对未来疫情走向的悲观看法</strong>。润的当天也录了个vlog，后续补上。</p>
+<h1 id="疫情带给我的一些变化"><a href="#疫情带给我的一些变化" class="headerlink" title="疫情带给我的一些变化"></a>疫情带给我的一些变化</h1><ul>
+<li>更加坚信党的领导，更加明确了“动态清零”的总方针，坚决同一切歪曲、怀疑、否定我国防疫方针政策的言行作斗争</li>
+<li>在接下来很长一段时间里，不会吃包菜、胡萝卜、萝卜、西葫芦、猪肉刺身等食物</li>
+<li>对于给陌生人打电话的社恐大大减少。现在无论是给市长热线，街道阿姨打电话，还是联系网格员，咨询同学经验，我都不会有任何迟疑，有需求直接联系，当场解决，哪管他面子不面子</li>
+<li>大大提升了信息检索及明辨是非的能力。这主要是体现在，我可以在各种市、区、街道、站点等得到的信息里甄别真假，及时地了解各种群聊里的小道信息，并以此预测迟迟不来的官方文件，同时对主流媒体的矫情文字予以免疫</li>
+<li>拓宽了见识，见了不少离谱事</li>
+<li>和小囡更稳定地相处</li>
+</ul>
+<hr>
+<p><strong><a target="_blank" rel="noopener" href="https://www.pexels.com/zh-cn/photo/927816/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">Pexels</a></strong> 上的 <strong><a target="_blank" rel="noopener" href="https://www.pexels.com/zh-cn/@vasilis-koudas-273354?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">Vasilis Koudas</a></strong> 拍摄的图片</p>
+
+              
+            </div>
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%9A%8F%E6%83%B3/" class="category-chain-item">随想</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>关于我在sh隔离这69天的一个粗略概述</div>
+      <div>http://baokker.github.io/2022/05/24/关于我在sh隔离这69天的一个粗略概述/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Baokker</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年5月24日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2022年10月8日</div>
+        </div>
+      
+      <div class="license-meta-item">
+        <div>许可协议</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/06/02/%E4%B8%80%E4%BA%9B%E8%BF%91%E6%9C%9F%E7%9A%84%E6%84%9F%E6%83%B3/" title="一些近期的感想">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">一些近期的感想</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/05/17/%E3%80%8A%E7%BD%AA%E4%B8%8E%E7%BD%9A%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/" title="《罪与罚》读后感">
+                        <span class="hidden-mobile">《罪与罚》读后感</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  <article id="comments" lazyload>
+    
+  <div id="waline"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#waline', function() {
+      Fluid.utils.createCssLink('https://lib.baomitu.com/waline/2.3.2/waline.min.css')
+      Fluid.utils.createScript('https://lib.baomitu.com/waline/2.3.2/waline.min.js', function() {
+        var options = Object.assign(
+          {"serverURL":"https://blog-comment-server-j7p2mwkga-baokker.vercel.app/","path":"window.location.pathname","meta":["nick","mail","link"],"requiredMeta":["nick"],"lang":"zh-CN","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"],"dark":"html[data-user-color-scheme=\"dark\"]","wordLimit":0,"pageSize":10},
+          {
+            el: '#waline',
+            path: window.location.pathname
+          }
+        )
+        Waline.init(options);
+        Fluid.utils.waitElementVisible('#waline .vcontent', () => {
+          var imgSelector = '#waline .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+  </article>
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.0/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script>
+  (function() {
+    var enableLang = CONFIG.code_language.enable && CONFIG.code_language.default;
+    var enableCopy = CONFIG.copy_btn;
+    if (!enableLang && !enableCopy) {
+      return;
+    }
+
+    function getBgClass(ele) {
+      return Fluid.utils.getBackgroundLightness(ele) >= 0 ? 'code-widget-light' : 'code-widget-dark';
+    }
+
+    var copyTmpl = '';
+    copyTmpl += '<div class="code-widget">';
+    copyTmpl += 'LANG';
+    copyTmpl += '</div>';
+    jQuery('.markdown-body pre').each(function() {
+      var $pre = jQuery(this);
+      if ($pre.find('code.mermaid').length > 0) {
+        return;
+      }
+      if ($pre.find('span.line').length > 0) {
+        return;
+      }
+
+      var lang = '';
+
+      if (enableLang) {
+        lang = CONFIG.code_language.default;
+        if ($pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2 && $pre.children().hasClass('hljs')) {
+          lang = $pre[0].children[0].classList[1];
+        } else if ($pre[0].getAttribute('data-language')) {
+          lang = $pre[0].getAttribute('data-language');
+        } else if ($pre.parent().hasClass('sourceCode') && $pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2) {
+          lang = $pre[0].children[0].classList[1];
+          $pre.parent().addClass('code-wrapper');
+        } else if ($pre.parent().hasClass('markdown-body') && $pre[0].classList.length === 0) {
+          $pre.wrap('<div class="code-wrapper"></div>');
+        }
+        lang = lang.toUpperCase().replace('NONE', CONFIG.code_language.default);
+      }
+      $pre.append(copyTmpl.replace('LANG', lang).replace('code-widget">',
+        getBgClass($pre[0]) + (enableCopy ? ' code-widget copy-btn" data-clipboard-snippet><i class="iconfont icon-copy"></i>' : ' code-widget">')));
+
+      if (enableCopy) {
+        Fluid.utils.createScript('https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js', function() {
+          var clipboard = new window.ClipboardJS('.copy-btn', {
+            target: function(trigger) {
+              var nodes = trigger.parentNode.childNodes;
+              for (var i = 0; i < nodes.length; i++) {
+                if (nodes[i].tagName === 'CODE') {
+                  return nodes[i];
+                }
+              }
+            }
+          });
+          clipboard.on('success', function(e) {
+            e.clearSelection();
+            e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-copy', 'icon-success');
+            setTimeout(function() {
+              e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-success', 'icon-copy');
+            }, 2000);
+          });
+        });
+      }
+    });
+  })();
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

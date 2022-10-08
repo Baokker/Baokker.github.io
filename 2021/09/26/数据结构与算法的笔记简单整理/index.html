@@ -1,0 +1,927 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/favicon.png">
+  <link rel="icon" href="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Baokker">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="好难 我都不懂 呜呜">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据结构与算法的笔记简单整理（持续更新">
+<meta property="og:url" content="http://baokker.github.io/2021/09/26/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E7%9A%84%E7%AC%94%E8%AE%B0%E7%AE%80%E5%8D%95%E6%95%B4%E7%90%86/index.html">
+<meta property="og:site_name" content="Baokker&#39;s Blog">
+<meta property="og:description" content="好难 我都不懂 呜呜">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/tiger-2535888_1920.jpg">
+<meta property="article:published_time" content="2021-09-26T05:55:21.000Z">
+<meta property="article:modified_time" content="2022-10-08T12:53:57.261Z">
+<meta property="article:author" content="Baokker">
+<meta property="article:tag" content="技术">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/tiger-2535888_1920.jpg">
+  
+  
+  
+  <title>数据结构与算法的笔记简单整理（持续更新 - Baokker&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"baokker.github.io","root":"/","version":"1.9.0","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Baokker&#39;s Blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/tiger-2535888_1920.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="数据结构与算法的笔记简单整理（持续更新"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2021-09-26 13:55" pubdate>
+          2021年9月26日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          4.5k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          38 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">数据结构与算法的笔记简单整理（持续更新</h1>
+            
+            <div class="markdown-body">
+              
+              <h1 id="开学学习内容"><a href="#开学学习内容" class="headerlink" title="开学学习内容"></a>开学学习内容</h1><h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><ul>
+<li><p>[快速转置算法][<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq845579063/article/details/51354847]">https://blog.csdn.net/qq845579063/article/details/51354847]</a></p>
+</li>
+<li><p>[KMP算法详解][<a target="_blank" rel="noopener" href="https://www.ruanyifeng.com/blog/2013/05/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm.html]">https://www.ruanyifeng.com/blog/2013/05/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm.html]</a></p>
+</li>
+<li><p>BM算法</p>
+</li>
+<li><p><strong>带头结点</strong>的链表（dummyHead？）</p>
+</li>
+<li><p>双向循环链表</p>
+</li>
+<li><p>邻接表表示的是出度（从顶点A连接到B和C，因而链表结构为A-&gt;B-&gt;C；反之，在逆邻接表中为B-&gt;A和C-&gt;A）</p>
+</li>
+<li><p>连通图：删去任意一个节点，所有顶点仍然互相连通的图。</p>
+<p>反之，若删去则分为两个图，则称为关节点。</p>
+<p>删去K个节点后无法保证连通图，则称连通图的连通度为K。</p>
+<p>待解决~~</p>
+</li>
+<li><p>最小生成树</p>
+<ul>
+<li>kruskal算法（按边加）</li>
+<li>prim算法（按顶点加）</li>
+</ul>
+</li>
+<li><p>AOE AOV</p>
+<p>其中AOV主要介绍如何通过拓扑排序判断AOV中是否存在有向环。</p>
+<p>AOE主要介绍如何计算最早开始时间和最晚结束时间</p>
+</li>
+<li><p>最短路径算法：</p>
+<ul>
+<li><p><strong>Dijkstra算法</strong></p>
+<ul>
+<li>单源最短路径（只能算出一个顶点到其他顶点的最短路径）</li>
+<li>不能有负权值，不能有环</li>
+</ul>
+</li>
+<li><p><strong>Floyd算法</strong></p>
+<ul>
+<li><p>没有负权值的顾虑，可计算任意两点之间距离。</p>
+</li>
+<li><p>本质是动态规划</p>
+</li>
+<li><p>&#96;&#96;&#96;<br>1 let dist be a |V| × |V| array of minimum distances initialized to ∞ (infinity)<br>2 for each vertex v<br>3    dist[v][v] ← 0<br>4 for each edge (u,v)<br>5    dist[u][v] ← w(u,v)  &#x2F;&#x2F; the weight of the edge (u,v)<br>6 for k from 1 to |V|<br>7    for i from 1 to |V|<br>8       for j from 1 to |V|<br>9          if dist[i][j] &gt; dist[i][k] + dist[k][j]<br>10             dist[i][j] ← dist[i][k] + dist[k][j]<br>11         end if</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs markdown"><br><span class="hljs-code">      </span><br><span class="hljs-code"></span><br><span class="hljs-bullet">*</span> 拓扑排序<br><br><br><br><span class="hljs-section">## LeetCode</span><br><br><span class="hljs-bullet">-</span> 双指针<br><span class="hljs-bullet">-</span> 链表→递归&amp;迭代<br><span class="hljs-bullet">-</span> dummyHead<br><span class="hljs-bullet">-</span> 循环不变量的确定<br><span class="hljs-bullet">-</span> 不变量（例如区间，在写之前就应当确定是[a,b]或者[a,b)）<br><br><br><br><span class="hljs-section">## 编写中遇到的c++语法问题</span><br><br><span class="hljs-bullet">-</span> <span class="hljs-code">```cpp</span><br><span class="hljs-code">  template &lt;class Type&gt; // == template &lt;typename Type&gt;   </span><br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>关于&lt;&lt;和&gt;&gt;的运算符重载：</p>
+<ul>
+<li><p>一般的运算符重载可以在类内直接解决</p>
+</li>
+<li><p>但是这两个运算符 为保证和正常使用cin和cout的习惯 需要将参数列表设为(istream &amp;input,class Classname)（同时返回也要右值引用</p>
+</li>
+<li><p>但是类内声明时 <strong>会默认在参数列表首位加上this指针</strong></p>
+</li>
+<li><p>因此 这类函数只能在外部声明（假如数据全部可访问） 或者只能在类内作为友元函数来访问 因为<strong>友元函数不会加上this指针</strong></p>
+</li>
+<li><p>较为正确的方法：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Candidate</span>:<br>&#123;<br>    <span class="hljs-keyword">private</span>:<br>    <span class="hljs-comment">//..</span><br>    <span class="hljs-keyword">public</span>:<br>    <span class="hljs-comment">//..</span><br>    <span class="hljs-keyword">friend</span> ostream&amp; <span class="hljs-keyword">operator</span>&lt;&lt;(ostream&amp; output, <span class="hljs-type">const</span> Candidate candidate) <span class="hljs-comment">// 重载输出函数</span><br>&#125;<br></code></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>STL的stack的pop()函数不会返回弹出数据 如需使用请结合pop()</p>
+</li>
+<li><p>c++的文件读入（istream）输出（ostream）一段文字</p>
+<p>最后我先用了cin.get()将输入的文字输出到ostream 然后读取时用getline将istream内数据读取</p>
+</li>
+<li><p>经过一番探索后我发现<br>将带模板的类的声明和定义放在.h和.cpp中 另外加上main.cpp是不对的行为<br>因为template function will be compiled only when it is used<br>而main中只包含了头文件而不包含.cpp 会导致其”invisible to the implementation”<br>所以 要么都写在头文件中 要么就在h末尾加上#include”…cpp”</p>
+</li>
+<li><pre><code class="cpp">if (a = 1) cout &lt;&lt; &quot;..&quot;;
+// equal to
+// 1. a=1;
+// if (a) ..
+// cause the = operator will return this integer
+<figure class="highlight tap"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs tap"><br>- ```cpp<br>  int a =<span class="hljs-number"> 3 </span>&lt;&lt; 4; // a =<span class="hljs-number"> 3 </span>* (2 ^ 4) =<span class="hljs-number"> 48 </span>左移运算符<br>  int b =<span class="hljs-number"> 8 </span>&gt;&gt; 1; // b =<span class="hljs-number"> 8 </span>/ (2 ^ 1) =<span class="hljs-number"> 4 </span> 右移运算符<br></code></pre></td></tr></table></figure>
+</code></pre>
+</li>
+<li><p>vector的几种赋值or拷贝方法：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs cpp">vector&lt;<span class="hljs-type">int</span>&gt; example=&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>&#125;;<br><span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">target1</span><span class="hljs-params">(example)</span></span>;<br><span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">target2</span><span class="hljs-params">(example.begin(),example.begin()+<span class="hljs-number">2</span>)</span></span>;<br>vector&lt;<span class="hljs-type">int</span>&gt; target3;<br>target3.<span class="hljs-built_in">assign</span>(<span class="hljs-number">2</span>,<span class="hljs-number">2</span>);<br>target3.<span class="hljs-built_in">assign</span>(example.<span class="hljs-built_in">begin</span>(),example.<span class="hljs-built_in">begin</span>()+<span class="hljs-number">2</span>); <span class="hljs-comment">//[a,b)</span><br>vector&lt;<span class="hljs-type">int</span>&gt; target4;<br>target4.<span class="hljs-built_in">swap</span>(example);<span class="hljs-comment">//example=&#123;&#125;</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p><code>sizeof(bool)==1 byte</code></p>
+</li>
+<li><p>c++ closure</p>
+<blockquote>
+<p>In <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Programming_language">programming languages</a>, a <strong>closure</strong>, also <strong>lexical closure</strong> or <strong>function closure</strong>, is a technique for implementing <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Lexically_scoped">lexically scoped</a> <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Name_binding">name binding</a> in a language with <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/First-class_function">first-class functions</a>.</p>
+</blockquote>
+</li>
+<li><p>自己编写的一个用于获得任意要求的整数值的函数：</p>
+<p>本来想使用template 但是经过研究发现 <strong>lambda不能用在template函数中</strong> 见如下说明：</p>
+<blockquote>
+<p>The evaluation of a lambda-expression results in a prvalue temporary (12.2). This temporary is called the closure object. <strong>A lambda-expression shall not appear in an unevaluated operand</strong> (Clause 5). [ Note: A closure object behaves like a function object (20.8).—end note ] <em>(emphasis mine)</em></p>
+</blockquote>
+<p>换言之，lambda是一个<strong>闭包</strong>，有类型也有状态（state），而template是动态的，未编译的，不可能接受包容state。</p>
+<p>（这个问题貌似在c20里得到了解决）</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-comment">//用function来闭包处理lambda函数</span><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">getIntValue</span><span class="hljs-params">(<span class="hljs-type">const</span> function&lt;<span class="hljs-type">bool</span>(<span class="hljs-type">int</span>)&gt;&amp; judgeFunc)</span> </span>&#123;<span class="hljs-comment">//for freely customizing the int value you want</span><br>	<span class="hljs-type">int</span> value;<br>	<span class="hljs-keyword">while</span> (<span class="hljs-literal">true</span>)<br>	&#123;<br>		cin &gt;&gt; value;<br>		<span class="hljs-keyword">if</span> (cin.<span class="hljs-built_in">fail</span>()) &#123;<br>			cerr &lt;&lt; <span class="hljs-string">&quot;input error\n&quot;</span>;<br>			cin.<span class="hljs-built_in">clear</span>();<br>			cin.<span class="hljs-built_in">ignore</span>(<span class="hljs-number">1024</span>, <span class="hljs-string">&#x27;\n&#x27;</span>);<br>		&#125;<br>		<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (!<span class="hljs-built_in">judgeFunc</span>(value)) &#123;<span class="hljs-comment">//对这句进行灵活定制</span><br>			cerr &lt;&lt; <span class="hljs-string">&quot;dont meet the command\n&quot;</span>;<br>		&#125;<br>		<span class="hljs-keyword">else</span><br>			<span class="hljs-keyword">break</span>;<br>	&#125;<br><br>	<span class="hljs-keyword">return</span> value;<br>&#125;<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="other"><a href="#other" class="headerlink" title="other"></a>other</h2><ul>
+<li><p><strong>拓扑</strong>是研究几何图形或空间在连续改变形状后还能保持不变的一些性质的一个学科。 它只考虑物体间的位置关系而不考虑它们的形状和大小。 拓扑英文名是Topology，直译是地志学，最早指研究地形、地貌相类似的有关学科。</p>
+</li>
+<li><p>蛇形命名法：<code>student_num</code>,<code>sum_score</code>如是。</p>
+</li>
+</ul>
+<h1 id="开学之前"><a href="#开学之前" class="headerlink" title="开学之前"></a>开学之前</h1><h2 id="AES算法"><a href="#AES算法" class="headerlink" title="AES算法"></a>AES算法</h2><ul>
+<li><p>对称加密算法（advanced encryption standard）（即可逆）</p>
+</li>
+<li><p>概念</p>
+<ul>
+<li><p>密钥</p>
+<ul>
+<li>AES128&#x2F;192&#x2F;256</li>
+</ul>
+</li>
+<li><p>填充</p>
+<ul>
+<li>在存在不满的情况下 以一些规则来填充未满部分</li>
+</ul>
+</li>
+<li><p>模式</p>
+<p>明文加密为密文</p>
+</li>
+</ul>
+</li>
+<li><p>加密过程</p>
+<ul>
+<li><p>初始轮</p>
+<p>加轮密钥</p>
+</li>
+<li><p>普通轮</p>
+<p>字节代替</p>
+<p>行移位</p>
+<p>列混淆</p>
+<p>加轮密钥</p>
+</li>
+<li><p>最终轮</p>
+<p>字节代替</p>
+<p>行移位</p>
+<p>加轮密钥</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><ul>
+<li>分治法</li>
+<li>pivot的选择的几种方式<ul>
+<li>选第一个</li>
+<li>随机数</li>
+</ul>
+</li>
+<li>partition的分法<ul>
+<li>挖坑法</li>
+<li>指针交换fa</li>
+</ul>
+</li>
+</ul>
+<h2 id="优先队列"><a href="#优先队列" class="headerlink" title="优先队列"></a>优先队列</h2><ul>
+<li>最大优先队列：最大的元素优先出队</li>
+<li>最小优先队列：最小的元素优先出队</li>
+<li>实现：堆排序</li>
+</ul>
+<h2 id="跳跃表"><a href="#跳跃表" class="headerlink" title="跳跃表"></a>跳跃表</h2><p>在链表中建立索引 乃至于索引的索引 来加快查找速度</p>
+<p>插入：</p>
+<ul>
+<li>新节点和各层索引节点逐一比较，确定原链表的插入位置。O（logN）</li>
+<li>把索引插入到原链表。O（1）</li>
+<li>利用抛硬币的随机方式，决定新节点是否提升为上一级索引。结果为“正”则提升并继续抛硬币，结果为“负”则停止。O（logN）</li>
+<li>总体上，跳跃表插入操作的时间复杂度是O（logN），而这种数据结构所占空间是2N，既空间复杂度是 O（N）</li>
+</ul>
+<p>删除：</p>
+<ul>
+<li>自上而下，查找第一次出现节点的索引，并逐层找到每一层对应的节点。O（logN）</li>
+<li>删除每一层查找到的节点，如果该层只剩下1个节点，删除整个一层（原链表除外）。O（logN）</li>
+<li>总体上，跳跃表删除操作的时间复杂度是O（logN）。</li>
+</ul>
+<h2 id="HashMap"><a href="#HashMap" class="headerlink" title="HashMap"></a>HashMap</h2><ul>
+<li><p>默认初始长度为16 且每次扩容只能*2</p>
+</li>
+<li><p>均匀分布：位运算</p>
+<blockquote>
+<p><strong>index &#x3D; HashCode（Key） &amp; （Length – 1）</strong></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="Chrome-脚本安装"><a href="#Chrome-脚本安装" class="headerlink" title="Chrome 脚本安装"></a>Chrome 脚本安装</h2><ol>
+<li>打开chrome扩展程序页 – chrome:&#x2F;&#x2F;extensions</li>
+<li>将刚才的自定义脚本保存为以user.js为后缀的 .js文件，例如test.user.js，拖入扩展程序页。</li>
+<li>重启浏览器。</li>
+<li>进入月饼抢购活动页面。此时脚本已自动执行。</li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://www.cxyxiaowu.com/4627.html">link</a></p>
+<h2 id="空间复杂度"><a href="#空间复杂度" class="headerlink" title="空间复杂度"></a>空间复杂度</h2><p><strong>S(n)&#x3D;O(f(n))</strong></p>
+<p>例如 递归的空间复杂度为n</p>
+<h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><p>分而治之 先分为一个个小块（类似于二叉树一样） 再往上溯源 合并</p>
+<h2 id="快速排序-1"><a href="#快速排序-1" class="headerlink" title="快速排序"></a>快速排序</h2><h2 id="桶排序"><a href="#桶排序" class="headerlink" title="桶排序"></a>桶排序</h2><p>伪代码（摘自Wikipedia</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs text">function bucket-sort(array, n) is<br>  buckets ← new array of n empty lists<br>  for i = 0 to (length(array)-1) do<br>    insert array[i] into buckets[msbits(array[i], k)]<br>  for i = 0 to n - 1 do<br>    next-sort(buckets[i])<br>  return the concatenation of buckets[0], ..., buckets[n-1]<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="Floyd-最短路算法"><a href="#Floyd-最短路算法" class="headerlink" title="Floyd 最短路算法"></a>Floyd 最短路算法</h2><h2 id="邻接表"><a href="#邻接表" class="headerlink" title="邻接表"></a>邻接表</h2><p>数组＋单链表</p>
+<h2 id="判断单链表是否存在环"><a href="#判断单链表是否存在环" class="headerlink" title="判断单链表是否存在环"></a>判断单链表是否存在环</h2><p>快慢法</p>
+<p>一直走法</p>
+<hr>
+<p>该图片由<a target="_blank" rel="noopener" href="https://pixabay.com/zh/users/andibreit-2748383/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2535888">Andreas Breitling</a>在<a target="_blank" rel="noopener" href="https://pixabay.com/zh/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2535888">Pixabay</a>上发布</p>
+
+              
+            </div>
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%8A%80%E6%9C%AF/" class="category-chain-item">技术</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E6%8A%80%E6%9C%AF/">#技术</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>数据结构与算法的笔记简单整理（持续更新</div>
+      <div>http://baokker.github.io/2021/09/26/数据结构与算法的笔记简单整理/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Baokker</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2021年9月26日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2022年10月8日</div>
+        </div>
+      
+      <div class="license-meta-item">
+        <div>许可协议</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/10/12/%E3%80%8A%E4%BD%A9%E5%BE%B7%E7%BD%97%C2%B7%E5%B7%B4%E6%8B%89%E8%8E%AB%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/" title="《佩德罗·巴拉莫》读后感">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">《佩德罗·巴拉莫》读后感</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/09/26/%E3%80%8A%E5%A4%AA%E9%98%B3%E7%85%A7%E5%B8%B8%E5%8D%87%E8%B5%B7%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/" title="《太阳照常升起》读后感">
+                        <span class="hidden-mobile">《太阳照常升起》读后感</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  <article id="comments" lazyload>
+    
+  <div id="waline"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#waline', function() {
+      Fluid.utils.createCssLink('https://lib.baomitu.com/waline/2.3.2/waline.min.css')
+      Fluid.utils.createScript('https://lib.baomitu.com/waline/2.3.2/waline.min.js', function() {
+        var options = Object.assign(
+          {"serverURL":"https://blog-comment-server-j7p2mwkga-baokker.vercel.app/","path":"window.location.pathname","meta":["nick","mail","link"],"requiredMeta":["nick"],"lang":"zh-CN","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"],"dark":"html[data-user-color-scheme=\"dark\"]","wordLimit":0,"pageSize":10},
+          {
+            el: '#waline',
+            path: window.location.pathname
+          }
+        )
+        Waline.init(options);
+        Fluid.utils.waitElementVisible('#waline .vcontent', () => {
+          var imgSelector = '#waline .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+  </article>
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.0/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script>
+  (function() {
+    var enableLang = CONFIG.code_language.enable && CONFIG.code_language.default;
+    var enableCopy = CONFIG.copy_btn;
+    if (!enableLang && !enableCopy) {
+      return;
+    }
+
+    function getBgClass(ele) {
+      return Fluid.utils.getBackgroundLightness(ele) >= 0 ? 'code-widget-light' : 'code-widget-dark';
+    }
+
+    var copyTmpl = '';
+    copyTmpl += '<div class="code-widget">';
+    copyTmpl += 'LANG';
+    copyTmpl += '</div>';
+    jQuery('.markdown-body pre').each(function() {
+      var $pre = jQuery(this);
+      if ($pre.find('code.mermaid').length > 0) {
+        return;
+      }
+      if ($pre.find('span.line').length > 0) {
+        return;
+      }
+
+      var lang = '';
+
+      if (enableLang) {
+        lang = CONFIG.code_language.default;
+        if ($pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2 && $pre.children().hasClass('hljs')) {
+          lang = $pre[0].children[0].classList[1];
+        } else if ($pre[0].getAttribute('data-language')) {
+          lang = $pre[0].getAttribute('data-language');
+        } else if ($pre.parent().hasClass('sourceCode') && $pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2) {
+          lang = $pre[0].children[0].classList[1];
+          $pre.parent().addClass('code-wrapper');
+        } else if ($pre.parent().hasClass('markdown-body') && $pre[0].classList.length === 0) {
+          $pre.wrap('<div class="code-wrapper"></div>');
+        }
+        lang = lang.toUpperCase().replace('NONE', CONFIG.code_language.default);
+      }
+      $pre.append(copyTmpl.replace('LANG', lang).replace('code-widget">',
+        getBgClass($pre[0]) + (enableCopy ? ' code-widget copy-btn" data-clipboard-snippet><i class="iconfont icon-copy"></i>' : ' code-widget">')));
+
+      if (enableCopy) {
+        Fluid.utils.createScript('https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js', function() {
+          var clipboard = new window.ClipboardJS('.copy-btn', {
+            target: function(trigger) {
+              var nodes = trigger.parentNode.childNodes;
+              for (var i = 0; i < nodes.length; i++) {
+                if (nodes[i].tagName === 'CODE') {
+                  return nodes[i];
+                }
+              }
+            }
+          });
+          clipboard.on('success', function(e) {
+            e.clearSelection();
+            e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-copy', 'icon-success');
+            setTimeout(function() {
+              e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-success', 'icon-copy');
+            }, 2000);
+          });
+        });
+      }
+    });
+  })();
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

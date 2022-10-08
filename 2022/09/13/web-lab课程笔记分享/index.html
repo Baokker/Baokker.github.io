@@ -1,0 +1,997 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/favicon.png">
+  <link rel="icon" href="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Baokker">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="国外的课就是香">
+<meta property="og:type" content="article">
+<meta property="og:title" content="web.lab课程笔记分享">
+<meta property="og:url" content="http://baokker.github.io/2022/09/13/web-lab%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0%E5%88%86%E4%BA%AB/index.html">
+<meta property="og:site_name" content="Baokker&#39;s Blog">
+<meta property="og:description" content="国外的课就是香">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/defaultImages.jpg">
+<meta property="article:published_time" content="2022-09-13T11:48:39.000Z">
+<meta property="article:modified_time" content="2022-10-08T12:53:57.216Z">
+<meta property="article:author" content="Baokker">
+<meta property="article:tag" content="web.lab">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/defaultImages.jpg">
+  
+  
+  
+  <title>web.lab课程笔记分享 - Baokker&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"baokker.github.io","root":"/","version":"1.9.0","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Baokker&#39;s Blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/defaultImages.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="web.lab课程笔记分享"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-09-13 19:48" pubdate>
+          2022年9月13日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          12k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          104 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">web.lab课程笔记分享</h1>
+            
+            <div class="markdown-body">
+              
+              <h1 id="web-lab"><a href="#web-lab" class="headerlink" title="web.lab"></a>web.lab</h1><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>直接把notion里的笔记copy了出来hh</p>
+<p>课程网址：<a target="_blank" rel="noopener" href="https://weblab.mit.edu/schedule/">web.lab</a></p>
+<p>暑假时带我入门web前端的一门好课，从基础的git操作，html+css+js三件套，再到react框架，后端express，数据库MongoDB，socket实时聊天，网站部署，typescript，都有所涉及，而这仅仅是一门不超过四个礼拜的小课。整个代码的框架也已经大多写好，我们只需要了解其中的要义，真的是老师把知识端到我们面前我们都不好意思不吸收的感觉。</p>
+<h1 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h1><p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Untitled.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p>Flex布局</p>
+<h1 id="ReactJS"><a href="#ReactJS" class="headerlink" title="ReactJS"></a>ReactJS</h1><p>reuse components</p>
+<ul>
+<li>React is a Framework that lets you <strong>divide up your website into reusable components</strong></li>
+<li>Each component is kind of like a ‘custom HTML tag’ that you define</li>
+<li>Your app can be divided into a ‘tree’ of components</li>
+</ul>
+<p>Props: <strong>Inputs passed from a parent to a child component(immutable)</strong></p>
+<p>State: <strong>Private information maintained by a component.</strong></p>
+<ul>
+<li>We pass <em>props</em> in from parent to child</li>
+<li>Allows our skeleton to render comments with content</li>
+<li><em>State</em> keeps track of private information that can be changed and influence how your app renders</li>
+</ul>
+<h2 id="JSX"><a href="#JSX" class="headerlink" title="JSX"></a>JSX</h2><p>() allows us to write HTML code inside JavaScript</p>
+<p>{} allows us to return to JavaScript inside the HTML environment inside the JavaScript class</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Untitled%201.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Untitled%202.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Untitled%203.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<ul>
+<li><strong>We declare state variables with</strong></li>
+</ul>
+<p><strong>const [something, setSomething] &#x3D; useState(initialValue)</strong></p>
+<p>React uses <strong>className</strong> instead of <strong>class</strong> for css styles</p>
+<h2 id="Backend-and-APIs"><a href="#Backend-and-APIs" class="headerlink" title="Backend and APIs"></a>Backend and APIs</h2><p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Untitled%204.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<h2 id="HTTP-Methods"><a href="#HTTP-Methods" class="headerlink" title="HTTP Methods"></a><strong>HTTP Methods</strong></h2><ul>
+<li>GET, well, gets data</li>
+<li>POST creates data</li>
+<li>PUT modifies data</li>
+<li>DELETE, well, deletes data</li>
+<li>You can find the rest here: <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods">https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods</a></li>
+</ul>
+<h2 id="Status-Codes"><a href="#Status-Codes" class="headerlink" title="Status Codes"></a><strong>Status Codes</strong></h2><ul>
+<li>1xx- informational</li>
+<li>2xx- you succeeded</li>
+<li>3xx- redirect</li>
+<li>4xx- you did something wrong</li>
+<li>5xx- server did something wrong</li>
+<li><a target="_blank" rel="noopener" href="https://www.restapitutorial.com/httpstatuscodes.html">https://www.restapitutorial.com/httpstatuscodes.html</a></li>
+</ul>
+<h2 id="requests-example"><a href="#requests-example" class="headerlink" title="requests example"></a><strong>requests example</strong></h2><p><a target="_blank" rel="noopener" href="https://reqbin.com/or3jkmdl">https://reqbin.com/or3jkmdl</a></p>
+<h2 id="API"><a href="#API" class="headerlink" title="API"></a>API</h2><p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Untitled%205.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<h2 id="API-example"><a href="#API-example" class="headerlink" title="API example"></a>API example</h2><ul>
+<li>There’s the Google Maps stuff mentioned a moment ago</li>
+<li><a target="_blank" rel="noopener" href="https://api.thedogapi.com/v1/images/search">The Dog API</a></li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://beta.openai.com/">https://beta.openai.com/</a></p>
+<p>, check out their blog to drool over stuff</p>
+<h2 id="States-and-Props"><a href="#States-and-Props" class="headerlink" title="States and Props"></a>States and Props</h2><p><strong>Make states stay, make props pass</strong></p>
+<h2 id="Life-Cycle"><a href="#Life-Cycle" class="headerlink" title="Life Cycle"></a>Life Cycle</h2><p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Untitled%206.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p><strong>Setting State is <em>ASYNC.异步的</em></strong></p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Untitled%207.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<h2 id="useEffect"><a href="#useEffect" class="headerlink" title="useEffect"></a>useEffect</h2><p><strong>useEffect() hook</strong></p>
+<ul>
+<li><p>Runs after specific variables change</p>
+<ul>
+<li>Can think of as response to state change</li>
+<li>Commonly used to load data into state</li>
+<li>Call an API&#x2F;perform some computation&#x2F;etc. at specific times</li>
+</ul>
+</li>
+<li><p>syntax: useEffect(function, <em>optional</em> dependency array)</p>
+<ul>
+<li>runs function every time a variable in dependency array changes</li>
+</ul>
+</li>
+<li><p>useEffect(function, [var1, var2]) runs function every time var1 or var2 changes</p>
+</li>
+<li><p>useEffect(function, []) runs function once, immediately after initialization</p>
+</li>
+<li><p>useEffect(function) runs every time <em>any</em> state variable changes</p>
+</li>
+</ul>
+<h2 id="JSX-example-conditional-rendering"><a href="#JSX-example-conditional-rendering" class="headerlink" title="JSX example(conditional rendering)"></a>JSX example(conditional rendering)</h2><p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Untitled%208.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Untitled%209.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Untitled%2010.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<h2 id="Loop-Rendering-Using-map-in-React"><a href="#Loop-Rendering-Using-map-in-React" class="headerlink" title="Loop Rendering: Using map() in React"></a>Loop Rendering: <strong>Using map() in React</strong></h2><p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Untitled%2011.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Untitled%2012.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<h2 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h2><ul>
+<li>Websites are divided into <strong>components</strong></li>
+<li>components can have inputs, which are <strong>props</strong></li>
+<li>components can have their own private, updatable information: <strong>state</strong></li>
+<li>Components run their code <strong>once at the beginning</strong>, and then <strong>once every time a prop or a state changes</strong></li>
+<li>To run something only once at the beginning, we use <strong>useEffect</strong>(function, [])</li>
+<li><strong>get(“&#x2F;api&#x2F;something”, someData) does a get request to “&#x2F;api&#x2F;something”, and gets back data (asynchronously)</strong></li>
+<li><strong>post(“&#x2F;api&#x2F;something”, someData) does a post request to “&#x2F;api&#x2F;something” (asynchronously)</strong></li>
+<li><strong>Router is our way of having different ‘pages’ (with their own URL) on your site</strong></li>
+</ul>
+<p><strong>Components re-run their code whenever state or props changes</strong></p>
+<h1 id="UX-UI"><a href="#UX-UI" class="headerlink" title="UX UI"></a>UX UI</h1><p>UX: User eXperience</p>
+<p>UI: User Interaction</p>
+<p>User Interface</p>
+<ul>
+<li>fonts</li>
+<li>color palettes</li>
+<li>shapes</li>
+<li>Responsive Design</li>
+</ul>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Untitled%2013.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Untitled%2014.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Untitled%2015.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p>Figma</p>
+<h1 id="Server"><a href="#Server" class="headerlink" title="Server"></a>Server</h1><p>npm：node package manager</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Untitled%2016.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Untitled%2017.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Untitled%2018.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Untitled%2019.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Untitled%2020.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<h1 id="API-1"><a href="#API-1" class="headerlink" title="API"></a>API</h1><p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Untitled%2021.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Untitled%2022.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Untitled%2023.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><code class="hljs jsx"><span class="hljs-comment">/*</span><br><span class="hljs-comment">|--------------------------------------------------------------------------</span><br><span class="hljs-comment">| api.js -- server routes</span><br><span class="hljs-comment">|--------------------------------------------------------------------------</span><br><span class="hljs-comment">|</span><br><span class="hljs-comment">| This file defines the routes for your server.</span><br><span class="hljs-comment">|</span><br><span class="hljs-comment">*/</span><br><br><span class="hljs-comment">// without a system for users, we&#x27;ll have to hardcode our user name</span><br><span class="hljs-keyword">const</span> <span class="hljs-variable constant_">MY_NAME</span> = <span class="hljs-string">&quot;baokker&quot;</span>;<br><br><span class="hljs-keyword">const</span> data = &#123;<br>  <span class="hljs-attr">stories</span>: [<br>    &#123;<br>      <span class="hljs-attr">_id</span>: <span class="hljs-number">0</span>,<br>      <span class="hljs-attr">creator_name</span>: <span class="hljs-string">&quot;Shannen Wu&quot;</span>,<br>      <span class="hljs-attr">content</span>: <span class="hljs-string">&quot;I love corgis!&quot;</span><br>    &#125;<br>  ],<br>  <span class="hljs-attr">comments</span>: [<br>    &#123;<br>      <span class="hljs-attr">_id</span>: <span class="hljs-number">0</span>,<br>      <span class="hljs-attr">creator_name</span>: <span class="hljs-string">&quot;Jessica Tang&quot;</span>,<br>      <span class="hljs-attr">parent</span>: <span class="hljs-number">0</span>,<br>      <span class="hljs-attr">content</span>: <span class="hljs-string">&quot;Wow! Me Too!&quot;</span>,<br>    &#125;<br>  ],<br>&#125;;<br><br><span class="hljs-keyword">const</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;express&quot;</span>);<br><br><span class="hljs-keyword">const</span> router = express.<span class="hljs-title class_">Router</span>();<br><br>router.<span class="hljs-title function_">get</span>(<span class="hljs-string">&quot;/test&quot;</span>, <span class="hljs-function">(<span class="hljs-params">req, res</span>) =&gt;</span> &#123;<br>  res.<span class="hljs-title function_">send</span>(&#123; <span class="hljs-attr">message</span>: <span class="hljs-string">&quot;Wow I made my first API! In its own file!&quot;</span> &#125;);<br>&#125;);<br><br>router.<span class="hljs-title function_">get</span>(<span class="hljs-string">&quot;/stories&quot;</span>, <span class="hljs-function">(<span class="hljs-params">req, res</span>) =&gt;</span> &#123;<br>  <span class="hljs-comment">// send back all of the stories!</span><br>  res.<span class="hljs-title function_">send</span>(data.<span class="hljs-property">stories</span>);<br>&#125;);<br><br>router.<span class="hljs-title function_">get</span>(<span class="hljs-string">&quot;/comment&quot;</span>, <span class="hljs-function">(<span class="hljs-params">req, res</span>) =&gt;</span> &#123;<br>  <span class="hljs-keyword">const</span> filteredComments = data.<span class="hljs-property">comments</span>.<span class="hljs-title function_">filter</span>(<br>    <span class="hljs-function">(<span class="hljs-params">comment</span>) =&gt;</span> comment.<span class="hljs-property">parent</span> == req.<span class="hljs-property">query</span>.<span class="hljs-property">parent</span>);<br>  res.<span class="hljs-title function_">send</span>(filteredComments)<br>&#125;);<br><br>router.<span class="hljs-title function_">post</span>(<span class="hljs-string">&quot;/story&quot;</span>,<span class="hljs-function">(<span class="hljs-params">req,res</span>)=&gt;</span>&#123;<br>  <span class="hljs-keyword">const</span> newStory=&#123;<br>    <span class="hljs-attr">_id</span>: data.<span class="hljs-property">stories</span>.<span class="hljs-property">length</span>,<br>    <span class="hljs-attr">creator_name</span>: <span class="hljs-variable constant_">MY_NAME</span>,<br>    <span class="hljs-attr">content</span>: req.<span class="hljs-property">body</span>.<span class="hljs-property">content</span>,<br>  &#125;;<br><br>  data.<span class="hljs-property">stories</span>.<span class="hljs-title function_">push</span>(newStory);<br>  res.<span class="hljs-title function_">send</span>(newStory);<br>&#125;);<br><br>router.<span class="hljs-title function_">post</span>(<span class="hljs-string">&quot;/comment&quot;</span>,<span class="hljs-function">(<span class="hljs-params">req,res</span>)=&gt;</span>&#123;<br>  <span class="hljs-keyword">const</span> newComment=&#123;<br>    <span class="hljs-attr">_id</span>: data.<span class="hljs-property">comments</span>.<span class="hljs-property">length</span>,<br>    <span class="hljs-attr">creator_name</span>: <span class="hljs-variable constant_">MY_NAME</span>,<br>    <span class="hljs-attr">parent</span>: req.<span class="hljs-property">body</span>.<span class="hljs-property">parent</span>,<br>    <span class="hljs-attr">content</span>: req.<span class="hljs-property">body</span>.<span class="hljs-property">content</span>,<br>  &#125;;<br><br>  data.<span class="hljs-property">comments</span>.<span class="hljs-title function_">push</span>(newComment);<br>  res.<span class="hljs-title function_">send</span>(newComment);<br>&#125;);<br><br>router.<span class="hljs-title function_">all</span>(<span class="hljs-string">&quot;*&quot;</span>,<span class="hljs-function">(<span class="hljs-params">req,res</span>)=&gt;</span>&#123;<br>  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">`API not found: <span class="hljs-subst">$&#123;req.method&#125;</span> <span class="hljs-subst">$&#123;req.url&#125;</span>`</span>);<br>  res.<span class="hljs-title function_">status</span>(<span class="hljs-number">404</span>).<span class="hljs-title function_">send</span>(<span class="hljs-string">&quot;API not found&quot;</span>);<br>&#125;);<br><br><span class="hljs-variable language_">module</span>.<span class="hljs-property">exports</span> = router;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><code class="hljs jsx"><span class="hljs-comment">/*</span><br><span class="hljs-comment">|--------------------------------------------------------------------------</span><br><span class="hljs-comment">| server.js -- The core of your server</span><br><span class="hljs-comment">|--------------------------------------------------------------------------</span><br><span class="hljs-comment">|</span><br><span class="hljs-comment">| This file defines how your server starts up. Think of it as the main() of your server.</span><br><span class="hljs-comment">| At a high level, this file does the following things:</span><br><span class="hljs-comment">| - Connect to the database (<span class="hljs-doctag">TODO:</span> WORKSHOP 5)</span><br><span class="hljs-comment">| - Sets up server middleware (i.e. addons that enable things like json parsing) (<span class="hljs-doctag">TODO:</span> WORKSHOP 3)</span><br><span class="hljs-comment">| - Hooks up all the backend routes specified in api.js (<span class="hljs-doctag">TODO:</span> WORKSHOP 4)</span><br><span class="hljs-comment">| - Sets up error handling in case something goes wrong when handling a request (<span class="hljs-doctag">TODO:</span> WORKSHOP 3)</span><br><span class="hljs-comment">| - Actually starts the webserver</span><br><span class="hljs-comment">*/</span><br><br><span class="hljs-comment">// import libraries needed for the webserver to work!</span><br><span class="hljs-keyword">const</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;express&quot;</span>); <span class="hljs-comment">// backend framework for our node server.</span><br><span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;path&quot;</span>); <span class="hljs-comment">// provide utilities for working with file and directory paths</span><br><br><span class="hljs-comment">// create a new express server</span><br><span class="hljs-keyword">const</span> app = <span class="hljs-title function_">express</span>();<br><br><span class="hljs-comment">// import the router from our API file</span><br><span class="hljs-keyword">const</span> api = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;./api.js&quot;</span>);<br><br><span class="hljs-comment">// allow us to make post requests</span><br>app.<span class="hljs-title function_">use</span>(express.<span class="hljs-title function_">json</span>());<br><br><span class="hljs-comment">// connect API routes from api.js</span><br>app.<span class="hljs-title function_">use</span>(<span class="hljs-string">&quot;/api&quot;</span>, api);<br><br><span class="hljs-comment">// Load the compiled react files, which will serve /index.html and /bundle.js</span><br><span class="hljs-keyword">const</span> reactPath = path.<span class="hljs-title function_">resolve</span>(__dirname, <span class="hljs-string">&quot;..&quot;</span>, <span class="hljs-string">&quot;client&quot;</span>, <span class="hljs-string">&quot;dist&quot;</span>);<br>app.<span class="hljs-title function_">use</span>(express.<span class="hljs-title function_">static</span>(reactPath));<br><br><span class="hljs-comment">// for all other routes, render index.html and let the react router handle it</span><br>app.<span class="hljs-title function_">get</span>(<span class="hljs-string">&quot;*&quot;</span>, <span class="hljs-function">(<span class="hljs-params">req, res</span>) =&gt;</span> &#123;<br>  res.<span class="hljs-title function_">sendFile</span>(path.<span class="hljs-title function_">join</span>(reactPath, <span class="hljs-string">&quot;index.html&quot;</span>));<br>&#125;);<br><br><span class="hljs-comment">// any server errors cause this function to run</span><br>app.<span class="hljs-title function_">use</span>(<span class="hljs-function">(<span class="hljs-params">err, req, res, next</span>) =&gt;</span> &#123;<br>  <span class="hljs-keyword">const</span> status = err.<span class="hljs-property">status</span> || <span class="hljs-number">500</span>;<br>  <span class="hljs-keyword">if</span>( status === <span class="hljs-number">500</span> )&#123;<br>    <span class="hljs-comment">// 500 means Internal Server Error</span><br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;The server errored when processing a request&quot;</span>);<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(err);<br>  &#125;<br><br>  res.<span class="hljs-title function_">status</span>(status);<br>  res.<span class="hljs-title function_">send</span>(&#123;<br>    <span class="hljs-attr">status</span>: status,<br>    <span class="hljs-attr">message</span>: err.<span class="hljs-property">message</span>,<br>  &#125;);<br>&#125;);<br><br><span class="hljs-comment">// hardcode port to 3000 for now</span><br><span class="hljs-keyword">const</span> port = <span class="hljs-number">3000</span>;<br>app.<span class="hljs-title function_">listen</span>(port, <span class="hljs-function">() =&gt;</span> &#123;<br>  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">`Server running on port: <span class="hljs-subst">$&#123;port&#125;</span>`</span>);<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+<h1 id="Database"><a href="#Database" class="headerlink" title="Database"></a>Database</h1><p>MongoDB: nosql, store in json</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Untitled%2024.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p>traditional:</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Untitled%2025.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p>workshop</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Untitled%2026.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p>MongoDB缺点：无法保证所有数据有相同结构</p>
+<p>因此需要使用Mongoose，它的Schema概念可以保持所有Object有相同的fields</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Untitled%2027.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p>因此不同的模型可以遵循相同的schema</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Untitled%2028.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p>合起来看，先连接，再创立schema，再写入数据</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Untitled%2029.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p>增就是save</p>
+<p>删</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Untitled%2030.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p>查</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Untitled%2031.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs jsx"><span class="hljs-keyword">const</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;express&quot;</span>);<br><br><span class="hljs-comment">// we haven&#x27;t set up user login yet, so just</span><br><span class="hljs-comment">// use a hardcoded name for now</span><br><span class="hljs-comment">// TODO change to a unique name for workshop</span><br><span class="hljs-keyword">const</span> <span class="hljs-variable constant_">MY_NAME</span> = <span class="hljs-string">&quot;baokker&quot;</span>;<br><br><span class="hljs-comment">// import models so we can interact with the database</span><br><span class="hljs-keyword">const</span> <span class="hljs-title class_">Story</span> = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;./models/story&quot;</span>);<br><span class="hljs-keyword">const</span> <span class="hljs-title class_">Comment</span> = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;./models/comment&quot;</span>)<br><br><span class="hljs-comment">// api endpoints: all these paths will be prefixed with &quot;/api/&quot;</span><br><span class="hljs-keyword">const</span> router = express.<span class="hljs-title class_">Router</span>();<br><br>router.<span class="hljs-title function_">get</span>(<span class="hljs-string">&quot;/stories&quot;</span>, <span class="hljs-function">(<span class="hljs-params">req, res</span>) =&gt;</span> &#123;<br>  <span class="hljs-title class_">Story</span>.<span class="hljs-title function_">find</span>(&#123;&#125;)<br>    .<span class="hljs-title function_">then</span>(<span class="hljs-function">(<span class="hljs-params">stories</span>) =&gt;</span> res.<span class="hljs-title function_">send</span>(stories));<br>&#125;);<br><br>router.<span class="hljs-title function_">post</span>(<span class="hljs-string">&quot;/story&quot;</span>, <span class="hljs-function">(<span class="hljs-params">req, res</span>) =&gt;</span> &#123;<br>  <span class="hljs-keyword">const</span> newStory = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Story</span>(&#123;<br>    <span class="hljs-attr">creator_name</span>: <span class="hljs-variable constant_">MY_NAME</span>,<br>    <span class="hljs-attr">content</span>: req.<span class="hljs-property">body</span>.<span class="hljs-property">content</span>,<br>  &#125;);<br>  newStory.<span class="hljs-title function_">save</span>().<span class="hljs-title function_">then</span>(<span class="hljs-function">(<span class="hljs-params">story</span>) =&gt;</span> res.<span class="hljs-title function_">send</span>(story));<br>&#125;);<br><br>router.<span class="hljs-title function_">get</span>(<span class="hljs-string">&quot;/comment&quot;</span>, <span class="hljs-function">(<span class="hljs-params">req, res</span>) =&gt;</span> &#123;<br>  <span class="hljs-title class_">Comment</span>.<span class="hljs-title function_">find</span>(&#123;<span class="hljs-attr">parent</span>: req.<span class="hljs-property">query</span>.<span class="hljs-property">parent</span>&#125;).<span class="hljs-title function_">then</span>(<span class="hljs-function">(<span class="hljs-params">comments</span>) =&gt;</span> res.<span class="hljs-title function_">send</span>(comments));<br>&#125;);<br><br>router.<span class="hljs-title function_">post</span>(<span class="hljs-string">&quot;/comment&quot;</span>, <span class="hljs-function">(<span class="hljs-params">req, res</span>) =&gt;</span> &#123;<br>  <span class="hljs-keyword">const</span> newComment = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Comment</span>(&#123;<br>    <span class="hljs-attr">creator_name</span>: <span class="hljs-variable constant_">MY_NAME</span>,<br>    <span class="hljs-attr">content</span>: req.<span class="hljs-property">body</span>.<span class="hljs-property">content</span>,<br>    <span class="hljs-attr">parent</span>: req.<span class="hljs-property">body</span>.<span class="hljs-property">parent</span>,<br>  &#125;);<br>  newComment.<span class="hljs-title function_">save</span>().<span class="hljs-title function_">then</span>(<span class="hljs-function">(<span class="hljs-params">comment</span>) =&gt;</span> res.<span class="hljs-title function_">send</span>(comment));<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs jsx"><span class="hljs-keyword">const</span> mongoose = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;mongoose&quot;</span>);<br><br><span class="hljs-comment">//define a comment schema for the database</span><br><span class="hljs-keyword">const</span> <span class="hljs-title class_">CommentSchema</span> = <span class="hljs-keyword">new</span> mongoose.<span class="hljs-title class_">Schema</span>(&#123;<br>  <span class="hljs-attr">creator_name</span>: <span class="hljs-title class_">String</span>,<br>  <span class="hljs-attr">parent</span>: <span class="hljs-title class_">String</span>, <span class="hljs-comment">// links to the _id of a parent story (_id is an autogenerated field by Mongoose).</span><br>  <span class="hljs-attr">content</span>: <span class="hljs-title class_">String</span>,<br>&#125;);<br><br><span class="hljs-comment">// compile model from schema</span><br><span class="hljs-variable language_">module</span>.<span class="hljs-property">exports</span> = mongoose.<span class="hljs-title function_">model</span>(<span class="hljs-string">&quot;comment&quot;</span>, <span class="hljs-title class_">CommentSchema</span>);<br></code></pre></td></tr></table></figure>
+
+<p>先连接数据库（在server.js里）</p>
+<p>再建立model，以便interact with db</p>
+<p>在get和post里用db的增删查改</p>
+<h1 id="Advanced-CSS"><a href="#Advanced-CSS" class="headerlink" title="Advanced CSS"></a><strong>Advanced CSS</strong></h1><h2 id="color-palettes"><a href="#color-palettes" class="headerlink" title="color palettes"></a>color palettes</h2><p>两到三种主题色</p>
+<p>coolors.co</p>
+<h2 id="Box-Model"><a href="#Box-Model" class="headerlink" title="Box Model"></a>Box Model</h2><p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Untitled%2032.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Untitled%2033.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<h2 id="layout"><a href="#layout" class="headerlink" title="layout"></a>layout</h2><h3 id="display"><a href="#display" class="headerlink" title="display"></a>display</h3><p>block：<p><br><div>等，要开新行的</p>
+<p>inline： <span><a><img>等，作为文本的部分，不能设置width height top bottom等属性</p>
+<p>inline-block：仍是inline，但可以设width和height</p>
+<p>none：不显示</p>
+<p>成排排列：flex，里面还有很多属性</p>
+<p>如justify-content…</p>
+<p>网格：grid</p>
+<h3 id="position"><a href="#position" class="headerlink" title="position"></a>position</h3><p>static</p>
+<p>relative</p>
+<p>absolute（适用于navbar sidebar等）</p>
+<p>fixed（固定在某个位置</p>
+<p>可以使用vw和calc两种技巧：</p>
+<p>margin-left: calc(100vw - 75px);</p>
+<p>calc表示数学计算，vw表示视图</p>
+<h2 id="transition"><a href="#transition" class="headerlink" title="transition"></a>transition</h2><p>e.g.</p>
+<p>transition: background-color 1s ease-in</p>
+<p>(property | timespan | how to change)</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">nav</span> ui <span class="hljs-selector-tag">li</span> &#123;<br>	<span class="hljs-attribute">transition</span>: all <span class="hljs-number">0.5s</span>; <span class="hljs-comment">/* 所有转变都是0.5s*/</span><br>&#125;<br><br><span class="hljs-selector-tag">nav</span> ui <span class="hljs-selector-tag">li</span><span class="hljs-selector-pseudo">:hover</span>&#123;<br>	<span class="hljs-attribute">transition</span>: <span class="hljs-built_in">scale</span>(<span class="hljs-number">1.5</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>（适合把菜单栏放大）</p>
+<h2 id="animation"><a href="#animation" class="headerlink" title="animation"></a>animation</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-attribute">animation</span>: rotate <span class="hljs-number">4s</span> infinite linear<br><span class="hljs-comment">/* rotate 除此之外还有 translate scale 等 */</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="responsive-layout"><a href="#responsive-layout" class="headerlink" title="responsive layout"></a>responsive layout</h2><p>例如，导航栏在窗口够大时显示所有菜单，否则合并到一个按钮里</p>
+<p>使用media query</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.main</span> &#123;<br>  <span class="hljs-attribute">float</span>: left;<br>  <span class="hljs-attribute">width</span>: <span class="hljs-number">60%</span>;<br>  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> <span class="hljs-number">20px</span>;<br>&#125;<br><br><span class="hljs-selector-class">.right</span> &#123;<br>  <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#e5e5e5</span>;<br>  <span class="hljs-attribute">float</span>: left;<br>  <span class="hljs-attribute">width</span>: <span class="hljs-number">20%</span>;<br>  <span class="hljs-attribute">padding</span>: <span class="hljs-number">15px</span>;<br>  <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">7px</span>;<br>  <span class="hljs-attribute">text-align</span>: center;<br>&#125;<br><br><span class="hljs-keyword">@media</span> <span class="hljs-keyword">only</span> screen <span class="hljs-keyword">and</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">620px</span>) &#123;<br>  <span class="hljs-comment">/* For mobile phones: */</span><br>  <span class="hljs-selector-class">.menu</span>, <span class="hljs-selector-class">.main</span>, <span class="hljs-selector-class">.right</span> &#123;<br>    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>这里的@media便是media query，将移动端缩小</p>
+<h2 id="Special-CSS-Selectors"><a href="#Special-CSS-Selectors" class="headerlink" title="Special CSS Selectors"></a>Special CSS Selectors</h2><p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Untitled%2034.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p>除了传统的类型，类，ID选择之外（尽量不要用id！）</p>
+<p>combinator</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">h2</span> + <span class="hljs-selector-tag">p</span>&#123;<br><span class="hljs-comment">/* all p follow behind h2*/</span><br>&#125;<br><br><span class="hljs-selector-tag">p</span> ~ <span class="hljs-selector-tag">span</span>&#123;<br><span class="hljs-comment">/* all span following an &lt;p&gt;*/</span><br>&#125;<br><br><span class="hljs-selector-tag">ul</span> &gt; <span class="hljs-selector-tag">li</span>&#123;<br><span class="hljs-comment">/*all li directly inside ul*/</span><br>&#125;<br><br><span class="hljs-selector-tag">div</span> <span class="hljs-selector-tag">span</span>&#123;<br><span class="hljs-comment">/* all span anywhere inside div*/</span><br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+<p>还有伪类</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs css">element<span class="hljs-selector-pseudo">:hover</span>&#123;<span class="hljs-comment">/*hovering*/</span><br>&#125;<br><span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:active</span>&#123;<span class="hljs-comment">/*click a link*/</span>&#125;<br><span class="hljs-selector-tag">input</span><span class="hljs-selector-pseudo">:focus</span> &#123;tabbing or clicking on an <span class="hljs-selector-tag">input</span>&#125;<br><span class="hljs-selector-tag">p</span><span class="hljs-selector-pseudo">:nth-child</span>(<span class="hljs-number">4</span>n)&#123;<span class="hljs-comment">/*every 4th &lt;p&gt;*/</span>&#125;<br><span class="hljs-selector-tag">p</span><span class="hljs-selector-pseudo">:nth-child</span>(even)&#123;<span class="hljs-comment">/*every even &lt;p&gt;*/</span>&#125;<br><br><span class="hljs-selector-tag">p</span><span class="hljs-selector-pseudo">::first-line</span>&#123;<br>&#125;<br><br><span class="hljs-selector-tag">p</span><span class="hljs-selector-pseudo">::first-letter</span>&#123;<br>&#125;<br><br><span class="hljs-selector-tag">p</span><span class="hljs-selector-pseudo">:after</span>&#123;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h1 id="如何开始制作自己的网站"><a href="#如何开始制作自己的网站" class="headerlink" title="如何开始制作自己的网站"></a>如何开始制作自己的网站</h1><p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Untitled%2035.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<h1 id="Accounts-Authentication"><a href="#Accounts-Authentication" class="headerlink" title="Accounts Authentication"></a>Accounts Authentication</h1><p>authentication: proving the identity of a person or entity</p>
+<p>方法：</p>
+<ul>
+<li>密码</li>
+<li>身份证</li>
+<li>手机</li>
+<li>指纹</li>
+<li>etc</li>
+</ul>
+<h2 id="session"><a href="#session" class="headerlink" title="session"></a>session</h2><p>存储在服务器上</p>
+<h2 id="token"><a href="#token" class="headerlink" title="token"></a>token</h2><p>存在client上</p>
+<p>用户登录→服务器生成JWT→用户发请求带着JWT→服务端校验</p>
+<h2 id="nitty-gritty"><a href="#nitty-gritty" class="headerlink" title="nitty gritty"></a>nitty gritty</h2><p>密码必须要加密！</p>
+<p>password hash salting（加点随机字符，再取hash）</p>
+<p>本课程采用Google Sign-In来实现认证，Google在登录成功后，发送一个success token，再在后端验证</p>
+<h1 id="Socket"><a href="#Socket" class="headerlink" title="Socket"></a>Socket</h1><p>live communication</p>
+<p>基本上相当于，后端发一个socket信号，前端接受到后执行相应信号</p>
+<p>后端既可以是shout to all people，向所有人发送socket信号；也可以只向指定的客户端的socket发送信号（whisper），怎么获得这些客户端呢？答案是客户端先发post请求，初始化socket</p>
+<h1 id="Advanced-React"><a href="#Advanced-React" class="headerlink" title="Advanced React"></a>Advanced React</h1><p>不要用<strong>document.getElementById()</strong></p>
+<p><strong>React Developer Tools</strong></p>
+<h1 id="How-to-code-good"><a href="#How-to-code-good" class="headerlink" title="How to code good"></a>How to code good</h1><p>git方面</p>
+<p>经常用</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 开始代码前拉下队友的代码</span><br>git pull<br>git pull --rebase<br><br><span class="hljs-comment"># commit前查看状态</span><br>git status <br><br>git commit -am <span class="hljs-string">&#x27;message&#x27;</span> <span class="hljs-comment"># 不要提交错误的代码（broken）！</span><br><span class="hljs-comment"># 此外 提交应尽量单功能 避免一次提交过多</span><br></code></pre></td></tr></table></figure>
+
+<p>少用</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">git add . <span class="hljs-comment"># 直接加了所有文件 确保gitignore写好了</span><br>git push --force <span class="hljs-comment"># 除非你知道在做什么</span><br>git reset --hard <span class="hljs-comment"># 清空本地</span><br>git commit -amend <span class="hljs-comment"># 我还不会</span><br></code></pre></td></tr></table></figure>
+
+<p>有用的例如git stash，可以暂存你本地写了但是不想提交的分支，git stash pop即可弹出。</p>
+<p>git branch查看分支（-d删除）</p>
+<p>git graph 图像</p>
+<p>代码风格方面</p>
+<p>prettier（与队友协商完整）</p>
+<p>Typescript很棒</p>
+<p>如何写好代码</p>
+<p>首先要设计好（wireframe mockup prototype）</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Untitled%2036.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Untitled%2037.png" srcset="/img/loading.gif" lazyload alt="Untitled"></p>
+<p>D.R.Y principle: don’t repeat yourself</p>
+<p>code时经常做test</p>
+<p>不必过度注释，优秀的代码不需要太多解释</p>
+<p>开发，测试，debug的核心要素在于，慢一点，做一点改变就检查一下，避免一下子写了五百行，结果还找不出bug</p>
+<p><strong>More lines of code &#x3D; More to debug</strong></p>
+<p>Linus’s law: “given enough eyeballs, all bugs are shallow”.</p>
+<h1 id="Async-Computation"><a href="#Async-Computation" class="headerlink" title="Async Computation"></a>Async Computation</h1><ul>
+<li>Promises have 3 states:<ul>
+<li><strong>Pending</strong> initial state (neither fulfilled nor rejected)</li>
+<li><strong>Fulfilled</strong> the operation completed successfully</li>
+<li><strong>Rejected</strong> the operation failed</li>
+</ul>
+</li>
+</ul>
+<p>Handle promises using .then() and .catch()</p>
+<ul>
+<li><p>Return promises and can be chained together</p>
+</li>
+<li><p>Use <strong>await</strong> keyword to wait for promises to resolve</p>
+</li>
+<li><p>Use <strong>async</strong> keyword to define asynchronous functions</p>
+</li>
+<li><p>You MUST wrap every <strong>await</strong> within an <strong>async</strong> function</p>
+</li>
+</ul>
+<p>Use async when we don’t know how long something will take:</p>
+<ul>
+<li>Client-server communication</li>
+<li>Server-database communication</li>
+<li>React Front End</li>
+<li>Background Tasks</li>
+</ul>
+<p>Make your own promises with Q.deferred</p>
+<p>处理多个Promise</p>
+<p>Promise.all(promises).then().catch()</p>
+<p>Promise.race(promises).then().catch() &#x2F;&#x2F; 最先完成的</p>
+<p>Promise.any(promises).then().catch() &#x2F;&#x2F; 首先完成的</p>
+<h1 id="TypeScript"><a href="#TypeScript" class="headerlink" title="TypeScript"></a>TypeScript</h1><p>js的超集</p>
+<p>加上了类型限制，比如说，在js里，9&lt;10是true，”9”&lt;”10”却是false，但是也不会报错</p>
+<figure class="highlight tsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs tsx"><span class="hljs-keyword">let</span> <span class="hljs-attr">message</span>: <span class="hljs-built_in">string</span>[] = [<span class="hljs-string">&quot;1&quot;</span>,<span class="hljs-string">&quot;2&quot;</span>,<span class="hljs-string">&quot;3&quot;</span>]<br><br><span class="hljs-keyword">let</span> <span class="hljs-attr">m</span>: <span class="hljs-built_in">string</span> = <span class="hljs-string">&quot;hello&quot;</span><br>m = <span class="hljs-number">1</span> <span class="hljs-comment">// error</span><br><br><span class="hljs-keyword">type</span> <span class="hljs-title class_">User</span> = &#123;<br>	<span class="hljs-attr">_id</span>: <span class="hljs-built_in">string</span>;<br>	<span class="hljs-attr">name</span>: <span class="hljs-built_in">string</span>;<br>	is_admin?: <span class="hljs-built_in">boolean</span>;<br>&#125;<br><br><span class="hljs-keyword">type</span> <span class="hljs-title class_">UserLogin</span> = <span class="hljs-title class_">User</span> &amp; &#123; <span class="hljs-attr">password</span>: <span class="hljs-built_in">string</span> &#125;<br><span class="hljs-keyword">const</span> <span class="hljs-attr">userLogin</span>: <span class="hljs-title class_">Userlogin</span> = &#123;...&#125;<br><br><span class="hljs-keyword">const</span> getComments = (<span class="hljs-attr">id</span>:<span class="hljs-built_in">string</span>):<span class="hljs-title class_">Comment</span>[] =&gt; &#123; <span class="hljs-keyword">return</span> [];&#125;<br><br><span class="hljs-keyword">const</span> getComments = (<span class="hljs-attr">id</span>:<span class="hljs-built_in">string</span>): <span class="hljs-title class_">Promise</span>&lt;<span class="hljs-title class_">Comment</span>[]&gt; =&gt; &#123;&#125;<br></code></pre></td></tr></table></figure>
+
+<p>修改config可以在tsconfig.json里改</p>
+<h1 id="Libraries"><a href="#Libraries" class="headerlink" title="Libraries"></a>Libraries</h1><p>tailwind→引入后，只需要引入对应css class即可</p>
+<p>ant-design→和element ui长得一样</p>
+<p>abcjs.net→</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs jsx">&lt;div id=<span class="hljs-string">&quot;paper&quot;</span>&gt;&lt;/div&gt;<br>abcjs.<span class="hljs-title function_">renderAbc</span>(<span class="hljs-string">&quot;paper&quot;</span>,<span class="hljs-string">&quot;X:1\nK:D\n............&quot;</span>)<br></code></pre></td></tr></table></figure>
+
+<p>甚至还可以播放（见文档）</p>
+<p>threejs.org→3d模型 in js</p>
+<p>autocomplete.js→自动补全</p>
+<h1 id="Deployment"><a href="#Deployment" class="headerlink" title="Deployment"></a>Deployment</h1><p>教的是Heroku</p>
+<p>Heroku在部署app时，不会固定地给你一个端口，而是动态分配，因此需要修改部署的配置</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs jsx">.<span class="hljs-title function_">listen</span>(process.<span class="hljs-property">env</span>.<span class="hljs-property">PROT</span> || <span class="hljs-number">3000</span>）<br></code></pre></td></tr></table></figure>
+
+              
+            </div>
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%8A%80%E6%9C%AF/" class="category-chain-item">技术</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/web-lab/">#web.lab</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>web.lab课程笔记分享</div>
+      <div>http://baokker.github.io/2022/09/13/web-lab课程笔记分享/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Baokker</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年9月13日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2022年10月8日</div>
+        </div>
+      
+      <div class="license-meta-item">
+        <div>许可协议</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/09/19/%E4%B8%BA%E4%BA%86%E8%AE%A9%E8%87%AA%E5%B7%B1%E5%BF%8D%E4%BD%8F%E4%B8%8D%E4%B9%B0Mac%EF%BC%8C%E6%88%91%E6%8A%8A%E6%88%91%E7%9A%84iPad%E7%9A%84%E7%94%9F%E4%BA%A7%E5%8A%9B%E6%8B%89%E5%88%B0%E4%BA%86%E6%9E%81%E9%99%90/" title="为了让自己忍住不买Mac，我把我的iPad的生产力拉到了极限">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">为了让自己忍住不买Mac，我把我的iPad的生产力拉到了极限</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/09/12/%E3%80%8A%E6%AD%BB%E4%BA%8E%E5%A8%81%E5%B0%BC%E6%96%AF%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/" title="《死于威尼斯》读后感">
+                        <span class="hidden-mobile">《死于威尼斯》读后感</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  <article id="comments" lazyload>
+    
+  <div id="waline"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#waline', function() {
+      Fluid.utils.createCssLink('https://lib.baomitu.com/waline/2.3.2/waline.min.css')
+      Fluid.utils.createScript('https://lib.baomitu.com/waline/2.3.2/waline.min.js', function() {
+        var options = Object.assign(
+          {"serverURL":"https://blog-comment-server-j7p2mwkga-baokker.vercel.app/","path":"window.location.pathname","meta":["nick","mail","link"],"requiredMeta":["nick"],"lang":"zh-CN","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"],"dark":"html[data-user-color-scheme=\"dark\"]","wordLimit":0,"pageSize":10},
+          {
+            el: '#waline',
+            path: window.location.pathname
+          }
+        )
+        Waline.init(options);
+        Fluid.utils.waitElementVisible('#waline .vcontent', () => {
+          var imgSelector = '#waline .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+  </article>
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.0/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script>
+  (function() {
+    var enableLang = CONFIG.code_language.enable && CONFIG.code_language.default;
+    var enableCopy = CONFIG.copy_btn;
+    if (!enableLang && !enableCopy) {
+      return;
+    }
+
+    function getBgClass(ele) {
+      return Fluid.utils.getBackgroundLightness(ele) >= 0 ? 'code-widget-light' : 'code-widget-dark';
+    }
+
+    var copyTmpl = '';
+    copyTmpl += '<div class="code-widget">';
+    copyTmpl += 'LANG';
+    copyTmpl += '</div>';
+    jQuery('.markdown-body pre').each(function() {
+      var $pre = jQuery(this);
+      if ($pre.find('code.mermaid').length > 0) {
+        return;
+      }
+      if ($pre.find('span.line').length > 0) {
+        return;
+      }
+
+      var lang = '';
+
+      if (enableLang) {
+        lang = CONFIG.code_language.default;
+        if ($pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2 && $pre.children().hasClass('hljs')) {
+          lang = $pre[0].children[0].classList[1];
+        } else if ($pre[0].getAttribute('data-language')) {
+          lang = $pre[0].getAttribute('data-language');
+        } else if ($pre.parent().hasClass('sourceCode') && $pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2) {
+          lang = $pre[0].children[0].classList[1];
+          $pre.parent().addClass('code-wrapper');
+        } else if ($pre.parent().hasClass('markdown-body') && $pre[0].classList.length === 0) {
+          $pre.wrap('<div class="code-wrapper"></div>');
+        }
+        lang = lang.toUpperCase().replace('NONE', CONFIG.code_language.default);
+      }
+      $pre.append(copyTmpl.replace('LANG', lang).replace('code-widget">',
+        getBgClass($pre[0]) + (enableCopy ? ' code-widget copy-btn" data-clipboard-snippet><i class="iconfont icon-copy"></i>' : ' code-widget">')));
+
+      if (enableCopy) {
+        Fluid.utils.createScript('https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js', function() {
+          var clipboard = new window.ClipboardJS('.copy-btn', {
+            target: function(trigger) {
+              var nodes = trigger.parentNode.childNodes;
+              for (var i = 0; i < nodes.length; i++) {
+                if (nodes[i].tagName === 'CODE') {
+                  return nodes[i];
+                }
+              }
+            }
+          });
+          clipboard.on('success', function(e) {
+            e.clearSelection();
+            e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-copy', 'icon-success');
+            setTimeout(function() {
+              e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-success', 'icon-copy');
+            }, 2000);
+          });
+        });
+      }
+    });
+  })();
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

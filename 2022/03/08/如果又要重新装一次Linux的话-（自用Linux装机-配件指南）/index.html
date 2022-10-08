@@ -1,0 +1,806 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/favicon.png">
+  <link rel="icon" href="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Baokker">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="呕心沥血之作了属于是">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如果又要重新装一次Linux的话..（自用Linux装机&#x2F;配件指南）">
+<meta property="og:url" content="http://baokker.github.io/2022/03/08/%E5%A6%82%E6%9E%9C%E5%8F%88%E8%A6%81%E9%87%8D%E6%96%B0%E8%A3%85%E4%B8%80%E6%AC%A1Linux%E7%9A%84%E8%AF%9D-%EF%BC%88%E8%87%AA%E7%94%A8Linux%E8%A3%85%E6%9C%BA-%E9%85%8D%E4%BB%B6%E6%8C%87%E5%8D%97%EF%BC%89/index.html">
+<meta property="og:site_name" content="Baokker&#39;s Blog">
+<meta property="og:description" content="呕心沥血之作了属于是">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/dog-5146351_1920.jpg">
+<meta property="article:published_time" content="2022-03-08T08:27:45.000Z">
+<meta property="article:modified_time" content="2022-10-08T12:53:57.257Z">
+<meta property="article:author" content="Baokker">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/dog-5146351_1920.jpg">
+  
+  
+  
+  <title>如果又要重新装一次Linux的话..（自用Linux装机/配件指南） - Baokker&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"baokker.github.io","root":"/","version":"1.9.0","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Baokker&#39;s Blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/dog-5146351_1920.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="如果又要重新装一次Linux的话..（自用Linux装机/配件指南）"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-03-08 16:27" pubdate>
+          2022年3月8日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          5.5k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          46 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">如果又要重新装一次Linux的话..（自用Linux装机/配件指南）</h1>
+            
+            <div class="markdown-body">
+              
+              <p>最近装了好几回虚拟机，装出经验来了，在这里总结一下吧，以后说不定还会用到呢。</p>
+<ul>
+<li>虚拟机：VMware WorkStations Pro</li>
+<li>系统：Ubuntu 20.04</li>
+</ul>
+<h1 id="VMware"><a href="#VMware" class="headerlink" title="VMware"></a>VMware</h1><p>去<a target="_blank" rel="noopener" href="https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html">官网</a>下载并安装VMware。破解码网上有很多，随便查查就能通过了</p>
+<h1 id="下载系统iso"><a href="#下载系统iso" class="headerlink" title="下载系统iso"></a>下载系统iso</h1><p>我这里用的是Ubuntu 20.04LTS，还是推荐直接去<a target="_blank" rel="noopener" href="https://ubuntu.com/download/desktop">官网</a>下载iso</p>
+<h1 id="安装系统"><a href="#安装系统" class="headerlink" title="安装系统"></a>安装系统</h1><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/141033713">https://zhuanlan.zhihu.com/p/141033713</a></p>
+<p>这个链接给的很详细了，我提几个自己觉得比较重要的点：</p>
+<ol>
+<li>刚开始时选择<strong>典型</strong>，然后不需要在一开始时选定iso，而是在创建完成后在虚拟机选项里挂载iso。</li>
+<li>安装Ubuntu还是建议English而非Chinese。中文缺点有二：<ul>
+<li>默认用户下的几个文件夹（<code>Desktop/Videos/Download/..</code>）都是中文命名（<code>桌面/视频/下载/..</code>），有可能导致一些软件安装时识别不了中文路径</li>
+<li>初次安装时，如果在一开始选择中文界面，会导致安装界面因为字体改变放大，然后你会看不到最下面的继续&#x2F;后退选项（）解决方法是按住<code>Alt+F7</code>，拖动窗口（）</li>
+</ul>
+</li>
+</ol>
+<h1 id="与主机共享"><a href="#与主机共享" class="headerlink" title="与主机共享"></a>与主机共享</h1><p>理论上说在左上角<code>虚拟机-&gt;设置-&gt;选项-&gt;共享文件夹</code>里面一番操作后，就能在<code>/mnt/hgfs</code>下看到共享的文件夹名。但是事实上，我经常发现共享文件夹没有挂载成功，因此我最后得出的解决方案是，每次开机后手动挂载共享文件夹。下面这句百试百灵</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo vmhgfs-fuse .host:/ /mnt/hgfs -o subtype=vmhgfs-fuse,allow_other<br></code></pre></td></tr></table></figure>
+
+
+
+<h1 id="clash-挂梯子"><a href="#clash-挂梯子" class="headerlink" title="clash 挂梯子"></a>clash 挂梯子</h1><ol>
+<li><p>到<a target="_blank" rel="noopener" href="https://github.com/Dreamacro/clash/releases">GitHub的release界面</a>下载clash（命令行版，如果想装clash for Windows的GUI界面，参看我<a href="https://baokker.github.io/2022/02/12/Linux%E9%80%9A%E8%BF%87Clash-for-Windows%E5%AE%9E%E7%8E%B0%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/">这篇</a>)，例如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">wget https://github.com/Dreamacro/clash/releases/download/v1.9.0/clash-linux-amd64-v1.9.0.gz<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>将其解压到合适的目录下（假如你解压在了<code>~/Apps</code>文件夹下），加上运行权限，并初次运行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> ~/Apps<br><span class="hljs-built_in">chmod</span> a+x clash-linux-amd64-v1.9.0 <span class="hljs-comment"># the name is defined by yourself</span><br>./clash-linux-amd64-v1.9.0<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>但此时还不够，需要修改<code>~/.config/clash</code>下的<code>config.yaml</code>文件。从你的梯子里找到clash的配置文件，或者需要先查找一些将节点信息转成clash配置文件的工具，将其替换。<br>（还是很推荐<a target="_blank" rel="noopener" href="https://bywave.art/">bywave</a>的）</p>
+</li>
+<li><p>修改系统代理，打开右上角<code>Settings-&gt;Network</code>，将<code>proxy</code>设为<code>manual</code>，同时将其设为：<br><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220305233146.png" srcset="/img/loading.gif" lazyload></p>
+</li>
+<li><p>测试一下，打开<a target="_blank" rel="noopener" href="http://www.google.com,看看行不行./">www.google.com，看看行不行。</a></p>
+</li>
+</ol>
+<p>another link：<a target="_blank" rel="noopener" href="https://zhaowen.site/wiki/clash%20for%20Linux.html">https://zhaowen.site/wiki/clash%20for%20Linux.html</a></p>
+<h1 id="安装一些必备工具"><a href="#安装一些必备工具" class="headerlink" title="安装一些必备工具"></a>安装一些必备工具</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt update<br><br>sudo apt install vim tree git fd-find tmux curl<br><br>sudo apt install zsh <span class="hljs-comment"># zsh</span><br>sh -c <span class="hljs-string">&quot;<span class="hljs-subst">$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>&quot;</span> <span class="hljs-comment"># zsh</span><br>chsh -s $(<span class="hljs-built_in">which</span> zsh) <span class="hljs-comment"># set as default zsh</span><br>sudo reboot <span class="hljs-comment"># make zsh work as default shell</span><br><span class="hljs-built_in">echo</span> <span class="hljs-variable">$SHELL</span> <span class="hljs-comment"># test whether zsh is rhe current shell</span><br><br>sudo apt install build-essential <span class="hljs-comment"># gcc and g++</span><br>gcc --version <span class="hljs-comment"># test whether gcc is installed successfully</span><br></code></pre></td></tr></table></figure>
+
+
+
+<p>一些参考链接：</p>
+<p><a target="_blank" rel="noopener" href="https://ohmyz.sh/#install">https://ohmyz.sh/#install</a><br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/19556676">https://zhuanlan.zhihu.com/p/19556676</a><br><a target="_blank" rel="noopener" href="https://linuxize.com/post/how-to-install-gcc-on-ubuntu-20-04/">https://linuxize.com/post/how-to-install-gcc-on-ubuntu-20-04/</a><br><a target="_blank" rel="noopener" href="https://regding.github.io/ubuntu-zsh">https://regding.github.io/ubuntu-zsh</a><br><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/bb2e0f2fab3c">https://www.jianshu.com/p/bb2e0f2fab3c</a></p>
+<h1 id="dotfiles"><a href="#dotfiles" class="headerlink" title="dotfiles"></a>dotfiles</h1><p>fork了一个大佬的<a target="_blank" rel="noopener" href="https://github.com/holman/dotfiles">dotfiles</a>，其要义在于，通过symlink软链接，实现将所有<strong>配置文件</strong>都集成在<code>~/dotfiles</code>文件夹内，以便同步，减少每次单独配置的烦恼。</p>
+<p>ps：此步骤不要直接使用，建议先阅读一下clone下来的配置文件的内容，选择自己需要的。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://github.com/holman/dotfiles.git ~/.dotfiles<br><span class="hljs-built_in">cd</span> ~/.dotfiles<br>script/bootstrap<br></code></pre></td></tr></table></figure>
+
+
+
+<h1 id="Chrome"><a href="#Chrome" class="headerlink" title="Chrome"></a>Chrome</h1><p>个人习惯于用Google账号同步各种信息，因此下载安装chrome还是必要的（可怜Firefox了！我知道你是个好浏览器！）</p>
+<ol>
+<li><p>前往<a target="_blank" rel="noopener" href="https://www.google.com/chrome/%EF%BC%8C%E4%B8%8B%E8%BD%BDdeb%E5%AE%89%E8%A3%85%E5%8C%85">https://www.google.com/chrome/，下载deb安装包</a></p>
+</li>
+<li><p>定位到该deb所在的文件夹位置，输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo dpkg -i chrome......deb <span class="hljs-comment"># 文件名省略了哈！</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>安装完成！</p>
+</li>
+</ol>
+<h1 id="zsh-plugins"><a href="#zsh-plugins" class="headerlink" title="zsh plugins"></a>zsh plugins</h1><ul>
+<li><p>auto suggestions（自动补全，真的人生必备插件！）</p>
+<ul>
+<li><p>Clone this repository into $ZSH_CUSTOM&#x2F;plugins (by default ~&#x2F;.oh-my-zsh&#x2F;custom&#x2F;plugins)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://github.com/zsh-users/zsh-autosuggestions <span class="hljs-variable">$&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;</span>/plugins/zsh-autosuggestions<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>Add the plugin to the list of plugins for Oh My Zsh to load (inside ~&#x2F;.zshrc):<br>（我由于之前在dotfiles里已经配置过，因此这步可以直接跳过）</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs text">plugins=( <br>    # other plugins...<br>    zsh-autosuggestions<br>)<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>Start a new terminal session.</p>
+</li>
+</ul>
+</li>
+<li><p>syntax highlighting（语法高亮 有错误语法会高亮提示）</p>
+<ul>
+<li>&#96;&#96;&#96;bash<br>git clone <a target="_blank" rel="noopener" href="https://github.com/zsh-users/zsh-syntax-highlighting.git">https://github.com/zsh-users/zsh-syntax-highlighting.git</a><br>echo “source ${(q-)PWD}&#x2F;zsh-syntax-highlighting&#x2F;zsh-syntax-highlighting.zsh” &gt;&gt; ${ZDOTDIR:-$HOME}&#x2F;.zshrc<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><code class="hljs stata">  <br>  - start a new terminal session<br>  <br>    <br>  <br><br>更多可以参考 https:<span class="hljs-comment">//juejin.cn/post/6844903598300610568</span><br><br><br><br># vim plugins<br><br>- [`vundle`](https:<span class="hljs-comment">//github.com/VundleVim/Vundle.vim)插件管理</span><br><br>  1.   ```bash<br>  git clone https:<span class="hljs-comment">//github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim</span><br>  <br>  2. Put this at the top of your `.vimrc` to <span class="hljs-keyword">use</span> Vundle. Remove plugins you don&#x27;t need, they are <span class="hljs-keyword">for</span> illustration purposes.<br>     （同上，已经通过dotfiles配置好了）<br>  <br>     ```text<br>     <span class="hljs-keyword">set</span> nocompatible              &quot; be iMproved, required<br>     filetype off                  &quot; required<br>     <br>     &quot; <span class="hljs-keyword">set</span> the runtime path to <span class="hljs-keyword">include</span> Vundle and initialize<br>     <span class="hljs-keyword">set</span> rtp+=~/.vim/bundle/Vundle.vim<br>     call vundle#begin()<br>     &quot; alternatively, pass a path where Vundle should install plugins<br>     &quot;call vundle#begin(&#x27;~/some/path/here&#x27;)<br>     <br>     &quot; let Vundle manage Vundle, required<br>     <span class="hljs-keyword">Plugin</span> &#x27;VundleVim/Vundle.vim&#x27;<br>     <br>     &quot; The following are examples of different formats supported.<br>     &quot; <span class="hljs-keyword">Keep</span> <span class="hljs-keyword">Plugin</span> commands between vundle#begin/end.<br>     &quot; <span class="hljs-keyword">plugin</span> <span class="hljs-keyword">on</span> GitHub repo<br>     <span class="hljs-keyword">Plugin</span> &#x27;tpope/vim-fugitive&#x27;<br>     &quot; <span class="hljs-keyword">plugin</span> from http:<span class="hljs-comment">//vim-scripts.org/vim/scripts.html</span><br>     &quot; <span class="hljs-keyword">Plugin</span> &#x27;L9&#x27;<br>     &quot; Git <span class="hljs-keyword">plugin</span> not hosted <span class="hljs-keyword">on</span> GitHub<br>     <span class="hljs-keyword">Plugin</span> &#x27;git:<span class="hljs-comment">//git.wincent.com/command-t.git&#x27;</span><br>     &quot; git repos <span class="hljs-keyword">on</span> your <span class="hljs-keyword">local</span> machine (i.<span class="hljs-keyword">e</span>. when working <span class="hljs-keyword">on</span> your own <span class="hljs-keyword">plugin</span>)<br>     <span class="hljs-keyword">Plugin</span> &#x27;<span class="hljs-keyword">file</span>:<span class="hljs-comment">///home/gmarik/path/to/plugin&#x27;</span><br>     &quot; The sparkup vim script is <span class="hljs-keyword">in</span> a subdirectory of this repo called vim.<br>     &quot; Pass the path to <span class="hljs-keyword">set</span> the runtimepath properly.<br>     <span class="hljs-keyword">Plugin</span> &#x27;rstacruz/sparkup&#x27;, &#123;&#x27;rtp&#x27;: &#x27;vim/&#x27;&#125;<br>     &quot; Install L9 and avoid a Naming conflict <span class="hljs-keyword">if</span> you&#x27;ve already installed a<br>     &quot; different <span class="hljs-keyword">version</span> somewhere <span class="hljs-keyword">else</span>.<br>     &quot; <span class="hljs-keyword">Plugin</span> &#x27;ascenator/L9&#x27;, &#123;&#x27;name&#x27;: &#x27;newL9&#x27;&#125;<br>     <br>     &quot; All of your Plugins must be added before the following <span class="hljs-keyword">line</span><br>     call vundle#end()            &quot; required<br>     filetype <span class="hljs-keyword">plugin</span> indent <span class="hljs-keyword">on</span>    &quot; required<br>     &quot; To ignore <span class="hljs-keyword">plugin</span> indent changes, instead <span class="hljs-keyword">use</span>:<br>     &quot;filetype <span class="hljs-keyword">plugin</span> <span class="hljs-keyword">on</span><br>     &quot;<br>     &quot; Brief <span class="hljs-keyword">help</span><br>     &quot; :PluginList       - lists configured plugins<br>     &quot; :PluginInstall    - installs plugins; <span class="hljs-keyword">append</span> `!` to <span class="hljs-keyword">update</span> or just :PluginUpdate<br>     &quot; :PluginSearch foo - searches <span class="hljs-keyword">for</span> foo; <span class="hljs-keyword">append</span> `!` to refresh <span class="hljs-keyword">local</span> cache<br>     &quot; :PluginClean      - confirms removal of unused plugins; <span class="hljs-keyword">append</span> `!` to auto-approve removal<br>     &quot;<br>     &quot; see :<span class="hljs-keyword">h</span> vundle <span class="hljs-keyword">for</span> <span class="hljs-keyword">more</span> details or wiki <span class="hljs-keyword">for</span> FAQ<br>     &quot; Put your non-<span class="hljs-keyword">Plugin</span> stuff after this <span class="hljs-keyword">line</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+<ol start="3">
+<li><pre><code class="bash">vim +PluginInstall +qall
+</code></pre>
+</li>
+</ol>
+</li>
+</ul>
+<h1 id="YCM"><a href="#YCM" class="headerlink" title="YCM"></a>YCM</h1><p>代码补全神器，必备。</p>
+<p>参考我的<a href="https://baokker.github.io/2022/02/12/YouCompleteMe%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/">这篇</a></p>
+<h1 id="git-authentication"><a href="#git-authentication" class="headerlink" title="git authentication"></a>git authentication</h1><p>通过generate access token或者SSH 免密登录解决。以后再更新吧..</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_41010198/article/details/119698015">https://blog.csdn.net/weixin_41010198/article/details/119698015</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_38163309/article/details/105335097">https://blog.csdn.net/qq_38163309/article/details/105335097</a></p>
+<h1 id="markdown-editor"><a href="#markdown-editor" class="headerlink" title="markdown editor"></a>markdown editor</h1><p>markdown写作还是必要的</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/brrd/abricotine">https://github.com/brrd/abricotine</a></p>
+<p>这款md的写作体验还是不错的。安装也很舒服，在<a target="_blank" rel="noopener" href="https://github.com/brrd/Abricotine/releases">release</a>下找到Debian&#x2F;Ubuntu的对应安装包，然后<code>sudo dpkg -i ....deb</code>就好了</p>
+
+              
+            </div>
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%8A%80%E6%9C%AF/" class="category-chain-item">技术</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>如果又要重新装一次Linux的话..（自用Linux装机/配件指南）</div>
+      <div>http://baokker.github.io/2022/03/08/如果又要重新装一次Linux的话-（自用Linux装机-配件指南）/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Baokker</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年3月8日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2022年10月8日</div>
+        </div>
+      
+      <div class="license-meta-item">
+        <div>许可协议</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/03/08/regex%EF%BC%88%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%89%E5%9C%A8%E7%BA%BF%E5%8C%B9%E9%85%8D%E7%BD%91%E7%AB%99/" title="regex（正则表达式）在线匹配网站">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">regex（正则表达式）在线匹配网站</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/03/04/%E3%80%8A%E7%AC%AC%E4%B8%80%E4%BA%BA%E7%A7%B0%E5%8D%95%E6%95%B0%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/" title="《第一人称单数》读后感">
+                        <span class="hidden-mobile">《第一人称单数》读后感</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  <article id="comments" lazyload>
+    
+  <div id="waline"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#waline', function() {
+      Fluid.utils.createCssLink('https://lib.baomitu.com/waline/2.3.2/waline.min.css')
+      Fluid.utils.createScript('https://lib.baomitu.com/waline/2.3.2/waline.min.js', function() {
+        var options = Object.assign(
+          {"serverURL":"https://blog-comment-server-j7p2mwkga-baokker.vercel.app/","path":"window.location.pathname","meta":["nick","mail","link"],"requiredMeta":["nick"],"lang":"zh-CN","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"],"dark":"html[data-user-color-scheme=\"dark\"]","wordLimit":0,"pageSize":10},
+          {
+            el: '#waline',
+            path: window.location.pathname
+          }
+        )
+        Waline.init(options);
+        Fluid.utils.waitElementVisible('#waline .vcontent', () => {
+          var imgSelector = '#waline .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+  </article>
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.0/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script>
+  (function() {
+    var enableLang = CONFIG.code_language.enable && CONFIG.code_language.default;
+    var enableCopy = CONFIG.copy_btn;
+    if (!enableLang && !enableCopy) {
+      return;
+    }
+
+    function getBgClass(ele) {
+      return Fluid.utils.getBackgroundLightness(ele) >= 0 ? 'code-widget-light' : 'code-widget-dark';
+    }
+
+    var copyTmpl = '';
+    copyTmpl += '<div class="code-widget">';
+    copyTmpl += 'LANG';
+    copyTmpl += '</div>';
+    jQuery('.markdown-body pre').each(function() {
+      var $pre = jQuery(this);
+      if ($pre.find('code.mermaid').length > 0) {
+        return;
+      }
+      if ($pre.find('span.line').length > 0) {
+        return;
+      }
+
+      var lang = '';
+
+      if (enableLang) {
+        lang = CONFIG.code_language.default;
+        if ($pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2 && $pre.children().hasClass('hljs')) {
+          lang = $pre[0].children[0].classList[1];
+        } else if ($pre[0].getAttribute('data-language')) {
+          lang = $pre[0].getAttribute('data-language');
+        } else if ($pre.parent().hasClass('sourceCode') && $pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2) {
+          lang = $pre[0].children[0].classList[1];
+          $pre.parent().addClass('code-wrapper');
+        } else if ($pre.parent().hasClass('markdown-body') && $pre[0].classList.length === 0) {
+          $pre.wrap('<div class="code-wrapper"></div>');
+        }
+        lang = lang.toUpperCase().replace('NONE', CONFIG.code_language.default);
+      }
+      $pre.append(copyTmpl.replace('LANG', lang).replace('code-widget">',
+        getBgClass($pre[0]) + (enableCopy ? ' code-widget copy-btn" data-clipboard-snippet><i class="iconfont icon-copy"></i>' : ' code-widget">')));
+
+      if (enableCopy) {
+        Fluid.utils.createScript('https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js', function() {
+          var clipboard = new window.ClipboardJS('.copy-btn', {
+            target: function(trigger) {
+              var nodes = trigger.parentNode.childNodes;
+              for (var i = 0; i < nodes.length; i++) {
+                if (nodes[i].tagName === 'CODE') {
+                  return nodes[i];
+                }
+              }
+            }
+          });
+          clipboard.on('success', function(e) {
+            e.clearSelection();
+            e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-copy', 'icon-success');
+            setTimeout(function() {
+              e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-success', 'icon-copy');
+            }, 2000);
+          });
+        });
+      }
+    });
+  })();
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

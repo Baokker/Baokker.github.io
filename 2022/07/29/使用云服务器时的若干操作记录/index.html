@@ -1,0 +1,842 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/favicon.png">
+  <link rel="icon" href="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Baokker">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="买了台服务器">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用云服务器时的若干操作记录">
+<meta property="og:url" content="http://baokker.github.io/2022/07/29/%E4%BD%BF%E7%94%A8%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%97%B6%E7%9A%84%E8%8B%A5%E5%B9%B2%E6%93%8D%E4%BD%9C%E8%AE%B0%E5%BD%95/index.html">
+<meta property="og:site_name" content="Baokker&#39;s Blog">
+<meta property="og:description" content="买了台服务器">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/defaultImages.jpg">
+<meta property="article:published_time" content="2022-07-29T11:57:13.000Z">
+<meta property="article:modified_time" content="2022-10-08T12:53:57.247Z">
+<meta property="article:author" content="Baokker">
+<meta property="article:tag" content="服务器">
+<meta property="article:tag" content="Linux">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/defaultImages.jpg">
+  
+  
+  
+  <title>使用云服务器时的若干操作记录 - Baokker&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"baokker.github.io","root":"/","version":"1.9.0","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Baokker&#39;s Blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/defaultImages.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="使用云服务器时的若干操作记录"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-07-29 19:57" pubdate>
+          2022年7月29日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          3.8k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          32 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">使用云服务器时的若干操作记录</h1>
+            
+            <div class="markdown-body">
+              
+              <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>前些天买了台<a target="_blank" rel="noopener" href="https://cloud.tencent.com/act/pro/seckill_season?from=17517">腾讯云</a>服务器，从头搭建了一遍Ubuntu，感觉上与虚拟机的操作大同小异，但也有若干不同之处，基于以前这篇<a href="https://baokker.github.io/2022/03/08/%E5%A6%82%E6%9E%9C%E5%8F%88%E8%A6%81%E9%87%8D%E6%96%B0%E8%A3%85%E4%B8%80%E6%AC%A1Linux%E7%9A%84%E8%AF%9D-%EF%BC%88%E8%87%AA%E7%94%A8Linux%E8%A3%85%E6%9C%BA-%E9%85%8D%E4%BB%B6%E6%8C%87%E5%8D%97%EF%BC%89/">《如果又要重新装一次Linux的话..（自用Linux装机&#x2F;配件指南）》</a>，再更新一遍。</p>
+<h1 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h1><ul>
+<li>腾讯云自身提供了一个网页版shell<br><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20220731211206248.png" srcset="/img/loading.gif" lazyload alt="image-20220731211206248"><br><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20220731211303145.png" srcset="/img/loading.gif" lazyload alt="image-20220731211303145"><br>输入用户名和密码后即可在云端操作。缺点是不能记住账密，但是我这种人一向懒得输入账号密码（</li>
+<li>Xshell。点击这个<a target="_blank" rel="noopener" href="https://www.xshell.com/zh/free-for-home-school/">链接</a>，可免费获得Xshell下载地址。在Windows上体验非常舒服（而且可以记住账号密码）<br><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20220731211601169.png" srcset="/img/loading.gif" lazyload alt="image-20220731211601169"></li>
+<li>最初我购买服务器的原因，是为了想在ipad上实现简单的开发（是的），因此提一嘴ipad。IOS端均可下载terminus进行连线。可以通过建立identity实现免密登录<br><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20220731212223637.png" srcset="/img/loading.gif" lazyload alt="image-20220731212223637"></li>
+</ul>
+<h1 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h1><ul>
+<li><p>一种是通过<code>scp</code>（突然恐怖氛围）（以下仅是举例，不是本人ip）</p>
+<figure class="highlight moonscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs moonscript">scp <span class="hljs-name">c</span>:\Users\lm\Desktop\wenjian.txt limin@<span class="hljs-number">173.16</span><span class="hljs-number">.101</span><span class="hljs-number">.136</span>:\home\lm<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>一种是通过Xftp，与上文Xshell是一家。点击此<a target="_blank" rel="noopener" href="https://www.xshell.com/zh/free-for-home-school/">链接</a>同样可免费获得</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20220731213050566.png" srcset="/img/loading.gif" lazyload alt="image-20220731213050566"><br>页面挺友好的，鼠标拖拽即可文件传输</p>
+</li>
+</ul>
+<h1 id="安装zsh"><a href="#安装zsh" class="headerlink" title="安装zsh"></a>安装zsh</h1><p>默认的bash还是太愚蠢了，我已经离不开zsh了…</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt-get install zsh <span class="hljs-comment"># 安装zsh</span><br>chsh -s /bin/zsh<br><br>sudo reboot <span class="hljs-comment"># 重启一下</span><br><br><span class="hljs-built_in">echo</span> <span class="hljs-variable">$SHELL</span> <span class="hljs-comment"># 输出shell 确保zsh</span><br>sh -c <span class="hljs-string">&quot;<span class="hljs-subst">$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)</span>&quot;</span> <span class="hljs-comment"># 安装ohmyzsh</span><br><br><span class="hljs-comment"># 安装一些插件</span><br><span class="hljs-comment"># zsh-autosuggestions 自动根据之前代码补全</span><br>git <span class="hljs-built_in">clone</span> https://github.com/zsh-users/zsh-autosuggestions <span class="hljs-variable">$&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;</span>/plugins/zsh-autosuggestions<br><span class="hljs-comment"># zsh-syntax-highlighting 语法高亮</span><br>git <span class="hljs-built_in">clone</span> https://github.com/zsh-users/zsh-syntax-highlighting.git <span class="hljs-variable">$&#123;ZSH_CUSTOM:-~/.oh-my-zsh/custom&#125;</span>/plugins/zsh-syntax-highlighting<br><br></code></pre></td></tr></table></figure>
+
+<p>设置.zshrc</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">vim ~/.zshrc<br></code></pre></td></tr></table></figure>
+
+<p>添加插件</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs text">plugins=(<br>    # other plugins...<br>    zsh-autosuggestions<br>    zsh-syntax-highlighting<br>)<br></code></pre></td></tr></table></figure>
+
+<p>愚蠢的我一开始没发现，预先配置好的zshrc里已经写好了plugins，而我只是直接G到最后一行，自己写了上去…</p>
+<p>最后<code>source ~/.zshrc</code>即可加载配置完成</p>
+<p>再提一嘴，可以在.zshrc里设置ZSH_THEME&#x3D;’random’，很变态，但是很爽…</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20220731224007101.png" srcset="/img/loading.gif" lazyload alt="image-20220731224007101"></p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20220731224025748.png" srcset="/img/loading.gif" lazyload alt="image-20220731224025748"></p>
+<h1 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h1><p>前端开发必备。</p>
+<p>其实腾讯云官方已经给了很好的文档：<a target="_blank" rel="noopener" href="https://cloud.tencent.com/document/product/213/38237">https://cloud.tencent.com/document/product/213/38237</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> XXX <span class="hljs-comment"># the dir you want to store</span><br>wget https://nodejs.org/dist/v10.16.3/node-v10.16.3-linux-x64.tar.xz <span class="hljs-comment"># 下载</span><br>tar xvf node-v10.16.3-linux-x64.tar.xz <span class="hljs-comment"># 解压</span><br><span class="hljs-built_in">ln</span> -s /root/node-v10.16.3-linux-x64/bin/node /usr/local/bin/node <span class="hljs-comment"># 建立软链接</span><br><span class="hljs-built_in">ln</span> -s /root/node-v10.16.3-linux-x64/bin/npm /usr/local/bin/npm<br></code></pre></td></tr></table></figure>
+
+<p>查看</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">node -v<br>npm -v<br></code></pre></td></tr></table></figure>
+
+<p>显示即安装成功</p>
+<h1 id="Github-SSH-key"><a href="#Github-SSH-key" class="headerlink" title="Github SSH key"></a>Github SSH key</h1><p>很简单啦~</p>
+<p>现在假设你<strong>没设置过任何ssh key</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> ~/.ssh<br>ssh-keygen -t rsa -C <span class="hljs-string">&quot;xxx@xxx.com&quot;</span> <span class="hljs-comment"># 你的邮箱 此后一直回车（也可以选择再确认一个密码）</span><br><br><span class="hljs-built_in">cd</span> ~/.ssh<br><span class="hljs-built_in">cat</span> id_rsa.pub<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20220731214537570.png" srcset="/img/loading.gif" lazyload alt="image-20220731214537570"></p>
+<p>将产生的内容全部复制到GitHub中</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20220731214648001.png" srcset="/img/loading.gif" lazyload alt="image-20220731214648001"></p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20220731214700052.png" srcset="/img/loading.gif" lazyload alt="image-20220731214700052"></p>
+<p>最后</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ssh -T git@github.com<br></code></pre></td></tr></table></figure>
+
+<p>显示认证通过即为成功</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20220731214752668.png" srcset="/img/loading.gif" lazyload alt="image-20220731214752668"></p>
+<h1 id="访问GitHub（clash）"><a href="#访问GitHub（clash）" class="headerlink" title="访问GitHub（clash）"></a>访问GitHub（clash）</h1><p>起初我一直担心用国内的服务器挂clash会被发邮件警告，后来咨询了友人，发现没啥事情，而且我又不会做那种不利于国家人民的事（至少在服务器上）</p>
+<p>首先去clash官方<a target="_blank" rel="noopener" href="https://github.com/Dreamacro/clash/releases">release页面</a>下载压缩包，并传输到服务器中</p>
+<p>可以直接<code>wget</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">wget https://github.com/Dreamacro/clash/releases/download/v1.11.4/clash-linux-amd64-v1.11.4.gz<br></code></pre></td></tr></table></figure>
+
+<p>也可以用之前说的xftp等上传方式传输。</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20220731215114897.png" srcset="/img/loading.gif" lazyload alt="image-20220731215114897"></p>
+<p>接下来解压</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">gunzip clash-linux-amd64-v1.4.1.gz<br><span class="hljs-built_in">mv</span> clash-linux-amd64-v1.4.1 clash-linux-amd64 <span class="hljs-comment"># 重命名 可以不用哈</span><br><span class="hljs-built_in">chmod</span> +x clash-linux-amd64 <span class="hljs-comment"># 增加运行权限</span><br>./clash-linux-amd64 <span class="hljs-comment"># 运行</span><br></code></pre></td></tr></table></figure>
+
+<p>此时它应该会有如下界面（弄的时候没截屏，只能copy别人的了）</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/ETAO3UOUYM4FIJ40QB.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>此时它会在<code>~/.config/clash</code>下生成两个文件，<code>Country.mmdb</code>和<code>config.yaml</code></p>
+<p><code>Country.mmdb</code>能自己下载好最好，但是由于在github上，可能下载不下来，需要手动去github下载上传，链接<a target="_blank" rel="noopener" href="https://github.com/Dreamacro/maxmind-geoip/releases">在此</a></p>
+<p><code>config.yaml</code>就是填你的代理文件</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20220731215656761.png" srcset="/img/loading.gif" lazyload alt="image-20220731215656761"></p>
+<p>另外，这个配置文件是yaml写的，记得冒号后面要加空格</p>
+<p>特别提一下图中的<code>secret</code>字段，这部分是登录网页端clash管理的密码</p>
+<p>首先在腾讯云上开放9090端口</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/1DA4HGB9URB@1_RU.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>再访问<a target="_blank" rel="noopener" href="http://clash.razord.top/#/proxies%EF%BC%8C%E8%BE%93%E5%85%A5ip%E5%8F%8A%E5%AF%86%E9%92%A5%EF%BC%88secret%EF%BC%89%EF%BC%8C%E5%8D%B3%E5%8F%AF%E5%9C%A8%E7%BD%91%E9%A1%B5%E4%B8%8A%E7%AE%A1%E7%90%86%E4%BB%A3%E7%90%86">http://clash.razord.top/#/proxies，输入ip及密钥（secret），即可在网页上管理代理</a></p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20220731215851435.png" srcset="/img/loading.gif" lazyload alt="image-20220731215851435"></p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20220731215920939.png" srcset="/img/loading.gif" lazyload alt="image-20220731215920939"></p>
+<p>最后编辑zsh的配置文件（<del>&#x2F;.zshrc，如果你是别的shell请修改对应的配置文件，如bash对应</del>&#x2F;.bashrc。可以<code>echo $SHELL</code>查看当前用的是哪个shell）</p>
+<p>目的在于将所有的流量都带到127.0.0.1，以便clash代理</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">vim ~/.zshrc<br></code></pre></td></tr></table></figure>
+
+<p>添加如下</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs text">export https_proxy=http://127.0.0.1:7890<br>export http_proxy=http://127.0.0.1:7890<br></code></pre></td></tr></table></figure>
+
+<p>保存后</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">source ~/.zshrc # 或者直接新开一个窗口<br>curl https://www.google.com<br></code></pre></td></tr></table></figure>
+
+<p>返回则配置成功</p>
+<p>最后最好将clash后台挂起来，这样才能做我们的正事。在这里顺带学习了一些Linux的后台用法（链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/renfeigui0/article/details/101023483%EF%BC%89">https://blog.csdn.net/renfeigui0/article/details/101023483）</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs shell">./clash-linux-amd64 &amp; # 后台挂起，但仍然会输出，关闭该窗口后命令也会退出<br>./clash-linux-amd64 &gt; /tmp/log.txt 2&gt;&amp;1 &amp; # 输出重定向<br><br>nohup 命令 &amp; # 后台挂起 注销终端也不影响（但是在用code server时并没有 不知道为什么）<br><br>jobs # 查看后台运行工作<br><br>ps -aux | grep clash # 列出所有进程 筛选clash<br>kill pid # kill进程<br></code></pre></td></tr></table></figure>
+
+<p>最后还是选择用screen</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">sudo apt-get install screen<br>screen -S clash<br></code></pre></td></tr></table></figure>
+
+<p>接下来便会进入名为clash的窗口，输入</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">./clash-linux-amd64<br></code></pre></td></tr></table></figure>
+
+<p>即可一直运行。ctrl+a+d返回原窗口</p>
+<h1 id="code-server"><a href="#code-server" class="headerlink" title="code server"></a>code server</h1><p>code-server相当于浏览器版的vscode（本身就是用js写的），将服务器中的代码进行可视化开发</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/v2-c163a20e73810ac55a656fd626170d44_720w.jpg" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>（偷图！）</p>
+<p>首先你要拥有一台服务器（什么悖论）</p>
+<p>然后下载</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">curl -fsSL https://code-server.dev/install.sh | sh<br></code></pre></td></tr></table></figure>
+
+<p>网速慢的话同理，先在本地下好，再上传到服务器上</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/coder/code-server/releases">https://github.com/coder/code-server/releases</a></p>
+<p>然后本地安装</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">sudo dpkg -i code-server_3.12.0_amd64.deb<br></code></pre></td></tr></table></figure>
+
+<p>安装完成后便可启动，这里用screen把code-server挂在后台上</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">screen -S code-server<br><span class="hljs-meta prompt_"># </span><span class="language-bash">进入新窗口</span><br>code-server --host &quot;0.0.0.0&quot;<br></code></pre></td></tr></table></figure>
+
+<p>同时在腾讯云控制台上开启8080端口</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20220731221848353.png" srcset="/img/loading.gif" lazyload alt="image-20220731221848353"></p>
+<p>接下来便可在浏览器上打开，网址为ip地址:8080端口</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20220731221931109.png" srcset="/img/loading.gif" lazyload alt="image-20220731221931109"></p>
+<p>密码存储在<code>~/.config/code-server/config.yaml</code>中</p>
+<p>登录即可如vscode般开发</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20220731222121684.png" srcset="/img/loading.gif" lazyload alt="image-20220731222121684"></p>
+<p>由于在浏览器上均可打开该页面，因此这也意味着，<strong>可以在ipad上实现如vscode般的开发</strong>。接下来一篇blog，我将会讲讲我如何给自己创造需求，为了给自己找理由买ipad，千方百计实现在ipad上写写代码。</p>
+
+              
+            </div>
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%8A%80%E6%9C%AF/" class="category-chain-item">技术</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">#服务器</a>
+      
+        <a href="/tags/Linux/">#Linux</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>使用云服务器时的若干操作记录</div>
+      <div>http://baokker.github.io/2022/07/29/使用云服务器时的若干操作记录/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Baokker</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年7月29日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2022年10月8日</div>
+        </div>
+      
+      <div class="license-meta-item">
+        <div>许可协议</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/08/01/Blog%E9%85%8D%E7%BD%AEWaline%E8%AF%84%E8%AE%BA%EF%BC%88fluid%E4%B8%BB%E9%A2%98%EF%BC%89/" title="Blog配置Waline评论（fluid主题）">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Blog配置Waline评论（fluid主题）</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/07/10/Typora-PicGo%E5%AE%9E%E7%8E%B0markdown%E5%86%99%E4%BD%9C%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87/" title="Typora+PicGo实现markdown写作自动上传图片">
+                        <span class="hidden-mobile">Typora+PicGo实现markdown写作自动上传图片</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  <article id="comments" lazyload>
+    
+  <div id="waline"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#waline', function() {
+      Fluid.utils.createCssLink('https://lib.baomitu.com/waline/2.3.2/waline.min.css')
+      Fluid.utils.createScript('https://lib.baomitu.com/waline/2.3.2/waline.min.js', function() {
+        var options = Object.assign(
+          {"serverURL":"https://blog-comment-server-j7p2mwkga-baokker.vercel.app/","path":"window.location.pathname","meta":["nick","mail","link"],"requiredMeta":["nick"],"lang":"zh-CN","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"],"dark":"html[data-user-color-scheme=\"dark\"]","wordLimit":0,"pageSize":10},
+          {
+            el: '#waline',
+            path: window.location.pathname
+          }
+        )
+        Waline.init(options);
+        Fluid.utils.waitElementVisible('#waline .vcontent', () => {
+          var imgSelector = '#waline .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+  </article>
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.0/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script>
+  (function() {
+    var enableLang = CONFIG.code_language.enable && CONFIG.code_language.default;
+    var enableCopy = CONFIG.copy_btn;
+    if (!enableLang && !enableCopy) {
+      return;
+    }
+
+    function getBgClass(ele) {
+      return Fluid.utils.getBackgroundLightness(ele) >= 0 ? 'code-widget-light' : 'code-widget-dark';
+    }
+
+    var copyTmpl = '';
+    copyTmpl += '<div class="code-widget">';
+    copyTmpl += 'LANG';
+    copyTmpl += '</div>';
+    jQuery('.markdown-body pre').each(function() {
+      var $pre = jQuery(this);
+      if ($pre.find('code.mermaid').length > 0) {
+        return;
+      }
+      if ($pre.find('span.line').length > 0) {
+        return;
+      }
+
+      var lang = '';
+
+      if (enableLang) {
+        lang = CONFIG.code_language.default;
+        if ($pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2 && $pre.children().hasClass('hljs')) {
+          lang = $pre[0].children[0].classList[1];
+        } else if ($pre[0].getAttribute('data-language')) {
+          lang = $pre[0].getAttribute('data-language');
+        } else if ($pre.parent().hasClass('sourceCode') && $pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2) {
+          lang = $pre[0].children[0].classList[1];
+          $pre.parent().addClass('code-wrapper');
+        } else if ($pre.parent().hasClass('markdown-body') && $pre[0].classList.length === 0) {
+          $pre.wrap('<div class="code-wrapper"></div>');
+        }
+        lang = lang.toUpperCase().replace('NONE', CONFIG.code_language.default);
+      }
+      $pre.append(copyTmpl.replace('LANG', lang).replace('code-widget">',
+        getBgClass($pre[0]) + (enableCopy ? ' code-widget copy-btn" data-clipboard-snippet><i class="iconfont icon-copy"></i>' : ' code-widget">')));
+
+      if (enableCopy) {
+        Fluid.utils.createScript('https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js', function() {
+          var clipboard = new window.ClipboardJS('.copy-btn', {
+            target: function(trigger) {
+              var nodes = trigger.parentNode.childNodes;
+              for (var i = 0; i < nodes.length; i++) {
+                if (nodes[i].tagName === 'CODE') {
+                  return nodes[i];
+                }
+              }
+            }
+          });
+          clipboard.on('success', function(e) {
+            e.clearSelection();
+            e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-copy', 'icon-success');
+            setTimeout(function() {
+              e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-success', 'icon-copy');
+            }, 2000);
+          });
+        });
+      }
+    });
+  })();
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

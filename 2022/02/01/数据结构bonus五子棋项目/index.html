@@ -1,0 +1,849 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/favicon.png">
+  <link rel="icon" href="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Baokker">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="直接抄文档了..">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据结构bonus五子棋项目">
+<meta property="og:url" content="http://baokker.github.io/2022/02/01/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84bonus%E4%BA%94%E5%AD%90%E6%A3%8B%E9%A1%B9%E7%9B%AE/index.html">
+<meta property="og:site_name" content="Baokker&#39;s Blog">
+<meta property="og:description" content="直接抄文档了..">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/defaultImages.jpg">
+<meta property="article:published_time" content="2022-02-01T15:10:48.000Z">
+<meta property="article:modified_time" content="2022-10-08T12:53:57.260Z">
+<meta property="article:author" content="Baokker">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/defaultImages.jpg">
+  
+  
+  
+  <title>数据结构bonus五子棋项目 - Baokker&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"baokker.github.io","root":"/","version":"1.9.0","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Baokker&#39;s Blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/defaultImages.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="数据结构bonus五子棋项目"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-02-01 23:10" pubdate>
+          2022年2月1日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          6.8k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          57 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">数据结构bonus五子棋项目</h1>
+            
+            <div class="markdown-body">
+              
+              <h1 id="五子棋"><a href="#五子棋" class="headerlink" title="五子棋"></a>五子棋</h1><p>本项目代码已发布于<a target="_blank" rel="noopener" href="https://github.com/Baokker/GobangwithAI">GitHub</a></p>
+<h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><p>在设计和开发的过程中，我们分别完成了两个版本的程序。前期为了测试算法和调试方便，我们先完成了命令行界面的版本，可以通过键盘输入坐标进行下棋。后期开发过程中，我们另外学习了Qt开发的知识，使用<a target="_blank" rel="noopener" href="https://doc.qt.io/archives/qt-5.9/index.html">Qt5.9</a>完成了图形化界面两种版本的程序。两种版本的AI均采用相同算法，具有相同的算力（可在<code>Const.h</code>中修改深度以改变算力）。</p>
+<h3 id="命令行版本"><a href="#命令行版本" class="headerlink" title="命令行版本"></a>命令行版本</h3><h4 id="双人对战"><a href="#双人对战" class="headerlink" title="双人对战"></a>双人对战</h4><ul>
+<li>选择<code>1-player vs player</code> </li>
+<li>默认先下黑子</li>
+<li>玩家A，B轮流键盘输入坐标a，b，表示在坐标(a,b)下棋</li>
+<li>系统判断合理性，若不符合重新输入</li>
+<li>若满足连成五子，则输出胜者，退出游戏</li>
+</ul>
+<h4 id="人机对战"><a href="#人机对战" class="headerlink" title="人机对战"></a>人机对战</h4><ul>
+<li>选择<code>2-player vs AI</code></li>
+<li>玩家可选择先下&#x2F;后下（<code>1-BLACK 2-WHITE</code>）</li>
+<li>默认先下黑子</li>
+<li>玩家输入坐标a，b，表示在坐标(a,b)下棋</li>
+<li>若为玩家输入，则系统判断合理性，不符合会提示重新输入；若为AI输入，则AI会计算并落子，下完后会提示AI刚才在哪里落了子。</li>
+<li>若满足连成五子，则输出胜者，退出游戏</li>
+</ul>
+<h3 id="图形化版本"><a href="#图形化版本" class="headerlink" title="图形化版本"></a>图形化版本</h3><p>图形化进入默认为双人对战，可通过上方的菜单栏进行切换。</p>
+<h4 id="双人对战-1"><a href="#双人对战-1" class="headerlink" title="双人对战"></a>双人对战</h4><ul>
+<li>在左上方菜单栏选择<code>Person VS Person</code> </li>
+<li>默认先下黑子</li>
+<li>玩家A，B轮流用鼠标落子</li>
+<li>若满足连成五子，则输出胜者，退出游戏</li>
+</ul>
+<h4 id="人机对战-1"><a href="#人机对战-1" class="headerlink" title="人机对战"></a>人机对战</h4><ul>
+<li>在左上方菜单栏选择<code>Person VS Computer</code> </li>
+<li>玩家可选择先下&#x2F;后下（<code>AI first</code>和<code>Player first</code>）</li>
+<li>默认先下黑子</li>
+<li>玩家用鼠标落子，随后AI落子，轮流进行</li>
+<li>若满足连成五子，则输出胜者，退出游戏</li>
+</ul>
+<h2 id="设计"><a href="#设计" class="headerlink" title="设计"></a>设计</h2><h3 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h3><p>在存储棋盘上各个位置的落子情况时，我们采用了二维数组进行存储，这样既容易与真实的棋盘分布直接联系起来，也方便直接进行随机访问。</p>
+<h3 id="AI算法"><a href="#AI算法" class="headerlink" title="AI算法"></a>AI算法</h3><h4 id="极大极小算法"><a href="#极大极小算法" class="headerlink" title="极大极小算法"></a>极大极小算法</h4><p>极大极小算法（Minmax algorithm）是处理零和博弈游戏对抗的经典算法之一。为确保能够实现这个算法，需要确保该游戏同时具有“零和”和“完全信息”两个特征。所谓“零和”，表示玩家双方在游戏中不可能同时获益，要么我方获利，要么敌方获利；所谓“完全信息”，表示玩家可以同时获取游戏中相关的全部信息（因此，打扑克牌显然不能采用极大极小算法，因为敌方的手牌对我方来说是非透明的）。因此，极大极小算法可以应用在跳棋、五子棋、象棋等棋类游戏中。在这两个基础之上，极大极小算法假设，玩家每次都会<strong>按照可以使自己当前局势利益最大化的方向出手</strong>。而又由于游戏中双方不可能同时获利，这也意味着，己方利益的最大化，意味着敌方利益的最小化。换言之，对我方来说，我方每次都会执行使我方利益最大化的步骤，而敌方则会执行使我方利益最小化的步骤。</p>
+<p>接下来的问题是，如何让计算机判断，当我方下了某步棋子后，局势对我方的有利程度呢？我们采取打分的方法。对每一种棋类游戏来说，不同的棋型都具有不同的含义。在较为简单的国际跳棋里，我方<em>连满三子</em>，即表示游戏取得胜利，这显然对于我方来说，是一个有利的情况；在五子棋里，当敌方下出<em>活三</em>时（一种活三的情况为，三颗同种颜色的棋子在上下、左右、或斜对角线上连成一条线，且两旁都没有其他颜色的棋子堵住），那对于我方来说，再不下子去堵住活三，我方就无法阻止其连成五子，这显然是对我方来说相当不利的情况。如果可以根据例如<em>连满三子</em>或<em>活三</em>这样的情况，<strong>对每种情况进行不同权值的加分</strong>，进而就可以对整个棋盘进行打分。</p>
+<p>解决完打分的问题后，我们就可以分析所有可能的落子情况，进行DFS递归。大体的示意图如下所示（以三字棋为例）：</p>
+<p><img src="E:\Homework_Third_Semester\Data_Structure\GobangForSubmit\img\img1.jpg" srcset="/img/loading.gif" lazyload alt="极大极小算法的示意图——以跳棋为例"></p>
+<p>在进行递归前，我们先设置一个<code>depth</code>变量，表示极大极小算法最多递归到第n层。随后对棋盘进行逐层展开，形成<a target="_blank" rel="noopener" href="https://wiki.mbalib.com/wiki/%E5%8D%9A%E5%BC%88%E6%A0%91">博弈树</a>。设算法函数名为<code>minmax</code>。</p>
+<p>对上图进行分析。第一次执行<code>minmax</code>函数，先进入第一层MAX层，表示我方。此时棋盘为空，对我方来说，可以有3*3共9种落子的方法。而我方需要做的，就是在这9种落子方法中，找到对我方利益最大，最可能使我方获胜的落子点。接下来，对这每一种落子情况，第二次调用<code>minmax</code>函数，此时为MIN层，表示为敌方下棋。对敌方来说，由于我方已经下过一子，所以ta会有8种落子的方法。敌方此时的目的，就是找出这8种里对ta利益最大（亦即对我方利益最小）的下法。</p>
+<p>接下来，轮到第二层MAX的<code>minmax</code>算法，我方有7种下法..递归搜索不断反复进行，直到达到<code>depth</code>或者终结情况（例如，某方获胜）为止。在图中的第一个TERMINAL情况里，白子（敌方）获得了胜利，对我方是不利的结果，评分为-1；在第三个TERMINAL里，我方获得了胜利，则评分为1。显然，敌方会选择使第一种情况出现的落子，我方则会选择使第三种情况出现的落子。在递归达到终止后，返回此状态下棋盘的评分，以便在上一层递归里，对不同的落子情况的评分进行比较，选择最优者。</p>
+<p>伪代码如下：</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">function minimax(<span class="hljs-keyword">node</span><span class="hljs-title">, depth</span>) // <span class="hljs-keyword">node</span><span class="hljs-title">表示当下的棋盘情况</span><br><span class="hljs-title">    if</span> <span class="hljs-keyword">node</span> <span class="hljs-title">is</span> a terminal <span class="hljs-keyword">node</span> <span class="hljs-title">or</span> depth == <span class="hljs-number">0</span> // 终止情况，达到最大深度或终止结点<br>        return the heuristic value of <span class="hljs-keyword">node</span> <span class="hljs-title">// 返回评分，供上一层递归进行比较</span><br><span class="hljs-title">    if</span> the adversary is to play at <span class="hljs-keyword">node</span> <span class="hljs-title">// 敌方落子</span><br><span class="hljs-title">        let</span> α := +∞<br>        for each child of <span class="hljs-keyword">node</span><br>            <span class="hljs-title">α := min</span>(α, minimax(child, depth-<span class="hljs-number">1</span>)) // 敌方会选择对我方最不利的下法<br>    else &#123;we are to play at <span class="hljs-keyword">node</span><span class="hljs-title">&#125;</span><br><span class="hljs-title">        let</span> α := -∞<br>        for each child of <span class="hljs-keyword">node</span><br>            <span class="hljs-title">α := max</span>(α, minimax(child, depth-<span class="hljs-number">1</span>)) // 我方会选择对我方最有利的下法<br>            if (α changes &amp;&amp; depth == <span class="hljs-number">0</span>) new_node = child // 如果需要记录下一步下子，可以在第一层递归里，当α发生变化时记录。<br>    return α // 返回评分值，方便上一层递归比较<br></code></pre></td></tr></table></figure>
+
+<p>值得一提的是，无论是上文的minmax算法，或是下文的alpha-beta剪枝算法，其本质上都用到了<strong>回溯</strong>。因此，需要保存当前函数里的棋盘状态，而不能在几次递归后丢失了原数据。为此，要么产生新的副本，在副本上进行递归，不影响原来的棋盘；要么，在原棋盘上进行操作，但在下完一子之后，<strong>记得要归位！</strong></p>
+<h4 id="alpha-beta剪枝算法"><a href="#alpha-beta剪枝算法" class="headerlink" title="alpha-beta剪枝算法"></a>alpha-beta剪枝算法</h4><p>前文对minmax算法进行了大篇幅的讲解，这样有利于减少分析ab剪枝时的难度。minmax算法虽然较为简单，但最致命的弱点是，算法复杂度实在太高。</p>
+<p><img src="E:\Homework_Third_Semester\Data_Structure\GobangForSubmit\img\img2.jpg" srcset="/img/loading.gif" lazyload alt="example"></p>
+<p>上图中，正方形表示我方（alpha层，对应minmax算法中的MAX层），圆形表示敌方（beta层，对应minmax算法中的MIN层）。α表示<strong>当前情况下我方的得分最大值</strong>，<strong>β表示当前情况下敌方的得分最小值</strong>，<strong>当α＞β时，就可以直接剪枝，退出该分支。</strong></p>
+<p>例如图中当β&#x3D;2，α&#x3D;3时，ab剪枝便会生效，直接退出该分支下的递归。这里面的原理，其实简单来说就是：在前一个（左边一个分支）里，我们已经知道，α的值为3，我方的得分如果要更新，必须比3还大；而在接下来的分支里，又已知β为2，代表<strong>β的分数再怎么更新，都比2要小</strong>，也就意味着，对我方更不利。在这种情况下，就没有必要再去考虑这个分支后面的情况。</p>
+<p>伪代码如下：</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-regexp">//</span> node表示当前节点，depth表示深度，Player表示玩家类型（AI或玩家）<br><span class="hljs-regexp">//</span> 之后的DEPTH表示在代码外部已经定义好的深度<br><span class="hljs-keyword">function</span> alphabeta(node, depth, α, β, Player) <br>     <span class="hljs-keyword">if</span> depth = <span class="hljs-number">0</span> or node == terminal <span class="hljs-regexp">//</span>达到理想深度或为终端情况<br>         return the heuristic value of node <span class="hljs-regexp">//</span> 返回评分，供上一层递归进行比较<br>     <span class="hljs-keyword">if</span> Player == AI <span class="hljs-regexp">//</span>我方AI下棋<br>         <span class="hljs-keyword">for</span> each child of node <span class="hljs-regexp">//</span> 遍历每种可能发生的情况<br>             v = alphabeta(child, depth - <span class="hljs-number">1</span>, α, β, PLAYER)) <span class="hljs-regexp">//</span> 递归<br>             <span class="hljs-keyword">if</span> (v &gt; α &amp;&amp; depth == <span class="hljs-number">0</span>) new_node = child <span class="hljs-regexp">//</span> 如果需要记录下一步下子，可以在第一层递归里，当α发生变化时记录<br>             α := max(α, v)<br>             <span class="hljs-keyword">if</span> β ≤ α<br>                 <span class="hljs-keyword">break</span> <span class="hljs-regexp">//</span> β裁剪<br>         return α <span class="hljs-regexp">//</span>返回对AI方最有利的落子得分<br>     <span class="hljs-keyword">else</span> <span class="hljs-regexp">//</span> 对手PLAYER下棋<br>         v := ∞<br>         <span class="hljs-keyword">for</span> each child of node <span class="hljs-regexp">//</span> 遍历每种可能发生的情况<br>             v := min(v, alphabeta(child, depth - <span class="hljs-number">1</span>, α, β, AI)) <span class="hljs-regexp">//</span> 递归<br>             β := min(β, v) <span class="hljs-regexp">//</span> 更新上界<br>             <span class="hljs-keyword">if</span> β ≤ α<br>                 <span class="hljs-keyword">break</span> <span class="hljs-regexp">//</span> α裁剪<br>         return β <span class="hljs-regexp">//</span>返回对player方最有利的落子得分<br></code></pre></td></tr></table></figure>
+
+<p>调用时直接</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">alphabeta(<span class="hljs-keyword">node</span><span class="hljs-title">,DEPTH</span>,-∞, +∞，AI)<br></code></pre></td></tr></table></figure>
+
+<p>即可。</p>
+<h4 id="开发过程中碰到的难点"><a href="#开发过程中碰到的难点" class="headerlink" title="开发过程中碰到的难点"></a>开发过程中碰到的难点</h4><ul>
+<li><p>boardEvaluate函数</p>
+<p>如何对五子棋上的棋盘进行打分？在五子棋术语中，存在各种各样的基本棋型。例如下图表示冲四：连成了四个子，但是被挡住了：</p>
+<p><img src="E:\Homework_Third_Semester\Data_Structure\GobangForSubmit\img\冲四.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>下图表示活三（在上文有介绍）：</p>
+<p><img src="E:\Homework_Third_Semester\Data_Structure\GobangForSubmit\img\活三.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>遍历棋盘上的每个棋子，并对其棋型进行打分，正数表示对我方有利，负数（敌方形成的棋型）表示对我方不利，加分总和即为评分。</p>
+<figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><code class="hljs axapta"><span class="hljs-built_in">int</span> Gobang::evaluate(<span class="hljs-built_in">int</span> x, <span class="hljs-built_in">int</span> y, <span class="hljs-built_in">int</span> chessType)<br>&#123;<br>	<span class="hljs-built_in">int</span> <span class="hljs-keyword">sum</span> = <span class="hljs-number">0</span>;<br>	<span class="hljs-comment">//四个方向估值</span><br>	<span class="hljs-keyword">for</span> (<span class="hljs-built_in">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">4</span>; i++)<br>	&#123;<br>		SituationType type = GetSituationType(x, y, i, chessType);<br>		<span class="hljs-keyword">switch</span> (type)<br>		&#123;<br>		<span class="hljs-keyword">case</span> BeFive:<br>			<span class="hljs-keyword">sum</span> += BE_FIVE; <span class="hljs-comment">// 和下面的常量一样，都是预先设好的分数</span><br>			<span class="hljs-keyword">break</span>;<br>		<span class="hljs-keyword">case</span> ActiveFour:<br>			<span class="hljs-keyword">sum</span> += ACTIVIE_FOUR;<br>			<span class="hljs-keyword">break</span>;<br>		<span class="hljs-keyword">case</span> RushFour:<br>			<span class="hljs-keyword">sum</span> += RUSH_FOUR;<br>			<span class="hljs-keyword">break</span>;<br>		<span class="hljs-keyword">case</span> ActiveThree:<br>			<span class="hljs-keyword">sum</span> += ACTIVIE_THREE;<br>			<span class="hljs-keyword">break</span>;<br>		<span class="hljs-keyword">case</span> SleepThree:<br>			<span class="hljs-keyword">sum</span> += SLEEP_THREE;<br>			<span class="hljs-keyword">break</span>;<br>		<span class="hljs-keyword">case</span> ActiveTwo:<br>			<span class="hljs-keyword">sum</span> += ACTIVE_TWO;<br>			<span class="hljs-keyword">break</span>;<br>		<span class="hljs-keyword">case</span> SleepTwo:<br>			<span class="hljs-keyword">sum</span> += SLEEP_TWO;<br>			<span class="hljs-keyword">break</span>;<br>		<span class="hljs-literal">default</span>:<br>			<span class="hljs-keyword">sum</span> += OTHER;<br>			<span class="hljs-keyword">break</span>;<br>		&#125;<br>	&#125;<br>	<span class="hljs-keyword">return</span> <span class="hljs-keyword">sum</span>;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>generateNext函数</p>
+<p>对于一般的五子棋来说，像三字棋那样，直接将所有未落子的位置加入到可能的节点中，显然是不合适的。一方面，即使假设每次只放入100个可选的走法，如果以minmax算法递归四次后，总共便需要执行10^8次了，这个处理次数显然过多了；另一方面，generateNext函数本身便具有较长的运行时间，在前期开发时甚至出现过AI一个棋子下了半分钟，而90%都在generate的情况。为此，我们对generateNext函数进行了大量的优化，以确保其尽量少产生无用的走法，减少博弈树的分支。</p>
+<p>伪代码如下：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><span class="hljs-function"><span class="hljs-title">generateNext</span><span class="hljs-params">(chessBoard,chessType)</span></span>:<br>	vector result <span class="hljs-comment">// 存储坐标</span><br>	<span class="hljs-keyword">for</span> <span class="hljs-selector-tag">i</span> <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(BoardSize):<br>		<span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(BoardSize):<br>			<span class="hljs-keyword">if</span> 满足我方在chessBoard<span class="hljs-selector-attr">[i]</span><span class="hljs-selector-attr">[j]</span>下子后连成五子<br>				result<span class="hljs-selector-class">.push</span>(<span class="hljs-built_in">Point</span>(<span class="hljs-selector-tag">i</span>,j)) <span class="hljs-comment">//存入坐标</span><br>	<br>	<span class="hljs-keyword">if</span> (result<span class="hljs-selector-class">.size</span>()&gt;<span class="hljs-number">0</span>) return result<br>	<br>	<span class="hljs-keyword">for</span> <span class="hljs-selector-tag">i</span> <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(BoardSize):<br>		<span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(BoardSize):<br>			<span class="hljs-keyword">if</span> 满足敌方在chessBoard<span class="hljs-selector-attr">[i]</span><span class="hljs-selector-attr">[j]</span>下子后连成五子<br>				result<span class="hljs-selector-class">.push</span>(<span class="hljs-built_in">Point</span>(<span class="hljs-selector-tag">i</span>,j)) <span class="hljs-comment">//存入坐标</span><br>				<br>					<span class="hljs-keyword">if</span> (result<span class="hljs-selector-class">.size</span>()&gt;<span class="hljs-number">0</span>) return result<br>				<br>	<span class="hljs-keyword">for</span> <span class="hljs-selector-tag">i</span> <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(BoardSize):<br>		<span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(BoardSize):<br>			<span class="hljs-keyword">if</span> 满足我方在chessBoard<span class="hljs-selector-attr">[i]</span><span class="hljs-selector-attr">[j]</span>下子后连成四子<br>				result<span class="hljs-selector-class">.push</span>(<span class="hljs-built_in">Point</span>(<span class="hljs-selector-tag">i</span>,j)) <span class="hljs-comment">//存入坐标</span><br>				<br>	<span class="hljs-keyword">if</span> (result<span class="hljs-selector-class">.size</span>()&gt;<span class="hljs-number">0</span>) return result<br>				<br>	<span class="hljs-keyword">for</span> <span class="hljs-selector-tag">i</span> <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(BoardSize):<br>		<span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(BoardSize):<br>			<span class="hljs-keyword">if</span> 满足敌方在chessBoard<span class="hljs-selector-attr">[i]</span><span class="hljs-selector-attr">[j]</span>下子后连成四子<br>				result<span class="hljs-selector-class">.push</span>(<span class="hljs-built_in">Point</span>(<span class="hljs-selector-tag">i</span>,j)) <span class="hljs-comment">//存入坐标</span><br>				<br>	<span class="hljs-keyword">if</span> (result<span class="hljs-selector-class">.size</span>()&gt;<span class="hljs-number">0</span>) return result<br>				<br>	<span class="hljs-keyword">for</span> <span class="hljs-selector-tag">i</span> <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(BoardSize):<br>		<span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(BoardSize):<br>			<span class="hljs-keyword">if</span> 满足我方在chessBoard<span class="hljs-selector-attr">[i]</span><span class="hljs-selector-attr">[j]</span>下子后连成活三<br>				result<span class="hljs-selector-class">.push</span>(<span class="hljs-built_in">Point</span>(<span class="hljs-selector-tag">i</span>,j)) <span class="hljs-comment">//存入坐标</span><br>				<br>	<span class="hljs-keyword">if</span> (result<span class="hljs-selector-class">.size</span>()&gt;<span class="hljs-number">0</span>) return result<br>				<br>	<span class="hljs-keyword">for</span> <span class="hljs-selector-tag">i</span> <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(BoardSize):<br>		<span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(BoardSize):<br>			<span class="hljs-keyword">if</span> chessBoard<span class="hljs-selector-attr">[i]</span><span class="hljs-selector-attr">[j]</span>周围棋子数量大于<span class="hljs-number">2</span> <span class="hljs-comment">// 适用于刚开始的情况</span><br>				result<span class="hljs-selector-class">.push</span>(<span class="hljs-built_in">Point</span>(<span class="hljs-selector-tag">i</span>,j)) <span class="hljs-comment">//存入坐标	</span><br>                <br>    <span class="hljs-keyword">if</span> (result<span class="hljs-selector-class">.size</span>()&gt;<span class="hljs-number">0</span>) return result<br></code></pre></td></tr></table></figure>
+
+<p>虽然函数颇长，但是思路是很明确的。</p>
+<p>首先，必须先把最有利的情况纳入结果中，这既包括我方的棋子达到某种有利局势，也包括阻止对方的棋子达到有利局势。在实在没有棋势的情况下，通过搜索周围棋子数量来加入选项，减少无关分支。</p>
+<p>另外一方面，我们假设，<strong>如果当下有一个更优的下法，就没有必要考虑优先级不如它的下法。</strong>譬如说，有活四我绝不去下活三，之类。所以当某个循环里找到并加入了合适的条件后，就直接返回result。</p>
+<p>这样，我们既减少了generate的时间，又尽可能地减少了分支。</p>
+</li>
+<li><p>ab剪枝的优化</p>
+<p>在ab剪枝里，除了对β ≤ α的情况进行剪枝外，还可以对必胜的棋盘进行剪枝。当打分显然大于连成五子所得的分数时，意味着已经取得胜利，也就没必要再对下面的情况进行计算。</p>
+<figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs abnf">if (alpha &gt;<span class="hljs-operator">=</span> BE_FIVE) break<span class="hljs-comment">;</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h4><p>通过一系列的算法优化和改进，我们的程序可以以较理想的速度进行深度为10的alpha-beta剪枝算法。</p>
+<h2 id="开发流程"><a href="#开发流程" class="headerlink" title="开发流程"></a>开发流程</h2><ul>
+<li>搭建棋盘，实现棋盘class</li>
+<li>搭建命令行版本架构（main函数）</li>
+<li>实现双人对战</li>
+<li>实现人机对战<ul>
+<li>实现alpha-beta剪枝算法</li>
+<li>实现电脑AI</li>
+<li>优化运行速度</li>
+</ul>
+</li>
+<li>实现命令行版本</li>
+<li>实现图形化版本</li>
+</ul>
+<h2 id="图形化"><a href="#图形化" class="headerlink" title="图形化"></a>图形化</h2><ul>
+<li><p>该程序的图形化使用QT creator平台，借助平台上的各种工具来实现游戏的图形化运行。</p>
+<ul>
+<li><p>用QTpainter的相关语句，通过使用darwline将棋盘画出，使用drawRect和drawEllipse将棋子的落点he棋子画出。</p>
+</li>
+<li><p>用QMenu设计游戏的菜单，在菜单中可以选择PVP和PVE，在PVE中可以选择Computer first或Player first。</p>
+</li>
+<li><p>用QAction做出按下选择的响应，不同的选择调用不同的函数，从而实现游戏的各项功能。</p>
+</li>
+<li><p>用QMessageBox做出游戏结束的弹窗，通过内部函数判断游戏的输赢或平局，然后弹窗告诉玩家结果，并结束游戏。</p>
+</li>
+<li><p>用QMouseEvent来检测鼠标在窗口上的位置，通过调用相关函数，来将鼠标的位置与棋盘关联起来，并通过鼠标的点击来实现下棋。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><h3 id="命令行版本-1"><a href="#命令行版本-1" class="headerlink" title="命令行版本"></a>命令行版本</h3><p><img src="E:\Homework_Third_Semester\Data_Structure\GobangForSubmit\img\test1.png" srcset="/img/loading.gif" lazyload alt="test1"></p>
+<p><img src="E:\Homework_Third_Semester\Data_Structure\GobangForSubmit\img\test2.png" srcset="/img/loading.gif" lazyload alt="test2"></p>
+<p><img src="E:\Homework_Third_Semester\Data_Structure\GobangForSubmit\img\test3.png" srcset="/img/loading.gif" lazyload alt="test3"></p>
+<h3 id="图形化版本-1"><a href="#图形化版本-1" class="headerlink" title="图形化版本"></a>图形化版本</h3><p><img src="E:\Homework_Third_Semester\Data_Structure\GobangForSubmit\img\test4.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2><h3 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h3><ul>
+<li><p>最好在cmd中运行，否则游戏结束会直接退出</p>
+<ol>
+<li>Win+R 输入<code>cmd</code></li>
+<li>切换到当前路径（例如，输入<code>e:</code>，再输入<code>cd GobangForSubmit\ExecutableFile\CommandLineVersion</code></li>
+<li>运行<code>GobangwithAI.exe</code></li>
+</ol>
+</li>
+<li><p>或者在<code>main.cpp</code>的<code>main</code>函数最后加上</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-built_in">system</span>(pause);<br></code></pre></td></tr></table></figure>
+
+<p>随后重新编译</p>
+</li>
+</ul>
+<h3 id="图形化-1"><a href="#图形化-1" class="headerlink" title="图形化"></a>图形化</h3><ul>
+<li><p>Windows平台可进入GobangForSubmit\ExecutableFile\GraphicalVersion路径，下载.exe文件，然后直接打开即可</p>
+</li>
+<li><p>若版本不兼容或使用其他平台，可以进入GobangForSubmit\Source\GraphicalVersion\Gobang路径，然后使用Qt打开Gobang.pro,编译运行即可体验</p>
+<ul>
+<li>如果无法打开，只需要删除项目中的.user 文件，再打开，打开后再点configure project，重新配置，重新构建，然后就能正常打开了</li>
+</ul>
+</li>
+</ul>
+
+              
+            </div>
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%8A%80%E6%9C%AF/" class="category-chain-item">技术</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>数据结构bonus五子棋项目</div>
+      <div>http://baokker.github.io/2022/02/01/数据结构bonus五子棋项目/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Baokker</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年2月1日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2022年10月8日</div>
+        </div>
+      
+      <div class="license-meta-item">
+        <div>许可协议</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/02/02/%E3%80%8A%E7%A8%80%E7%BC%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" title="《稀缺》读书笔记">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">《稀缺》读书笔记</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/02/01/%E3%80%8A%E4%BA%BA%E6%80%A7%E7%9A%84%E6%9E%B7%E9%94%81%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/" title="《人性的枷锁》读后感">
+                        <span class="hidden-mobile">《人性的枷锁》读后感</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  <article id="comments" lazyload>
+    
+  <div id="waline"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#waline', function() {
+      Fluid.utils.createCssLink('https://lib.baomitu.com/waline/2.3.2/waline.min.css')
+      Fluid.utils.createScript('https://lib.baomitu.com/waline/2.3.2/waline.min.js', function() {
+        var options = Object.assign(
+          {"serverURL":"https://blog-comment-server-j7p2mwkga-baokker.vercel.app/","path":"window.location.pathname","meta":["nick","mail","link"],"requiredMeta":["nick"],"lang":"zh-CN","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"],"dark":"html[data-user-color-scheme=\"dark\"]","wordLimit":0,"pageSize":10},
+          {
+            el: '#waline',
+            path: window.location.pathname
+          }
+        )
+        Waline.init(options);
+        Fluid.utils.waitElementVisible('#waline .vcontent', () => {
+          var imgSelector = '#waline .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+  </article>
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.0/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script>
+  (function() {
+    var enableLang = CONFIG.code_language.enable && CONFIG.code_language.default;
+    var enableCopy = CONFIG.copy_btn;
+    if (!enableLang && !enableCopy) {
+      return;
+    }
+
+    function getBgClass(ele) {
+      return Fluid.utils.getBackgroundLightness(ele) >= 0 ? 'code-widget-light' : 'code-widget-dark';
+    }
+
+    var copyTmpl = '';
+    copyTmpl += '<div class="code-widget">';
+    copyTmpl += 'LANG';
+    copyTmpl += '</div>';
+    jQuery('.markdown-body pre').each(function() {
+      var $pre = jQuery(this);
+      if ($pre.find('code.mermaid').length > 0) {
+        return;
+      }
+      if ($pre.find('span.line').length > 0) {
+        return;
+      }
+
+      var lang = '';
+
+      if (enableLang) {
+        lang = CONFIG.code_language.default;
+        if ($pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2 && $pre.children().hasClass('hljs')) {
+          lang = $pre[0].children[0].classList[1];
+        } else if ($pre[0].getAttribute('data-language')) {
+          lang = $pre[0].getAttribute('data-language');
+        } else if ($pre.parent().hasClass('sourceCode') && $pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2) {
+          lang = $pre[0].children[0].classList[1];
+          $pre.parent().addClass('code-wrapper');
+        } else if ($pre.parent().hasClass('markdown-body') && $pre[0].classList.length === 0) {
+          $pre.wrap('<div class="code-wrapper"></div>');
+        }
+        lang = lang.toUpperCase().replace('NONE', CONFIG.code_language.default);
+      }
+      $pre.append(copyTmpl.replace('LANG', lang).replace('code-widget">',
+        getBgClass($pre[0]) + (enableCopy ? ' code-widget copy-btn" data-clipboard-snippet><i class="iconfont icon-copy"></i>' : ' code-widget">')));
+
+      if (enableCopy) {
+        Fluid.utils.createScript('https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js', function() {
+          var clipboard = new window.ClipboardJS('.copy-btn', {
+            target: function(trigger) {
+              var nodes = trigger.parentNode.childNodes;
+              for (var i = 0; i < nodes.length; i++) {
+                if (nodes[i].tagName === 'CODE') {
+                  return nodes[i];
+                }
+              }
+            }
+          });
+          clipboard.on('success', function(e) {
+            e.clearSelection();
+            e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-copy', 'icon-success');
+            setTimeout(function() {
+              e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-success', 'icon-copy');
+            }, 2000);
+          });
+        });
+      }
+    });
+  })();
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

@@ -1,0 +1,1052 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/favicon.png">
+  <link rel="icon" href="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Baokker">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="值得一看的cpp进阶课">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CS106L笔记">
+<meta property="og:url" content="http://baokker.github.io/2022/08/07/CS106L%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="Baokker&#39;s Blog">
+<meta property="og:description" content="值得一看的cpp进阶课">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/defaultImages.jpg">
+<meta property="article:published_time" content="2022-08-07T14:54:01.000Z">
+<meta property="article:modified_time" content="2022-10-08T12:53:57.202Z">
+<meta property="article:author" content="Baokker">
+<meta property="article:tag" content="技术">
+<meta property="article:tag" content="c++">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/defaultImages.jpg">
+  
+  
+  
+  <title>CS106L笔记 - Baokker&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"baokker.github.io","root":"/","version":"1.9.0","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Baokker&#39;s Blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/defaultImages.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="CS106L笔记"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-08-07 22:54" pubdate>
+          2022年8月7日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          27k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          227 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">CS106L笔记</h1>
+            
+            <div class="markdown-body">
+              
+              <h1 id="CS106L"><a href="#CS106L" class="headerlink" title="CS106L"></a>CS106L</h1><blockquote>
+<p>前言：</p>
+<ul>
+<li><p>适用人群：我个人觉得非常适用于已经对c++有所了解，或者修读过类似于高级语言程序设计这样的课程，想对c++有进一步的研究的同学。</p>
+</li>
+<li><p>课程难度对我来说挺大，一方面是全英文，另一方面，c++讲到的东西，确实比c多了很多，以前学的c++，反而有些像套了一点壳的c，面向对象，泛式编程的思想都没悟透。</p>
+</li>
+<li><p>课程链接：<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=_WvkljZzGug&amp;list=PLCgD3ws8aVdolCexlz8f3U-RROA0s5jWA&amp;index=3">https://www.youtube.com/watch?v=_WvkljZzGug&amp;list=PLCgD3ws8aVdolCexlz8f3U-RROA0s5jWA&amp;index=3</a><br>（我看的是2019年版本的，因为看起来比较全）</p>
+</li>
+<li><p>slides and assignments: <a target="_blank" rel="noopener" href="https://web.stanford.edu/class/archive/cs/cs106l/cs106l.1184/lectures.html">https://web.stanford.edu/class/archive/cs/cs106l/cs106l.1184/lectures.html</a><br><a target="_blank" rel="noopener" href="http://web.stanford.edu/class/cs106l/">http://web.stanford.edu/class/cs106l/</a></p>
+</li>
+<li><p>提供的代码需要在Qt下运行，并且版本要大于6.0（害得我重装了5.9.9的Qt（）。斯坦福官方给出的教程链接：<a target="_blank" rel="noopener" href="https://web.stanford.edu/dept/cs_edu/resources/qt/install-windows">https://web.stanford.edu/dept/cs_edu/resources/qt/install-windows</a></p>
+</li>
+</ul>
+</blockquote>
+<h1 id="Lec-0-Intro"><a href="#Lec-0-Intro" class="headerlink" title="Lec 0 Intro"></a>Lec 0 Intro</h1><p>the course’s goal:</p>
+<ul>
+<li>Learn the <strong>feature</strong> of cpp</li>
+<li>Become comfortable with cpp documentation</li>
+<li>Familiar with the design philosophy of modern cpp</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20220221153946.png" srcset="/img/loading.gif" lazyload></p>
+<p>History:</p>
+<p>Assembly-&gt;C-&gt;C++</p>
+<p>C’s weakness</p>
+<ul>
+<li><p>No <code>objects</code> or <code>classes</code></p>
+</li>
+<li><p>Difficult to write code that worked <strong>generically</strong></p>
+</li>
+<li><p>Tedious when writing large programs</p>
+</li>
+</ul>
+<p>Design Philosophy of C++:</p>
+<ul>
+<li>Allow the programmer full control, responsibility, and choice if they want it.</li>
+<li>Express ideas and intent directly in code.</li>
+<li>Enforce safety at compile time whenever possible</li>
+<li>Do not waste time or space</li>
+<li>Compartmentalize messy constructs</li>
+</ul>
+<p>cpp is a <strong>multi-paradigm</strong> programming language</p>
+<ul>
+<li>generic programming</li>
+<li>object-oriented programming</li>
+<li>..</li>
+</ul>
+<h1 id="Lec-1-amp-2-Stream"><a href="#Lec-1-amp-2-Stream" class="headerlink" title="Lec 1&amp;2  Stream"></a>Lec 1&amp;2  Stream</h1><h2 id="stringstream"><a href="#stringstream" class="headerlink" title="stringstream"></a>stringstream</h2><p>two key steps: </p>
+<p><img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20220221163337.png" srcset="/img/loading.gif" lazyload></p>
+<p>state bits:</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20220221163443.png" srcset="/img/loading.gif" lazyload></p>
+<p>four standard output ways: </p>
+<p><img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20220221163517.png" srcset="/img/loading.gif" lazyload></p>
+<blockquote>
+<p>variables declared in the loop can <strong>only</strong> be used within the loop. They can’t be used outside the loop.</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20220221163556.png" srcset="/img/loading.gif" lazyload></p>
+<p>还是直接上代码的好..</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">// 先介绍stringstream</span><br><span class="hljs-comment">// ostringstream 联想到 cout，istringstream 则联想到 cin</span><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">stringStreamTest</span><span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-function">ostringstream <span class="hljs-title">oss</span><span class="hljs-params">(<span class="hljs-string">&quot;Ito En Green Tea &quot;</span>)</span></span>; <span class="hljs-comment">// default open mode</span><br>    <span class="hljs-comment">// 这个时候这个stream里的指针摆在第一个(&quot;I&quot;)的位置上</span><br>    <span class="hljs-comment">// 可以更改位置，例如：</span><br>    <span class="hljs-comment">// oss(&quot;..&quot;,stringstream::ate)</span><br>    <span class="hljs-comment">// 即将指针放在最末尾(at the end)</span><br>    <br>    <span class="hljs-comment">// 用str()提取文字</span><br>    cout &lt;&lt; oss.<span class="hljs-built_in">str</span>() &lt;&lt; endl; <span class="hljs-comment">// &quot;Ito En Tea&quot;</span><br>    <br>    <span class="hljs-comment">//oss.tellp()显示当前的指针位置。目前是在最开始</span><br>    <span class="hljs-keyword">auto</span> pos = oss.<span class="hljs-built_in">tellp</span>();<br>    <br>    <span class="hljs-comment">// 移动到pos以后3个字符</span><br>    oss.<span class="hljs-built_in">seekp</span>(pos + <span class="hljs-built_in">streamoff</span>(<span class="hljs-number">3</span>));<br>    <br>    <span class="hljs-comment">// 所谓type conversion，转到string representation</span><br>    oss &lt;&lt; <span class="hljs-number">16.9</span> &lt;&lt; <span class="hljs-string">&quot; Ounce &quot;</span>;<br>    <span class="hljs-comment">// 是的，因为在最开始写入，前面的内容被覆盖了</span><br>    cout &lt;&lt; oss.<span class="hljs-built_in">str</span>() &lt;&lt; endl; <span class="hljs-comment">// &quot;16.9 Ounce 1&quot;</span><br><br>    oss &lt;&lt; <span class="hljs-string">&quot;(Pack of &quot;</span> &lt;&lt; <span class="hljs-number">12</span> &lt;&lt; <span class="hljs-string">&quot;)&quot;</span>;<br>    cout &lt;&lt; oss.<span class="hljs-built_in">str</span>() &lt;&lt; endl; <span class="hljs-comment">// &quot;Ito En Tea 16.9 Ounce (Pack of 12)&quot;</span><br>	<br>    <span class="hljs-comment">// iss以oss的文本内容来构造</span><br>    <span class="hljs-function">istringstream <span class="hljs-title">iss</span><span class="hljs-params">(oss.str())</span></span>;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">stringPositionTest</span><span class="hljs-params">()</span> </span>&#123;<br>    string token;<br>    <span class="hljs-function">ostringstream <span class="hljs-title">oss</span><span class="hljs-params">(<span class="hljs-string">&quot;Ito En Green Tea&quot;</span>)</span></span>; <span class="hljs-comment">// position is at 0</span><br>    oss &lt;&lt; <span class="hljs-number">16.9</span>; <span class="hljs-comment">// 指针在最开始</span><br>    cout &lt;&lt; oss.<span class="hljs-built_in">str</span>() &lt;&lt; endl; <span class="hljs-comment">// &quot;16.9En Green Tea&quot;, position at 4</span><br><br><br>    <span class="hljs-keyword">auto</span> pos = oss.<span class="hljs-built_in">tellp</span>() + <span class="hljs-built_in">streamoff</span>(<span class="hljs-number">3</span>); <span class="hljs-comment">// fpos = position, off = offset</span><br>    oss.<span class="hljs-built_in">seekp</span>(pos); <span class="hljs-comment">// moves the position down 3 characters, position at 7</span><br>    oss &lt;&lt; <span class="hljs-string">&quot;Black&quot;</span>;<br>    cout &lt;&lt; oss.<span class="hljs-built_in">str</span>() &lt;&lt; endl; <span class="hljs-comment">// &quot;16.9En Black Tea&quot;, position at 12</span><br><br><br>    <span class="hljs-comment">// moves position down 1 from current, position at 13</span><br>    <span class="hljs-comment">// 另外一种用法</span><br>    <span class="hljs-comment">// ostream&amp; seekp (streamoff off, ios_base::seekdir way);</span><br>    <span class="hljs-comment">// 第一个参数表示offset，后一个表示位置</span><br>    oss.<span class="hljs-built_in">seekp</span>(<span class="hljs-built_in">streamoff</span>(<span class="hljs-number">1</span>), stringstream::cur);<br>    oss &lt;&lt; <span class="hljs-string">&quot;Milk&quot;</span>;<br>    cout &lt;&lt; oss.<span class="hljs-built_in">str</span>() &lt;&lt; endl; <span class="hljs-comment">// &quot;16.9En Black Milk&quot;, position at 17</span><br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">printBitInfo</span><span class="hljs-params">(istream&amp; s)</span> </span>&#123;<br>    cout &lt;&lt; <span class="hljs-string">&quot;State bits: &quot;</span>;<br>	<br>    <span class="hljs-comment">// stream的四种状态</span><br>    cout &lt;&lt; (s.<span class="hljs-built_in">good</span>() ? <span class="hljs-string">&quot;G&quot;</span> : <span class="hljs-string">&quot;-&quot;</span>); <span class="hljs-comment">// 表示输入正常，可继续接受输入</span><br>    cout &lt;&lt; (s.<span class="hljs-built_in">fail</span>() ? <span class="hljs-string">&quot;F&quot;</span> : <span class="hljs-string">&quot;-&quot;</span>); <span class="hljs-comment">// 表示输入出现异常(Type mismatch, file can&#x27;t be opened, seekg failed, so on)，未来不可以继续接受输入</span><br>    cout &lt;&lt; (s.<span class="hljs-built_in">eof</span>() ? <span class="hljs-string">&quot;E&quot;</span> : <span class="hljs-string">&quot;-&quot;</span>); <span class="hljs-comment">// Reach the end</span><br>    cout &lt;&lt; (s.<span class="hljs-built_in">bad</span>() ? <span class="hljs-string">&quot;B&quot;</span> : <span class="hljs-string">&quot;-&quot;</span>); <span class="hljs-comment">// Couldn&#x27;t move characters to buffer from external resource(e.g. the file is suddenlt deleted)</span><br><br>    cout &lt;&lt; endl;<br>    cout &lt;&lt; <span class="hljs-string">&quot;-----------&quot;</span> &lt;&lt; endl;<br>&#125;<br><br><span class="hljs-comment">// 非常合规的获得一个整数的方法</span><br><span class="hljs-comment">// prompt表示提示文字，reprompt表示错误重新提示文字</span><br><span class="hljs-comment">// const&amp; 允许右值，同时也不会修改左值</span><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">getInteger</span><span class="hljs-params">(<span class="hljs-type">const</span> string&amp; prompt,</span></span><br><span class="hljs-params"><span class="hljs-function">               <span class="hljs-type">const</span> string&amp; reprompt)</span> </span>&#123;<br>    <span class="hljs-keyword">while</span> (<span class="hljs-literal">true</span>) &#123; <span class="hljs-comment">// 循环，直到满足条件</span><br>        cout &lt;&lt; prompt; <span class="hljs-comment">// 输出文字提示</span><br>        string line;<br>        <span class="hljs-keyword">if</span> (!<span class="hljs-built_in">getline</span>(cin, line)) &#123; <span class="hljs-comment">// getline，避免cin设置state麻烦，空格读取不了等各种情况</span><br>            <span class="hljs-keyword">throw</span> std::<span class="hljs-built_in">domain_error</span>(<span class="hljs-string">&quot;getLine: End of input reached while waiting for line.&quot;</span>);<br>        &#125;<br>        <span class="hljs-function">istringstream <span class="hljs-title">iss</span><span class="hljs-params">(line)</span></span>; <span class="hljs-comment">//以这个string初始化istringstream</span><br>        <span class="hljs-type">int</span> value;<br>        <span class="hljs-type">char</span> extra; <span class="hljs-comment">// 测试有没有多余的字符</span><br>        <span class="hljs-keyword">if</span> (iss &gt;&gt; value &amp;&amp; !(iss &gt;&gt; extra)) <br>            <span class="hljs-keyword">return</span> value; <span class="hljs-comment">// 当且仅当iss输入value成功并且输入extra（多余的字符）失败（即没有多余的字符）时，才通过</span><br>        <span class="hljs-comment">// 当iss(cin同理)输入数据时，返回的iss(cin)本身可以隐式转换为boolean值，代表输入是否成功</span><br>        cerr &lt;&lt; reprompt &lt;&lt; endl; <span class="hljs-comment">// 输出错误提示</span><br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+<p>When should use stringstream?</p>
+<ul>
+<li>Processing strings</li>
+<li>Formatting input&#x2F;output</li>
+<li>Parsing different types</li>
+</ul>
+<p>When u want to just concatenate some strings, it’s faster to use str.append()!!</p>
+<h2 id="Type"><a href="#Type" class="headerlink" title="Type"></a>Type</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">// Next topic: Type</span><br><span class="hljs-comment">// 像下面的type表示起来很麻烦，还很容易报错</span><br>std::unordered_map&lt;forward_list&lt;Student&gt;,unordered_set&gt;::iterator begin = studentMap.<span class="hljs-built_in">cbegin</span>();<br><span class="hljs-comment">// 该怎么解决呢？</span><br><span class="hljs-comment">// Method 1,name alias</span><br><span class="hljs-keyword">using</span> map_iterator = std::unordered_map&lt;forward_list&lt;Student&gt;,unordered_set&gt;::iterator;<br>map_iterator end = studentMap.<span class="hljs-built_in">cend</span>();<br><span class="hljs-comment">// Method 2,auto</span><br><span class="hljs-keyword">auto</span> autoEnd = studentMap.<span class="hljs-built_in">end</span>();<br><br><span class="hljs-comment">// auto 顺带还解决了一波多参数</span><br><span class="hljs-comment">// 从Python学习而来</span><br><span class="hljs-comment">// pair可以同时传递两个参数</span><br><span class="hljs-function">pair&lt;<span class="hljs-type">int</span>, <span class="hljs-type">int</span>&gt; <span class="hljs-title">pairTest</span><span class="hljs-params">()</span> </span>&#123;<br>	<span class="hljs-type">int</span> smallNum = <span class="hljs-number">1</span>, largeNum = <span class="hljs-number">2</span>;<br>	<span class="hljs-keyword">return</span> &#123;smallNum,largeNum&#125;; <span class="hljs-comment">// uniform initialization</span><br>    <span class="hljs-comment">// another way is </span><br>    <span class="hljs-comment">// make_pair(smallNum,largeNum);</span><br>&#125;<br><br><span class="hljs-comment">// tuple则长度任意</span><br><span class="hljs-function">tuple&lt;<span class="hljs-type">int</span>, <span class="hljs-type">double</span>, string&gt; <span class="hljs-title">tupleTest</span><span class="hljs-params">()</span> </span>&#123;<br>	<span class="hljs-keyword">return</span> &#123; <span class="hljs-number">1</span>,<span class="hljs-number">2.0</span>,<span class="hljs-string">&quot;a str&quot;</span> &#125;; <span class="hljs-comment">// make_tuple(1, 2.0, &quot;a str&quot;)</span><br>&#125;<br><br><span class="hljs-comment">// in main():</span><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-keyword">auto</span> test = <span class="hljs-built_in">pairTest</span>();<br>	cout &lt;&lt; test.first &lt;&lt; <span class="hljs-string">&quot; &quot;</span> &lt;&lt; test.second &lt;&lt; endl; <span class="hljs-comment">// pair的第一种用法，用first和second</span><br>	<span class="hljs-keyword">auto</span> [num1, num2] = <span class="hljs-built_in">pairTest</span>(); <span class="hljs-comment">// 第二种用法，Structured Bindings，但是仅限于c17之后</span><br>	<span class="hljs-comment">// 一些深入研究：https://www.fluentcpp.com/2018/06/19/3-simple-c17-features-that-will-make-your-code-simpler/</span><br>    <span class="hljs-comment">// 注意编译器的编译标准，可能会报错</span><br>    <br>	<span class="hljs-type">int</span> a; <span class="hljs-type">double</span> b; string c;<br>	<span class="hljs-built_in">tie</span>(a, b, c) = <span class="hljs-built_in">tupleTest</span>(); <span class="hljs-comment">// tuple的接收，在c17之前只能用tie，或者更复杂的get(0)...</span><br>	<span class="hljs-keyword">auto</span> [c, d, e] = <span class="hljs-built_in">tupleTest</span>(); <span class="hljs-comment">// c17之后，带上auto有如Python一样灵活</span><br>&#125;<br><br><span class="hljs-comment">// Method 3 Structure</span><br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">PriceRange</span><br>&#123;<br>    <span class="hljs-type">int</span> min, max;<br>&#125;;<br><span class="hljs-comment">// then you can return this struct</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="uniform-initialization"><a href="#uniform-initialization" class="headerlink" title="uniform initialization"></a>uniform initialization</h2><p>c++ has many many initializations.</p>
+<p>Therefore, a <strong>automatically deduced</strong> declaration is highly praised. This is called <strong>Uniform initialization</strong> in C++ 11.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">struct</span> <span class="hljs-title class_">Course</span>&#123;<br>    string code;<br>    <span class="hljs-type">int</span> id;<br>&#125;;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    Course now &#123;<span class="hljs-string">&quot;CS106L&quot;</span>,<span class="hljs-number">123</span>&#125;;<br>    vector&lt;<span class="hljs-type">int</span>&gt; vec&#123;<span class="hljs-number">3</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>&#125;;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs c++">string str = <span class="hljs-string">&quot;hello&quot;</span>;<br><span class="hljs-keyword">auto</span> c1 = str[<span class="hljs-number">2</span>];<br>c1 = <span class="hljs-string">&#x27;a&#x27;</span>;<br>cout &lt;&lt; str &lt;&lt; endl; <span class="hljs-comment">// hello</span><br><br><span class="hljs-keyword">auto</span>&amp; c2 = str[<span class="hljs-number">2</span>];<br>c2 = <span class="hljs-string">&#x27;a&#x27;</span>;<br>cout &lt;&lt; str &lt;&lt; endl; <span class="hljs-comment">// healo</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h1 id="Lecture-3-Sequence-Containers"><a href="#Lecture-3-Sequence-Containers" class="headerlink" title="Lecture 3 Sequence Containers"></a>Lecture 3 Sequence Containers</h1><h2 id="example"><a href="#example" class="headerlink" title="example"></a>example</h2><p><img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20220222162049.png" srcset="/img/loading.gif" lazyload></p>
+<p>With the power of STL, some operations can be done in a few steps. This gives you the extra time to <code>understand the problem in more depth</code>.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span> <span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">vec</span><span class="hljs-params">(kNumInts)</span></span>;<br>    std::<span class="hljs-built_in">generate</span>(vec.<span class="hljs-built_in">begin</span>(), vec.<span class="hljs-built_in">end</span>(), rand);<br>    std::<span class="hljs-built_in">sort</span>(vec.<span class="hljs-built_in">begin</span>(), vec.<span class="hljs-built_in">end</span>());<br>    std::<span class="hljs-built_in">copy</span>(vec.<span class="hljs-built_in">begin</span>(), vec.<span class="hljs-built_in">end</span>(), std::<span class="hljs-built_in">ostream_iterator</span>&lt;<span class="hljs-type">int</span>&gt;(cout, <span class="hljs-string">&quot;\n&quot;</span>));<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="sequence-containers"><a href="#sequence-containers" class="headerlink" title="sequence containers"></a>sequence containers</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">// we will introduce vector and deque</span><br><span class="hljs-comment">// vector&#x27;s key difference with basic array</span><br><span class="hljs-comment">// is that vector has at(),which will have bounds check</span><br><span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">vec</span><span class="hljs-params">(<span class="hljs-number">15</span>,<span class="hljs-number">5</span>)</span></span>; <span class="hljs-comment">// a vector with 15 elements,all assigned as 5</span><br>cout &lt;&lt; vec.<span class="hljs-built_in">at</span>(<span class="hljs-number">20</span>); <span class="hljs-comment">// will throw an error</span><br>cout &lt;&lt; vec[<span class="hljs-number">20</span>]; <span class="hljs-comment">// still work</span><br><span class="hljs-comment">// however, this is not set as default</span><br><span class="hljs-comment">// because if u can write correctly, the boundary check will just slow down the speed</span><br><span class="hljs-comment">// this is opposed to cpp&#x27;s philosophy </span><br><br><span class="hljs-comment">// vector has another disadvantage</span><br><span class="hljs-comment">// its push_front func executes slowly</span><br><span class="hljs-comment">// deque is more suitable for this job(double ended queue)</span><br><span class="hljs-comment">// its push_back/pop_back/push_front/pop_front are faster(especially *_front are faster than vector)</span><br>deque&lt;<span class="hljs-type">int</span>&gt; deq;<br>deq.<span class="hljs-built_in">push_front</span>(<span class="hljs-number">1</span>); <span class="hljs-comment">// faster than vec.push_front(1);</span><br><br><span class="hljs-comment">// whereas, it&#x27;s still recommended to use vector by default,as its common operations like element access are faster than deque.</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h1 id="Lec-4-Associative-Containers"><a href="#Lec-4-Associative-Containers" class="headerlink" title="Lec 4 Associative Containers"></a>Lec 4 Associative Containers</h1><h2 id="Container-Adaptors"><a href="#Container-Adaptors" class="headerlink" title="Container Adaptors"></a>Container Adaptors</h2><p><img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20220223183026.png" srcset="/img/loading.gif" lazyload></p>
+<p>using <code>deque</code></p>
+<h2 id="Associative-Adaptors"><a href="#Associative-Adaptors" class="headerlink" title="Associative Adaptors"></a>Associative Adaptors</h2><p>map&#x2F;set: iterate</p>
+<p>unorderd_map&#x2F;unordered_set : access individual</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">// map</span><br><span class="hljs-keyword">while</span>(stream &gt;&gt; word) &#123;<br>    <span class="hljs-comment">// This single line is doing a ton of work. The square bracket notation for</span><br>    <span class="hljs-comment">// accessing values in maps will return a reference to the value associated</span><br>    <span class="hljs-comment">// with the specified key. We can then modify it with ++ directly.</span><br>    <span class="hljs-comment">//</span><br>    <span class="hljs-comment">// However, if response is not already a key in the map, the square brackets</span><br>    <span class="hljs-comment">// do a bit of extra work first. They automatically insert a new key-value</span><br>    <span class="hljs-comment">// pair into the map, where the key is response and the value is a</span><br>    <span class="hljs-comment">// reasonable default value -- in the case of integers, 0.</span><br>    ++frequencyMap[word];<br>&#125;<br><br><span class="hljs-comment">//another way</span><br>frequencyMap.<span class="hljs-built_in">insert</span>(&#123;<span class="hljs-string">&quot;word&quot;</span>,<span class="hljs-number">1</span>&#125;) <span class="hljs-comment">// using pair(with uniform constructor)</span><br><br><span class="hljs-comment">// Returns the number of keys equal to response.</span><br><span class="hljs-comment">// In anything but a multimap/multiset, this is</span><br><span class="hljs-comment">// either going to be 1 or 0.</span><br><span class="hljs-keyword">if</span> (frequencyMap.<span class="hljs-built_in">count</span>(response)) &#123;<br>    cout &lt;&lt; frequencyMap[response] &lt;&lt; <span class="hljs-string">&quot; entries found.&quot;</span> &lt;&lt; endl;<br>&#125; <span class="hljs-keyword">else</span> &#123;<br>    cout &lt;&lt; <span class="hljs-string">&quot;None.&quot;</span> &lt;&lt; endl;<br>&#125;<br><br><span class="hljs-comment">// set</span><br><span class="hljs-comment">// using insert</span><br>set&lt;string&gt; groceryList;<br>groceryList.<span class="hljs-built_in">insert</span>(<span class="hljs-string">&quot;milk&quot;</span>);<br>groceryList.<span class="hljs-built_in">insert</span>(<span class="hljs-string">&quot;eggs&quot;</span>);<br><br><span class="hljs-comment">// This set contains &quot;milk&quot;.</span><br><span class="hljs-keyword">if</span> (groceryList.<span class="hljs-built_in">count</span>(<span class="hljs-string">&quot;milk&quot;</span>)) &#123;<br>    cout &lt;&lt; <span class="hljs-string">&quot;We are getting milk!&quot;</span> &lt;&lt; endl;<br>&#125; <span class="hljs-keyword">else</span> &#123;<br>    cout &lt;&lt; <span class="hljs-string">&quot;Well, no use crying...&quot;</span> &lt;&lt; endl;<br>&#125;<br><br><span class="hljs-comment">// remove</span><br>groceryList.<span class="hljs-built_in">erase</span>(<span class="hljs-string">&quot;eggs&quot;</span>);<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="iterator"><a href="#iterator" class="headerlink" title="iterator"></a>iterator</h2><p>non-linear to linear</p>
+<p>(inner method: in-order traversal)</p>
+<p>*iter to dereference</p>
+<p>.end()</p>
+<p>advantage: tackle problems in a <strong>standardised</strong> way</p>
+<p>five kinds of iterators:</p>
+<ul>
+<li>Input Iterators.(can only access elements)</li>
+<li>Output Iterators.(can only assign elements)</li>
+<li>Forward Iterator.(input &amp; output, but can only move in the forward direction)</li>
+<li>Bidirectional Iterators.(Forward, and can also move backwards)</li>
+<li>Random-Access Iterators.(move randomly like pointers)</li>
+</ul>
+<h1 id="Lec-5-Advanced-Containers"><a href="#Lec-5-Advanced-Containers" class="headerlink" title="Lec 5 Advanced Containers"></a>Lec 5 Advanced Containers</h1><h2 id="Multimaps"><a href="#Multimaps" class="headerlink" title="Multimaps"></a>Multimaps</h2><p>the same key has multiple values</p>
+<h2 id="examples"><a href="#examples" class="headerlink" title="examples"></a>examples</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">// usage of find</span><br><span class="hljs-comment">// we can also use the find algorithm to look for an element</span><br><span class="hljs-comment">// in a collection and return an iterator to it</span><br>vector&lt;<span class="hljs-type">int</span>&gt;::iterator it = std::<span class="hljs-built_in">find</span>(vec.<span class="hljs-built_in">begin</span>(), vec.<span class="hljs-built_in">end</span>(), <span class="hljs-number">5</span>);<br><span class="hljs-keyword">if</span>(it != vec.<span class="hljs-built_in">end</span>()) &#123;<br>    cout &lt;&lt; <span class="hljs-string">&quot;Found elem &quot;</span> &lt;&lt; *it &lt;&lt; endl;<br>&#125; <span class="hljs-keyword">else</span> &#123;<br>    cout &lt;&lt; <span class="hljs-string">&quot;Element not found &quot;</span> &lt;&lt; endl;<br><span class="hljs-comment">// find is slightly faster than count(count is based on find)</span><br><br><span class="hljs-comment">// another words,the find in string is a little bit different</span><br>    std::string s = <span class="hljs-string">&quot;hell[o&quot;</span>;<br><span class="hljs-keyword">if</span> (s.<span class="hljs-built_in">find</span>(<span class="hljs-string">&#x27;[&#x27;</span>) != std::string::npos)<br>    ; <span class="hljs-comment">// found</span><br><span class="hljs-keyword">else</span><br>    ; <span class="hljs-comment">// not found</span><br>    <br><span class="hljs-comment">// after c++23,the string supports contains() to find</span><br><span class="hljs-comment">// it will return a boolean</span><br>s.<span class="hljs-built_in">contains</span>(<span class="hljs-string">&quot;hello&quot;</span>);<br>s.<span class="hljs-built_in">contains</span>(<span class="hljs-string">&#x27;h&#x27;</span>);<br>    <br><span class="hljs-comment">// upper_bound versus inner_bound</span><br>    <br>set&lt;<span class="hljs-type">int</span>&gt; mySet&#123;<span class="hljs-number">4</span>,<span class="hljs-number">1</span>,<span class="hljs-number">3</span>,<span class="hljs-number">5</span>,<span class="hljs-number">55</span>,<span class="hljs-number">5</span>, <span class="hljs-number">9</span>, <span class="hljs-number">22</span>, <span class="hljs-number">19</span>, <span class="hljs-number">28</span>&#125;;<br><br><span class="hljs-comment">// we can iterate through a range of elements in</span><br><span class="hljs-comment">// a sorted collection</span><br>    <br><span class="hljs-comment">// (sort first!)</span><br><span class="hljs-comment">// .lower_bound(value) (the first value &gt;= value)</span><br><span class="hljs-comment">// .upper_bound(value) (the first value &gt; value)</span><br><span class="hljs-comment">// below code means [7,28]</span><br>set&lt;<span class="hljs-type">int</span>&gt;::iterator iter = mySet.<span class="hljs-built_in">lower_bound</span>(<span class="hljs-number">7</span>);<br>set&lt;<span class="hljs-type">int</span>&gt;::iterator end = mySet.<span class="hljs-built_in">upper_bound</span>(<span class="hljs-number">28</span>);<br>    <br><span class="hljs-comment">// map&lt;string,int&gt; -&gt; pair&lt;string,int&gt;</span><br><span class="hljs-comment">// pair.first</span><br><span class="hljs-comment">// pair.second </span><br><span class="hljs-comment">// when using map iterators, notice the brackets</span><br><span class="hljs-comment">// e.g. (*i).first</span><br><span class="hljs-comment">// notice the parentheses</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h1 id="Lec-6-Templates"><a href="#Lec-6-Templates" class="headerlink" title="Lec 6 Templates"></a>Lec 6 Templates</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">// a good example that shows how to get a value of any type</span><br><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">typename</span> DataType&gt;<br><span class="hljs-function">DataType <span class="hljs-title">getType</span><span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-keyword">while</span>(<span class="hljs-literal">true</span>) &#123;<br>    <span class="hljs-comment">/* First we get a line of input from the user. */</span><br>        string line;<br>        std::<span class="hljs-built_in">getline</span>(cin, line);<br>        <span class="hljs-comment">/*</span><br><span class="hljs-comment">        * We&#x27;ll again use an istringstream because we only want to pull data</span><br><span class="hljs-comment">        * out of the stream once we have put the string&#x27;s contents in it.</span><br><span class="hljs-comment">        */</span><br>        <span class="hljs-function">std::istringstream <span class="hljs-title">converter</span><span class="hljs-params">(line)</span></span>;<br>        <span class="hljs-comment">/*</span><br><span class="hljs-comment">        * Try getting an DataType from the stream. If this is not succesful</span><br><span class="hljs-comment">        * then user input was not a valid input.</span><br><span class="hljs-comment">        */</span><br>        DataType result;<br>        <span class="hljs-keyword">if</span>(converter &gt;&gt; result) &#123;<br>            <span class="hljs-comment">/*</span><br><span class="hljs-comment">            * See if we can extract a char from the stream.</span><br><span class="hljs-comment">            * If so, the user had junk after a valid int in their input.</span><br><span class="hljs-comment">            */</span><br>            <span class="hljs-type">char</span> remaining;<br>            <span class="hljs-keyword">if</span>(converter &gt;&gt; remaining) &#123;<br>                cout &lt;&lt; <span class="hljs-string">&quot;Unexpected character. Try again.&quot;</span> &lt;&lt; endl;<br>            &#125; <span class="hljs-keyword">else</span> &#123;<br>                <span class="hljs-comment">/*</span><br><span class="hljs-comment">                * Input was succesfully converted to DataType with no</span><br><span class="hljs-comment">                * trailing stuff at the end.</span><br><span class="hljs-comment">                */</span><br>                <span class="hljs-keyword">return</span> result;<br>            &#125;<br>        &#125; <span class="hljs-keyword">else</span> &#123;<br>            cout &lt;&lt; <span class="hljs-string">&quot;Not a valid input. Try again.&quot;</span> &lt;&lt; endl;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h1 id="Lec-7-Templates-and-Functions"><a href="#Lec-7-Templates-and-Functions" class="headerlink" title="Lec 7 Templates and Functions"></a>Lec 7 Templates and Functions</h1><h2 id="Implicit-Interface"><a href="#Implicit-Interface" class="headerlink" title="Implicit Interface"></a>Implicit Interface</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">template</span> &lt;<span class="hljs-keyword">typename</span> Collection, <span class="hljs-keyword">typename</span> DataType&gt;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">countOccurences</span><span class="hljs-params">(<span class="hljs-type">const</span> Collection&lt;DataType&gt;&amp; list,DataType val)</span></span><br><span class="hljs-function"><span class="hljs-comment">// above is better compared to</span></span><br><span class="hljs-function"><span class="hljs-comment">// int countOccurences(T1 list,T2 val)</span></span><br><span class="hljs-function"><span class="hljs-comment">// as it may cause dismatch when executing like &quot;list[0] == val&quot;</span></span><br></code></pre></td></tr></table></figure>
+
+
+
+<p>In c++ 20, it added named requirements on the template arguments.</p>
+<h2 id="lambda"><a href="#lambda" class="headerlink" title="lambda"></a>lambda</h2><p>my problem: need a generic function like</p>
+<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs lua">DataType <span class="hljs-built_in">input</span>(judgeFunc)&#123;<br>	<span class="hljs-keyword">while</span>(<span class="hljs-built_in">input</span>)&#123;<br>		<span class="hljs-keyword">if</span> (judgeFunc(<span class="hljs-built_in">input</span>) == <span class="hljs-literal">true</span>)<br>			<span class="hljs-keyword">return</span> <span class="hljs-built_in">input</span>;<br>		&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<p>how to tackle?</p>
+<ol>
+<li>using function pointer</li>
+<li><strong>lambda</strong></li>
+</ol>
+<p>（上学期写数据结构的时候正好考虑到了这个需求，并且想得一模一样！听到这里真的很激动</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-function">std::vector&lt;Student&gt; <span class="hljs-title">StudentDatabase::studentsInYear</span><span class="hljs-params">(std::string yearToFind)</span> </span>&#123;<br>    vector&lt;Student&gt; ret;<br>	<span class="hljs-comment">// STL algorithm function</span><br>    <span class="hljs-comment">// copy element in db(database) that meets the command of lambda from begin to end,and insert into ret from  back</span><br>    <span class="hljs-comment">// ret means return(woo)</span><br>    std::<span class="hljs-built_in">copy_if</span>(db.<span class="hljs-built_in">begin</span>(), db.<span class="hljs-built_in">end</span>(), std::<span class="hljs-built_in">back_inserter</span>(ret),<br>                                        [&amp;yearToFind](Student s) -&gt; <span class="hljs-type">bool</span> &#123;<br>                                                <span class="hljs-keyword">return</span> s.<span class="hljs-built_in">classLevel</span>() == yearToFind;<br>                                        &#125;);<br><br><br>    <span class="hljs-keyword">return</span> ret;<br>&#125;<br><br><span class="hljs-comment">// the lambda actually is a class constructed by c++ compiler</span><br><span class="hljs-comment">// before c++11, similar behaviors can only be reached by creating a class that overloads the () operator by yourself</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h1 id="Lec-8-Functions-and-Algorithms"><a href="#Lec-8-Functions-and-Algorithms" class="headerlink" title="Lec 8 Functions and Algorithms"></a>Lec 8 Functions and Algorithms</h1><h2 id="Remain"><a href="#Remain" class="headerlink" title="Remain"></a>Remain</h2><p>using reference capture in lambda: <code>auto someFunc = [&amp;vec]()&#123; //.. &#125;;</code></p>
+<h2 id="Algorithms"><a href="#Algorithms" class="headerlink" title="Algorithms"></a>Algorithms</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-type">double</span> total = std::<span class="hljs-built_in">accumulate</span>(nums.<span class="hljs-built_in">begin</span>(), nums.<span class="hljs-built_in">end</span>(), <span class="hljs-number">0.0</span>);<br><br><span class="hljs-comment">/* The nth_element function will sort the array *a little bit*.  That means that</span><br><span class="hljs-comment">*   * The nth element (where n is a parameter) will be in the same position</span><br><span class="hljs-comment">*     it would be in if the array was sorted.</span><br><span class="hljs-comment">*   * All elements to the left of the nth element will be less than it, and</span><br><span class="hljs-comment">*     all elements to the right or it will be greater than it.</span><br><span class="hljs-comment">*</span><br><span class="hljs-comment">* The first property guarantees that if we call nth_element with n being</span><br><span class="hljs-comment">* halfway between begin and end we can recover the median by simply reading</span><br><span class="hljs-comment">* that element.</span><br><span class="hljs-comment">*/</span><br>std::<span class="hljs-built_in">nth_element</span>(nums.<span class="hljs-built_in">begin</span>(), nums.<span class="hljs-built_in">begin</span>() + nums.<span class="hljs-built_in">size</span>() / <span class="hljs-number">2</span>, nums.<span class="hljs-built_in">end</span>());<br><span class="hljs-type">int</span> median = nums[nums.<span class="hljs-built_in">size</span>() / <span class="hljs-number">2</span>];<br><br>std::<span class="hljs-built_in">sort</span>(nums.<span class="hljs-built_in">begin</span>(), nums.<span class="hljs-built_in">end</span>());<br>std::<span class="hljs-built_in">reverse</span>(nums.<span class="hljs-built_in">begin</span>(), nums.<span class="hljs-built_in">end</span>());<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="erase-remove-idiom"><a href="#erase-remove-idiom" class="headerlink" title="erase-remove idiom"></a>erase-remove idiom</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">IsOdd</span><span class="hljs-params">(<span class="hljs-type">int</span> i)</span> </span>&#123; <span class="hljs-keyword">return</span> i &amp; <span class="hljs-number">1</span>; &#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-comment">// Initializes a vector that holds numbers from 0-9.</span><br>    std::vector&lt;<span class="hljs-type">int</span>&gt; v = &#123;<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>&#125;;<br><br>    <span class="hljs-comment">// Removes all elements with the value 5.</span><br>    <span class="hljs-comment">// remove or remove_if will put the elements that meet the command</span><br>    <span class="hljs-comment">// to the end of the vector</span><br>    <span class="hljs-comment">// and will return the iterator pointing to the first element meeting the commmand</span><br>    <span class="hljs-comment">// remove can&#x27;t just move out these elements</span><br>    <span class="hljs-comment">// as it is just a algorithm so that it can&#x27;t change the in</span><br>    v.<span class="hljs-built_in">erase</span>(std::<span class="hljs-built_in">remove</span>(v.<span class="hljs-built_in">begin</span>(), v.<span class="hljs-built_in">end</span>(), <span class="hljs-number">5</span>), v.<span class="hljs-built_in">end</span>());<br><br>    <span class="hljs-comment">// Removes all odd numbers.</span><br>    v.<span class="hljs-built_in">erase</span>(std::<span class="hljs-built_in">remove_if</span>(v.<span class="hljs-built_in">begin</span>(), v.<span class="hljs-built_in">end</span>(), IsOdd), v.<span class="hljs-built_in">end</span>());<br>    <br>    <span class="hljs-comment">// in c++20 std::erase and std::erase_if provide the method that directly move and erase the elements</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="ostream-iterator"><a href="#ostream-iterator" class="headerlink" title="ostream_iterator"></a>ostream_iterator</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">// usage: iterator for output to ostream</span><br><span class="hljs-comment">// e.g. write elements to cout</span><br><span class="hljs-comment">// after C++11</span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iterator&gt;</span></span><br><br>std::vector&lt;<span class="hljs-type">int</span>&gt; data = &#123; <span class="hljs-number">1</span>, <span class="hljs-number">21</span>, <span class="hljs-number">31</span>, <span class="hljs-number">41</span>, <span class="hljs-number">51</span>, <span class="hljs-number">61</span>, <span class="hljs-number">71</span>, <span class="hljs-number">81</span> &#125;;<br><span class="hljs-comment">// bind to cout,separated by &#x27;,&#x27;</span><br><span class="hljs-function">std::ostream_iterator&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">dataIter</span><span class="hljs-params">(std::cout, <span class="hljs-string">&quot;, &quot;</span>)</span></span>;<br><span class="hljs-comment">// copy the data from begin to end to the ostream_iterator</span><br>std::<span class="hljs-built_in">copy</span>(data.<span class="hljs-built_in">begin</span>(), data.<span class="hljs-built_in">end</span>(), dataIter);<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="bind-and-placeholders"><a href="#bind-and-placeholders" class="headerlink" title="bind and placeholders"></a>bind and placeholders</h2><p><a target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/bind-function-placeholders-c/">https://www.geeksforgeeks.org/bind-function-placeholders-c/</a></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">// Driver function to demonstrate bind()</span><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">func</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b, <span class="hljs-type">int</span> c)</span></span><br><span class="hljs-function"></span>&#123;<br>    cout &lt;&lt; (a - b - c) &lt;&lt; endl;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    <br><span class="hljs-comment">// C++ code to demonstrate placeholder</span><br><span class="hljs-comment">// property 1</span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;functional&gt;</span> <span class="hljs-comment">// for bind()</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br>  <br><span class="hljs-comment">// for placeholders</span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std::placeholders;<br>  <br><span class="hljs-comment">// Driver function to demonstrate bind()</span><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">func</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b, <span class="hljs-type">int</span> c)</span></span><br><span class="hljs-function"></span>&#123;<br>    cout &lt;&lt; (a - b - c) &lt;&lt; endl;<br>&#125;<br>  <br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span> <span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-comment">// for placeholders</span><br>    <span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std::placeholders;<br>  <br>    <span class="hljs-comment">// Second parameter to fn1() is assigned</span><br>    <span class="hljs-comment">// to &#x27;a&#x27; in fun().</span><br>    <span class="hljs-comment">// 2 is assigned to &#x27;b&#x27; in fun</span><br>    <span class="hljs-comment">// First parameter to fn1() is assigned</span><br>    <span class="hljs-comment">// to &#x27;c&#x27; in fun().</span><br>    <span class="hljs-keyword">auto</span> fn1 =  <span class="hljs-built_in">bind</span>(func, _2, <span class="hljs-number">2</span>, _1);<br>  <br>    <span class="hljs-comment">// calling of function</span><br>    cout &lt;&lt; <span class="hljs-string">&quot;The value of function is : &quot;</span>;<br>    <span class="hljs-built_in">fn1</span>(<span class="hljs-number">1</span>, <span class="hljs-number">13</span>); <span class="hljs-comment">// 13 - 2 - 1 = 10</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h1 id="Lec-9-STL-Summar"><a href="#Lec-9-STL-Summar" class="headerlink" title="Lec 9 STL Summar"></a>Lec 9 STL Summar</h1><p>Iterator Adapter:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">// back_inserter</span><br><span class="hljs-built_in">copy</span>(source.<span class="hljs-built_in">begin</span>(), source.<span class="hljs-built_in">end</span>(), <span class="hljs-built_in">back_inserter</span>(target));<br><span class="hljs-built_in">fill_n</span>(<span class="hljs-built_in">back_inserter</span>(vec.<span class="hljs-built_in">end</span>()), <span class="hljs-number">3</span>, <span class="hljs-number">-1</span> ) <span class="hljs-comment">// &#123;a,b,..-1,-1,-1&#125;</span><br></code></pre></td></tr></table></figure>
+
+<p>more applications like <strong>boost library, multi-thread programming..</strong></p>
+<p>Key Concept: <strong>Abstraction</strong></p>
+<p>这堂课带着写代码，还是挺有收获的。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;iterator&gt;</span> <span class="hljs-comment">// ostream_iterator</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;algorithm&gt;</span> <span class="hljs-comment">// transform</span></span><br><br><span class="hljs-comment">// alias</span><br><span class="hljs-comment">// particular declarition</span><br><span class="hljs-comment">// 尤其是在编写大项目时，为了避免发生命名冲突和重载</span><br><span class="hljs-comment">// 不建议直接使用using namespace std;</span><br><span class="hljs-comment">// 而是使用alias</span><br><span class="hljs-keyword">using</span> std::cout;	<span class="hljs-keyword">using</span> std::endl;<br><br><span class="hljs-comment">// 接下来很有讲头</span><br><span class="hljs-keyword">while</span> (std::<span class="hljs-built_in">getline</span>(file,line))&#123; <br>    <span class="hljs-comment">// getline实际上返回的是一个stream</span><br>    <span class="hljs-comment">// 但是stream可以隐式地转换为bool，表示输入是否成功</span><br>    <span class="hljs-comment">// 以此可读取整个文件</span><br>    <span class="hljs-comment">// 但是！不建议再在循环里读取文本！可能会影响到外面的循环！</span><br>    <br>	std::<span class="hljs-built_in">transform</span>(line.<span class="hljs-built_in">begin</span>(), line.<span class="hljs-built_in">end</span>(), std::<span class="hljs-built_in">ostream_iterator</span>&lt;<span class="hljs-type">char</span>&gt;(cout, <span class="hljs-string">&quot;,&quot;</span>), ::tolower);<br>    <span class="hljs-comment">// transform是algorithm里的一个有用的算法，相当于对一段range进行for循环，然后对每个元素采取操作</span><br>    <span class="hljs-comment">// 前两个参数表示开始点和结束点</span><br>    <span class="hljs-comment">// 第四个参数是转小写，前面的::是表示全局空间里的作用域符，可以不加</span><br>    <span class="hljs-comment">// 第三个参数是一个iterator adapter，它会将转为小写后的char送到绑定的cout这个ostream里，并且每个以“，”间隔</span><br>    <br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h1 id="Lec-10-Classes-and-Const-Correctness"><a href="#Lec-10-Classes-and-Const-Correctness" class="headerlink" title="Lec 10 Classes and Const Correctness"></a>Lec 10 Classes and Const Correctness</h1><h2 id="c-x2F-c-extensions"><a href="#c-x2F-c-extensions" class="headerlink" title="c&#x2F;c++ extensions"></a>c&#x2F;c++ extensions</h2><p>from this <a target="_blank" rel="noopener" href="https://forums.codeguru.com/showthread.php?397010-What-s-with-*-cxx-files-instead-of-*-cpp">link</a>:</p>
+<blockquote>
+<p>There are at least four different extensions usable for C++ files:</p>
+<ul>
+<li>.C<br>Not very popular since it requires a case-sensitive file system (otherwise, it would clash with old .c file names), and even a few modern OS are not case-sensitive.</li>
+<li>.c++<br>Some OS or file systems don’t support the + character in file names.</li>
+<li>.cpp<br>That’s very portable across file systems.<br>But, it might be less consistent than .cxx</li>
+<li>.cxx<br>Very portable across file systems (not more than .cpp)<br>Using the name CXX for C++ is quite popular because CPP usually designates the C (and C++) pre-processor.</li>
+</ul>
+<p>For headers, there are at least five extensions:</p>
+<ul>
+<li>.h<br>Traditional C header files.<br>Since the compiler doesn’t do anything based on this extension, it can be used for C++ header files too.<br>Furthermore, there are a lot of header files that are designed to be included by both C and C++ translation units.<br>In that case, it’s natural to give them this extension.</li>
+<li>.H, .hpp or .hxx<br>That’s very natural to give one of these extensions for C++ header files (being consistent with the name of C++ translation units).<br>That’s not a bad idea to use one of these name for pure C++ header files only (containing class definitions, or templates, or any other feature not supported by C).</li>
+<li>No extension<br>That’s internally used by a number of C++ compilers for iostream, vector, algorithm and all others new-style C++ headers.</li>
+</ul>
+</blockquote>
+<h2 id="why-don’t-use-global-variables"><a href="#why-don’t-use-global-variables" class="headerlink" title="why don’t use global variables"></a>why don’t use global variables</h2><ul>
+<li><p>“Global variables can be read or modified by any part of the<br>program, making it difficult to remember or reason about<br>every possible use”</p>
+</li>
+<li><p>“A global variable can be get or set by any part of the<br>program, and any rules regarding its use can be easily broken<br>or forgotten”</p>
+</li>
+<li><p>“Non-const variables can be read or modified by any part of<br>the function, making it difficult to remember or reason about<br>every possible use”</p>
+</li>
+<li><p>“A non-const variable can be get or set by any part of the<br>function, and any rules regarding its use can be easily broken<br>or forgotten”</p>
+</li>
+</ul>
+<h2 id="const"><a href="#const" class="headerlink" title="const"></a>const</h2><p>const value</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-type">const</span> <span class="hljs-type">int</span> a = <span class="hljs-number">4</span>;<br></code></pre></td></tr></table></figure>
+
+<p>const member function</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Foo</span>&#123;<br>    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">foo</span><span class="hljs-params">()</span> <span class="hljs-type">const</span></span>;<br>&#125;;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">Foo::foo</span><span class="hljs-params">()</span> <span class="hljs-type">const</span></span>&#123;<br>    std::cout &lt;&lt; <span class="hljs-string">&quot;foo&quot;</span> &lt;&lt; std::endl;<br>    <span class="hljs-keyword">return</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>const class non-const class</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Foo</span>&#123;<br>    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">foo1</span><span class="hljs-params">()</span></span>;<br>    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">foo2</span><span class="hljs-params">()</span> <span class="hljs-type">const</span></span>;<br>&#125;;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">Foo::foo1</span><span class="hljs-params">()</span></span>&#123;<br>    std::cout &lt;&lt; <span class="hljs-string">&quot;foo1&quot;</span> &lt;&lt; std::endl;<br>    <span class="hljs-keyword">return</span>;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">Foo::foo2</span><span class="hljs-params">()</span> <span class="hljs-type">const</span></span>&#123;<br>    std::cout &lt;&lt; <span class="hljs-string">&quot;foo2&quot;</span> &lt;&lt; std::endl;<br>    <span class="hljs-keyword">return</span>;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-type">const</span> Foo f1;<br>    foo f2;<br>    f2.<span class="hljs-built_in">foo1</span>();<br>    f2.<span class="hljs-built_in">foo2</span>(); <span class="hljs-comment">// all feasible</span><br>    <br>    f1.<span class="hljs-built_in">foo2</span>();<br>    <span class="hljs-comment">//f1.foo1(); // compile error</span><br>    <span class="hljs-comment">// const class can only call const member functions</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>const pointer</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">// method:</span><br><span class="hljs-comment">// read from right to left</span><br><br><span class="hljs-comment">//constant pointer to a non-constant int</span><br><span class="hljs-type">int</span> * <span class="hljs-type">const</span> p; <span class="hljs-comment">// p is a const int*</span><br><br><span class="hljs-comment">//non-constant pointer to a constant int</span><br><span class="hljs-type">const</span> <span class="hljs-type">int</span>* p;<br><span class="hljs-type">int</span> <span class="hljs-type">const</span>* p; <span class="hljs-comment">// *p is a const int </span><br><br><span class="hljs-comment">//constant pointer to a constant int</span><br><span class="hljs-type">const</span> <span class="hljs-type">int</span>* <span class="hljs-type">const</span> p;<br><span class="hljs-type">int</span> <span class="hljs-type">const</span>* <span class="hljs-type">const</span> p; <span class="hljs-comment">// const p is a const int*</span><br></code></pre></td></tr></table></figure>
+
+<p>const iterators</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-type">const</span> vector&lt;<span class="hljs-type">int</span>&gt;::iterator iter1 = vec.<span class="hljs-built_in">begin</span>(); <span class="hljs-comment">// equal to int * const p</span><br><span class="hljs-comment">// the finger is fixed, but the value which the finger points to is changable</span><br><br>vector&lt;<span class="hljs-type">int</span>&gt;::const_iterator iter2 = vec.<span class="hljs-built_in">begin</span>(); <span class="hljs-comment">// finger is changable but not value</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h1 id="Lec-11-Operators"><a href="#Lec-11-Operators" class="headerlink" title="Lec 11 Operators"></a>Lec 11 Operators</h1><h2 id="operator-overloading"><a href="#operator-overloading" class="headerlink" title="operator overloading"></a>operator overloading</h2><p><img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20220306155440.png" srcset="/img/loading.gif" lazyload></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">// return as reference</span><br><span class="hljs-comment">// so when it is returned</span><br><span class="hljs-comment">// the return value could be used as left value</span><br>vector&lt;string&gt;&amp; vector&lt;string&gt;::<span class="hljs-keyword">operator</span>+=(<span class="hljs-type">const</span> string&amp; element)&#123;<br>    <span class="hljs-built_in">push_back</span>(element);<br>    <span class="hljs-keyword">return</span> *<span class="hljs-keyword">this</span>;<br>&#125;<br><br><span class="hljs-comment">// not recommend</span><br><span class="hljs-comment">// set as non-member function</span><br>StringVector StringVector::<span class="hljs-keyword">operator</span>+(<span class="hljs-type">const</span> StringVector&amp; other)&#123;<br>    StringVector result = *<span class="hljs-keyword">this</span>; <span class="hljs-comment">// copy constructor</span><br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">const</span> std::string&amp; s : other)&#123;<br>        result.<span class="hljs-built_in">push_back</span>(s);<br>    &#125;<br>    <span class="hljs-keyword">return</span> result;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="operator-overloading-is-or-is-not-a-member-function"><a href="#operator-overloading-is-or-is-not-a-member-function" class="headerlink" title="operator overloading is or is not a member function?"></a>operator overloading is or is not a member function?</h2><ol>
+<li>Assignment (&#x3D;), subscript ([]), function call (“()”), and member selection (-&gt;) operators must be defined as member functions</li>
+<li>some(like <code>&lt;&lt;</code>) must be be defined as non-member(we write for rhs, but not lhs)</li>
+<li>symmetric operation should be non-member functions, so we can prevent situations like, <code>a + 1</code> is legal, <code>1 + a</code> is illegal</li>
+<li>unary operation should be used as member function, so we can easily change the private value</li>
+<li>some binary operation(e.g. <code>+=</code>) should be member function, too. Or it’s hard to change the inner value.</li>
+</ol>
+<h2 id="POLA"><a href="#POLA" class="headerlink" title="POLA"></a>POLA</h2><p><strong>principle of least astonishment</strong></p>
+<p>if a necessary feature has a high astonishment factor, it may be necessary to redesign the feature.</p>
+<h2 id="copy"><a href="#copy" class="headerlink" title="copy"></a>copy</h2><p>shallow copy&#x2F;deep copy</p>
+<p>比如说，对于一个对象，如果里面有new出来的数组，如果只是对其浅拷贝，那么它默认只会获取new的那个指针，而不是整个数组，因而<strong>拷贝和被拷贝的对象的数组，指向的是同一段内容</strong>。而深拷贝则需要手动制定，以将两者区别开来。</p>
+<h1 id="Lec-12-Special-Member-Functions"><a href="#Lec-12-Special-Member-Functions" class="headerlink" title="Lec 12 Special Member Functions"></a>Lec 12 Special Member Functions</h1><h2 id="recap"><a href="#recap" class="headerlink" title="recap"></a>recap</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">// if you want to overload [] </span><br><span class="hljs-comment">// then you should consider overload const and non-const version,or the const object can&#x27;t use it </span><br><span class="hljs-comment">// e.g. if only have non-const</span><br><br><span class="hljs-comment">// const object can&#x27;t call it</span><br><span class="hljs-type">int</span>&amp; myVector::<span class="hljs-keyword">operator</span>[](<span class="hljs-type">size_t</span> index)&#123;<br>    <span class="hljs-keyword">return</span> _elems[index];<br>&#125;<br><br><span class="hljs-comment">// const object can only overload [] with this below</span><br><span class="hljs-comment">//const int&amp; myVector::operator[](size_t index) const&#123;</span><br><span class="hljs-comment">//    return _elems[index];</span><br><span class="hljs-comment">//&#125;</span><br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    myVector v1;<br>    <span class="hljs-type">const</span> myVector v2;<br>    v1[<span class="hljs-number">0</span>] = <span class="hljs-number">0</span>;<br>    <span class="hljs-type">int</span> elem1 = v1[<span class="hljs-number">0</span>];<br>    <br>    <span class="hljs-comment">//int elem2 = v2[0]; // const can&#x27;t use it, so compile error.</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="copy-construction-vs-copy-assignment"><a href="#copy-construction-vs-copy-assignment" class="headerlink" title="copy construction vs copy assignment"></a>copy construction vs copy assignment</h2><p>these special functions will be created by compiler, but they won’t always work, especially with something irrelated to the class itself(like heap, stream, etc)</p>
+<ul>
+<li><p>default construction</p>
+</li>
+<li><p><strong>copy construction</strong></p>
+</li>
+<li><p><strong>copy assignment</strong></p>
+</li>
+<li><p>destruction</p>
+</li>
+</ul>
+<p>what’s the difference between construction and assignment?</p>
+<p><a target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/copy-constructor-vs-assignment-operator-in-c/">https://www.geeksforgeeks.org/copy-constructor-vs-assignment-operator-in-c/</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/copy-constructor-in-cpp/">https://www.geeksforgeeks.org/copy-constructor-in-cpp/</a></p>
+<p>(geeksforgeeks is really recommended!)</p>
+<p>e.g.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-function">Test <span class="hljs-title">foo</span><span class="hljs-params">()</span></span>&#123;<br>    Test test;<br>    <span class="hljs-keyword">return</span> test; <span class="hljs-comment">// copy constructor(the original will diminish as the function ends)</span><br>&#125;<br><br><span class="hljs-function">myVector&amp; <span class="hljs-title">add</span><span class="hljs-params">(<span class="hljs-type">const</span> <span class="hljs-type">int</span>&amp; value)</span></span>&#123; <span class="hljs-comment">// not copy! by reference!</span><br>    <span class="hljs-built_in">push_back</span>(value);<br>    <span class="hljs-keyword">return</span> *<span class="hljs-keyword">this</span>;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>  Test t1, t2; <span class="hljs-comment">// default constructor</span><br>  t2 = t1; <span class="hljs-comment">// copy assignment (don&#x27;t create new space)</span><br>  <span class="hljs-function">Test <span class="hljs-title">t3</span><span class="hljs-params">()</span></span>; <span class="hljs-comment">// a function</span><br>  Test t3 = t1; <span class="hljs-comment">// copy constructor (create new space)</span><br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>Therefore, the codes below can’t run correctly, cause the copy is just a <strong>shallow copy</strong>.</p>
+<p>这部分还是挺重要的，还是切换成中文说吧。下面这样<code>copy = vec</code>，在没有自己定义复制构造函数的情况下，只会执行系统默认编写的复制构造函数。系统自己写的特点是什么呢？只能<strong>浅拷贝（shallow copy）</strong>，如果成员有复制构造函数可以拷贝，就直接拷贝，而<strong>不能直接调用class之外（例如，new出来的内存）之类的东西</strong>。</p>
+<p>再看下面这个函数。他的第二句话<code>vector&lt;int&gt; copy = vec;</code>，实际上就是直接执行了系统编写的浅拷贝。原来vector里的size等变量，可以直接浅拷贝过来。但如果vector里面，还有一个*elem数组，并且new出了一段内存来存储数据的话，那么这个复制构造函数，<strong>并不会将所有数据全部拷贝到一个新数组里</strong>，而只是构造出一个指针，指向的内容还是原来的数组。但是在退出函数时，copy就被销毁了，不仅没有拷贝回来，还带回来一个野指针。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c++">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-keyword">operator</span>+(<span class="hljs-type">const</span> vector&lt;<span class="hljs-type">int</span>&gt;&amp;vec, <span class="hljs-type">int</span> elem)&#123;<br>    vector&lt;<span class="hljs-type">int</span>&gt; copy = vec; <span class="hljs-comment">// constructor</span><br>    <span class="hljs-comment">// but the default is only shallow</span><br>    copy += element;<br>    <span class="hljs-keyword">return</span> copy; <span class="hljs-comment">// copy constructor</span><br>    <span class="hljs-comment">// and the copy is freed !!</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>这个时候，就需要我们自己写一个copy constructor：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">// copy constructor</span><br><span class="hljs-comment">// allocate new and copy</span><br><span class="hljs-comment">// e.g.</span><br><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> Type&gt;<br><span class="hljs-built_in">myVector</span>&lt;Type&gt;(<span class="hljs-type">const</span> myVector&lt;Type&gt;&amp; other):<span class="hljs-built_in">size</span>(other.size)&#123;<br>    elems = <span class="hljs-keyword">new</span> Type[size];<br>    std::<span class="hljs-built_in">copy</span>(other.<span class="hljs-built_in">begin</span>(),other.<span class="hljs-built_in">end</span>(),<span class="hljs-built_in">begin</span>());<br>&#125;<br><br><span class="hljs-comment">// copy assignment</span><br><span class="hljs-comment">// 1 compare</span><br><span class="hljs-comment">// 2 free old</span><br><span class="hljs-comment">// 3 allocate new and copy</span><br><span class="hljs-comment">// e.g.</span><br><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> Type&gt;<br>myVector&amp; myVector&lt;Type&gt;::<span class="hljs-keyword">operator</span>=(<span class="hljs-type">const</span> myVector&lt;Type&gt;&amp; other)&#123; <span class="hljs-comment">// return as reference</span><br>    <span class="hljs-keyword">if</span> (&amp;other != <span class="hljs-keyword">this</span>)&#123;<br>    	size = other.size;<br>        <span class="hljs-keyword">delete</span>[]elems;<br>        elems = std::<span class="hljs-keyword">new</span> Type[size];<br>        std::<span class="hljs-built_in">copy</span>(other.<span class="hljs-built_in">begin</span>(),other.<span class="hljs-built_in">end</span>(),<span class="hljs-built_in">begin</span>());<br>    &#125;<br>	<span class="hljs-keyword">return</span> *<span class="hljs-keyword">this</span>; <span class="hljs-comment">// return itself for chain operation(though bad code)</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="rule-of-three-x2F-zero"><a href="#rule-of-three-x2F-zero" class="headerlink" title="rule of three&#x2F;zero"></a>rule of three&#x2F;zero</h2><p>When do you need to write your own special member functions?</p>
+<p><strong>when the default one generated by the compiler does not work.(e.g. pointers, streams, those are pointed to outside resources.</strong></p>
+<p><strong>Rule of Three</strong>: If you explicitly define (or delete) a copy constructor, copy assignment, or destructor, you should define(or delete) all three.</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs c++">~<span class="hljs-built_in">myVector</span>(); <span class="hljs-comment">// deconstructor</span><br><span class="hljs-built_in">myVector</span>(<span class="hljs-type">const</span> myVector&amp; other); <span class="hljs-comment">// copy constructor</span><br>myVector&amp; myVector::<span class="hljs-keyword">operator</span>=(<span class="hljs-type">const</span> myVector&amp; other); <span class="hljs-comment">// copy assignment</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="RVO"><a href="#RVO" class="headerlink" title="RVO"></a>RVO</h2><p>**<code>Return Value Optimization</code>**，即，编译器会对函数的返回值进行编译优化，减少不必要的copy。</p>
+<p>例如，某函数要return的是函数体内的一个x变量，然后我们将其赋给main里的变量a（即，<code>a = func();</code>），照道理x需要再被拷贝一下（尽管这不是必要的），然后返回这个copy，然后x被摧毁。但是此时编译器会捕捉到这个细节，直接在a上进行赋值，减少拷贝。</p>
+<p>去掉这种优化的办法：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">g++ xxxxx.cpp -std=c++11 -fno-elide-constructors -o move<br></code></pre></td></tr></table></figure>
+
+
+
+<h1 id="Lec-13-Move-Semantics"><a href="#Lec-13-Move-Semantics" class="headerlink" title="Lec 13 Move Semantics"></a>Lec 13 Move Semantics</h1><p>c++的<code>vector</code>里有<code>emplace_back</code>和<code>push_back</code>两种函数，前者接收右值，后者接收左值。示例如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;vector&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;string&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;cassert&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br> <br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">President</span><br>&#123;<br>    std::string name;<br>    std::string country;<br>    <span class="hljs-type">int</span> year;<br> <br>    <span class="hljs-built_in">President</span>(std::string p_name, std::string p_country, <span class="hljs-type">int</span> p_year)<br>        : <span class="hljs-built_in">name</span>(std::<span class="hljs-built_in">move</span>(p_name)), <span class="hljs-built_in">country</span>(std::<span class="hljs-built_in">move</span>(p_country)), <span class="hljs-built_in">year</span>(p_year)<br>    &#123;<br>        std::cout &lt;&lt; <span class="hljs-string">&quot;I am being constructed.\n&quot;</span>;<br>    &#125;<br>    <span class="hljs-built_in">President</span>(President&amp;&amp; other)<br>        : <span class="hljs-built_in">name</span>(std::<span class="hljs-built_in">move</span>(other.name)), <span class="hljs-built_in">country</span>(std::<span class="hljs-built_in">move</span>(other.country)), <span class="hljs-built_in">year</span>(other.year)<br>    &#123;<br>        std::cout &lt;&lt; <span class="hljs-string">&quot;I am being moved.\n&quot;</span>;<br>    &#125;<br>    President&amp; <span class="hljs-keyword">operator</span>=(<span class="hljs-type">const</span> President&amp; other) = <span class="hljs-keyword">default</span>;<br>&#125;;<br> <br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    std::vector&lt;President&gt; elections;<br>    std::cout &lt;&lt; <span class="hljs-string">&quot;emplace_back:\n&quot;</span>;<br>    <span class="hljs-comment">// support after c++17 </span><br>    <span class="hljs-keyword">auto</span>&amp; ref = elections.<span class="hljs-built_in">emplace_back</span>(<span class="hljs-string">&quot;Nelson Mandela&quot;</span>, <span class="hljs-string">&quot;South Africa&quot;</span>, <span class="hljs-number">1994</span>);<br>    <span class="hljs-built_in">assert</span>(ref.year == <span class="hljs-number">1994</span> &amp;&amp; <span class="hljs-string">&quot;uses a reference to the created object (C++17)&quot;</span>);<br> <br>    std::vector&lt;President&gt; reElections;<br>    std::cout &lt;&lt; <span class="hljs-string">&quot;\npush_back:\n&quot;</span>;<br>    reElections.<span class="hljs-built_in">push_back</span>(<span class="hljs-built_in">President</span>(<span class="hljs-string">&quot;Franklin Delano Roosevelt&quot;</span>, <span class="hljs-string">&quot;the USA&quot;</span>, <span class="hljs-number">1936</span>));<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<p>wasted copy-&gt;move directly</p>
+<h2 id="lvalues-vs-rvalues"><a href="#lvalues-vs-rvalues" class="headerlink" title="lvalues vs rvalues"></a>lvalues vs rvalues</h2><p>lvalue:</p>
+<ul>
+<li>can find name(identity) -&gt; &amp;var is valid</li>
+</ul>
+<p>rvalue:</p>
+<ul>
+<li>opposite: can’t find &amp;var</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20220324162358.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20220324162750.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="move-constructor-and-assignment"><a href="#move-constructor-and-assignment" class="headerlink" title="move constructor and assignment"></a>move constructor and assignment</h2><p>move(steal) from <strong>rvalue</strong></p>
+<p>rvalue can be copyed or <strong>moved</strong>, as it’s disposable.</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20220324163518.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20220324163750.png" srcset="/img/loading.gif" lazyload></p>
+<p>这是一种可行但是并没有真正用到rvalue和move精髓的代码：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20220324183121.png" srcset="/img/loading.gif" lazyload></p>
+<p>为什么呢？因为尽管它传入的是右值的引用，但事实上，在这个函数里，它是一个<strong>左值</strong>，这个时候，就需要用到<code>move</code>表示其为右值：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20220324183443.png" srcset="/img/loading.gif" lazyload></p>
+<p>原课程的PPT：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20220324183510.png" srcset="/img/loading.gif" lazyload></p>
+<p>因此，原先的rule of three变为了rule of five，即需要额外指定<code>move constructor</code> and <code>move assignment</code>：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Baokker/cdn_for_blog/blog_imgs/20220324183546.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="swap"><a href="#swap" class="headerlink" title="swap"></a>swap</h2><p>在原先的swap基础上，加上<code>move</code>使其转为右值，以减少原先作为左值的额外拷贝。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">typename</span> T&gt;</span><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">swap</span><span class="hljs-params">(T&amp; a, T&amp; b)</span></span>&#123;<br>    T temp = std::<span class="hljs-built_in">move</span>(a);<br>    a = std::<span class="hljs-built_in">move</span>(b);<br>    b = std::<span class="hljs-built_in">move</span>(temp);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="perfect-forwarding"><a href="#perfect-forwarding" class="headerlink" title="perfect forwarding"></a>perfect forwarding</h2><p>读了很多，很有意思，不过也很难..其实主要解决的问题还是，<strong>在函数参数中的右值引用，在函数本体里仍然有可能作为一个左值存在。</strong></p>
+<blockquote>
+<p>Perfect forwarding requires <em>forwarding references</em> in order to preserve the ref-qualifiers of the arguments. Such references appear only in a <em>deduced context</em>. That is:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-function"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">class</span> T&gt;</span><br><span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">f</span><span class="hljs-params">(T&amp;&amp; x)</span> <span class="hljs-comment">// x is a forwarding reference, because T is deduced from a call to f()</span></span><br><span class="hljs-function"></span>&#123;<br> <span class="hljs-built_in">g</span>(std::forward&lt;T&gt;(x)); <span class="hljs-comment">// g() will receive an lvalue or an rvalue, depending on x</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>The following does not involve perfect forwarding, because <code>T</code> is not deduced from the constructor call:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-keyword">template</span>&lt;<span class="hljs-keyword">class</span> <span class="hljs-title class_">T</span>&gt;<br><span class="hljs-keyword">struct</span> <span class="hljs-title class_">a</span><br>&#123;<br> <span class="hljs-built_in">a</span>(T&amp;&amp; x); <span class="hljs-comment">// x is a rvalue reference, not a forwarding reference</span><br>&#125;;<br></code></pre></td></tr></table></figure>
+</blockquote>
+<p>在template的帮助下，函数可以对x的类型作出推断，判断其为左值或右值，这样在接下来的函数里，就不会出现右值变成左值的可能。</p>
+<h1 id="Lec-14-Inheritance"><a href="#Lec-14-Inheritance" class="headerlink" title="Lec 14 Inheritance"></a>Lec 14 Inheritance</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-function"><span class="hljs-type">const</span> <span class="hljs-type">int</span>* <span class="hljs-type">const</span> <span class="hljs-title">myClassMethod</span><span class="hljs-params">(<span class="hljs-type">const</span> <span class="hljs-type">int</span>* <span class="hljs-type">const</span> &amp; param)</span> <span class="hljs-type">const</span></span>;<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="namespace"><a href="#namespace" class="headerlink" title="namespace"></a>namespace</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-comment">// in the previous code we see a lot of alias</span><br><span class="hljs-keyword">using</span> std::endl;<br><span class="hljs-keyword">using</span> std::cout;<br><br><span class="hljs-comment">// lead into conflict</span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;algorithm&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-type">int</span> count; <span class="hljs-comment">// its precedence is higher</span><br>    vector&lt;<span class="hljs-type">int</span>&gt; vec&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">3</span>&#125;;<br>    <br>    <span class="hljs-comment">// cout &lt;&lt; &quot;count 1 by algorithm&quot; &lt;&lt; count(vec.begin(),vec.end(),1) &lt;&lt; endl; // conflict and error</span><br>    cout &lt;&lt; <span class="hljs-string">&quot;count 1 by algorithm&quot;</span> &lt;&lt; std::<span class="hljs-built_in">count</span>(vec.<span class="hljs-built_in">begin</span>(),vec.<span class="hljs-built_in">end</span>(),<span class="hljs-number">1</span>) &lt;&lt; endl; <span class="hljs-comment">// ok</span><br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br><br><span class="hljs-comment">// syntax</span><br><span class="hljs-keyword">namespace</span> Lecture&#123;<br>    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">count</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt; vec,<span class="hljs-type">int</span> target)</span></span>&#123;<br>        <span class="hljs-type">int</span> num = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">const</span> <span class="hljs-keyword">auto</span> &amp;i:vec.<span class="hljs-built_in">size</span>())&#123;<br>            <span class="hljs-keyword">if</span> (vec[i] == target)<br>            	num++;<br>        &#125;<br>        <span class="hljs-keyword">return</span> num;<br>    &#125;<br>&#125;<br><br><span class="hljs-comment">// so now you can use it..</span><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    vector&lt;<span class="hljs-type">int</span>&gt; vec&#123;<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">3</span>&#125;;<br>    cout &lt;&lt; <span class="hljs-string">&quot;count 1 by Lecture&quot;</span> &lt;&lt; Lecture::<span class="hljs-built_in">count</span>(vec,<span class="hljs-number">1</span>) &lt;&lt; endl; <span class="hljs-comment">// ok</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="inheritance"><a href="#inheritance" class="headerlink" title="inheritance"></a>inheritance</h2><p>感觉上不如软荣上实践得来的经验多..得去CS108才能得到更好的锻炼。</p>
+<p>不过有一句还是值得摘录的：<strong>No “virtual” members - instead, if a member has the same name as as inherited member,it hides it.</strong></p>
+
+              
+            </div>
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%8A%80%E6%9C%AF/" class="category-chain-item">技术</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E6%8A%80%E6%9C%AF/">#技术</a>
+      
+        <a href="/tags/c/">#c++</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>CS106L笔记</div>
+      <div>http://baokker.github.io/2022/08/07/CS106L笔记/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Baokker</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年8月7日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2022年10月8日</div>
+        </div>
+      
+      <div class="license-meta-item">
+        <div>许可协议</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/08/07/%E5%8F%A4%E6%97%A9Linux%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%AC%94%E8%AE%B0/" title="古早Linux命令行笔记">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">古早Linux命令行笔记</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/08/07/%E5%8F%A4%E6%97%A9MySQL%E7%AC%94%E8%AE%B0/" title="古早MySQL笔记">
+                        <span class="hidden-mobile">古早MySQL笔记</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  <article id="comments" lazyload>
+    
+  <div id="waline"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#waline', function() {
+      Fluid.utils.createCssLink('https://lib.baomitu.com/waline/2.3.2/waline.min.css')
+      Fluid.utils.createScript('https://lib.baomitu.com/waline/2.3.2/waline.min.js', function() {
+        var options = Object.assign(
+          {"serverURL":"https://blog-comment-server-j7p2mwkga-baokker.vercel.app/","path":"window.location.pathname","meta":["nick","mail","link"],"requiredMeta":["nick"],"lang":"zh-CN","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"],"dark":"html[data-user-color-scheme=\"dark\"]","wordLimit":0,"pageSize":10},
+          {
+            el: '#waline',
+            path: window.location.pathname
+          }
+        )
+        Waline.init(options);
+        Fluid.utils.waitElementVisible('#waline .vcontent', () => {
+          var imgSelector = '#waline .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+  </article>
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.0/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script>
+  (function() {
+    var enableLang = CONFIG.code_language.enable && CONFIG.code_language.default;
+    var enableCopy = CONFIG.copy_btn;
+    if (!enableLang && !enableCopy) {
+      return;
+    }
+
+    function getBgClass(ele) {
+      return Fluid.utils.getBackgroundLightness(ele) >= 0 ? 'code-widget-light' : 'code-widget-dark';
+    }
+
+    var copyTmpl = '';
+    copyTmpl += '<div class="code-widget">';
+    copyTmpl += 'LANG';
+    copyTmpl += '</div>';
+    jQuery('.markdown-body pre').each(function() {
+      var $pre = jQuery(this);
+      if ($pre.find('code.mermaid').length > 0) {
+        return;
+      }
+      if ($pre.find('span.line').length > 0) {
+        return;
+      }
+
+      var lang = '';
+
+      if (enableLang) {
+        lang = CONFIG.code_language.default;
+        if ($pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2 && $pre.children().hasClass('hljs')) {
+          lang = $pre[0].children[0].classList[1];
+        } else if ($pre[0].getAttribute('data-language')) {
+          lang = $pre[0].getAttribute('data-language');
+        } else if ($pre.parent().hasClass('sourceCode') && $pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2) {
+          lang = $pre[0].children[0].classList[1];
+          $pre.parent().addClass('code-wrapper');
+        } else if ($pre.parent().hasClass('markdown-body') && $pre[0].classList.length === 0) {
+          $pre.wrap('<div class="code-wrapper"></div>');
+        }
+        lang = lang.toUpperCase().replace('NONE', CONFIG.code_language.default);
+      }
+      $pre.append(copyTmpl.replace('LANG', lang).replace('code-widget">',
+        getBgClass($pre[0]) + (enableCopy ? ' code-widget copy-btn" data-clipboard-snippet><i class="iconfont icon-copy"></i>' : ' code-widget">')));
+
+      if (enableCopy) {
+        Fluid.utils.createScript('https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js', function() {
+          var clipboard = new window.ClipboardJS('.copy-btn', {
+            target: function(trigger) {
+              var nodes = trigger.parentNode.childNodes;
+              for (var i = 0; i < nodes.length; i++) {
+                if (nodes[i].tagName === 'CODE') {
+                  return nodes[i];
+                }
+              }
+            }
+          });
+          clipboard.on('success', function(e) {
+            e.clearSelection();
+            e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-copy', 'icon-success');
+            setTimeout(function() {
+              e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-success', 'icon-copy');
+            }, 2000);
+          });
+        });
+      }
+    });
+  })();
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
