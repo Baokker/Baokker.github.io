@@ -1,0 +1,894 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/favicon.png">
+  <link rel="icon" href="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Baokker">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="水一篇Readme">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据仓库ETL爬虫&amp;数据处理小记">
+<meta property="og:url" content="http://baokker.github.io/2022/10/11/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93ETL%E7%88%AC%E8%99%AB-%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%B0%8F%E8%AE%B0/index.html">
+<meta property="og:site_name" content="Baokker&#39;s Blog">
+<meta property="og:description" content="水一篇Readme">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/defaultImages.jpg">
+<meta property="article:published_time" content="2022-10-11T14:16:33.135Z">
+<meta property="article:modified_time" content="2022-10-31T13:35:59.259Z">
+<meta property="article:author" content="Baokker">
+<meta property="article:tag" content="技术">
+<meta property="article:tag" content="ETL">
+<meta property="article:tag" content="数据仓库">
+<meta property="article:tag" content="Python">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/defaultImages.jpg">
+  
+  
+  
+  <title>数据仓库ETL爬虫&amp;数据处理小记 - Baokker&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"baokker.github.io","root":"/","version":"1.9.0","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Baokker&#39;s Blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/defaultImages.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="数据仓库ETL爬虫&amp;数据处理小记"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-10-11 22:16" pubdate>
+          2022年10月11日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          15k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          128 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">数据仓库ETL爬虫&amp;数据处理小记</h1>
+            
+            <div class="markdown-body">
+              
+              <h1 id="Github-Repository"><a href="#Github-Repository" class="headerlink" title="Github Repository"></a>Github Repository</h1><p>这个链接将在本学期末本人将此repository设为public后可以访问：</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/Baokker/data-warehouse/tree/main/homework-1-etl">https://github.com/Baokker/data-warehouse/tree/main/homework-1-etl</a></p>
+<h1 id="要求"><a href="#要求" class="headerlink" title="要求"></a>要求</h1><blockquote>
+<ul>
+<li><p>数据来源：<a target="_blank" rel="noopener" href="http://snap.stanford.edu/data/web-Movies.html">http://snap.stanford.edu/data/web-Movies.html (Links to an external site.)</a></p>
+</li>
+<li><p>ETL要求：</p>
+</li>
+</ul>
+<p>1）获取用户评价数据中的7,911,684个用户评价</p>
+<p>2）从Amazon网站中利用网页中所说的方法利用爬虫获取253,059个Product信息页面</p>
+<p>3）挑选其中的电影页面，通过ETL从数据中获取</p>
+<ul>
+<li>电影ID，评论用户ID，评论用户ProfileName，评论用户评价Helpfulness，评论用户Score，评论时间Time，评论结论Summary，评论结论Text，电影上映时间，电影风格，电影导演，电影主演，电影演员，电影版本等信息</li>
+</ul>
+<p>4）在网页中不同网页可能是相同的电影（如同一部电影的蓝光、DVD版本，同一部电影的不同语言的版本等），通过ETL对相同的电影（需要给出你所认为的相同的定义）进行合并</p>
+<p>5）在网页中电影演员、电影导演、电影主演等会出现同一个人但有不同名字的情况（如middle name，名字缩写等），通过ETL对相同的人名进行合并</p>
+<p>4）在网页中部分电影没有上映时间，可以通过第三方数据源（如IMDB、豆瓣等）或者从评论时间来获取</p>
+<p>5）通过ETL工具存储Amazon页面和最终合并后的电影之间的数据血缘关系，即可以知道某个电影的某个信息是从哪些网站或者数据源获取的，在合并的过程中最终我们采用的信息是从哪里来的。</p>
+<ul>
+<li>可以参考的工具：</li>
+</ul>
+<ol>
+<li>Pentaho Data Integration: <a target="_blank" rel="noopener" href="https://sourceforge.net/projects/pentaho/">https://sourceforge.net/projects/pentaho/ (Links to an external site.)</a></li>
+</ol>
+<ol start="2">
+<li>Web爬虫：<a target="_blank" rel="noopener" href="https://scrapy.org/">https://scrapy.org</a></li>
+</ol>
+</blockquote>
+<h1 id="Tree（文件大纲）"><a href="#Tree（文件大纲）" class="headerlink" title="Tree（文件大纲）"></a>Tree（文件大纲）</h1><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs mipsasm">.<br>├── Data<br>│   └── Raw <span class="hljs-comment"># 原本的数据</span><br>├── FilmInfoSpider <span class="hljs-comment"># 爬取电影信息，并存储电影</span><br>│   ├── FilmInfoSpider<br>│   ├── WebPages <span class="hljs-comment"># 存储的网页</span><br>│   └── productId.csv <span class="hljs-comment"># 产品ASIN值表</span><br>├── <span class="hljs-keyword">JupyterScripts</span><br><span class="hljs-keyword"></span>│   ├── <span class="hljs-keyword">extract_movies_txt.ipynb </span><span class="hljs-comment"># 提取movies.txt中的信息（comments，product id）</span><br>│   ├── <span class="hljs-keyword">extract_no_title_prime_video_id.ipynb </span><span class="hljs-comment"># 提取没有标题的数据的ASIN值</span><br>│   ├── get_date_from_comments.ipynb <span class="hljs-comment"># 从评论获取日期</span><br>│   ├── merge_movies_info.ipynb <span class="hljs-comment"># 合并电影信息（重新补爬的信息）</span><br>│   ├── merge_same_title_and_record_source.ipynb <span class="hljs-comment"># 合并同一部电影，并记录数据血缘</span><br>│   └── merge_similar_names.ipynb <span class="hljs-comment"># 合并相似人名</span><br>├── PrimeVideoInfoSpider <span class="hljs-comment"># 补爬Prime Video标题的爬虫脚本</span><br>├── README.assets <span class="hljs-comment"># 文档配图</span><br>└── README.md <span class="hljs-comment"># 文档</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h1 id="获取用户评价"><a href="#获取用户评价" class="headerlink" title="获取用户评价"></a>获取用户评价</h1><p>首先打开要求中给出的<a target="_blank" rel="noopener" href="http://snap.stanford.edu/data/web-Movies.html">snap网页</a>，观察可发现，它提供了一个下载链接，用于下载十多年来由约九十万用户发出的与二十五万产品相关的近八百万条评论。</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20221020205139744.png" srcset="/img/loading.gif" lazyload alt="image-20221020205139744"></p>
+<p>下载压缩包后解压，会得到一个将近9G的<code>movies.txt</code>文件，里面的文本格式基本如下所示，其中<code>productId</code>即为每个产品对应的亚马逊产品号（ASIN），并且都是唯一的。</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20221020205159989.png" srcset="/img/loading.gif" lazyload alt="image-20221020205159989"></p>
+<p>由于文本格式非常整齐，因此可以直接用Python逐行读取，提取内容。</p>
+<p>具体代码见<code>extract_movies_txt.ipynb</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd<br><br>i = <span class="hljs-number">0</span><br><br>productId = []<br>userId = []<br>profileName = []<br>helpfulness = []<br>score = []<br>time = []<br>summary = []<br>text = []<br><br><span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> <span class="hljs-built_in">open</span>(<span class="hljs-string">&quot;../Data/Raw/movies.txt&quot;</span>, <span class="hljs-string">&#x27;r&#x27;</span>, encoding=<span class="hljs-string">&#x27;UTF-8&#x27;</span>, errors=<span class="hljs-string">&#x27;ignore&#x27;</span>): <br>    split = line.split(<span class="hljs-string">&#x27; &#x27;</span>, <span class="hljs-number">1</span>)<br><span class="hljs-comment">#     print(split)</span><br>    <span class="hljs-keyword">if</span> split == []:<br>        <span class="hljs-keyword">continue</span><br>        <br>    <span class="hljs-keyword">if</span> split[<span class="hljs-number">0</span>] == <span class="hljs-string">&quot;product/productId:&quot;</span>:<br>        productId.append(split[<span class="hljs-number">1</span>])<br>    <span class="hljs-keyword">elif</span> split[<span class="hljs-number">0</span>] == <span class="hljs-string">&quot;review/userId:&quot;</span>:<br>        userId.append(split[<span class="hljs-number">1</span>])<br>    <span class="hljs-keyword">elif</span> split[<span class="hljs-number">0</span>] == <span class="hljs-string">&quot;review/profileName:&quot;</span>:<br>        profileName.append(split[<span class="hljs-number">1</span>])<br>    <span class="hljs-keyword">elif</span> split[<span class="hljs-number">0</span>] == <span class="hljs-string">&quot;review/helpfulness:&quot;</span>:<br>        helpfulness.append(split[<span class="hljs-number">1</span>])<br>    <span class="hljs-keyword">elif</span> split[<span class="hljs-number">0</span>] == <span class="hljs-string">&quot;review/score:&quot;</span>:<br>        score.append(split[<span class="hljs-number">1</span>])<br>    <span class="hljs-keyword">elif</span> split[<span class="hljs-number">0</span>] == <span class="hljs-string">&quot;review/time:&quot;</span>:<br>        time.append(split[<span class="hljs-number">1</span>])<br>    <span class="hljs-keyword">elif</span> split[<span class="hljs-number">0</span>] == <span class="hljs-string">&quot;review/summary:&quot;</span>:<br>        summary.append(split[<span class="hljs-number">1</span>])<br>    <span class="hljs-keyword">elif</span> split[<span class="hljs-number">0</span>] == <span class="hljs-string">&quot;review/text:&quot;</span>:<br>        text.append(split[<span class="hljs-number">1</span>])<br>        i += <span class="hljs-number">1</span><br>    <br>    <span class="hljs-keyword">if</span> i % <span class="hljs-number">1000000</span> == <span class="hljs-number">0</span>:<br>        <span class="hljs-built_in">print</span>(i)<br>            <br><span class="hljs-built_in">print</span>(i)<br><span class="hljs-comment"># 字典中的key值即为csv中列名</span><br>dataframe = pd.DataFrame(&#123;<span class="hljs-string">&#x27;productId&#x27;</span>:productId,<span class="hljs-string">&#x27;userId&#x27;</span>:userId,<span class="hljs-string">&#x27;profileName&#x27;</span>:profileName,<span class="hljs-string">&#x27;helpfulness&#x27;</span>:helpfulness,<span class="hljs-string">&#x27;score&#x27;</span>:score,<span class="hljs-string">&#x27;time&#x27;</span>:time,<span class="hljs-string">&#x27;summary&#x27;</span>:summary,<span class="hljs-string">&#x27;text&#x27;</span>:text&#125;)<br><br><span class="hljs-comment"># 将DataFrame存储为csv,index表示是否显示行名，default=True</span><br>dataframe.to_csv(<span class="hljs-string">&quot;comments.csv&quot;</span>,index=<span class="hljs-literal">False</span>,sep=<span class="hljs-string">&#x27;,&#x27;</span>)<br></code></pre></td></tr></table></figure>
+
+<p>逐行读取并用<code>split</code>函数提取内容，再用<code>pandas</code>导出为csv保存，最后得到一个约8G的csv文件，里面包含评论的各种信息</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20221017193813962.png" srcset="/img/loading.gif" lazyload alt="image-20221017193813962"></p>
+<p>可以看到，提取过程中并没有对换行做出很好的处理，因此用pandas导入后再进行处理，去除换行（<code>get_date_from_comments.ipynb</code>）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python">comments[<span class="hljs-string">&#x27;productId&#x27;</span>] = comments[<span class="hljs-string">&#x27;productId&#x27;</span>].<span class="hljs-built_in">str</span>.strip()<br>comments[<span class="hljs-string">&#x27;userId&#x27;</span>] = comments[<span class="hljs-string">&#x27;userId&#x27;</span>].<span class="hljs-built_in">str</span>.strip()<br>comments[<span class="hljs-string">&#x27;profileName&#x27;</span>] = comments[<span class="hljs-string">&#x27;profileName&#x27;</span>].<span class="hljs-built_in">str</span>.strip()<br>comments[<span class="hljs-string">&#x27;helpfulness&#x27;</span>] = comments[<span class="hljs-string">&#x27;helpfulness&#x27;</span>].<span class="hljs-built_in">str</span>.strip()<br>comments[<span class="hljs-string">&#x27;summary&#x27;</span>] = comments[<span class="hljs-string">&#x27;summary&#x27;</span>].<span class="hljs-built_in">str</span>.strip()<br></code></pre></td></tr></table></figure>
+
+<p>可以看到，经过处理后，基本达到了一个较好的效果</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20221020205034420.png" srcset="/img/loading.gif" lazyload alt="image-20221020205034420"></p>
+<h1 id="爬取网页"><a href="#爬取网页" class="headerlink" title="爬取网页"></a>爬取网页</h1><h2 id="获取ASIN"><a href="#获取ASIN" class="headerlink" title="获取ASIN"></a>获取ASIN</h2><p>由官网介绍可得，每件产品对应的网址，其实就是<code>amazon.com/dp/$(ASIN)</code>，其中ASIN为对应的产品编号</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20221020205208740.png" srcset="/img/loading.gif" lazyload alt="image-20221020205208740"></p>
+<p><img src="/Users/baokker/Work/Homework5thSemester/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/Homework-1/submit/README.assets/image-20221020205225156.png" srcset="/img/loading.gif" lazyload alt="image-20221020205225156"></p>
+<p>为此，首先在<code>movies.txt</code>中提取ASIN（<code>extract_movies_txt.ipynb</code>），并保存为<code>productId.csv</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> pandas <span class="hljs-keyword">as</span> pd<br><br>productId = []<br><span class="hljs-keyword">for</span> line <span class="hljs-keyword">in</span> <span class="hljs-built_in">open</span>(<span class="hljs-string">&quot;../Data/Raw/movies.txt&quot;</span>, <span class="hljs-string">&#x27;r&#x27;</span>, encoding=<span class="hljs-string">&#x27;UTF-8&#x27;</span>, errors=<span class="hljs-string">&#x27;ignore&#x27;</span>): <br>    split = line.split()<br><span class="hljs-comment">#     print(split)</span><br>    <span class="hljs-keyword">if</span> split == []:<br>        <span class="hljs-keyword">continue</span><br>    <span class="hljs-keyword">if</span> split[<span class="hljs-number">0</span>] == <span class="hljs-string">&quot;product/productId:&quot;</span>:<br>        <span class="hljs-keyword">if</span> split[<span class="hljs-number">1</span>] <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> productId:<br>            productId.append(split[<span class="hljs-number">1</span>])<br><span class="hljs-comment">#             print(productId)</span><br>     <br><span class="hljs-comment"># 字典中的key值即为csv中列名</span><br>dataframe = pd.DataFrame(&#123;<span class="hljs-string">&#x27;productId&#x27;</span>:productId&#125;)<br><br><span class="hljs-comment"># 将DataFrame存储为csv,index表示是否显示行名，default=True</span><br>dataframe.to_csv(<span class="hljs-string">&quot;productId.csv&quot;</span>,index=<span class="hljs-literal">False</span>,sep=<span class="hljs-string">&#x27;,&#x27;</span>)<br></code></pre></td></tr></table></figure>
+
+<h2 id="定位网页内容"><a href="#定位网页内容" class="headerlink" title="定位网页内容"></a>定位网页内容</h2><p>接下来对网页内容进行爬取。在此处使用Scrapy＋Selenium进行爬取网页内容，具体内容如下：</p>
+<p>首先安装Scrapy，再使用scrapy自带的命令行查看和分析单个网页</p>
+<p><a target="_blank" rel="noopener" href="https://www.amazon.com/dp/B00006HAXW/">https://www.amazon.com/dp/B00006HAXW/</a></p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs 1c">scrapy shell &#x27;https://www.amazon.com/dp/B<span class="hljs-number">0000</span>6HAXW/&#x27;<br></code></pre></td></tr></table></figure>
+
+<p>之后可以在命令行中通过<code>view(response)</code>方法查看页面，也可以通过<code>response.xpath(&#39;...&#39;).get()</code>的方法获取数据。（xpath是一种XML路径语言，相比css更容易确定HTML页面中的位置</p>
+<p>xpath的语法不难，但是浏览器自带的开发者工具提供了更为方便的方式。在网页内容中右键选中对应的标签块（例如，<code>&lt;span&gt;</code>，<code>&lt;h1</code>），右键即可复制其对应的XPath，并查看相关内容</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Snipaste_2022-10-12_15-36-44.png" srcset="/img/loading.gif" lazyload alt="Snipaste_2022-10-12_15-36-44"></p>
+<p>经观察，亚马逊的电影网页分成正常和Prime Video两种</p>
+<p>正常页面如下</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20221020205501754.png" srcset="/img/loading.gif" lazyload alt="image-20221020205501754"></p>
+<p>经观察，爬取了这部分以及标题的内容</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20221020205514216.png" srcset="/img/loading.gif" lazyload alt="image-20221020205514216"></p>
+<p>Prime Video的页面如下</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20221020205807719.png" srcset="/img/loading.gif" lazyload alt="image-20221020205807719"></p>
+<p>主要选取了以下部分内容</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20221020205821572.png" srcset="/img/loading.gif" lazyload alt="image-20221020205821572"></p>
+<h2 id="开爬"><a href="#开爬" class="headerlink" title="开爬"></a>开爬</h2><p>接下来使用scrapy创建项目</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">scrapy startproject FilmInfoSpider<br></code></pre></td></tr></table></figure>
+
+<p>在<code>FilmInfoSpider/FilmInfoSpider</code>下建立py文件，并写入爬虫脚本，爬取的链接为上文中提取的25w个产品对应的网址</p>
+<p>核心部分代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">parse</span>(<span class="hljs-params">self, response</span>):<br>    <span class="hljs-comment"># 初始化yield返回数据</span><br>    attributes = &#123;<span class="hljs-string">&#x27;ASIN&#x27;</span>:<span class="hljs-string">&#x27;&#x27;</span>,<span class="hljs-string">&#x27;Title&#x27;</span>:<span class="hljs-string">&#x27;&#x27;</span>,<span class="hljs-string">&#x27;Language&#x27;</span>:<span class="hljs-string">&#x27;&#x27;</span>,<span class="hljs-string">&#x27;Release date&#x27;</span>:<span class="hljs-string">&#x27;&#x27;</span>,<span class="hljs-string">&#x27;Date First Available&#x27;</span>:<span class="hljs-string">&#x27;&#x27;</span>,<span class="hljs-string">&#x27;Run time&#x27;</span>:<span class="hljs-string">&#x27;&#x27;</span>,<span class="hljs-string">&#x27;Producers&#x27;</span>:<span class="hljs-string">&#x27;&#x27;</span>,<span class="hljs-string">&#x27;Directors&#x27;</span>:<span class="hljs-string">&#x27;&#x27;</span>,<span class="hljs-string">&#x27;Writers&#x27;</span>:<span class="hljs-string">&#x27;&#x27;</span>,<span class="hljs-string">&#x27;Actors&#x27;</span>:<span class="hljs-string">&#x27;&#x27;</span>,<span class="hljs-string">&#x27;Media Format&#x27;</span>:<span class="hljs-string">&#x27;&#x27;</span>,<span class="hljs-string">&#x27;Subtitles&#x27;</span>:<span class="hljs-string">&#x27;&#x27;</span>, <span class="hljs-string">&#x27;Genres&#x27;</span>:<span class="hljs-string">&#x27;&#x27;</span>&#125;<br>    <br>    <span class="hljs-comment"># 确定ASIN值</span><br>    asin_begin_position = <span class="hljs-number">26</span><br>    asin_length = <span class="hljs-number">10</span><br>    attributes[<span class="hljs-string">&#x27;ASIN&#x27;</span>] = response.url[asin_begin_position:asin_begin_position + asin_length]<br>    <br>    <span class="hljs-comment"># 判断类别</span><br>    product_type = response.xpath(<span class="hljs-string">&#x27;//*[@id=&quot;nav-search-label-id&quot;]/text()&#x27;</span>).get()<br><br>    <span class="hljs-comment"># 如果都不是 直接return</span><br>    <span class="hljs-keyword">if</span> product_type != <span class="hljs-string">&#x27;Movies &amp; TV&#x27;</span> <span class="hljs-keyword">and</span> product_type != <span class="hljs-string">&#x27;Prime Video&#x27;</span>:<br>        <span class="hljs-keyword">return</span> <br><br>    <span class="hljs-comment"># 写入文件 以备不时之需</span><br>    path = <span class="hljs-string">&#x27;WebPages/&#x27;</span><br>    <span class="hljs-comment"># path = &#x27;/Volumes/PortableSSD/WebPages&#x27;</span><br>    filename = <span class="hljs-string">f&#x27;<span class="hljs-subst">&#123;path&#125;</span>/<span class="hljs-subst">&#123;attributes[<span class="hljs-string">&quot;ASIN&quot;</span>]&#125;</span>.html&#x27;</span><br>    <span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(filename, <span class="hljs-string">&#x27;wb&#x27;</span>) <span class="hljs-keyword">as</span> f:<br>        f.write(response.body)<br><br>    <span class="hljs-comment"># Movies &amp; TV</span><br>    <span class="hljs-keyword">if</span> product_type == <span class="hljs-string">&#x27;Movies &amp; TV&#x27;</span>:<br>        <span class="hljs-comment"># 获取标题</span><br>        Title = response.xpath(<span class="hljs-string">&#x27;//*[@id=&quot;productTitle&quot;]/text()&#x27;</span>).extract_first().strip()<br>        attributes[<span class="hljs-string">&#x27;Title&#x27;</span>] = Title<br><br>        <span class="hljs-comment"># 获取Product details</span><br>        result = response.xpath(<span class="hljs-string">&#x27;//*[@id=&quot;detailBullets_feature_div&quot;]/ul/li/span/span/text()&#x27;</span>).getall()<br>        result = [r.replace(<span class="hljs-string">&#x27;:&#x27;</span>,<span class="hljs-string">&#x27;&#x27;</span>).replace(<span class="hljs-string">&#x27;\u200f&#x27;</span>,<span class="hljs-string">&#x27;&#x27;</span>).replace(<span class="hljs-string">&#x27;\u200e&#x27;</span>,<span class="hljs-string">&#x27;&#x27;</span>).replace(<span class="hljs-string">&#x27;\t&#x27;</span>, <span class="hljs-string">&#x27;&#x27;</span>).replace(<span class="hljs-string">&#x27;\n&#x27;</span>, <span class="hljs-string">&#x27;&#x27;</span>).replace(<span class="hljs-string">&#x27;\r&#x27;</span>, <span class="hljs-string">&#x27;&#x27;</span>).strip() <span class="hljs-keyword">for</span> r <span class="hljs-keyword">in</span> result]<br>        <br>        columns = result[<span class="hljs-number">0</span>::<span class="hljs-number">2</span>]<br>        value = result[<span class="hljs-number">1</span>::<span class="hljs-number">2</span>]<br><br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(columns)):<br>            <span class="hljs-keyword">for</span> key <span class="hljs-keyword">in</span> attributes.keys():<br>                <span class="hljs-keyword">if</span> columns[i] <span class="hljs-keyword">in</span> key:<br>                    attributes[key] = value[i]<br><br>    <span class="hljs-comment"># Prime Video</span><br>    <span class="hljs-keyword">elif</span> product_type == <span class="hljs-string">&#x27;Prime Video&#x27;</span>:<br>        <span class="hljs-comment"># 是否为电影</span><br>        <span class="hljs-keyword">if</span> <span class="hljs-string">&#x27;&quot;titleType&quot;:&quot;movie&quot;&#x27;</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> response.xpath(<span class="hljs-string">&#x27;//*[@id=&quot;a-page&quot;]/div[2]/script[15]/text()&#x27;</span>).get():<br>            <span class="hljs-keyword">return</span><br><br>        <span class="hljs-comment"># Title = response.xpath(&#x27;//*[@id=&quot;a-page&quot;]/div[2]/div[4]/div/div/div[2]/div[3]/div/h1/text()&#x27;).get() # 原先代码有误</span><br>        Title = response.xpath(<span class="hljs-string">&#x27;//*[@id=&quot;a-page&quot;]/div[2]/div[4]/div/div/div[2]/div[2]/div/h1/text()&#x27;</span>).get()<br>        <span class="hljs-keyword">if</span> Title == <span class="hljs-literal">None</span>:<br>            Title = response.xpath(<span class="hljs-string">&#x27;//*[@id=&quot;a-page&quot;]/div[2]/div[4]/div/div/div[2]/div[1]/div/h1/text()&#x27;</span>).get()<br>            <br>        attributes[<span class="hljs-string">&#x27;Title&#x27;</span>] = Title<br><br>        columns_1 = response.xpath(<span class="hljs-string">&#x27;//*[@id=&quot;btf-product-details&quot;]/div/dl/dt/span/text()&#x27;</span>).getall()<br>        value_1 = response.xpath(<span class="hljs-string">&#x27;//*[@id=&quot;btf-product-details&quot;]/div/dl/dd/*/text()&#x27;</span>).getall()<br><br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(columns_1)):<br>            <span class="hljs-keyword">for</span> key <span class="hljs-keyword">in</span> attributes.keys():<br>                <span class="hljs-keyword">if</span> columns_1[i] <span class="hljs-keyword">in</span> key:<br>                    attributes[key] = value_1[i]<br><br>        columns_2 = response.xpath(<span class="hljs-string">&#x27;//*[@id=&quot;meta-info&quot;]/div/dl/dt/span/text()&#x27;</span>).getall()<br>        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(columns_2)):<br>            <span class="hljs-comment"># 根据columns内容判断</span><br>            <span class="hljs-keyword">if</span> columns_2[i] == <span class="hljs-string">&#x27;Directors&#x27;</span> <span class="hljs-keyword">or</span> columns_2[i] == <span class="hljs-string">&#x27;Genres&#x27;</span>:<br>                attributes[columns_2[i]] = response.xpath(<span class="hljs-string">&#x27;//*[@id=&quot;meta-info&quot;]/div/dl[&#x27;</span> + <span class="hljs-built_in">str</span>(i + <span class="hljs-number">1</span>) + <span class="hljs-string">&#x27;]/dd/a/text()&#x27;</span>).get()<br>            <span class="hljs-keyword">elif</span> columns_2[i] == <span class="hljs-string">&#x27;Starring&#x27;</span>:<br>                attributes[<span class="hljs-string">&#x27;Actors&#x27;</span>] = <span class="hljs-built_in">str</span>(response.xpath(<span class="hljs-string">&#x27;//*[@id=&quot;meta-info&quot;]/div/dl[&#x27;</span> + <span class="hljs-built_in">str</span>(i + <span class="hljs-number">1</span>) + <span class="hljs-string">&#x27;]/dd/a/text()&#x27;</span>).getall())[<span class="hljs-number">1</span>:-<span class="hljs-number">2</span>].replace(<span class="hljs-string">&quot;&#x27;&quot;</span>,<span class="hljs-string">&#x27;&#x27;</span>)<br>    <br>    <span class="hljs-keyword">yield</span> attributes<br></code></pre></td></tr></table></figure>
+
+<p>具体来说，首先根据搜索框里类别来判断网页的类型，如果是Movies &amp; TV，那么就按普通页面的的内容获取标题和内容；如果是Prime Video，则再判断该类型是否为movie，是则提取网页内容。</p>
+<p>此外，为以防万一，将每次访问的网页内容也写入到文件，方便后续调用</p>
+<h2 id="反反爬"><a href="#反反爬" class="headerlink" title="反反爬"></a>反反爬</h2><p>然而亚马逊具有很强的反爬机制，没过多久就要求我输入验证码验证，大致图片如下：</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/1620.jpeg" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>另外，对于请求过度频繁的ip，亚马逊也会禁止其访问内容</p>
+<p>对此，需要进行反反爬措施。有ip池代理＋伪造请求头的方法，也有使用Selenium模拟手动打开的方法。Selenium本身是为Web浏览器提供的一个测试工具，为测试的自动化提供了一系列方法，由于其在某种程度上说类似于模拟人进行浏览器的操作，相比单纯的发送ip请求，可以绕过更多限制，减少反爬的可能，因此也有越来越多采用Selenium进行爬虫的方案。此处采用了Selenium作为scrapy的middleware，先用Selenium打开一个浏览器，再打开制定的网页，并作为response返回。</p>
+<p>核心代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">process_request</span>(<span class="hljs-params">self, request, spider</span>):<br>    <span class="hljs-comment"># Called for each request that goes through the downloader</span><br>    <span class="hljs-comment"># middleware.</span><br><br>    <span class="hljs-comment"># Must either:</span><br>    <span class="hljs-comment"># - return None: continue processing this request</span><br>    <span class="hljs-comment"># - or return a Response object</span><br>    <span class="hljs-comment"># - or return a Request object</span><br>    <span class="hljs-comment"># - or raise IgnoreRequest: process_exception() methods of</span><br>    <span class="hljs-comment">#   installed downloader middleware will be called</span><br>    self.driver.get(request.url+<span class="hljs-string">&quot;/?language=en_US&quot;</span>)<br>    self.driver.refresh()<br><br>    <span class="hljs-comment"># 检测机器人</span><br>    robot_sentence = <span class="hljs-string">&quot;Sorry, we just need to make sure you&#x27;re not a robot. For best results, please make sure your browser is accepting cookies.&quot;</span><br>    <span class="hljs-keyword">if</span> robot_sentence <span class="hljs-keyword">in</span> self.driver.page_source:<br>        <span class="hljs-keyword">from</span> lxml <span class="hljs-keyword">import</span> etree<br>        html = etree.HTML(self.driver.page_source)<br><br>        <span class="hljs-keyword">from</span> amazoncaptcha <span class="hljs-keyword">import</span> AmazonCaptcha<br>        link = html.xpath(<span class="hljs-string">&quot;/html/body/div/div[1]/div[3]/div/div/form/div[1]/div/div/div[1]/img/@src&quot;</span>)[<span class="hljs-number">0</span>]<br>        captcha = AmazonCaptcha.fromlink(link)<br>        solution = captcha.solve()<br><br>        <span class="hljs-keyword">from</span> selenium.webdriver.common.by <span class="hljs-keyword">import</span> By<br>        input_element = self.driver.find_element(By.ID,<span class="hljs-string">&quot;captchacharacters&quot;</span>)<br>        input_element.send_keys(solution)<br><br>        button = self.driver.find_element(By.XPATH,<span class="hljs-string">&quot;//button&quot;</span>)<br>        button.click()<br>        time.sleep(<span class="hljs-number">3</span>)<br><br>    source = self.driver.page_source<br>    response = HtmlResponse(url = self.driver.current_url, body = source, request = request, encoding = <span class="hljs-string">&#x27;utf-8&#x27;</span>)<br>    <span class="hljs-keyword">return</span> response<br></code></pre></td></tr></table></figure>
+
+<p>这里主要有两个要点：</p>
+<ul>
+<li>经过一定的爬取后，发现数据并不完整，经过debug发现，网页在加载时不一定能完全加载完，下面的Product details可能不会加载成功，而是变成一段sorry的话，再刷新后才会正常显示。因此在每次Selenium获取网页后，调用<code>refresh()</code>方法再次刷新</li>
+<li>爬取时有较小概率出现验证码的问题。经过查阅，发现github上有一库为<code>amazoncaptcha</code>，可以根据传入的图片链接获得对应的验证码数字。于是先用xpath获取验证码图片的链接，再用<code>amazoncaptcha</code>得出结果，并用Selenium模拟输入验证码并按下按钮，即可解决验证码的问题</li>
+</ul>
+<p>解决这些问题后，连开五个进程进行了爬取：</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Snipaste_2022-10-12_11-00-55.png" srcset="/img/loading.gif" lazyload alt="Snipaste_2022-10-12_11-00-55"></p>
+<p>（忘记截屏15w-2ow的了..）</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/1-5.png" srcset="/img/loading.gif" lazyload alt="1-5"></p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/5-10.png" srcset="/img/loading.gif" lazyload alt="5-10"></p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/10-15.png" srcset="/img/loading.gif" lazyload alt="10-15"></p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20-25.png" srcset="/img/loading.gif" lazyload alt="20-25"></p>
+<h2 id="补爬"><a href="#补爬" class="headerlink" title="补爬"></a>补爬</h2><p>爬取完数据后，发现部分数据没有Title，检查后发现是Prime video检索标题的Xpath有误</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20221017174931183.png" srcset="/img/loading.gif" lazyload alt="image-20221017174931183"></p>
+<p>所幸在之前保留了网页的文件，因此修改代码后，使用scrapy对本地文件爬取即可</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">scrapy startproject PrimeVideoSpider<br></code></pre></td></tr></table></figure>
+
+<p>由于仅是本地文件，也不存在反爬的可能，直接用默认的middleware即可</p>
+<h1 id="合并相同电影"><a href="#合并相同电影" class="headerlink" title="合并相同电影"></a>合并相同电影</h1><p>观察电影标题，可以发现很多电影其实是一部，无非是版本（VHS，DVD，Blu-ray），或者是放映年份的区别。为保证数据的质量，对相似的电影进行合并</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20221017181359390.png" srcset="/img/loading.gif" lazyload alt="image-20221017181359390"></p>
+<p>在此处，主要采用pandas+fuzzywuzzy的方法合并数据。pandas是一个著名的python的数据分析库，在处理数据方面工具齐全，性能较快；<a target="_blank" rel="noopener" href="https://github.com/seatgeek/fuzzywuzzy">fuzzywuzzy</a>是一个匹配字符串的库，采用<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Levenshtein_distance">Levenshtein Distance</a>计算字符串直接的相似度</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20221021161242643.png" srcset="/img/loading.gif" lazyload alt="image-20221021161242643"></p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20221022131351128.png" srcset="/img/loading.gif" lazyload alt="image-20221022131351128"></p>
+<p>针对合并相同电影的需求，给出如下方法：</p>
+<ol>
+<li>首先去除Title中关于版本的信息（VHS，DVD等），并删除最外边多余的引号</li>
+<li>利用Levenshtein Distance计算相似度，选取那些得分高于95的，视为同一电影</li>
+<li>在合并电影时<ul>
+<li>Title选名字最短的</li>
+<li>Release Date，Date First Available选最早的</li>
+<li>Run time，Producers，Directors，Writers，Actors，Genres一般出现的都不会有不同，选取第一个出现的</li>
+<li>Producers，Directors，Writers，Actors使用列表分割</li>
+<li>Media Format，Subtitles将所有可能的结果纳入到一个集合中</li>
+</ul>
+</li>
+</ol>
+<p>核心代码见<code>merge_same_title_and_record_source.ipynb</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> datetime<br><br>i = <span class="hljs-number">0</span><br><br>merged_movies_collection = pd.DataFrame(columns=[<span class="hljs-string">&#x27;Title&#x27;</span>,<span class="hljs-string">&#x27;Language&#x27;</span>,<span class="hljs-string">&#x27;Release date&#x27;</span>,<span class="hljs-string">&#x27;Date First Available&#x27;</span>,<span class="hljs-string">&#x27;Run time&#x27;</span>,<span class="hljs-string">&#x27;Producers&#x27;</span>,<span class="hljs-string">&#x27;Directors&#x27;</span>,<span class="hljs-string">&#x27;Writers&#x27;</span>,<span class="hljs-string">&#x27;Actors&#x27;</span>,<span class="hljs-string">&#x27;Media Format&#x27;</span>,<span class="hljs-string">&#x27;Subtitles&#x27;</span>,<span class="hljs-string">&#x27;Genres&#x27;</span>])<br>merged_movies_source_asin_collection = pd.DataFrame(columns=[<span class="hljs-string">&#x27;Title&#x27;</span>,<span class="hljs-string">&#x27;Language&#x27;</span>,<span class="hljs-string">&#x27;Release date&#x27;</span>,<span class="hljs-string">&#x27;Date First Available&#x27;</span>,<span class="hljs-string">&#x27;Run time&#x27;</span>,<span class="hljs-string">&#x27;Producers&#x27;</span>,<span class="hljs-string">&#x27;Directors&#x27;</span>,<span class="hljs-string">&#x27;Writers&#x27;</span>,<span class="hljs-string">&#x27;Actors&#x27;</span>,<span class="hljs-string">&#x27;Media Format&#x27;</span>,<span class="hljs-string">&#x27;Subtitles&#x27;</span>,<span class="hljs-string">&#x27;Genres&#x27;</span>])<br><br>whole_length = movies_info.shape[<span class="hljs-number">0</span>]<br><br><span class="hljs-keyword">for</span> index, row <span class="hljs-keyword">in</span> movies_info.iterrows():<br>    i += <span class="hljs-number">1</span><br>    <span class="hljs-keyword">if</span> whole_length - index &lt;= <span class="hljs-number">10</span>: <span class="hljs-comment"># 不能直接用shape[0]，因为会不断变化</span><br>        end = whole_length<br>    <span class="hljs-keyword">else</span>:<br>        end = index + <span class="hljs-number">10</span><br>        <br>    similar_title_info = process.extract(row[<span class="hljs-string">&#x27;Title&#x27;</span>], movies_info.loc[index:end, <span class="hljs-string">&#x27;Title&#x27;</span>] , limit = <span class="hljs-number">10</span>)<br>    similar_title_order = [s[<span class="hljs-number">2</span>] <span class="hljs-keyword">for</span> s <span class="hljs-keyword">in</span> similar_title_info <span class="hljs-keyword">if</span> s[<span class="hljs-number">1</span>] &gt;= <span class="hljs-number">95</span>]        <br>    <br>    <span class="hljs-comment"># WARNING:root:Applied processor reduces input query to empty string, all comparisons will have score 0. [Query: &#x27;-&#x27;]</span><br>    <span class="hljs-comment"># &#x27;$&#x27;,&#x27;-&#x27;</span><br>    <span class="hljs-keyword">if</span> similar_title_order == [] <span class="hljs-keyword">and</span> index <span class="hljs-keyword">in</span> movies_info.index:<br>        similar_title_order = [index]<br>    <span class="hljs-comment"># has been added</span><br>    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> similar_title_order == []:<br>        <span class="hljs-keyword">continue</span><br>    <br>    for_merge_info = movies_info.loc[similar_title_order,:]<br>    <br>    merged_movie_info = pd.DataFrame(data=[[<span class="hljs-string">&#x27;&#x27;</span>,[],<span class="hljs-string">&#x27;&#x27;</span>,<span class="hljs-string">&#x27;&#x27;</span>,<span class="hljs-string">&#x27;&#x27;</span>,<span class="hljs-string">&#x27;&#x27;</span>,<span class="hljs-string">&#x27;&#x27;</span>,[],[],[],[],<span class="hljs-string">&#x27;&#x27;</span>]], columns=[<span class="hljs-string">&#x27;Title&#x27;</span>,<span class="hljs-string">&#x27;Language&#x27;</span>,<span class="hljs-string">&#x27;Release date&#x27;</span>,<span class="hljs-string">&#x27;Date First Available&#x27;</span>,<span class="hljs-string">&#x27;Run time&#x27;</span>,<span class="hljs-string">&#x27;Producers&#x27;</span>,<span class="hljs-string">&#x27;Directors&#x27;</span>,<span class="hljs-string">&#x27;Writers&#x27;</span>,<span class="hljs-string">&#x27;Actors&#x27;</span>,<span class="hljs-string">&#x27;Media Format&#x27;</span>,<span class="hljs-string">&#x27;Subtitles&#x27;</span>,<span class="hljs-string">&#x27;Genres&#x27;</span>])<br>    merged_movie_source_asin = pd.DataFrame(data=[[[],[],[],[],<span class="hljs-string">&#x27;&#x27;</span>,<span class="hljs-string">&#x27;&#x27;</span>,<span class="hljs-string">&#x27;&#x27;</span>,<span class="hljs-string">&#x27;&#x27;</span>,[],[],[],<span class="hljs-string">&#x27;&#x27;</span>]], columns=[<span class="hljs-string">&#x27;Title&#x27;</span>,<span class="hljs-string">&#x27;Language&#x27;</span>,<span class="hljs-string">&#x27;Release date&#x27;</span>,<span class="hljs-string">&#x27;Date First Available&#x27;</span>,<span class="hljs-string">&#x27;Run time&#x27;</span>,<span class="hljs-string">&#x27;Producers&#x27;</span>,<span class="hljs-string">&#x27;Directors&#x27;</span>,<span class="hljs-string">&#x27;Writers&#x27;</span>,<span class="hljs-string">&#x27;Actors&#x27;</span>,<span class="hljs-string">&#x27;Media Format&#x27;</span>,<span class="hljs-string">&#x27;Subtitles&#x27;</span>,<span class="hljs-string">&#x27;Genres&#x27;</span>])<br>    <br>    <span class="hljs-comment"># 初始</span><br>    <span class="hljs-keyword">for</span> index, row <span class="hljs-keyword">in</span> for_merge_info.iterrows():<br>        <span class="hljs-comment"># Title 默认加上所有ASIN</span><br>        merged_movie_source_asin.loc[<span class="hljs-number">0</span>,<span class="hljs-string">&#x27;Title&#x27;</span>].append(row[<span class="hljs-string">&#x27;ASIN&#x27;</span>])<br>        <span class="hljs-comment"># Title 选最短名</span><br>        <span class="hljs-keyword">if</span> merged_movie_info.loc[<span class="hljs-number">0</span>,<span class="hljs-string">&#x27;Title&#x27;</span>] == <span class="hljs-string">&#x27;&#x27;</span> <span class="hljs-keyword">or</span> <span class="hljs-built_in">len</span>(merged_movie_info.loc[<span class="hljs-number">0</span>,<span class="hljs-string">&#x27;Title&#x27;</span>]) &gt; <span class="hljs-built_in">len</span>(row[<span class="hljs-string">&#x27;Title&#x27;</span>]): <br>            merged_movie_info.loc[<span class="hljs-number">0</span>,<span class="hljs-string">&#x27;Title&#x27;</span>] = row[<span class="hljs-string">&#x27;Title&#x27;</span>]<br>        <span class="hljs-comment"># Language 有且不重复就加进去</span><br>        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> pd.isna(row[<span class="hljs-string">&#x27;Language&#x27;</span>]):<br>            merged_movie_source_asin.loc[<span class="hljs-number">0</span>,<span class="hljs-string">&#x27;Language&#x27;</span>].append(row[<span class="hljs-string">&#x27;ASIN&#x27;</span>])<br>            <span class="hljs-keyword">if</span> row[<span class="hljs-string">&#x27;Language&#x27;</span>] <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> merged_movie_info.loc[<span class="hljs-number">0</span>,<span class="hljs-string">&#x27;Language&#x27;</span>]:<br>                merged_movie_info.loc[<span class="hljs-number">0</span>,<span class="hljs-string">&#x27;Language&#x27;</span>].append(row[<span class="hljs-string">&#x27;Language&#x27;</span>])<br>				<span class="hljs-comment"># ...省略</span><br>    <br>    merged_movies_collection =  pd.concat([merged_movies_collection,merged_movie_info], ignore_index=<span class="hljs-literal">True</span>)<br>    merged_movies_source_asin_collection = pd.concat([merged_movies_source_asin_collection, merged_movie_source_asin], ignore_index=<span class="hljs-literal">True</span>)<br>    <br>    movies_info.drop(similar_title_order, inplace=<span class="hljs-literal">True</span>)<br>    <br>    <span class="hljs-keyword">if</span> i % <span class="hljs-number">1000</span> == <span class="hljs-number">0</span>:<br>        <span class="hljs-built_in">print</span>(i)<br></code></pre></td></tr></table></figure>
+
+<p>另外，考虑到fuzzywuzzy在计算大量距离时耗时较长，因此先将电影名排序，再将每部电影与之后10部电影的相似度进行比较，从而减少了运行的时间</p>
+<h1 id="合并人名"><a href="#合并人名" class="headerlink" title="合并人名"></a>合并人名</h1><p>人名的格式不尽相同，有时相同的人会有不同的名字，情况如下：</p>
+<ul>
+<li>人名颠倒，或者缺少空格</li>
+</ul>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20221020211208243.png" srcset="/img/loading.gif" lazyload alt="image-20221020211208243"></p>
+<ul>
+<li>大小写不同</li>
+</ul>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20221020211345194.png" srcset="/img/loading.gif" lazyload alt="image-20221020211345194"></p>
+<ul>
+<li><p>middle name缩写</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20221020211639154.png" srcset="/img/loading.gif" lazyload alt="image-20221020211639154"></p>
+</li>
+</ul>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20221020211706280.png" srcset="/img/loading.gif" lazyload alt="image-20221020211706280"></p>
+<p>经过测试，仍采用fuzzywuzzy库进行相似度比较</p>
+<ol>
+<li>首先读取电影信息，抽离出所有导演，编剧和演员的名字，合并到names数组中</li>
+<li>对其进行去重，降序排序<ul>
+<li>这样是为了保证更加规范的小写字母的名字在前，以确保替换时以先遍历到的规范名字在前</li>
+</ul>
+</li>
+<li>遍历数组，计算首字母相同的名字之间的相似度，选取得分高于95的进行替换</li>
+</ol>
+<p>（具体代码见<code>merge_similar_names.ipynb</code>）</p>
+<h1 id="上映日期"><a href="#上映日期" class="headerlink" title="上映日期"></a>上映日期</h1><p>部分电影缺少上映日期。对此，从之前提取的评论数据出发，选取对应ASIN值的评论中最早的时间，将其定义为上映日期</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> math<br>i = <span class="hljs-number">0</span><br><span class="hljs-keyword">for</span> index, row <span class="hljs-keyword">in</span> movies_info.iterrows():<br>    <span class="hljs-keyword">if</span> pd.isnull(row[<span class="hljs-string">&#x27;Release date&#x27;</span>]):<br>        ID = row[<span class="hljs-string">&#x27;ASIN&#x27;</span>]<br>        <span class="hljs-built_in">print</span>(ID, end = <span class="hljs-string">&#x27; &#x27;</span>)<br>        earliest_time = comments.loc[comments[<span class="hljs-string">&#x27;productId&#x27;</span>]==ID,<span class="hljs-string">&#x27;time&#x27;</span>].<span class="hljs-built_in">min</span>()<br>        <span class="hljs-built_in">print</span>(earliest_time)<br>        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> math.isnan(earliest_time):<br>            earliest_time_str = time.strftime(<span class="hljs-string">&quot;%B %d, %Y&quot;</span>, time.localtime(earliest_time))<br><span class="hljs-comment">#             movies_info.loc[movies_info[&#x27;ASIN&#x27;] == ID, &#x27;Release date&#x27;] = earliest_time_str</span><br>            row[<span class="hljs-string">&#x27;Release date&#x27;</span>] = earliest_time_str<br>            i += <span class="hljs-number">1</span><br>            <span class="hljs-keyword">if</span> i % <span class="hljs-number">1000</span> == <span class="hljs-number">0</span>:<br>                <span class="hljs-built_in">print</span>(i)<br><span class="hljs-comment">#             print(row)</span><br></code></pre></td></tr></table></figure>
+
+<p>结果如下</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20221018101059482.png" srcset="/img/loading.gif" lazyload alt="image-20221018101059482"></p>
+<p>此外，经调研发现，imdb提供了若干<a target="_blank" rel="noopener" href="https://imdb-api.com/swagger/index.html">API接口</a>，只需要在<a target="_blank" rel="noopener" href="https://developer.imdb.com/?ref_=header">imdb developer</a>上注册一个账号，申请API_KEY，就可以根据文档描述进行查询。简单的示例如下：</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20221031190941823.png" srcset="/img/loading.gif" lazyload alt="image-20221031190941823"></p>
+<h1 id="数据血缘"><a href="#数据血缘" class="headerlink" title="数据血缘"></a>数据血缘</h1><p>在合并相同电影的同时，建立了一个新的名为<code>source_asin</code>的DataFrame，列的信息与电影信息相同，行数也保持一致，而每个单元格的信息则是对应电影信息表中的数据的来源ASIN值。通过这种方式，可以找到每个信息的来源</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20221023102747788.png" srcset="/img/loading.gif" lazyload alt="image-20221023102747788"></p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20221023102706332.png" srcset="/img/loading.gif" lazyload alt="image-20221023102706332"></p>
+
+              
+            </div>
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%8A%80%E6%9C%AF/" class="category-chain-item">技术</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E6%8A%80%E6%9C%AF/">#技术</a>
+      
+        <a href="/tags/ETL/">#ETL</a>
+      
+        <a href="/tags/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/">#数据仓库</a>
+      
+        <a href="/tags/Python/">#Python</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>数据仓库ETL爬虫&amp;数据处理小记</div>
+      <div>http://baokker.github.io/2022/10/11/数据仓库ETL爬虫-数据处理小记/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Baokker</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年10月11日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2022年10月31日</div>
+        </div>
+      
+      <div class="license-meta-item">
+        <div>许可协议</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/10/12/Mac%E4%BD%93%E9%AA%8C%E4%B8%80%E6%9C%88%E6%8C%87%E5%8D%97/" title="Mac体验一月指南">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Mac体验一月指南</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/10/01/%E5%86%99%E4%BA%86%E4%B8%80%E6%AE%B5%E7%AE%80%E7%9F%AD%E7%9A%84%E4%B8%8A%E5%A4%A7%E8%87%AA%E5%8A%A8%E6%9F%A5%E6%88%90%E7%BB%A9%E8%84%9A%E6%9C%AC%EF%BC%88%E6%94%AF%E6%8C%81%E5%BE%AE%E4%BF%A1%E6%8E%A8%E9%80%81%EF%BC%89/" title="写了一段简短的上大自动查成绩脚本（支持微信推送）">
+                        <span class="hidden-mobile">写了一段简短的上大自动查成绩脚本（支持微信推送）</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  <article id="comments" lazyload>
+    
+  <div id="waline"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#waline', function() {
+      Fluid.utils.createCssLink('https://lib.baomitu.com/waline/2.3.2/waline.min.css')
+      Fluid.utils.createScript('https://lib.baomitu.com/waline/2.3.2/waline.min.js', function() {
+        var options = Object.assign(
+          {"serverURL":"https://blog-comment-server-j7p2mwkga-baokker.vercel.app/","path":"window.location.pathname","meta":["nick","mail","link"],"requiredMeta":["nick"],"lang":"zh-CN","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"],"dark":"html[data-user-color-scheme=\"dark\"]","wordLimit":0,"pageSize":10},
+          {
+            el: '#waline',
+            path: window.location.pathname
+          }
+        )
+        Waline.init(options);
+        Fluid.utils.waitElementVisible('#waline .vcontent', () => {
+          var imgSelector = '#waline .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+  </article>
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.0/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script>
+  (function() {
+    var enableLang = CONFIG.code_language.enable && CONFIG.code_language.default;
+    var enableCopy = CONFIG.copy_btn;
+    if (!enableLang && !enableCopy) {
+      return;
+    }
+
+    function getBgClass(ele) {
+      return Fluid.utils.getBackgroundLightness(ele) >= 0 ? 'code-widget-light' : 'code-widget-dark';
+    }
+
+    var copyTmpl = '';
+    copyTmpl += '<div class="code-widget">';
+    copyTmpl += 'LANG';
+    copyTmpl += '</div>';
+    jQuery('.markdown-body pre').each(function() {
+      var $pre = jQuery(this);
+      if ($pre.find('code.mermaid').length > 0) {
+        return;
+      }
+      if ($pre.find('span.line').length > 0) {
+        return;
+      }
+
+      var lang = '';
+
+      if (enableLang) {
+        lang = CONFIG.code_language.default;
+        if ($pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2 && $pre.children().hasClass('hljs')) {
+          lang = $pre[0].children[0].classList[1];
+        } else if ($pre[0].getAttribute('data-language')) {
+          lang = $pre[0].getAttribute('data-language');
+        } else if ($pre.parent().hasClass('sourceCode') && $pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2) {
+          lang = $pre[0].children[0].classList[1];
+          $pre.parent().addClass('code-wrapper');
+        } else if ($pre.parent().hasClass('markdown-body') && $pre[0].classList.length === 0) {
+          $pre.wrap('<div class="code-wrapper"></div>');
+        }
+        lang = lang.toUpperCase().replace('NONE', CONFIG.code_language.default);
+      }
+      $pre.append(copyTmpl.replace('LANG', lang).replace('code-widget">',
+        getBgClass($pre[0]) + (enableCopy ? ' code-widget copy-btn" data-clipboard-snippet><i class="iconfont icon-copy"></i>' : ' code-widget">')));
+
+      if (enableCopy) {
+        Fluid.utils.createScript('https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js', function() {
+          var clipboard = new window.ClipboardJS('.copy-btn', {
+            target: function(trigger) {
+              var nodes = trigger.parentNode.childNodes;
+              for (var i = 0; i < nodes.length; i++) {
+                if (nodes[i].tagName === 'CODE') {
+                  return nodes[i];
+                }
+              }
+            }
+          });
+          clipboard.on('success', function(e) {
+            e.clearSelection();
+            e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-copy', 'icon-success');
+            setTimeout(function() {
+              e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-success', 'icon-copy');
+            }, 2000);
+          });
+        });
+      }
+    });
+  })();
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
