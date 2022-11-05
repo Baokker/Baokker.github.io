@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>苹果邮件APP使用教程</title>
+    <link href="/2022/11/01/%E8%8B%B9%E6%9E%9C%E9%82%AE%E4%BB%B6APP%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"/>
+    <url>/2022/11/01/%E8%8B%B9%E6%9E%9C%E9%82%AE%E4%BB%B6APP%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</url>
+    
+    <content type="html"><![CDATA[<p>近日使用邮箱颇多，然而对于同时持有Gmail、QQ mail和学校mail的我来说，手动管理这些邮箱并非一件易事。于是想起苹果自带的邮件app，遂上手体验了一下，发现功能还不错，而且也与我的全家桶起到了联动的效果</p><h1 id="添加Google邮箱"><a href="#添加Google邮箱" class="headerlink" title="添加Google邮箱"></a>添加Google邮箱</h1><p>可以直接在邮件-&gt;添加账户中选择Google</p><p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20221105171532598.png" alt="image-20221105171532598"></p><p>不过这种方案国内经常容易卡壳，你也可以选择在设置里选择互联网账户，并添加Google，在设置完成后关联到邮件中</p><p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20221105172035117.png" alt="image-20221105172035117"></p><h1 id="QQ邮箱"><a href="#QQ邮箱" class="headerlink" title="QQ邮箱"></a>QQ邮箱</h1><p>选择QQ邮箱</p><p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20221105172104523.png" alt="image-20221105172104523"></p><p>输入账号密码，但密码不是你的那个密码</p><p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20221105172151222.png" alt="image-20221105172151222"></p><p>此时你应当前往qq邮箱，然后找到如下位置，开启IMAP&#x2F;SMTP（计网的知识第一次照进了现实）</p><p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20221105172729479.png" alt="image-20221105172729479"></p><p>再生成授权码</p><p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20221105172801117.png" alt="image-20221105172801117"></p><p>生成的16位密码才是填到邮件app里的密码</p><p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/v2-b986514ad486bee3397389c6ae529ab0_1440w.webp" alt="img"></p><h1 id="同济邮箱"><a href="#同济邮箱" class="headerlink" title="同济邮箱"></a>同济邮箱</h1><p>同济的邮箱设置方法如下。首先选择其他邮箱：</p><p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20221101140039345.png" alt="image-20221101140039345"></p><p>邮件设置如下：</p><p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20221105102030556.png" alt="image-20221105102030556"></p><p>其中密码仍然需要去同济邮箱主页手动获取<img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20221101140015058.png" alt="image-20221101140015058"></p><p>配置完成后，查收邮件就都非常方便啦~</p><p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20221105173457674.png" alt="image-20221105173457674"></p><hr><p>该图片由<a href="https://pixabay.com/zh/users/talhakhalil007-5671515/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4284157">talha khalil</a>在<a href="https://pixabay.com/zh//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=4284157">Pixabay</a>上发布</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>技术</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>邮件</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>telegram+z-library最速查电子书指南</title>
     <link href="/2022/10/29/telegram-z-library%E6%9C%80%E9%80%9F%E6%9F%A5%E7%94%B5%E5%AD%90%E4%B9%A6%E6%8C%87%E5%8D%97/"/>
     <url>/2022/10/29/telegram-z-library%E6%9C%80%E9%80%9F%E6%9F%A5%E7%94%B5%E5%AD%90%E4%B9%A6%E6%8C%87%E5%8D%97/</url>
