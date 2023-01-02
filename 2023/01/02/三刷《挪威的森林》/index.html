@@ -16,25 +16,24 @@
   <meta name="author" content="Baokker">
   <meta name="keywords" content="">
   
-    <meta name="description" content="更轻量的操控远端代码的方法">
+    <meta name="description" content="惟死者永远十七">
 <meta property="og:type" content="article">
-<meta property="og:title" content="VS Code 远端ssh连接开发">
-<meta property="og:url" content="http://baokker.github.io/2022/12/31/VS-Code-%E8%BF%9C%E7%AB%AFssh%E8%BF%9E%E6%8E%A5%E5%BC%80%E5%8F%91/index.html">
+<meta property="og:title" content="三刷《挪威的森林》">
+<meta property="og:url" content="http://baokker.github.io/2023/01/02/%E4%B8%89%E5%88%B7%E3%80%8A%E6%8C%AA%E5%A8%81%E7%9A%84%E6%A3%AE%E6%9E%97%E3%80%8B/index.html">
 <meta property="og:site_name" content="Baokker&#39;s Blog">
-<meta property="og:description" content="更轻量的操控远端代码的方法">
+<meta property="og:description" content="惟死者永远十七">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/defaultImages.jpg">
-<meta property="article:published_time" content="2022-12-31T02:39:26.000Z">
-<meta property="article:modified_time" content="2022-12-31T02:39:51.482Z">
+<meta property="og:image" content="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/winter-5892335_1280.jpg">
+<meta property="article:published_time" content="2023-01-02T01:46:18.000Z">
+<meta property="article:modified_time" content="2023-01-02T05:37:59.730Z">
 <meta property="article:author" content="Baokker">
-<meta property="article:tag" content="vscode">
-<meta property="article:tag" content="ssh">
+<meta property="article:tag" content="挪威的森林">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/defaultImages.jpg">
+<meta name="twitter:image" content="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/winter-5892335_1280.jpg">
   
   
   
-  <title>VS Code 远端ssh连接开发 - Baokker&#39;s Blog</title>
+  <title>三刷《挪威的森林》 - Baokker&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -203,13 +202,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/defaultImages.jpg') no-repeat center center; background-size: cover;">
+     style="background: url('https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/winter-5892335_1280.jpg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="VS Code 远端ssh连接开发"></span>
+            <span id="subtitle" data-typed-text="三刷《挪威的森林》"></span>
           
         </div>
 
@@ -220,8 +219,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-12-31 10:39" pubdate>
-          2022年12月31日 上午
+        <time datetime="2023-01-02 09:46" pubdate>
+          2023年1月2日 上午
         </time>
       </span>
     
@@ -232,7 +231,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.1k 字
+          4.2k 字
         
       </span>
     
@@ -243,7 +242,7 @@
         
         
         
-          10 分钟
+          36 分钟
         
       </span>
     
@@ -281,41 +280,107 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">VS Code 远端ssh连接开发</h1>
+            <h1 style="display: none">三刷《挪威的森林》</h1>
             
             <div class="markdown-body">
               
-              <h1 id="查看本地ssh"><a href="#查看本地ssh" class="headerlink" title="查看本地ssh"></a>查看本地ssh</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> ~/.ssh<br><span class="hljs-built_in">ls</span><br></code></pre></td></tr></table></figure>
-
-<p>如果本地已经有<code>id_rsa</code>和<code>id_rsa.pub</code>，表明本地已经建立过ssh，可以跳过下一步；如果没有的话，则需要建立一个</p>
-<h1 id="设置ssh密钥"><a href="#设置ssh密钥" class="headerlink" title="设置ssh密钥"></a>设置ssh密钥</h1><figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs excel">ssh-keygen -<span class="hljs-built_in">t</span> rsa -C <span class="hljs-string">&quot;your_email@example.com&quot;</span><br></code></pre></td></tr></table></figure>
-
-<p>代码参数含义：</p>
-<p>-t 指定密钥类型，默认是 rsa ，可以省略。</p>
-<p>-C 设置注释文字，比如邮箱。</p>
-<p>-f 指定密钥文件存储文件名。</p>
-<p>以上代码省略了 -f 参数，因此，运行上面那条命令后会让你输入一个文件名，用于保存刚才生成的 SSH key 代码，如：</p>
-<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs gradle">Generating <span class="hljs-keyword">public</span>/<span class="hljs-keyword">private</span> rsa key pair.<br># Enter <span class="hljs-keyword">file</span> in which to save the key (<span class="hljs-regexp">/c/U</span>sers<span class="hljs-regexp">/you/</span>.ssh/id_rsa): [Press enter]<br></code></pre></td></tr></table></figure>
-
-<p>当然，你也可以不输入文件名，使用默认文件名（推荐），那么就会生成 id_rsa 和 id_rsa.pub 两个秘钥文件。</p>
-<p>接着又会提示你输入两次密码（该密码是你push文件的时候要输入的密码，而不是github管理者的密码），</p>
-<p>当然，你也可以不输入密码，直接按回车。那么push的时候就不需要输入密码，直接提交到github上了，如：</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">Enter</span> passphrase (empty for <span class="hljs-literal">no</span> passphrase): <br><span class="hljs-comment"># Enter same passphrase again:</span><br></code></pre></td></tr></table></figure>
-
-<p>接下来，就会显示如下代码提示，如：</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs awk">Your identification has been saved <span class="hljs-keyword">in</span> <span class="hljs-regexp">/c/</span>Users<span class="hljs-regexp">/you/</span>.ssh/id_rsa.<br><span class="hljs-comment"># Your public key has been saved in /c/Users/you/.ssh/id_rsa.pub.</span><br><span class="hljs-comment"># The key fingerprint is:</span><br><span class="hljs-comment"># 01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@example.com</span><br></code></pre></td></tr></table></figure>
-
-<h1 id="上传本地密钥到服务器并认证"><a href="#上传本地密钥到服务器并认证" class="headerlink" title="上传本地密钥到服务器并认证"></a>上传本地密钥到服务器并认证</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">mkdir</span> ~/.ssh<br><span class="hljs-built_in">cd</span> ~/.ssh<br><span class="hljs-built_in">cat</span> id_rsa.pub &gt;&gt; authorized_keys <span class="hljs-comment"># id_rsa.pub是刚刚生成的ssh公钥</span><br><span class="hljs-built_in">chmod</span> 600 authorized_keys <br>service sshd restart<br>sudo service ssh restart<br></code></pre></td></tr></table></figure>
-
-<h1 id="本地vscode连接"><a href="#本地vscode连接" class="headerlink" title="本地vscode连接"></a>本地vscode连接</h1><p>安装remote ssh</p>
-<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20221231103727629.png" srcset="/img/loading.gif" lazyload alt="image-20221231103727629"></p>
-<p>修改本地配置文件，添加ssh config</p>
-<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">Host xxx<br>  HostName xxxx<br>  <span class="hljs-keyword">User</span> <span class="hljs-title">xxxxx</span><br></code></pre></td></tr></table></figure>
-
-<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20221231103646094.png" srcset="/img/loading.gif" lazyload alt="image-20221231103646094"></p>
-<p>重启vscode，即可免密登录~</p>
+              <p>对我来说，《挪威的森林》有着与众不同的意义。或许称其为我一生中最重要的书之一也无妨。第一遍读是在初中的时候。那时心理状态堪忧，每日昏昏沉沉，靠着强打精神勉强过日子。不料某日晚上，隔壁寝室的一位友人跟我说：“我靠，村上这小说也太黄了”，遂把我拉到他们寝室，翻开的正是《挪威的森林》，写的正是直子生日那天晚上，我同她睡觉的场景。</p>
+<blockquote>
+<p> “这天夜里，我同直子睡了。我不知这样做是否正确，即使在二十年后的今天仍不知道。大概永远不会知道。不过那时候却只能这样做。她情绪激动，不知所措，希望得到我的抚慰。我关掉房间的电灯，缓缓地轻轻地脱去她的衣服，自己也随之脱掉，然后抱在一起。那是个温和的雨夜，我们赤身裸体也未感到寒意。我和直子在黑暗中默默地相互抚摸身体。我吻她的嘴唇，温和地用手扪住她的乳房。直子握住我变硬的东西。她的下部温暖湿润，等待着我。”</p>
+</blockquote>
+<p>现在再看，其实村上只是如实地描写场景，在所有可能的性场景描写中，选择了最具纯洁美的那种写法。但无论如何，这段描写使当时的我对此书产生了兴趣——倒不是说对情色文学，而是对阅读产生了兴趣。读罢此书后我开始大量阅读，起初是书店里日本文学一栏中村上的其余小说，再慢慢开始读更多的经典，看更多的风景，我于是得以被重新塑造。我常常想，我这一生总会和书邂逅，总会喜欢上阅读，但未曾想到，竟然会以这样的方式开端。不禁哑然失笑。</p>
+<p>接下来又读了两遍《挪威的森林》。说来也巧，第二遍读是在我约莫十七岁的时候，也就是书中木月自杀的年龄；第三遍，也就是现在这遍，刚好是我约莫二十一岁的年纪（总是加上约莫，是因为我对年龄的计算实在不算上手，虚岁实岁那些玩意分辨不清），而直子也是在这个时候在深夜的森林里，将自己的脖颈套入高悬的绳索里。我仍然在长大，在成熟，在变老，而木月永远十七，直子永远二一。</p>
 <hr>
-<p>参考：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/425641299">https://zhuanlan.zhihu.com/p/425641299</a></p>
+<p>年前某天晚上emo的时候，又想起了这本书。当时还在准备期末考，还在吵架，心里愈发感伤，感觉眼前的路越走越小，小到不见。想起书里那些为我所铭记的感伤的话，想起直子和木月的死。感觉自己更能理解木月和直子为何如此亲密，却都选择了自杀。这点我认为村上在他另一本《海边的卡夫卡》中已经有所体现。书中，图书馆的馆长——或许亦是我的母亲——佐伯，早年和爱人亲密无间，“活在一个完美无缺的圆圈里”，然而随着年龄越来越大，挑战越来越多，这个完美的纯真的世界变得愈发脆弱。为此，佐伯的爱人选择了自杀，而佐伯在这之后选择封闭自己，让自己永远处在了“那边”。直子和木月亦如是。他们从三岁开始便成为青梅竹马，从小到大亲密无间，以至于面对成熟，面对可能即将破裂崩塌的世界时，木月选择通过死来回避，而直子挣扎了四年，最后终于还是抛下我，步了他的后尘。可能我也是因为这个原因又想起了这本书。十七岁到二十一岁，世界在我面前显现出它的残忍、枯燥、疲惫，一点点撕碎它原先带给我的憧憬和纯真。直子和木月选择了死，而我和绿子选择了生。Both are answers, just with different meanings.</p>
+<hr>
+<p>不知道是书本身的篇幅太短，还是我对书中的内容过于熟悉，我花了短短一天便完成了这本书的三刷。想来我再度捧起此书，某种程度上说并非为了重温剧情——至今依然记得——可能说成把自己当成人肉的计算机，在小说里找到那天晚上想起的那几句感伤的话，倒也不为过。我记得书上大约说过，那年我二十，直子多少岁，唯死者永远十七。于是我找到了这句话的原文：</p>
+<blockquote>
+<p>“到四月中旬，直子满二十岁。我十一月出生，她大约长我七个月。对直子的二十岁，我竟有些不可思议。我也好，直子也好，总以为应该还是在十八岁与十九岁之间徘徊才是。十八之后是十九，十九之后再十八——如此固然理想，但她终究二十岁了。到秋天我也将二十岁。惟死者永远十七。”</p>
+</blockquote>
+<blockquote>
+<p>四季更迭，我与死者之间的距离亦随之渐渐拉开。木月照旧十七，直子依然二十一，永远地。</p>
+</blockquote>
+<p>死去的人永远停留，而我要继续活下去，继续与周遭的世界搏斗，受伤流泪也在所不惜，因为这是往下生活需要付出的努力和代价。</p>
+<blockquote>
+<p>喂，木月！我和你不同，我决心活下去，而且要力所能及地好好活下去。你想必很痛苦，但我也不轻松，不骗你。这也是你留下直子死去造成的！但我绝不抛弃她，因为我喜欢她，我比她顽强，并将变得更加顽强，变得成熟，变成大人——此外我别无选择。</p>
+</blockquote>
+<p>还有一句，”希望你能记住我，记住我这样活过“：</p>
+<blockquote>
+<p>“希望你能记住我。记住我这样活过、这样在你身边待过。可能一直记住？”<br>“永远。”我回答。</p>
+</blockquote>
+<blockquote>
+<p>时至今日，我才恍然领悟直子之所以求我别忘记她的原因。直子当然知道，知道她在我心目中的记忆迟早要被冲淡。惟其如此，她才强调说：希望你能记住我，记住我曾这样存在过。</p>
+</blockquote>
+<p>说实话，这句话在村上的其他小说里也看了不少，别的作家的作品里也能看到，可最让我伤心的还是直子这句。我也希望能永远记住她，可是我在不断前进，存在我十八岁身体里的那些信念，那些内在，也在变化，在磨损。我永远无法抓住记忆，而只能让它逐渐模糊，成为一片残影。无论是对小说的我还是现实的我，这一点始终成立。小说的第一章，即是我在机场又想起了直子，但是却发现想起她模样的时间，正变得越来越长。</p>
+<p>另外一句话，以前写一点小作文的时候，经常喜欢用。”悲哀得难以自禁“，短短七个字，仿佛将我识过的字都已用尽。</p>
+<blockquote>
+<p>想到这里，我悲哀得难以自禁。因为，直子连爱都没爱过我。</p>
+</blockquote>
+<p>直子究竟有没有爱过我呢？我想，她一定也不想给我带来这么大的苦恼，想要像正常人一样生活，感谢我在她身边的陪伴，对她的付出。为此她让我跟她睡，解决我的生理需求，却无论如何也无法真正地爱我，或者只是想从中，找到一点木月的影子。她还是被木月带去了生的另一边。</p>
+<hr>
+<p>还有一些三刷时很喜欢的句子，也一并附上吧。</p>
+<p>写回忆：</p>
+<blockquote>
+<p>记忆这东西总有些不可思议。实际身临其境的时候，几乎未曾意识到那片风景，未曾觉得它有什么撩人情怀之处，更没想到十八年后仍历历在目</p>
+</blockquote>
+<p>写我对死亡的看法——很经典的句子了。</p>
+<blockquote>
+<p>死并非生的对立面，而作为生的一部分永存。</p>
+</blockquote>
+<blockquote>
+<p>而直子的死还使我明白：无论熟知怎样的哲理，也无以消除所爱之人的死带来的悲哀。无论怎样的哲理，怎样的真诚，怎样的坚韧，怎样的柔情，也无以排遣这种悲哀。我们惟一能做到的，就是从这片悲哀中挣脱出来，并从中领悟某种哲理。而领悟后的任何哲理，在继之而来的意外悲哀面前，又是那样软弱无力——我形影相吊地倾听这暗夜的涛声和风鸣，日复一日地如此冥思苦索。</p>
+</blockquote>
+<p>永泽给我的好感并不多，但他的两句金句为之前和现在的我所铭记。</p>
+<p>一句是写他对阅读的看法，</p>
+<blockquote>
+<p>他宣称：对死后不足三十年的作家，原则上是不屑一顾的，那种书不足为信。<br>“不是说我不相信现代文学。我只是不愿意在阅读未经过时间洗礼的书籍上面浪费时间。人生短暂。”</p>
+</blockquote>
+<p>短短两句话，替我减去了大半阅读垃圾书籍的时间。</p>
+<p>一句是他临走前给我的寄语，</p>
+<blockquote>
+<p>不要同情自己！”他说，“同情自己是卑劣懦夫干的勾当。”</p>
+</blockquote>
+<p>想来有点残忍，但是对那时的我来说，却是作为座右铭来看待的。</p>
+<p>直子的话读来总让我觉得心塞。她在信里写道：</p>
+<blockquote>
+<p>很多事都请你不要介意。即便发生了什么，或者没有发生什么，我想结局恐怕都是这样的。也许这种说法有伤你的感情。果真如此，我向你道歉。我想要说的，是希望你不要因为我而自己责备自己，这确确实实是应该由我一个人来全部承担的。</p>
+</blockquote>
+<p>她从来不想让自己连累他人，即使自己已经身处深渊，已经万劫不复，再也站不起来，她也不希望自己变成我的某种负担。</p>
+<blockquote>
+<p>“在那以前，我想再调理一下自己。恢复得好好的，成为一个符合你口味的人。能等到那时候？”</p>
+</blockquote>
+<p>读到这句话的时候我非常心碎。早就知道接下来迎接我的迟早是直子的死讯，可她在那之前，仍然想着努力变成一个正常人，想跟我生活在一起，我也准备了房子，修缮了庭院，准备迎接她从阿美寮出来，迎接新的人生。可惜人生很少如愿。</p>
+<p>相比之下，绿子说的一些话则阳光了不少。</p>
+<p>例如这段话，我也有一些同感。有时候女孩子要的不是那份道理，就是那份包容，对她任性的包容。</p>
+<blockquote>
+<p>“不不。就算我再怎么样也不敢那么追求。我所求的只是容许我任性，百分之百的任性。比方说，我现在对你说想吃草莓蛋糕，你就什么也不顾地跑去买，气喘吁吁地跑回来递给我，说：‘喏，绿子，这就是草莓蛋糕。’可我又说：‘我已经懒得吃这玩艺儿了！’说着‘砰’一声从窗口扔出。这就是我追求的。”<br>“这和爱似乎不大相干啊！”我不无愕然地说。<br>“相干！你不知道罢了，”绿子说，“对女孩儿来说，这东西有时非常非常珍贵。”</p>
+</blockquote>
+<p>这句经典名言：</p>
+<blockquote>
+<p>“哪里会有人喜欢孤独，不过是不喜欢失望。”然后转向我：“如果你写自传的话，可别忘了这句对白。”</p>
+</blockquote>
+<p>饼干罐的理论是我这回读到才想起来的。想来还颇有道理，人生恐怕便是这样，只管往下吃就好。</p>
+<blockquote>
+<p>饼干罐不是装有各种各样的饼干，喜欢的和不大喜欢的都在里面吗？如果先一个劲儿挑你喜欢的吃，那么剩下的就全是不大喜欢的。每次遇到麻烦我就总这样想：先把这个应付过去，往下就好办了。人生就是饼干罐。”</p>
+</blockquote>
+<p>还有绿子的几次表白，都是很经典的句子。</p>
+<blockquote>
+<p>你总是蜷缩在你自己的世界里，而我却一个劲儿“咚咚”敲门，一个劲儿叫你。于是你悄悄抬一下眼皮，又即刻恢复原状。</p>
+</blockquote>
+<blockquote>
+<p>“为什么 ？”绿子吼道，“你脑袋是不是不正常？又懂英语虚拟语气，又能解数列，又会读马克思，这一点为什么就不明白？为什么还要问？为什么非得叫女孩子开口不可？还不是因为我喜欢你超过喜欢他吗？我本来也很想爱上一个更英俊的男孩，但没办法，就是看中了你。”</p>
+</blockquote>
+<blockquote>
+<p>“我可是有血有肉的活生生的女孩，”绿子把脸颊擦在我脖颈上说，“而且现在就在你的怀抱里表白说喜欢你。只要你一声令下，赴汤蹈火都在所不惜。虽然我多少有蛮不讲理的地方，但心地善良正直，勤快能干，脸蛋也相当俊俏，乳房形状也够好看，饭菜做得又好，父亲的遗产也办了信托存款，你还不以为这是大甩卖？你要是不买，我很快就到别处去。”</p>
+</blockquote>
+<hr>
+<p>不过还是提一嘴，《挪》尽管是村上最负盛名的作品，但绝不是一部典型的村上风格的作品。一般村上的小说里，都是一个不善言辞的单身汉莫名奇妙卷进一宗事情里，然后顺着指引不知为何地来到某地，然后进入一片神奇抽象的空间，在里面完成一些魔幻现实主义的事情，最后又回到现实世界里。偶尔来些双线乃至于三线叙事，增加可阅读性。依我看，这类风格最典型的还是《世界尽头与冷酷仙境》。真的想了解村上的朋友还是读其他的书为佳。</p>
+<hr>
+<blockquote>
+<p>I once had a girl<br>Or should I say she once had me<br>She showed me her room<br>Isn’t it good Norwegian wood?</p>
+</blockquote>
+<hr>
+<p>该图片由<a target="_blank" rel="noopener" href="https://pixabay.com/zh/users/sorbyphoto-725076/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5892335">Henning Sørby</a>在<a target="_blank" rel="noopener" href="https://pixabay.com/zh//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=5892335">Pixabay</a>上发布</p>
 
               
             </div>
@@ -333,7 +398,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E6%8A%80%E6%9C%AF/" class="category-chain-item">技术</a>
+  <a href="/categories/%E4%B9%A6%E5%8D%95/" class="category-chain-item">书单</a>
   
   
 
@@ -348,9 +413,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/vscode/">#vscode</a>
-      
-        <a href="/tags/ssh/">#ssh</a>
+        <a href="/tags/%E6%8C%AA%E5%A8%81%E7%9A%84%E6%A3%AE%E6%9E%97/">#挪威的森林</a>
       
     </div>
   
@@ -362,8 +425,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>VS Code 远端ssh连接开发</div>
-      <div>http://baokker.github.io/2022/12/31/VS-Code-远端ssh连接开发/</div>
+      <div>三刷《挪威的森林》</div>
+      <div>http://baokker.github.io/2023/01/02/三刷《挪威的森林》/</div>
     </div>
     <div class="license-meta">
       
@@ -375,13 +438,13 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年12月31日</div>
+          <div>2023年1月2日</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2022年12月31日</div>
+          <div>2023年1月2日</div>
         </div>
       
       <div class="license-meta-item">
@@ -410,18 +473,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/01/02/%E4%B8%89%E5%88%B7%E3%80%8A%E6%8C%AA%E5%A8%81%E7%9A%84%E6%A3%AE%E6%9E%97%E3%80%8B/" title="三刷《挪威的森林》">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">三刷《挪威的森林》</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/12/30/%E3%80%8A%E9%9C%8D%E4%B9%B1%E6%97%B6%E6%9C%9F%E7%9A%84%E7%88%B1%E6%83%85%E3%80%8B%E8%AF%BB%E5%90%8E%E6%84%9F/" title="《霍乱时期的爱情》读后感">
-                        <span class="hidden-mobile">《霍乱时期的爱情》读后感</span>
+                      <a href="/2022/12/31/VS-Code-%E8%BF%9C%E7%AB%AFssh%E8%BF%9E%E6%8E%A5%E5%BC%80%E5%8F%91/" title="VS Code 远端ssh连接开发">
+                        <span class="hidden-mobile">VS Code 远端ssh连接开发</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
