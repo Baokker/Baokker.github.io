@@ -4,6 +4,56 @@
   
   
   <entry>
+    <title>使用Mac迁移大数据时需要拖拽而不是拷贝</title>
+    <link href="/2023/03/05/%E4%BD%BF%E7%94%A8Mac%E8%BF%81%E7%A7%BB%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%97%B6%E9%9C%80%E8%A6%81%E6%8B%96%E6%8B%BD%E8%80%8C%E4%B8%8D%E6%98%AF%E6%8B%B7%E8%B4%9D/"/>
+    <url>/2023/03/05/%E4%BD%BF%E7%94%A8Mac%E8%BF%81%E7%A7%BB%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%97%B6%E9%9C%80%E8%A6%81%E6%8B%96%E6%8B%BD%E8%80%8C%E4%B8%8D%E6%98%AF%E6%8B%B7%E8%B4%9D/</url>
+    
+    <content type="html"><![CDATA[<p>非常有意思的bug（乐）</p><p>那天我拿到了小宝作为生日礼物送给我的机械硬盘，于是就愉快地连上Mac，将我原先固态硬盘里的数据迁移到机械硬盘中</p><p>之前的老硬盘空间1T，然而在我的各种文件下，可用空间已经不足100G，这次索性来了个4T的机械硬盘，我觉得起码到大学毕业都不会有问题</p><p>于是连上固态硬盘，选中几十G的数据，Command + C，再到机械硬盘中Command + V，就开始摸鱼忙别的事</p><p>结果正在PostMan测后端，突然就没反应了，可是代码也没怎么动，怎么会跑不起来呢…</p><p>于是一看访达，发现磁盘剩余空间，突然就只剩下了25MB…</p><p>？</p><p>赶快上网查询，同时各种清理软件，结果发现是系统文件生成了200多G。再磁盘扫描一下，发现罪魁祸首是一个<code>/private/var/folders/.../shared-pasteboard/</code>的文件夹</p><p>最终查询结论如下：</p><ul><li>我使用了苹果的接力设置，支持三端同步剪贴板</li><li>我使用Command C拷贝了几十上百G的数据</li><li>这些数据被系统缓存到了硬盘中</li><li>硬盘炸了</li></ul><p>所以重启之后，电脑便恢复了原样…</p><p>但是这样指标不治本，到底要怎样传输呢？</p><p>答：传输大量数据时，使用鼠标拖拽，这样就不会被接力。或者临时关闭接力。</p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20230305151200973.png" alt="image-20230305151200973" style="zoom:50%;" /><p>（说实话这个拖拽也挺累的，蛮难对齐的…）</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>技术</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Mac</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>使用Vue和Express.js搭建前后端注册登录系统</title>
+    <link href="/2023/03/05/%E4%BD%BF%E7%94%A8Vue%E5%92%8CExpress-js%E6%90%AD%E5%BB%BA%E5%89%8D%E5%90%8E%E7%AB%AF%E6%B3%A8%E5%86%8C%E7%99%BB%E5%BD%95%E7%B3%BB%E7%BB%9F/"/>
+    <url>/2023/03/05/%E4%BD%BF%E7%94%A8Vue%E5%92%8CExpress-js%E6%90%AD%E5%BB%BA%E5%89%8D%E5%90%8E%E7%AB%AF%E6%B3%A8%E5%86%8C%E7%99%BB%E5%BD%95%E7%B3%BB%E7%BB%9F/</url>
+    
+    <content type="html"><![CDATA[<h1 id="项目简介"><a href="#项目简介" class="headerlink" title="项目简介"></a>项目简介</h1><p>想学一学 Express.js，同时也想自己搭一遍从前端到后端实现注册登录的过程，遂创建此项目。</p><p>前端：简简单单的 Vue2 + Axios + Vue-router + Vuex。对界面颜值的要求也不高，仅仅是为了体验一把连通的感觉，直接用 HTML 写页面了</p><p>后端：Express.js + MongoDB</p><p>Express是基于Nodejs的一款后端框架，使用JavaScript，易于上手，且配套组件库也较为丰富。</p><h1 id="Express-js"><a href="#Express-js" class="headerlink" title="Express.js"></a>Express.js</h1><h2 id="连接到数据库"><a href="#连接到数据库" class="headerlink" title="连接到数据库"></a>连接到数据库</h2><p>数据库使用 MongoDB，通过 mongoose 库进行操作很方便。此外我也没有在本地配置 MongoDB 数据库，而是使用了他家的<a href="https://www.mongodb.com/atlas/database"> Altas 服务</a>，也就是云端的可直接连接使用的 MongoDB 数据库。使用免费的配置即可。</p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20230304193945458.png" alt="image-20230304193945458" style="zoom:50%;" /><p>点击其中的<code>connect</code>按钮，即可获取连接的方式</p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20230304194026035.png" alt="image-20230304194026035" style="zoom:50%;" /><h2 id="保护隐私"><a href="#保护隐私" class="headerlink" title="保护隐私"></a>保护隐私</h2><p>上学期的两个课程项目都遇到了这个问题：项目通常通过 Github 进行代码同步，但是数据库的 ip 地址和密码等敏感信息，却不知道应该怎么处理。反正上学期由于时间原因，最后都变成了直接把服务器的 link 写在代码里（）然而这显然是不够优雅的。</p><p>查询一番后得出了这样的推荐方案：</p><ul><li><p>将此类敏感信息放入到<code>.env</code>文件中</p></li><li><p>将<code>.env</code>放入<code>.gitignore</code>中，以避免被加入到仓库中</p></li><li><p>创建<code>.env.example</code>，保持<code>.env</code>的格式，但隐去敏感信息。<code>.env.example</code>是可以放入到仓库中的</p></li><li><p>团队协作时通过其他途径获取敏感信息并填入<code>.env</code></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;dotenv&quot;</span>).<span class="hljs-title function_">config</span>(); <span class="hljs-comment">// store in .env file for security and privacy</span><br><span class="hljs-keyword">const</span> mongodb_link = process.<span class="hljs-property">env</span>.<span class="hljs-property">MONGODB_LINK</span>;<br></code></pre></td></tr></table></figure></li></ul><p>同时让我受益匪浅的一点是，之前我一直认为<code>.gitignore</code>只能放在Git项目的根目录位置中，而事实上<code>.gitignore</code>可以在多处，每个<code>.gitignore</code>的规则适用于它所在的文件夹。引用ChatGPT的话（后续介绍）：</p><blockquote><p>在不同的文件夹中的环境配置文件可以分别在对应文件夹的<code>.gitignore</code>中加入，以确保它们不被添加到 Git 仓库中。例如，如果你的环境配置文件在 <code>backend</code> 文件夹和 <code>frontend</code> 文件夹中，你可以在 <code>backend/.gitignore</code> 中加入 <code>*.env</code>，在 <code>frontend/.gitignore</code> 中也加入 <code>*.env</code>，这样就能避免它们被 Git 仓库追踪。</p></blockquote><blockquote><p>是的，你可以在同一个项目中创建多个<code>.gitignore</code>文件或在一个<code>.gitignore</code>文件中列出多个忽略规则。如果你在项目的根目录下创建了一个<code>.gitignore</code>文件，则该文件中列出的规则将适用于整个项目。如果你在项目中的特定目录中创建了一个<code>.gitignore</code>文件，则该文件中列出的规则将仅适用于该目录及其子目录。</p></blockquote><h2 id="跨域"><a href="#跨域" class="headerlink" title="跨域"></a>跨域</h2><p>跨域问题可以说每次前后端开发都会出现orz。使用PostMan时，它不会受到同源策略的限制，因此不会报错。而前后端运行在不同的IP和端口，因此会产生安全警告。</p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Snipaste_2023-02-28_23-13-32.png" alt="Snipaste_2023-02-28_23-13-32" style="zoom:50%;" /><p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Snipaste_2023-03-01_18-38-03.png" alt="Snipaste_2023-03-01_18-38-03"></p><p>解决方法很简单，加上一层cors的中间件就好（）</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">const</span> cors = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;cors&quot;</span>);<br>app.<span class="hljs-title function_">use</span>(<span class="hljs-title function_">cors</span>());<br></code></pre></td></tr></table></figure><h1 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h1><h2 id="yarn-npm"><a href="#yarn-npm" class="headerlink" title="yarn npm"></a>yarn npm</h2><p>这回用上了yarn作为包管理器，不得不说它的缓存机制和处理方式都非常不错，安装速度比npm快了太多</p><h2 id="版本问题"><a href="#版本问题" class="headerlink" title="版本问题"></a>版本问题</h2><p>有几个奇怪的bug处理半天，最后发现还是因为自己偷懒用了Vue2，然后直接用yarn add了VueX、Vue Router。但事实上这两个库的最新版本目前已经不再对Vue2支持了，需要降级安装。</p><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs avrasm">yarn <span class="hljs-keyword">add</span> vuex<span class="hljs-subst">@3</span><br>yarn <span class="hljs-keyword">add</span> vue-router<span class="hljs-subst">@3</span><br></code></pre></td></tr></table></figure><p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Snipaste_2023-03-01_18-21-43.png" alt="Snipaste_2023-03-01_18-21-43"></p><p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Snipaste_2023-03-01_19-04-43.png" alt="Snipaste_2023-03-01_19-04-43"></p><h2 id="onclick-vs-click"><a href="#onclick-vs-click" class="headerlink" title="onclick vs @click"></a>onclick vs @click</h2><p>好久没写前端，一开始想简单地用HTML里的button触发函数，直接写上<code>onclick</code>，报错如下</p><p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Snipaste_2023-03-01_19-18-58.png" alt="Snipaste_2023-03-01_19-18-58"></p><p>查阅以后发现自己被自己干沉默了，连Vue是搞啥的都不记得了。</p><p>@click 是 Vue 中绑定点击事件的语法糖，它等价于 v-on:click，表示绑定点击事件。</p><p>而 onclick 是 HTML 中绑定点击事件的方式，它直接写在 HTML 元素的属性中，例如：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">&quot;handleClick()&quot;</span>&gt;</span>Click me<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br></code></pre></td></tr></table></figure><h1 id="登录逻辑"><a href="#登录逻辑" class="headerlink" title="登录逻辑"></a>登录逻辑</h1><p>梳理一遍，感觉面试中也是很常见的hh</p><ol><li>初始假设用户未登录</li><li>用户进入一个需要权限验证的页面</li><li>vue-router路由拦截，从vuex中获取用户信息</li><li>由于未登录，无法获取用户信息</li><li>vue-router重定向到登录页面，加上redirect参数以便后续返回原页面</li><li>用户输入账号密码，发送post请求到后端</li><li>后端连接数据库，校验账号密码（密码需加密后与数据库中比对，不能明文存储）</li><li>校验完成，发送Token给前端，Token中包括过期时间，用户信息等加密信息</li><li>前端接收Token，存储在cookie中</li><li>前端登录成功，通过之前的redirect参数重新返回原页面</li><li>进入路由拦截，前端未获得用户信息，但有Token的cookie</li><li>前端再次发送一个user_info的get请求，通过Token获取用户的信息，如用户名，用户角色（普通用户或管理员）</li><li>后端校验Token是否过期，如无过期则返回信息</li><li>前端接收后将信息存在vuex中</li><li>（optional）前端根据用户的角色，生成可访问的路由（这一步在前后端都能实现）</li><li>前端检查角色权限是否满足，满足则放行</li><li>进入页面，发送get请求（当有Token时，请求头中都会有Token字段以校验）</li><li>后端接收到get请求，校验Token合法性，成功则返回数据</li><li>成功返回</li></ol><h1 id="ChatGPT"><a href="#ChatGPT" class="headerlink" title="ChatGPT"></a>ChatGPT</h1><p>编写过程中感谢ChatGPT提供的大力支持，非常好的老师orz</p><p>几乎是有问必答</p><p>此外，如何正确地提问也是门学问，这里有一篇<a href="https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md">tutorial</a></p><p>关于ChatGPT的更多玩法见<a href="https://github.com/PlexPt/awesome-chatgpt-prompts-zh">此</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>技术</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Express.js</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>压抑，人性的恶——读芥川龙之介《罗生门》短篇集感</title>
     <link href="/2023/02/18/%E5%8E%8B%E6%8A%91%EF%BC%8C%E4%BA%BA%E6%80%A7%E7%9A%84%E6%81%B6%E2%80%94%E2%80%94%E8%AF%BB%E8%8A%A5%E5%B7%9D%E9%BE%99%E4%B9%8B%E4%BB%8B%E3%80%8A%E7%BD%97%E7%94%9F%E9%97%A8%E3%80%8B%E7%9F%AD%E7%AF%87%E9%9B%86%E6%84%9F/"/>
     <url>/2023/02/18/%E5%8E%8B%E6%8A%91%EF%BC%8C%E4%BA%BA%E6%80%A7%E7%9A%84%E6%81%B6%E2%80%94%E2%80%94%E8%AF%BB%E8%8A%A5%E5%B7%9D%E9%BE%99%E4%B9%8B%E4%BB%8B%E3%80%8A%E7%BD%97%E7%94%9F%E9%97%A8%E3%80%8B%E7%9F%AD%E7%AF%87%E9%9B%86%E6%84%9F/</url>
