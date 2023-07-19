@@ -1,0 +1,877 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/favicon.png">
+  <link rel="icon" href="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Baokker">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="狠狠从备忘录复制粘贴">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一口气更新本学期代码经验心得">
+<meta property="og:url" content="http://baokker.github.io/2023/06/24/%E4%B8%80%E5%8F%A3%E6%B0%94%E6%9B%B4%E6%96%B0%E6%9C%AC%E5%AD%A6%E6%9C%9F%E4%BB%A3%E7%A0%81%E7%BB%8F%E9%AA%8C%E5%BF%83%E5%BE%97/index.html">
+<meta property="og:site_name" content="Baokker&#39;s Blog">
+<meta property="og:description" content="狠狠从备忘录复制粘贴">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/defaultImages.jpg">
+<meta property="article:published_time" content="2023-06-24T14:59:07.000Z">
+<meta property="article:modified_time" content="2023-07-17T06:09:35.751Z">
+<meta property="article:author" content="Baokker">
+<meta property="article:tag" content="代码">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/defaultImages.jpg">
+  
+  
+  
+  <title>一口气更新本学期代码经验心得 - Baokker&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"baokker.github.io","root":"/","version":"1.9.0","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Baokker&#39;s Blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/defaultImages.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="一口气更新本学期代码经验心得"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-06-24 22:59" pubdate>
+          2023年6月24日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          8k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          68 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">一口气更新本学期代码经验心得</h1>
+            
+            <div class="markdown-body">
+              
+              <h1 id="ChatGPT-Copilot"><a href="#ChatGPT-Copilot" class="headerlink" title="ChatGPT Copilot"></a>ChatGPT Copilot</h1><p>可以说这学期给我的代码开发带来最大变化的就是这两款工具了，一款帮我生成代码或者特定的指令，一段潜伏在IDE里，读取我的上下文和注释，帮我缝缝补补生成代码。</p>
+<p>ChatGPT由于之前封禁了一大波号，一段时间没敢用，反而让我在网上接触到了一些<a target="_blank" rel="noopener" href="https://github.com/xx025/carrot">镜像网站</a>，非常方便使用。在这里仅给出链接，具体还请各位自己探索。我在这里放一些使用的截图。</p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20230716160607480.png" srcset="/img/loading.gif" lazyload alt="image-20230716160607480"></p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20230716160637678.png" srcset="/img/loading.gif" lazyload alt="image-20230716160637678"></p>
+<p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20230716160913128.png" srcset="/img/loading.gif" lazyload alt="image-20230716160913128"></p>
+<p>基本上当我遇到错误报告，代码不知道怎么写，Linux命令想不起来怎么做，或者想偷个懒让他帮我写点东西时，我都会使用它给我提供建议或者初稿，而我只消稍加润色即可完成。</p>
+<p>而copilot在我申请了<a href="https://baokker.github.io/2023/01/07/%E4%BD%9C%E4%B8%BA%E5%90%8C%E6%B5%8E%E5%AD%A6%E5%AD%90%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96Github-Pro/">GitHub Pro</a>之后，则成为了我编写代码的利器。一般来说，我只需要把光标悬浮在那边，它便能为我补充代码</p>
+<img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20230107110009964.png" srcset="/img/loading.gif" lazyload style="zoom:50%;" />
+
+<p>不过经过我长期的使用，我发现更有效的方法是，先写一两行注释，让它明白我的意思，再让它自动生成，往往更为高效</p>
+<img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20230716161703459.png" srcset="/img/loading.gif" lazyload alt="image-20230716161703459" style="zoom:50%;" />
+
+<p>这两款工具在根本上改变了我的workflow，所以我要将它们放在最前面。具体来说，原先我的工作流是这样的：</p>
+<ul>
+<li>Google了解一下这个语言&#x2F;框架</li>
+<li>Google大概了解一下语言&#x2F;框架的上手方法</li>
+<li>结合网上的教程，摸索出一个可以跑的框架</li>
+<li>进一步完善需求</li>
+<li>如果碰到bug，继续Google解决相关问题</li>
+</ul>
+<p>但是拥有这两款工具后，我的工作流变成了：</p>
+<ul>
+<li>ChatGPT教一下我这个语言&#x2F;框架</li>
+<li>ChatGPT帮我搭好了能跑的框架，并教我怎么上手</li>
+<li>我进一步完善我的需求，但是中途大部分其实是copilot帮我生成的，我只是在按tab键，然后检查它写的对不对（大多数时候写得比我好）</li>
+<li>如果碰到bug，先问问ChatGPT</li>
+<li>实在没解决，或者意识到这个问题它是解决不了的（知识库不够新，跟不上版本，问题太复杂等等），由人脑解决（搜索Google，加上自己思考）</li>
+</ul>
+<p>可以看到它们帮我减少了相当多的负担，并且它们的出现让我意识到，这些劳动已经逐渐成为了人工智能的简单工作，而我也不能仅仅是原地踏步，停留在掌握CRUD上。<strong>现在更关键的能力是，如何掌握让人工智能帮助我提高生产力，以及挖掘出自己与人工智能不同且更高级的地方。</strong></p>
+<h1 id="C语言"><a href="#C语言" class="headerlink" title="C语言"></a>C语言</h1><p>好久没写c，结果某同学给我发来几道题把我看傻了。例如</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">int</span> arr[<span class="hljs-number">10</span>]=&#123;[<span class="hljs-number">0</span> ... <span class="hljs-number">3</span>]=<span class="hljs-number">1</span>,<span class="hljs-meta"> [7 ... 9]=4&#125;;</span><br></code></pre></td></tr></table></figure>
+
+<p>在c里面居然是对的。<a target="_blank" rel="noopener" href="https://www.digitalocean.com/community/tutorials/initialize-an-array-in-c#method-3-using-designated-initializers-for-gcc-compiler-only">查阅</a>了一番，得到了这样的解答：</p>
+<blockquote>
+<p>If you’re using <code>gcc</code> as your C compiler, you can use designated initializers, to set a specific range of the array to the same value.</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-comment">// Valid only for gcc based compilers</span><br><span class="hljs-comment">// Use a designated initializer on the range</span><br><span class="hljs-type">int</span> arr[<span class="hljs-number">9</span>] = &#123; [<span class="hljs-number">0</span> ... <span class="hljs-number">8</span>] = <span class="hljs-number">10</span> &#125;;<br></code></pre></td></tr></table></figure>
+
+<p>Note that there is a space between the numbers and there are the three dots. Otherwise, the compiler may think that it is a decimal point and throw an error.</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-type">int</span> arr[<span class="hljs-number">9</span>] = &#123; [<span class="hljs-number">0</span> ... <span class="hljs-number">8</span>] = <span class="hljs-number">10</span> &#125;;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>; i&lt;<span class="hljs-number">9</span>; i++)<br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d\n&quot;</span>, arr[i]);<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><strong>Output (for gcc only)</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs markup">10<br>10<br>10<br>10<br>10<br>10<br>10<br>10<br>10<br></code></pre></td></tr></table></figure>
+
+<p>Copy</p>
+<p>We can also combine this with our old initializer list elements!</p>
+<p>For example, I am setting only array index <code>arr[0], arr[8]</code> as 0, while the others are designated initialized to 10!</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-type">int</span> arr[<span class="hljs-number">9</span>] = &#123; <span class="hljs-number">0</span>, [<span class="hljs-number">1</span> ... <span class="hljs-number">7</span>] = <span class="hljs-number">10</span>, <span class="hljs-number">0</span> &#125;;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>; i&lt;<span class="hljs-number">9</span>; i++)<br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d\n&quot;</span>, arr[i]);<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>Copy</p>
+<p><strong>Output</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs markup">0<br>10<br>10<br>10<br>10<br>10<br>10<br>10<br>0<br></code></pre></td></tr></table></figure>
+</blockquote>
+<p>仅在gcc下能通过，同时三个点两旁必须有空格……还真是抽象啊</p>
+<p>还有一个</p>
+<blockquote>
+<p>char s[] &#x3D; “12345”; int m &#x3D; sizeof(s);</p>
+<p>m的值是</p>
+</blockquote>
+<p>答案是6，真的是6了我这个老6。看到答案才想起来，c里的char字符串后面有个\0表示结束。</p>
+<h1 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h1><p>这学期写了不少Vue前端，有几个点当时记了下来</p>
+<h2 id="watch的深度"><a href="#watch的深度" class="headerlink" title="watch的深度"></a>watch的深度</h2><p>一开始用watch检测某个数组的变化，结果发现并没有检测到。读了<a target="_blank" rel="noopener" href="https://cn.vuejs.org/guide/essentials/watchers.html#basic-example">官方文档</a>（同学们，真的是这样，一定要多读官方文档啊，非常的重要）后方才晓得，检测数组要加上deep才行。</p>
+<blockquote>
+<p><code>watch</code> 默认是浅层的：被侦听的属性，仅在被赋新值时，才会触发回调函数——而嵌套属性的变化不会触发。如果想侦听所有嵌套的变更，你需要深层侦听器：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> &#123;<br>  <span class="hljs-attr">watch</span>: &#123;<br>    <span class="hljs-attr">someObject</span>: &#123;<br>      <span class="hljs-title function_">handler</span>(<span class="hljs-params">newValue, oldValue</span>) &#123;<br>        <span class="hljs-comment">// 注意：在嵌套的变更中，</span><br>        <span class="hljs-comment">// 只要没有替换对象本身，</span><br>        <span class="hljs-comment">// 那么这里的 `newValue` 和 `oldValue` 相同</span><br>      &#125;,<br>      <span class="hljs-attr">deep</span>: <span class="hljs-literal">true</span><br>    &#125;<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>深度侦听需要遍历被侦听对象中的所有嵌套的属性，当用于大型数据结构时，开销很大。因此请只在必要时才使用它，并且要留意性能。</p>
+</blockquote>
+<h2 id="package-lock-json"><a href="#package-lock-json" class="headerlink" title="package-lock.json"></a>package-lock.json</h2><p>某次开发时，嫌弃package-lock.json变来变去几万行，干脆把它给删了，加到了gitignore里，结果弄巧成拙，后来的同学根本跑不起来。</p>
+<p>事实上，package.json记录的是依赖的元文件，而package-lock.json记录了确切的版本，锁定了依赖的版本，这使得所有人运行的项目都有完全相同的依赖，以确保大家都能跑起来。</p>
+<p>经验教训：package-lock.json不能加到gitignore</p>
+<h2 id="两种import的方式"><a href="#两种import的方式" class="headerlink" title="两种import的方式"></a>两种import的方式</h2><blockquote>
+<p>import LoginReminder from ‘@&#x2F;components&#x2F;LoginReminder’;<code>和</code>import {LoginReminder} from ‘@&#x2F;components&#x2F;LoginReminder’;有什么区别</p>
+</blockquote>
+<p>这两种方式导入LoginReminder组件的区别在于导入方式不同，最终得到的变量不同。</p>
+<p>1 <code>import LoginReminder from &#39;@/components/LoginReminder&#39;;</code><br> 这种方式是使用export default语法导出的组件。在另一个文件中使用import导入时，你可以自由地命名导入的变量名。例如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// LoginReminder.vue 组件文件</span><br><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> &#123;<br> <span class="hljs-comment">// ...</span><br>&#125;<br><br><span class="hljs-comment">// 在另一个文件中引用 LoginReminder.vue 组件</span><br><br><span class="hljs-keyword">import</span> <span class="hljs-title class_">MyLoginReminder</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@/components/LoginReminder&#x27;</span>;<br><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> &#123;<br> <span class="hljs-attr">components</span>: &#123;<br>  <span class="hljs-title class_">MyLoginReminder</span>,<br> &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>在这个例子中，我们没有指定导入的变量名，而是自己定义了一个名称为MyLoginReminder的变量作为导入的组件。</p>
+<p>2 <code>import &#123;LoginReminder&#125; from &#39;@/components/LoginReminder&#39;;</code><br> 这种方式是使用export语法导出的组件。在导入时，和导出时使用的变量名需要完全一致。例如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-comment">// LoginReminder.vue 组件文件</span><br><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> <span class="hljs-title class_">LoginReminder</span> = &#123;<br> <span class="hljs-comment">// ...</span><br>&#125;<br><br><span class="hljs-comment">// 在另一个文件中引用 LoginReminder.vue 组件</span><br><br><span class="hljs-keyword">import</span> &#123; <span class="hljs-title class_">LoginReminder</span> &#125; <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@/components/LoginReminder&#x27;</span>;<br><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> &#123;<br> <span class="hljs-attr">components</span>: &#123;<br>  <span class="hljs-title class_">LoginReminder</span>,<br> &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+<p> 在这个例子中，我们使用了export const语法来导出组件，同时也给导出的变量起了一个名字LoginReminder。在导入时，我们需要使用完全相同的变量名LoginReminder来引用该组件。注意，在import语句中，需要用花括号将变量名包裹起来。</p>
+<p>综上所述，无论是哪种方式，导入的都是组件的对象，只不过使用的变量名不同。</p>
+<h1 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h1><h2 id="x3D-x3D-x3D-x3D-x3D"><a href="#x3D-x3D-x3D-x3D-x3D" class="headerlink" title="&#x3D;&#x3D; &#x3D;&#x3D;&#x3D;"></a>&#x3D;&#x3D; &#x3D;&#x3D;&#x3D;</h2><p>碰到两三回这个错误了，de了半天bug，发现是&#x3D;&#x3D;把字符串和数字比较了，甚至还返回true了（例如，<code>&#39;1&#39; == 1</code>，<code>1 + &#39;0&#39; = 10</code>这种逆天的语法，我真的这辈子都无法理解）。</p>
+<p>让ChatGPT来说明一下&#x3D;&#x3D;和&#x3D;&#x3D;&#x3D;的区别。简单来说就是&#x3D;&#x3D;不会比较类型，但是&#x3D;&#x3D;&#x3D;会。</p>
+<blockquote>
+<p>在JavaScript中，”&#x3D;&#x3D;”和”&#x3D;&#x3D;&#x3D;”是用于比较两个值的操作符。它们之间的区别如下：</p>
+<ol>
+<li>“&#x3D;&#x3D;” 操作符是相等比较，它会进行类型转换。如果比较的两个值类型不同，它们会被转换为一个公共类型，然后再进行比较。</li>
+<li>“&#x3D;&#x3D;&#x3D;” 操作符是严格相等比较，它不会进行类型转换。只有当比较的两个值类型相同并且值也相等时，才会返回 true。</li>
+</ol>
+<p>下面是几个例子来说明它们之间的区别：</p>
+<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs arcade">javascriptCopy Code<span class="hljs-comment">// 示例1: 相等比较, 类型转换</span><br><span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(<span class="hljs-number">1</span> == <span class="hljs-string">&quot;1&quot;</span>);  <span class="hljs-comment">// 输出: true, 数字1 被转换为字符串 &quot;1&quot; 进行比较</span><br><br><span class="hljs-comment">// 示例2: 严格相等比较, 不进行类型转换</span><br><span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(<span class="hljs-number">1</span> === <span class="hljs-string">&quot;1&quot;</span>);  <span class="hljs-comment">// 输出: false, 数字1 和字符串 &quot;1&quot; 类型不同</span><br><br><span class="hljs-comment">// 示例3: 相等比较, 类型转换</span><br><span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(<span class="hljs-literal">true</span> == <span class="hljs-number">1</span>);  <span class="hljs-comment">// 输出: true, 布尔值true 被转换为数字1 进行比较</span><br><br><span class="hljs-comment">// 示例4: 严格相等比较, 不进行类型转换</span><br><span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(<span class="hljs-literal">true</span> === <span class="hljs-number">1</span>);  <span class="hljs-comment">// 输出: false, 布尔值true 和数字1 类型不同</span><br><br><span class="hljs-comment">// 示例5: 相等比较, 类型转换</span><br><span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(<span class="hljs-literal">null</span> == <span class="hljs-literal">undefined</span>); <span class="hljs-comment">// 输出: true, null 和 undefined 被认为是相等的特殊情况</span><br><br><span class="hljs-comment">// 示例6: 严格相等比较, 不进行类型转换</span><br><span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(<span class="hljs-literal">null</span> === <span class="hljs-literal">undefined</span>); <span class="hljs-comment">// 输出: false, null 和 undefined 类型不同</span><br></code></pre></td></tr></table></figure>
+
+<p>总结一下，”&#x3D;&#x3D;” 允许类型不同的值进行比较时进行类型转换，而 “&#x3D;&#x3D;&#x3D;” 需要比较的两个值类型相同。在大多数情况下，建议使用”&#x3D;&#x3D;&#x3D;”进行严格相等比较，这样可以避免类型转换可能带来的意外结果。</p>
+</blockquote>
+<p>他说的对</p>
+<h2 id="forEach-map-区别"><a href="#forEach-map-区别" class="headerlink" title="forEach map 区别"></a>forEach map 区别</h2><p>简单来说，forEach是void函数，作用在原数组上；map是返回一个新数组</p>
+<p>还是让ChatGPT来解释一下吧</p>
+<blockquote>
+<p>在JavaScript中，<code>forEach</code>和<code>map</code>都是用于遍历数组的方法，但它们之间有一些区别。下面是它们的区别及相应的例子：</p>
+<ol>
+<li><code>forEach</code>：<code>forEach</code>方法用于遍历数组的每个元素，并对每个元素执行指定的回调函数。在<code>forEach</code>的回调函数中，我们可以对当前元素进行操作，但无法改变原始数组的内容。</li>
+</ol>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs awk">javascriptCopy Codeconst arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];<br><br>arr.forEach((num) =&gt; &#123;<br>  console.log(num * <span class="hljs-number">2</span>); <span class="hljs-regexp">//</span> 对每个元素乘以<span class="hljs-number">2</span>并输出<br>&#125;);<br><br><span class="hljs-regexp">//</span> 输出：<br><span class="hljs-regexp">//</span> <span class="hljs-number">2</span><br><span class="hljs-regexp">//</span> <span class="hljs-number">4</span><br><span class="hljs-regexp">//</span> <span class="hljs-number">6</span><br></code></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><code>map</code>：<code>map</code>方法也用于遍历数组的每个元素，但它会返回一个新的数组，该数组包含了对原始数组每个元素进行处理后得到的结果。在<code>map</code>的回调函数中，我们可以对当前元素进行操作，并返回一个新的值。</li>
+</ol>
+<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs arcade">javascriptCopy Codeconst arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];<br><br>const newArr = arr.<span class="hljs-built_in">map</span>(<span class="hljs-function">(<span class="hljs-params">num</span>) =&gt;</span> &#123;<br>  <span class="hljs-keyword">return</span> num * <span class="hljs-number">2</span>; <span class="hljs-comment">// 对每个元素乘以2并返回新的值</span><br>&#125;);<br><br><span class="hljs-built_in">console</span>.<span class="hljs-built_in">log</span>(newArr); <span class="hljs-comment">// 输出: [2, 4, 6]</span><br></code></pre></td></tr></table></figure>
+
+<p>总结一下两者的区别：</p>
+<ul>
+<li><code>forEach</code>没有返回值，仅用于遍历数组执行操作，不能改变原始数组；</li>
+<li><code>map</code>返回一个新的数组，其中包含对原始数组每个元素进行处理后的结果。</li>
+</ul>
+<p>因此，如果只需要遍历数组并执行一些操作而不需要返回新的数组，可以使用<code>forEach</code>；如果需要对原始数组进行处理并返回一个新的数组，可以使用<code>map</code>。</p>
+</blockquote>
+<h1 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h1><p>事实上，这学期的大多数Python代码是ChatGPT帮我写的……无论是简单的深度学习代码，还是数据处理的代码。</p>
+<p>这学期碰到过一个很有意思的bug。当时我用Python从网上下载下来图片，然后按照Excel中的数据存到本地，但是在保存时有几个文件保存的格式并不成功，检查后发现是因为部分文件名含有特殊字符“&#x2F;”，例如“张A&#x2F;xx公司.jpg“，从而导致Python在存储时将张A识别成了文件夹。解决方法是提前replace这类字符串，将&#x2F;换成其他字符即可。注意replace方法是返回一个新str，而不是修改原先的str</p>
+<h1 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h1><p>Field injection is not recommended </p>
+<p>尽管字段注入可能看起来很方便，但是它存在一些问题：</p>
+<ol>
+<li>与构造函数和 Setter 注入相比，字段注入不容易进行单元测试。这是因为在使用字段注入时，需要直接修改字段的值，而在测试中，如果要注入其他的测试值，则需要使用反射机制才能修改字段的值。</li>
+<li>字段注入会使得代码更加难以理解和维护。当读取代码时，无法立即知道该字段是如何被注入的，因为字段注入是隐式的，而构造函数注入和 Setter 注入则更加明确。</li>
+<li>字段注入可能导致类之间的紧耦合关系增加。如果一个类使用了另一个类的字段，那么这两个类就会产生紧密的耦合，降低了代码的灵活性和可维护性。</li>
+</ol>
+<p>因此，虽然字段注入看起来很方便，但是为了保持代码的可测试性、可读性和可维护性，仍然建议使用构造函数注入和 Setter 注入来替代字段注入。</p>
+<h1 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h1><p>遇到一个bug，是想在redis里存时间，结果报错称Java 8 date&#x2F;time type <code>java.time.LocalDate</code> not supported by default。当时比较忙，时间紧张下直接用了比较无脑的方法：先转成String存进去，取出来再转成LocalDate……实际上更好的方法是自己添加序列化和反序列化器，这里由于笔者也未继续实践，就不多写了。</p>
+<h1 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h1><p>建议还是认真读完一遍前端UI文档再来开发，会效率高很多。至少也得大致过一遍，才能知道一些比较少见的用法。之前只是草草看了一遍Vue的文档，很多概念还是模糊。这学期再看了一次，不仅学到了slot的用法，还对watch的深度有了了解，这些知识在debug时相当有帮助，可以提升定位bug的速度。</p>
+<h1 id="小程序"><a href="#小程序" class="headerlink" title="小程序"></a>小程序</h1><p>这学期有幸体验了下微信小程序开发，也算颇有一些心得。首先值得吐槽的点是，小程序的文档好难找orz而且一开始我以为它只有视频的文档，把我给看傻了，后来才发现左边的目录栏是可以展开的…在此处附上link</p>
+<p><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/framework/">https://developers.weixin.qq.com/miniprogram/dev/framework/</a></p>
+<p>好在有一众网上教程和Chat老师的教导，因此上手也比较快，个人理解来看就是一个小号的Vue，封装了比较多wx相关的api。当然使用的时候也遇到过一些坑，比如某些api不是在所有平台上都通用的，这就导致本地运行时的效果很正常，但是交给客户时试用反而有不同。</p>
+<h1 id="css"><a href="#css" class="headerlink" title="css"></a>css</h1><p>找css样式的正确方法：打开F12控制台，直接点对应的区域，会显示对应的css style。遇到特别刁钻的需求时可以对着弄。</p>
+<img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20230716231601926.png" srcset="/img/loading.gif" lazyload alt="image-20230716231601926" style="zoom:50%;" />
+
+<h1 id="pip和conda的区别"><a href="#pip和conda的区别" class="headerlink" title="pip和conda的区别"></a>pip和conda的区别</h1><blockquote>
+<p>pip install 和 conda install 都是用于安装 Python 包和库的命令，但是它们使用的包管理工具和适用范围有所不同。</p>
+<p>pip 是 Python 官方推荐的包管理工具，可以在全局环境或虚拟环境中使用。它可以从 Python Package Index (PyPI) 中下载并安装 Python 模块、包和库，并且可以安装其他的二进制文件。通过 pip install 命令安装的包一般都是纯 Python 代码实现的，如果需要依赖某些 C 或 C++ 编写的扩展模块，通常需要手动安装这些模块的编译环境。因此，使用 pip 安装的包可能会存在兼容性和性能问题。</p>
+<p>而 conda 则是 Anaconda 发行版自带的包管理工具，也可以在全局环境或虚拟环境中使用。它除了可以下载和安装 Python 包外，还可以安装二进制文件、文档和依赖库。conda 拥有自己的包仓库，叫做 Anaconda 仓库，其中包含了大量的科学计算和数据分析相关的 Python 包。conda 能够处理多平台、多版本、多依赖关系的情况，可以自动安装相关的依赖包及其编译环境，从而避免了很多兼容性和性能方面的问题。</p>
+<p>总之，如果您使用 Python 进行科学计算和数据分析等工作，建议使用 Anaconda 发行版，并使用 conda 命令来管理包的安装，这样可以保证软件环境的稳定性和完整性。如果您只是在轻量级的 Python 项目中使用一些简单的纯 Python 包，那么使用 pip 工具已经足够了。</p>
+</blockquote>
+<p>我个人一般这样管理Python环境：</p>
+<ul>
+<li><p>使用conda管理系统里的所有Python管理</p>
+<figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs gauss">conda env list <span class="hljs-meta"># 查看所有Python环境</span><br>conda <span class="hljs-keyword">create</span> --name lab3 python=<span class="hljs-number">3.8</span> <span class="hljs-meta"># 创建py38环境</span><br>conda <span class="hljs-keyword">create</span> -f environment.yaml <span class="hljs-meta"># 根据environment.yaml的信息创建Python环境</span><br>conda activate lab3 <span class="hljs-meta"># 激活环境</span><br>conda deactivate <span class="hljs-meta"># 取消激活</span><br>conda remove -n software-testing -all <span class="hljs-meta"># 删除环境</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>在每个Python环境里使用pip管理Python的包</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">pip list<br>pip install pandas<br>pip uninstall pandas<br># pip <span class="hljs-keyword">freeze</span> | tee requirements.txt # pip其实也可以导出，不过我不是很常用就是了<br># pip install -r requirement.txt # pip也可以导入<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>使用conda导出Python环境，以便在多个设备使用</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">conda <span class="hljs-built_in">env</span> <span class="hljs-built_in">export</span> &gt; environment.yaml <span class="hljs-comment"># 导出当前环境的信息到environment.yaml</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+
+              
+            </div>
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%8A%80%E6%9C%AF/" class="category-chain-item">技术</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E4%BB%A3%E7%A0%81/">#代码</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>一口气更新本学期代码经验心得</div>
+      <div>http://baokker.github.io/2023/06/24/一口气更新本学期代码经验心得/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Baokker</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年6月24日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2023年7月17日</div>
+        </div>
+      
+      <div class="license-meta-item">
+        <div>许可协议</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
+      </div>
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2023/06/24/%E9%9A%8F%E7%AC%94%E4%B8%80%E5%88%99/" title="随笔一则">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">随笔一则</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/06/24/%E4%B8%80%E5%8F%A3%E6%B0%94%E6%9B%B4%E6%96%B0%E8%AF%BB%E5%90%8E%E6%84%9F%EF%BC%88%E3%80%8A%E9%80%83%E7%A6%BB%E3%80%8B%E3%80%8A%E5%A4%9C%E8%88%AA%E3%80%8B%E3%80%8A%E9%9D%92%E6%98%A5%E5%92%96%E5%95%A1%E9%A6%86%E3%80%8B%E3%80%8A%E6%AF%AB%E6%97%A0%E6%84%8F%E4%B9%89%E7%9A%84%E5%B7%A5%E4%BD%9C%E3%80%8B%E3%80%8A%E7%99%BD%E8%89%B2%E7%9B%B8%E7%B0%BF1%E5%92%8C2%E3%80%8B%EF%BC%89/" title="一口气更新读后感（《逃离》《夜航》《青春咖啡馆》《毫无意义的工作》《白色相簿1和2》）">
+                        <span class="hidden-mobile">一口气更新读后感（《逃离》《夜航》《青春咖啡馆》《毫无意义的工作》《白色相簿1和2》）</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  <article id="comments" lazyload>
+    
+  <div id="waline"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#waline', function() {
+      Fluid.utils.createCssLink('https://lib.baomitu.com/waline/2.14.1/waline.min.css')
+      Fluid.utils.createScript('https://lib.baomitu.com/waline/2.14.1/waline.min.js', function() {
+        var options = Object.assign(
+          {"serverURL":"https://blog-comment-server.vercel.app/","path":"window.location.pathname","meta":["nick","mail","link"],"requiredMeta":["nick"],"lang":"zh-CN","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"],"dark":"html[data-user-color-scheme=\"dark\"]","wordLimit":0,"pageSize":10},
+          {
+            el: '#waline',
+            path: window.location.pathname
+          }
+        )
+        Waline.init(options);
+        Fluid.utils.waitElementVisible('#waline .vcontent', () => {
+          var imgSelector = '#waline .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+  </article>
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.0/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script>
+  (function() {
+    var enableLang = CONFIG.code_language.enable && CONFIG.code_language.default;
+    var enableCopy = CONFIG.copy_btn;
+    if (!enableLang && !enableCopy) {
+      return;
+    }
+
+    function getBgClass(ele) {
+      return Fluid.utils.getBackgroundLightness(ele) >= 0 ? 'code-widget-light' : 'code-widget-dark';
+    }
+
+    var copyTmpl = '';
+    copyTmpl += '<div class="code-widget">';
+    copyTmpl += 'LANG';
+    copyTmpl += '</div>';
+    jQuery('.markdown-body pre').each(function() {
+      var $pre = jQuery(this);
+      if ($pre.find('code.mermaid').length > 0) {
+        return;
+      }
+      if ($pre.find('span.line').length > 0) {
+        return;
+      }
+
+      var lang = '';
+
+      if (enableLang) {
+        lang = CONFIG.code_language.default;
+        if ($pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2 && $pre.children().hasClass('hljs')) {
+          lang = $pre[0].children[0].classList[1];
+        } else if ($pre[0].getAttribute('data-language')) {
+          lang = $pre[0].getAttribute('data-language');
+        } else if ($pre.parent().hasClass('sourceCode') && $pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2) {
+          lang = $pre[0].children[0].classList[1];
+          $pre.parent().addClass('code-wrapper');
+        } else if ($pre.parent().hasClass('markdown-body') && $pre[0].classList.length === 0) {
+          $pre.wrap('<div class="code-wrapper"></div>');
+        }
+        lang = lang.toUpperCase().replace('NONE', CONFIG.code_language.default);
+      }
+      $pre.append(copyTmpl.replace('LANG', lang).replace('code-widget">',
+        getBgClass($pre[0]) + (enableCopy ? ' code-widget copy-btn" data-clipboard-snippet><i class="iconfont icon-copy"></i>' : ' code-widget">')));
+
+      if (enableCopy) {
+        Fluid.utils.createScript('https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js', function() {
+          var clipboard = new window.ClipboardJS('.copy-btn', {
+            target: function(trigger) {
+              var nodes = trigger.parentNode.childNodes;
+              for (var i = 0; i < nodes.length; i++) {
+                if (nodes[i].tagName === 'CODE') {
+                  return nodes[i];
+                }
+              }
+            }
+          });
+          clipboard.on('success', function(e) {
+            e.clearSelection();
+            e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-copy', 'icon-success');
+            setTimeout(function() {
+              e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-success', 'icon-copy');
+            }, 2000);
+          });
+        });
+      }
+    });
+  })();
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
