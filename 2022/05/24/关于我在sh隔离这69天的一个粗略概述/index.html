@@ -7,8 +7,11 @@
 
 <head>
   <meta charset="UTF-8">
+
   <link rel="apple-touch-icon" sizes="76x76" href="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/favicon.png">
   <link rel="icon" href="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/favicon.png">
+  
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -51,7 +54,7 @@
 <!-- 主题依赖的图标库，不要自行修改 -->
 <!-- Do not modify the link that theme dependent icons -->
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
 
 
 
@@ -72,7 +75,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"baokker.github.io","root":"/","version":"1.9.0","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"baokker.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null},"gtag":null,"woyaola":null,"cnzz":null},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -81,6 +84,8 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
+  
+
 
   
 <meta name="generator" content="Hexo 6.3.0"></head>
@@ -114,9 +119,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="/" target="_self">
                 <i class="iconfont icon-home-fill"></i>
-                首页
+                <span>首页</span>
               </a>
             </li>
           
@@ -126,9 +131,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
+              <a class="nav-link" href="/archives/" target="_self">
                 <i class="iconfont icon-archive-fill"></i>
-                归档
+                <span>归档</span>
               </a>
             </li>
           
@@ -138,9 +143,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/categories/">
+              <a class="nav-link" href="/categories/" target="_self">
                 <i class="iconfont icon-category-fill"></i>
-                分类
+                <span>分类</span>
               </a>
             </li>
           
@@ -150,9 +155,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
+              <a class="nav-link" href="/tags/" target="_self">
                 <i class="iconfont icon-tags-fill"></i>
-                标签
+                <span>标签</span>
               </a>
             </li>
           
@@ -162,9 +167,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
+              <a class="nav-link" href="/about/" target="_self">
                 <i class="iconfont icon-user-fill"></i>
-                关于
+                <span>关于</span>
               </a>
             </li>
           
@@ -174,9 +179,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/links/">
+              <a class="nav-link" href="/links/" target="_self">
                 <i class="iconfont icon-link-fill"></i>
-                友链
+                <span>友链</span>
               </a>
             </li>
           
@@ -184,15 +189,16 @@
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+              <i class="iconfont icon-search"></i>
             </a>
           </li>
           
         
         
           <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
           </li>
         
       </ul>
@@ -280,12 +286,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <!-- SEO header -->
-            <h1 style="display: none">关于我在sh隔离这69天的一个粗略概述</h1>
+            <h1 id="seo-header">关于我在sh隔离这69天的一个粗略概述</h1>
             
-            <div class="markdown-body">
-              
-              <p>在pyq看到润回家的同学发了九张长图的plog，看完一时感慨万分，恰好自己明日也即将润回魂牵梦萦的家乡，顿时也想对自己这三个月的生活做个粗糙的纪录。比经历更可怕的是遗忘，我想明年今日的我可能在浪潮里很难再记起今日的心境，所以有必要将其诉诸文字，分享一些自己关注的细节和想法。再者，现在我的blog在国内不挂梯子难以访问，那我反倒可以写得更加轻松和张扬了。</p>
+            
+              <div class="markdown-body">
+                
+                <p>在pyq看到润回家的同学发了九张长图的plog，看完一时感慨万分，恰好自己明日也即将润回魂牵梦萦的家乡，顿时也想对自己这三个月的生活做个粗糙的纪录。比经历更可怕的是遗忘，我想明年今日的我可能在浪潮里很难再记起今日的心境，所以有必要将其诉诸文字，分享一些自己关注的细节和想法。再者，现在我的blog在国内不挂梯子难以访问，那我反倒可以写得更加轻松和张扬了。</p>
 <h1 id="历程的简单梳理"><a href="#历程的简单梳理" class="headerlink" title="历程的简单梳理"></a>历程的简单梳理</h1><h2 id="之前"><a href="#之前" class="headerlink" title="之前"></a>之前</h2><p>2月28号是我的生日。生日前的周六，我和小囡一起出去庆祝生日，路上我们还在讨论接下来日子的安排。我刚好在学期初，没什么特别紧要的事要做，她忙完期末考也有相当一段时间空闲。我们想着3月初去踏青，共青公园，滴水湖，乃至于迪士尼，还可以拍不少vlog。</p>
 <p>次日周末，我又和室友一起去了南翔印象城。搬迁校区后，我们一直在上海与江苏的交界处，地处郊区，周边的确环境优美，树木长得郁郁葱葱，周边分布着平房和高楼，平房一般是某某村落居民的住所，而高楼往往是买不起内环的居民群居的地方。那天我们豪爽地在手机上打车，直接从学校西北门开八公里公路到印象城里。虽然没有当年五角场的层楼林立，然而商场里仍然人来人往，各种商店也一应俱全。我们在绿茶餐厅里饱食一顿，其中的豆腐羹我们仨都称赞为全场MVP。而后两个月的某天，当一位室友在手机里翻出那几张菜肴的照片（有些菜我们当时甚至还指指点点，觉得这个不好那个不好）给我们看时，大家都发出了类似于和妈妈相依为命十年结果街头走散若干年后重聚时发出的那种叫声。</p>
 <p>情绪是越写越高，句子也越写越长，反而是显得有些臃肿了。总之，生活的美好画卷，仿佛正徐徐在我面前展开。现在的我回忆当时的心境时，总是能感受到这股由衷的期待。</p>
@@ -321,8 +327,9 @@
 <hr>
 <p><strong><a target="_blank" rel="noopener" href="https://www.pexels.com/zh-cn/photo/927816/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">Pexels</a></strong> 上的 <strong><a target="_blank" rel="noopener" href="https://www.pexels.com/zh-cn/@vasilis-koudas-273354?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">Vasilis Koudas</a></strong> 拍摄的图片</p>
 
-              
-            </div>
+                
+              </div>
+            
             <hr/>
             <div>
               <div class="post-metas my-3">
@@ -379,21 +386,23 @@
           <div>2022年5月29日</div>
         </div>
       
-      <div class="license-meta-item">
-        <div>许可协议</div>
-        <div>
-          
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
             
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
             
-              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
-              <span class="hint--top hint--rounded" aria-label="BY - 署名">
-                <i class="iconfont icon-by"></i>
-              </span>
-              </a>
-            
-          
+          </div>
         </div>
-      </div>
+      
     </div>
     <div class="license-icon iconfont"></div>
   </div>
@@ -427,13 +436,15 @@
             </div>
 
             
-  <article id="comments" lazyload>
-    
+  
+  
+    <article id="comments" lazyload>
+      
   <div id="waline"></div>
   <script type="text/javascript">
     Fluid.utils.loadComments('#waline', function() {
-      Fluid.utils.createCssLink('https://lib.baomitu.com/waline/2.14.1/waline.min.css')
-      Fluid.utils.createScript('https://lib.baomitu.com/waline/2.14.1/waline.min.js', function() {
+      Fluid.utils.createCssLink('https://lib.baomitu.com/waline/2.14.1/waline.css')
+      Fluid.utils.createScript('https://lib.baomitu.com/waline/2.14.1/waline.js', function() {
         var options = Object.assign(
           {"serverURL":"https://comment.baokker-blog.top/","path":"window.location.pathname","meta":["nick","mail","link"],"requiredMeta":["nick"],"lang":"zh-CN","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"],"dark":"html[data-user-color-scheme=\"dark\"]","wordLimit":0,"pageSize":10},
           {
@@ -453,7 +464,8 @@
   <noscript>Please enable JavaScript to view the comments</noscript>
 
 
-  </article>
+    </article>
+  
 
 
           </article>
@@ -465,7 +477,10 @@
       
   <aside class="sidebar" style="margin-left: -1rem">
     <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
   <div class="toc-body" id="toc-body"></div>
 </div>
 
@@ -499,6 +514,7 @@
 
 
   
+
 
 
 
@@ -568,10 +584,11 @@
       </span>
     
     
-  
-</div>
 
   
+
+</div>
+
   
   
 </div>
@@ -616,8 +633,6 @@
 
 
 
-
-
   
     <script  src="/js/img-lazyload.js" ></script>
   
@@ -633,94 +648,41 @@
     var boardCtn = jQuery('#board-ctn');
     var boardTop = boardCtn.offset().top;
 
-    window.tocbot.init({
+    window.tocbot.init(Object.assign({
       tocSelector     : '#toc-body',
       contentSelector : '.markdown-body',
-      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
       linkClass       : 'tocbot-link',
       activeLinkClass : 'tocbot-active-link',
       listClass       : 'tocbot-list',
       isCollapsedClass: 'tocbot-is-collapsed',
       collapsibleClass: 'tocbot-is-collapsible',
-      collapseDepth   : CONFIG.toc.collapseDepth || 0,
       scrollSmooth    : true,
-      headingsOffset  : -boardTop
-    });
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
     if (toc.find('.toc-list-item').length > 0) {
       toc.css('visibility', 'visible');
     }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
   });
 </script>
 
 
-  <script>
-  (function() {
-    var enableLang = CONFIG.code_language.enable && CONFIG.code_language.default;
-    var enableCopy = CONFIG.copy_btn;
-    if (!enableLang && !enableCopy) {
-      return;
-    }
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js></script>
 
-    function getBgClass(ele) {
-      return Fluid.utils.getBackgroundLightness(ele) >= 0 ? 'code-widget-light' : 'code-widget-dark';
-    }
-
-    var copyTmpl = '';
-    copyTmpl += '<div class="code-widget">';
-    copyTmpl += 'LANG';
-    copyTmpl += '</div>';
-    jQuery('.markdown-body pre').each(function() {
-      var $pre = jQuery(this);
-      if ($pre.find('code.mermaid').length > 0) {
-        return;
-      }
-      if ($pre.find('span.line').length > 0) {
-        return;
-      }
-
-      var lang = '';
-
-      if (enableLang) {
-        lang = CONFIG.code_language.default;
-        if ($pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2 && $pre.children().hasClass('hljs')) {
-          lang = $pre[0].children[0].classList[1];
-        } else if ($pre[0].getAttribute('data-language')) {
-          lang = $pre[0].getAttribute('data-language');
-        } else if ($pre.parent().hasClass('sourceCode') && $pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2) {
-          lang = $pre[0].children[0].classList[1];
-          $pre.parent().addClass('code-wrapper');
-        } else if ($pre.parent().hasClass('markdown-body') && $pre[0].classList.length === 0) {
-          $pre.wrap('<div class="code-wrapper"></div>');
-        }
-        lang = lang.toUpperCase().replace('NONE', CONFIG.code_language.default);
-      }
-      $pre.append(copyTmpl.replace('LANG', lang).replace('code-widget">',
-        getBgClass($pre[0]) + (enableCopy ? ' code-widget copy-btn" data-clipboard-snippet><i class="iconfont icon-copy"></i>' : ' code-widget">')));
-
-      if (enableCopy) {
-        Fluid.utils.createScript('https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js', function() {
-          var clipboard = new window.ClipboardJS('.copy-btn', {
-            target: function(trigger) {
-              var nodes = trigger.parentNode.childNodes;
-              for (var i = 0; i < nodes.length; i++) {
-                if (nodes[i].tagName === 'CODE') {
-                  return nodes[i];
-                }
-              }
-            }
-          });
-          clipboard.on('success', function(e) {
-            e.clearSelection();
-            e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-copy', 'icon-success');
-            setTimeout(function() {
-              e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-success', 'icon-copy');
-            }, 2000);
-          });
-        });
-      }
-    });
-  })();
-</script>
+  <script>Fluid.plugins.codeWidget();</script>
 
 
   
@@ -742,6 +704,21 @@
       window.anchors.options.class = 'anchorjs-link-left';
     }
     window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
   });
 </script>
 

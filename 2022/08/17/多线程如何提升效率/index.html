@@ -7,8 +7,11 @@
 
 <head>
   <meta charset="UTF-8">
+
   <link rel="apple-touch-icon" sizes="76x76" href="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/favicon.png">
   <link rel="icon" href="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/favicon.png">
+  
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -52,7 +55,7 @@
 <!-- 主题依赖的图标库，不要自行修改 -->
 <!-- Do not modify the link that theme dependent icons -->
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
 
 
 
@@ -73,7 +76,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"baokker.github.io","root":"/","version":"1.9.0","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"baokker.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null},"gtag":null,"woyaola":null,"cnzz":null},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -82,6 +85,8 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
+  
+
 
   
 <meta name="generator" content="Hexo 6.3.0"></head>
@@ -115,9 +120,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="/" target="_self">
                 <i class="iconfont icon-home-fill"></i>
-                首页
+                <span>首页</span>
               </a>
             </li>
           
@@ -127,9 +132,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
+              <a class="nav-link" href="/archives/" target="_self">
                 <i class="iconfont icon-archive-fill"></i>
-                归档
+                <span>归档</span>
               </a>
             </li>
           
@@ -139,9 +144,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/categories/">
+              <a class="nav-link" href="/categories/" target="_self">
                 <i class="iconfont icon-category-fill"></i>
-                分类
+                <span>分类</span>
               </a>
             </li>
           
@@ -151,9 +156,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
+              <a class="nav-link" href="/tags/" target="_self">
                 <i class="iconfont icon-tags-fill"></i>
-                标签
+                <span>标签</span>
               </a>
             </li>
           
@@ -163,9 +168,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
+              <a class="nav-link" href="/about/" target="_self">
                 <i class="iconfont icon-user-fill"></i>
-                关于
+                <span>关于</span>
               </a>
             </li>
           
@@ -175,9 +180,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/links/">
+              <a class="nav-link" href="/links/" target="_self">
                 <i class="iconfont icon-link-fill"></i>
-                友链
+                <span>友链</span>
               </a>
             </li>
           
@@ -185,15 +190,16 @@
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+              <i class="iconfont icon-search"></i>
             </a>
           </li>
           
         
         
           <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
           </li>
         
       </ul>
@@ -281,12 +287,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <!-- SEO header -->
-            <h1 style="display: none">多线程如何提升效率</h1>
+            <h1 id="seo-header">多线程如何提升效率</h1>
             
-            <div class="markdown-body">
-              
-              <p>这篇blog的标题看起来很像是<strong>技术</strong>类的文章（当我从脑海里浮现出这篇文章的标题时，我意识到自己已经深受最近写的xv6的影响），<br>但事实上，这篇文章是一篇随想文章，是想写我最近的一些感慨。</p>
+            
+              <div class="markdown-body">
+                
+                <p>这篇blog的标题看起来很像是<strong>技术</strong>类的文章（当我从脑海里浮现出这篇文章的标题时，我意识到自己已经深受最近写的xv6的影响），<br>但事实上，这篇文章是一篇随想文章，是想写我最近的一些感慨。</p>
 <h1 id="计算机中的多线程"><a href="#计算机中的多线程" class="headerlink" title="计算机中的多线程"></a>计算机中的多线程</h1><p>我想这其实和计算机的多线程颇有相似之处。对于一个多线程的任务，如果同时有多个线程访问并修改一个变量，那么很可能导致某些操作被覆盖，并没有被写入，从而导致结果并非预期所想。<br>程序员如何解决这个问题？答案是，引入<strong>原子操作</strong>和<strong>锁</strong>的概念。<br>所谓原子操作，即在这段代码执行操作的时间里，有且仅有这段代码能获取和修改这个变量，其他线程想要获得，只能等到这段代码结束原子操作。<br>那怎么实现原子操作呢？这就要用到上文提到的锁。对于想要保护唯一访问的变量，用一个锁维护起来。每个线程想要访问该变量时，首先判断该变量的锁是否被夺取，如果没有，则将该锁夺取，同时进行其对应操作；如果已经被夺取，那就不断等待，或者让自身进入睡眠（自旋锁和睡眠锁hhh），直到可以获得锁的时候。</p>
 <h1 id="生活中的多线程"><a href="#生活中的多线程" class="headerlink" title="生活中的多线程"></a>生活中的多线程</h1><p>我们每个人其实都生活在多线程中。死去的大作业突然开始攻击自己，家里的爸妈想让我看看Excel，爱人和我约会，同学与我聊天，我是生活里每个人（以及每个事物）想要访问并获取的对象。我需要对这些大大小小的事务进行处理。但是就像计算机一样，如果你想着多件事情（比如，一边写xv6的报告，一边想着迟迟未动的数据库课设，还有陪npy，还有学科三），这些事情就会影响到你工作的状态，最严重的情况是，（用当下较为时兴的话来说，）我陷入了内耗，因为我一直处在对各种可能完不成的任务的担忧之中。<br>所以在面对生活里的多线程时，也需要引入<strong>原子操作</strong>，引入<strong>锁</strong>。<br>所谓原子操作，就是要专注当下，当你在完成这项任务时，你只是在完成这项任务，其他的任务已经提前规划好了，就不必再为其担心。就好像给你上了一把锁，现在你只是关在这个房间里完成这个房间的任务，等下个房间再去完成其他的任务。（灵魂拷问：可以不去房间里吗)<br>那么怎么确定原子操作的优先级呢？答案是熟记二八法则，首先完成20%最重要的事情，产出最大的价值。</p>
 <h1 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h1><p>写这篇blog主要是之前和npy吵架时得到的经验教训，虽然她生气的时候凶凶的，但是我知道她心里是为我好，考虑着我的，因此我很感谢她在我生命里的存在。</p>
@@ -295,8 +301,9 @@
 <hr>
 <p>该图片由<a target="_blank" rel="noopener" href="https://pixabay.com/zh/users/geralt-9301/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=911767">Gerd Altmann</a>在<a target="_blank" rel="noopener" href="https://pixabay.com/zh//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=911767">Pixabay</a>上发布</p>
 
-              
-            </div>
+                
+              </div>
+            
             <hr/>
             <div>
               <div class="post-metas my-3">
@@ -326,7 +333,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">#多线程</a>
+        <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" class="print-no-link">#多线程</a>
       
     </div>
   
@@ -360,21 +367,23 @@
           <div>2022年9月6日</div>
         </div>
       
-      <div class="license-meta-item">
-        <div>许可协议</div>
-        <div>
-          
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
             
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
             
-              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
-              <span class="hint--top hint--rounded" aria-label="BY - 署名">
-                <i class="iconfont icon-by"></i>
-              </span>
-              </a>
-            
-          
+          </div>
         </div>
-      </div>
+      
     </div>
     <div class="license-icon iconfont"></div>
   </div>
@@ -408,13 +417,15 @@
             </div>
 
             
-  <article id="comments" lazyload>
-    
+  
+  
+    <article id="comments" lazyload>
+      
   <div id="waline"></div>
   <script type="text/javascript">
     Fluid.utils.loadComments('#waline', function() {
-      Fluid.utils.createCssLink('https://lib.baomitu.com/waline/2.14.1/waline.min.css')
-      Fluid.utils.createScript('https://lib.baomitu.com/waline/2.14.1/waline.min.js', function() {
+      Fluid.utils.createCssLink('https://lib.baomitu.com/waline/2.14.1/waline.css')
+      Fluid.utils.createScript('https://lib.baomitu.com/waline/2.14.1/waline.js', function() {
         var options = Object.assign(
           {"serverURL":"https://comment.baokker-blog.top/","path":"window.location.pathname","meta":["nick","mail","link"],"requiredMeta":["nick"],"lang":"zh-CN","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"],"dark":"html[data-user-color-scheme=\"dark\"]","wordLimit":0,"pageSize":10},
           {
@@ -434,7 +445,8 @@
   <noscript>Please enable JavaScript to view the comments</noscript>
 
 
-  </article>
+    </article>
+  
 
 
           </article>
@@ -446,7 +458,10 @@
       
   <aside class="sidebar" style="margin-left: -1rem">
     <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
   <div class="toc-body" id="toc-body"></div>
 </div>
 
@@ -480,6 +495,7 @@
 
 
   
+
 
 
 
@@ -549,10 +565,11 @@
       </span>
     
     
-  
-</div>
 
   
+
+</div>
+
   
   
 </div>
@@ -597,8 +614,6 @@
 
 
 
-
-
   
     <script  src="/js/img-lazyload.js" ></script>
   
@@ -614,94 +629,41 @@
     var boardCtn = jQuery('#board-ctn');
     var boardTop = boardCtn.offset().top;
 
-    window.tocbot.init({
+    window.tocbot.init(Object.assign({
       tocSelector     : '#toc-body',
       contentSelector : '.markdown-body',
-      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
       linkClass       : 'tocbot-link',
       activeLinkClass : 'tocbot-active-link',
       listClass       : 'tocbot-list',
       isCollapsedClass: 'tocbot-is-collapsed',
       collapsibleClass: 'tocbot-is-collapsible',
-      collapseDepth   : CONFIG.toc.collapseDepth || 0,
       scrollSmooth    : true,
-      headingsOffset  : -boardTop
-    });
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
     if (toc.find('.toc-list-item').length > 0) {
       toc.css('visibility', 'visible');
     }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
   });
 </script>
 
 
-  <script>
-  (function() {
-    var enableLang = CONFIG.code_language.enable && CONFIG.code_language.default;
-    var enableCopy = CONFIG.copy_btn;
-    if (!enableLang && !enableCopy) {
-      return;
-    }
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js></script>
 
-    function getBgClass(ele) {
-      return Fluid.utils.getBackgroundLightness(ele) >= 0 ? 'code-widget-light' : 'code-widget-dark';
-    }
-
-    var copyTmpl = '';
-    copyTmpl += '<div class="code-widget">';
-    copyTmpl += 'LANG';
-    copyTmpl += '</div>';
-    jQuery('.markdown-body pre').each(function() {
-      var $pre = jQuery(this);
-      if ($pre.find('code.mermaid').length > 0) {
-        return;
-      }
-      if ($pre.find('span.line').length > 0) {
-        return;
-      }
-
-      var lang = '';
-
-      if (enableLang) {
-        lang = CONFIG.code_language.default;
-        if ($pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2 && $pre.children().hasClass('hljs')) {
-          lang = $pre[0].children[0].classList[1];
-        } else if ($pre[0].getAttribute('data-language')) {
-          lang = $pre[0].getAttribute('data-language');
-        } else if ($pre.parent().hasClass('sourceCode') && $pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2) {
-          lang = $pre[0].children[0].classList[1];
-          $pre.parent().addClass('code-wrapper');
-        } else if ($pre.parent().hasClass('markdown-body') && $pre[0].classList.length === 0) {
-          $pre.wrap('<div class="code-wrapper"></div>');
-        }
-        lang = lang.toUpperCase().replace('NONE', CONFIG.code_language.default);
-      }
-      $pre.append(copyTmpl.replace('LANG', lang).replace('code-widget">',
-        getBgClass($pre[0]) + (enableCopy ? ' code-widget copy-btn" data-clipboard-snippet><i class="iconfont icon-copy"></i>' : ' code-widget">')));
-
-      if (enableCopy) {
-        Fluid.utils.createScript('https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js', function() {
-          var clipboard = new window.ClipboardJS('.copy-btn', {
-            target: function(trigger) {
-              var nodes = trigger.parentNode.childNodes;
-              for (var i = 0; i < nodes.length; i++) {
-                if (nodes[i].tagName === 'CODE') {
-                  return nodes[i];
-                }
-              }
-            }
-          });
-          clipboard.on('success', function(e) {
-            e.clearSelection();
-            e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-copy', 'icon-success');
-            setTimeout(function() {
-              e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-success', 'icon-copy');
-            }, 2000);
-          });
-        });
-      }
-    });
-  })();
-</script>
+  <script>Fluid.plugins.codeWidget();</script>
 
 
   
@@ -723,6 +685,21 @@
       window.anchors.options.class = 'anchorjs-link-left';
     }
     window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
   });
 </script>
 

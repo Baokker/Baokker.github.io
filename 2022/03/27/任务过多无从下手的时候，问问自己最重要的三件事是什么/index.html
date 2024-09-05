@@ -7,8 +7,11 @@
 
 <head>
   <meta charset="UTF-8">
+
   <link rel="apple-touch-icon" sizes="76x76" href="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/favicon.png">
   <link rel="icon" href="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/favicon.png">
+  
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -51,7 +54,7 @@
 <!-- 主题依赖的图标库，不要自行修改 -->
 <!-- Do not modify the link that theme dependent icons -->
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
 
 
 
@@ -72,7 +75,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"baokker.github.io","root":"/","version":"1.9.0","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"baokker.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null},"gtag":null,"woyaola":null,"cnzz":null},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -81,6 +84,8 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
+  
+
 
   
 <meta name="generator" content="Hexo 6.3.0"></head>
@@ -114,9 +119,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="/" target="_self">
                 <i class="iconfont icon-home-fill"></i>
-                首页
+                <span>首页</span>
               </a>
             </li>
           
@@ -126,9 +131,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
+              <a class="nav-link" href="/archives/" target="_self">
                 <i class="iconfont icon-archive-fill"></i>
-                归档
+                <span>归档</span>
               </a>
             </li>
           
@@ -138,9 +143,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/categories/">
+              <a class="nav-link" href="/categories/" target="_self">
                 <i class="iconfont icon-category-fill"></i>
-                分类
+                <span>分类</span>
               </a>
             </li>
           
@@ -150,9 +155,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
+              <a class="nav-link" href="/tags/" target="_self">
                 <i class="iconfont icon-tags-fill"></i>
-                标签
+                <span>标签</span>
               </a>
             </li>
           
@@ -162,9 +167,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
+              <a class="nav-link" href="/about/" target="_self">
                 <i class="iconfont icon-user-fill"></i>
-                关于
+                <span>关于</span>
               </a>
             </li>
           
@@ -174,9 +179,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/links/">
+              <a class="nav-link" href="/links/" target="_self">
                 <i class="iconfont icon-link-fill"></i>
-                友链
+                <span>友链</span>
               </a>
             </li>
           
@@ -184,15 +189,16 @@
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+              <i class="iconfont icon-search"></i>
             </a>
           </li>
           
         
         
           <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
           </li>
         
       </ul>
@@ -280,12 +286,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <!-- SEO header -->
-            <h1 style="display: none">任务过多无从下手的时候，问问自己最重要的三件事是什么</h1>
+            <h1 id="seo-header">任务过多无从下手的时候，问问自己最重要的三件事是什么</h1>
             
-            <div class="markdown-body">
-              
-              <p>到了大二下，学习的任务突然增重了很多。首先是专业课的比例大大上升，许多课程需要去认真学习（绝对不是之前的课都没好好听）；其次，这个学期有很多的小组项目，而我在大多数小组里担任组长，这需要我始终要保持比组员快一步未雨绸缪，看得远一些，把计划安排下去；最后，因为疫情，所有课程都变成了网课，所以我原本就一般自律的生活变得愈发慵懒。一周五天四节早八我没有一节是在九点半之前下床的（）</p>
+            
+              <div class="markdown-body">
+                
+                <p>到了大二下，学习的任务突然增重了很多。首先是专业课的比例大大上升，许多课程需要去认真学习（绝对不是之前的课都没好好听）；其次，这个学期有很多的小组项目，而我在大多数小组里担任组长，这需要我始终要保持比组员快一步未雨绸缪，看得远一些，把计划安排下去；最后，因为疫情，所有课程都变成了网课，所以我原本就一般自律的生活变得愈发慵懒。一周五天四节早八我没有一节是在九点半之前下床的（）</p>
 <p>于是每次安排未来，写下计划的时候，都会发现：要记得多陪陪小囡，好久没见着她；数据库已经被老师拉开了好多，课本还没看多少；创新创业好像要开始立项答辩了，得多看点论文；可是我还好想看茨威格的《昨日的世界》，写得真的蛮好；我还想补点blog，看着前些天随手写下的标题，我都快不记得当时自己是想说什么（我这篇post便是吸取此教训而来..）</p>
 <p>思绪混乱的时候突然想到，自己其实是陷入了<a href="https://baokker.github.io/2022/02/02/%E3%80%8A%E7%A8%80%E7%BC%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"><strong>稀缺</strong></a>的怪圈子，每天都想着怎样塞满今天的安排，眼前有多少急着忙着做完的事情，这种时间稀缺的心态，使我的视野变得狭窄，增加了我的认知负担，还不利于我的情绪。</p>
 <p>于是想到，每次当我遇到类似的事情太多的情境时，应该给自己安排如下的步骤：</p>
@@ -296,8 +302,9 @@
 <hr>
 <p><strong><a target="_blank" rel="noopener" href="https://www.pexels.com/zh-cn/photo/10194726/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">Pexels</a></strong> 上的 <strong><a target="_blank" rel="noopener" href="https://www.pexels.com/zh-cn/@aleksey-sokolenko-2501915?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">Aleksey Sokolenko</a></strong> 拍摄的图片</p>
 
-              
-            </div>
+                
+              </div>
+            
             <hr/>
             <div>
               <div class="post-metas my-3">
@@ -354,21 +361,23 @@
           <div>2022年5月29日</div>
         </div>
       
-      <div class="license-meta-item">
-        <div>许可协议</div>
-        <div>
-          
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
             
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
             
-              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
-              <span class="hint--top hint--rounded" aria-label="BY - 署名">
-                <i class="iconfont icon-by"></i>
-              </span>
-              </a>
-            
-          
+          </div>
         </div>
-      </div>
+      
     </div>
     <div class="license-icon iconfont"></div>
   </div>
@@ -402,13 +411,15 @@
             </div>
 
             
-  <article id="comments" lazyload>
-    
+  
+  
+    <article id="comments" lazyload>
+      
   <div id="waline"></div>
   <script type="text/javascript">
     Fluid.utils.loadComments('#waline', function() {
-      Fluid.utils.createCssLink('https://lib.baomitu.com/waline/2.14.1/waline.min.css')
-      Fluid.utils.createScript('https://lib.baomitu.com/waline/2.14.1/waline.min.js', function() {
+      Fluid.utils.createCssLink('https://lib.baomitu.com/waline/2.14.1/waline.css')
+      Fluid.utils.createScript('https://lib.baomitu.com/waline/2.14.1/waline.js', function() {
         var options = Object.assign(
           {"serverURL":"https://comment.baokker-blog.top/","path":"window.location.pathname","meta":["nick","mail","link"],"requiredMeta":["nick"],"lang":"zh-CN","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"],"dark":"html[data-user-color-scheme=\"dark\"]","wordLimit":0,"pageSize":10},
           {
@@ -428,7 +439,8 @@
   <noscript>Please enable JavaScript to view the comments</noscript>
 
 
-  </article>
+    </article>
+  
 
 
           </article>
@@ -440,7 +452,10 @@
       
   <aside class="sidebar" style="margin-left: -1rem">
     <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
   <div class="toc-body" id="toc-body"></div>
 </div>
 
@@ -474,6 +489,7 @@
 
 
   
+
 
 
 
@@ -543,10 +559,11 @@
       </span>
     
     
-  
-</div>
 
   
+
+</div>
+
   
   
 </div>
@@ -591,8 +608,6 @@
 
 
 
-
-
   
     <script  src="/js/img-lazyload.js" ></script>
   
@@ -608,94 +623,41 @@
     var boardCtn = jQuery('#board-ctn');
     var boardTop = boardCtn.offset().top;
 
-    window.tocbot.init({
+    window.tocbot.init(Object.assign({
       tocSelector     : '#toc-body',
       contentSelector : '.markdown-body',
-      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
       linkClass       : 'tocbot-link',
       activeLinkClass : 'tocbot-active-link',
       listClass       : 'tocbot-list',
       isCollapsedClass: 'tocbot-is-collapsed',
       collapsibleClass: 'tocbot-is-collapsible',
-      collapseDepth   : CONFIG.toc.collapseDepth || 0,
       scrollSmooth    : true,
-      headingsOffset  : -boardTop
-    });
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
     if (toc.find('.toc-list-item').length > 0) {
       toc.css('visibility', 'visible');
     }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
   });
 </script>
 
 
-  <script>
-  (function() {
-    var enableLang = CONFIG.code_language.enable && CONFIG.code_language.default;
-    var enableCopy = CONFIG.copy_btn;
-    if (!enableLang && !enableCopy) {
-      return;
-    }
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js></script>
 
-    function getBgClass(ele) {
-      return Fluid.utils.getBackgroundLightness(ele) >= 0 ? 'code-widget-light' : 'code-widget-dark';
-    }
-
-    var copyTmpl = '';
-    copyTmpl += '<div class="code-widget">';
-    copyTmpl += 'LANG';
-    copyTmpl += '</div>';
-    jQuery('.markdown-body pre').each(function() {
-      var $pre = jQuery(this);
-      if ($pre.find('code.mermaid').length > 0) {
-        return;
-      }
-      if ($pre.find('span.line').length > 0) {
-        return;
-      }
-
-      var lang = '';
-
-      if (enableLang) {
-        lang = CONFIG.code_language.default;
-        if ($pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2 && $pre.children().hasClass('hljs')) {
-          lang = $pre[0].children[0].classList[1];
-        } else if ($pre[0].getAttribute('data-language')) {
-          lang = $pre[0].getAttribute('data-language');
-        } else if ($pre.parent().hasClass('sourceCode') && $pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2) {
-          lang = $pre[0].children[0].classList[1];
-          $pre.parent().addClass('code-wrapper');
-        } else if ($pre.parent().hasClass('markdown-body') && $pre[0].classList.length === 0) {
-          $pre.wrap('<div class="code-wrapper"></div>');
-        }
-        lang = lang.toUpperCase().replace('NONE', CONFIG.code_language.default);
-      }
-      $pre.append(copyTmpl.replace('LANG', lang).replace('code-widget">',
-        getBgClass($pre[0]) + (enableCopy ? ' code-widget copy-btn" data-clipboard-snippet><i class="iconfont icon-copy"></i>' : ' code-widget">')));
-
-      if (enableCopy) {
-        Fluid.utils.createScript('https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js', function() {
-          var clipboard = new window.ClipboardJS('.copy-btn', {
-            target: function(trigger) {
-              var nodes = trigger.parentNode.childNodes;
-              for (var i = 0; i < nodes.length; i++) {
-                if (nodes[i].tagName === 'CODE') {
-                  return nodes[i];
-                }
-              }
-            }
-          });
-          clipboard.on('success', function(e) {
-            e.clearSelection();
-            e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-copy', 'icon-success');
-            setTimeout(function() {
-              e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-success', 'icon-copy');
-            }, 2000);
-          });
-        });
-      }
-    });
-  })();
-</script>
+  <script>Fluid.plugins.codeWidget();</script>
 
 
   
@@ -717,6 +679,21 @@
       window.anchors.options.class = 'anchorjs-link-left';
     }
     window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
   });
 </script>
 

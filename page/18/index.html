@@ -7,8 +7,11 @@
 
 <head>
   <meta charset="UTF-8">
+
   <link rel="apple-touch-icon" sizes="76x76" href="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/favicon.png">
   <link rel="icon" href="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/favicon.png">
+  
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -41,7 +44,7 @@
 <!-- 主题依赖的图标库，不要自行修改 -->
 <!-- Do not modify the link that theme dependent icons -->
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
 
 
 
@@ -62,7 +65,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"baokker.github.io","root":"/","version":"1.9.0","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"baokker.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null},"gtag":null,"woyaola":null,"cnzz":null},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -71,6 +74,8 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
+  
+
 
   
 <meta name="generator" content="Hexo 6.3.0"></head>
@@ -104,9 +109,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="/" target="_self">
                 <i class="iconfont icon-home-fill"></i>
-                首页
+                <span>首页</span>
               </a>
             </li>
           
@@ -116,9 +121,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
+              <a class="nav-link" href="/archives/" target="_self">
                 <i class="iconfont icon-archive-fill"></i>
-                归档
+                <span>归档</span>
               </a>
             </li>
           
@@ -128,9 +133,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/categories/">
+              <a class="nav-link" href="/categories/" target="_self">
                 <i class="iconfont icon-category-fill"></i>
-                分类
+                <span>分类</span>
               </a>
             </li>
           
@@ -140,9 +145,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
+              <a class="nav-link" href="/tags/" target="_self">
                 <i class="iconfont icon-tags-fill"></i>
-                标签
+                <span>标签</span>
               </a>
             </li>
           
@@ -152,9 +157,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
+              <a class="nav-link" href="/about/" target="_self">
                 <i class="iconfont icon-user-fill"></i>
-                关于
+                <span>关于</span>
               </a>
             </li>
           
@@ -164,9 +169,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/links/">
+              <a class="nav-link" href="/links/" target="_self">
                 <i class="iconfont icon-link-fill"></i>
-                友链
+                <span>友链</span>
               </a>
             </li>
           
@@ -174,15 +179,16 @@
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+              <i class="iconfont icon-search"></i>
             </a>
           </li>
           
         
         
           <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
           </li>
         
       </ul>
@@ -241,16 +247,16 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2021/11/15/%E3%80%90%E8%87%AA%E7%94%A8%E3%80%91%E5%90%83%E9%A5%AD%E7%A4%BC%E4%BB%AA%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%B0%E5%BD%95/" target="_self">
           【自用】吃饭礼仪的一些记录
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2021/11/15/%E3%80%90%E8%87%AA%E7%94%A8%E3%80%91%E5%90%83%E9%A5%AD%E7%A4%BC%E4%BB%AA%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%B0%E5%BD%95/" target="_self">
+      
+      <a class="index-excerpt " href="/2021/11/15/%E3%80%90%E8%87%AA%E7%94%A8%E3%80%91%E5%90%83%E9%A5%AD%E7%A4%BC%E4%BB%AA%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%B0%E5%BD%95/" target="_self">
         <div>
-          
           学习一下
         </div>
       </a>
@@ -308,16 +314,16 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2021/11/12/%E3%80%90%E6%91%98%E5%BD%95%E3%80%91%E4%B8%80%E4%BA%9B%E7%BE%8E%E7%BE%8E%E7%9A%84%E8%AF%9D/" target="_self">
           【摘录】一些美美的话
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2021/11/12/%E3%80%90%E6%91%98%E5%BD%95%E3%80%91%E4%B8%80%E4%BA%9B%E7%BE%8E%E7%BE%8E%E7%9A%84%E8%AF%9D/" target="_self">
+      
+      <a class="index-excerpt " href="/2021/11/12/%E3%80%90%E6%91%98%E5%BD%95%E3%80%91%E4%B8%80%E4%BA%9B%E7%BE%8E%E7%BE%8E%E7%9A%84%E8%AF%9D/" target="_self">
         <div>
-          
           需要这么一点美文来暖暖心
         </div>
       </a>
@@ -375,16 +381,16 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2021/11/11/%E3%80%90%E9%9A%8F%E6%83%B3%E3%80%91%E9%80%82%E6%97%B6%E6%94%BE%E7%A9%BA/" target="_self">
           【随想】适时放空
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2021/11/11/%E3%80%90%E9%9A%8F%E6%83%B3%E3%80%91%E9%80%82%E6%97%B6%E6%94%BE%E7%A9%BA/" target="_self">
+      
+      <a class="index-excerpt " href="/2021/11/11/%E3%80%90%E9%9A%8F%E6%83%B3%E3%80%91%E9%80%82%E6%97%B6%E6%94%BE%E7%A9%BA/" target="_self">
         <div>
-          
           看到这里 不如放空三分钟
         </div>
       </a>
@@ -442,16 +448,16 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2021/11/11/%E3%80%90%E8%87%AA%E7%94%A8%E3%80%91%E8%AF%BB%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E8%A7%89%E5%BE%97%E5%BE%88%E4%B8%8D%E9%94%99%E7%9A%84%E6%A6%82%E5%BF%B5%EF%BC%88%E5%AF%B9%E7%B4%A0%E6%9D%90%E5%BA%93%E7%9A%84%E6%8B%93%E5%B1%95%EF%BC%89/" target="_self">
           【自用】读到的各种觉得很不错的概念（对素材库的拓展）
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2021/11/11/%E3%80%90%E8%87%AA%E7%94%A8%E3%80%91%E8%AF%BB%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E8%A7%89%E5%BE%97%E5%BE%88%E4%B8%8D%E9%94%99%E7%9A%84%E6%A6%82%E5%BF%B5%EF%BC%88%E5%AF%B9%E7%B4%A0%E6%9D%90%E5%BA%93%E7%9A%84%E6%8B%93%E5%B1%95%EF%BC%89/" target="_self">
+      
+      <a class="index-excerpt " href="/2021/11/11/%E3%80%90%E8%87%AA%E7%94%A8%E3%80%91%E8%AF%BB%E5%88%B0%E7%9A%84%E5%90%84%E7%A7%8D%E8%A7%89%E5%BE%97%E5%BE%88%E4%B8%8D%E9%94%99%E7%9A%84%E6%A6%82%E5%BF%B5%EF%BC%88%E5%AF%B9%E7%B4%A0%E6%9D%90%E5%BA%93%E7%9A%84%E6%8B%93%E5%B1%95%EF%BC%89/" target="_self">
         <div>
-          
           各种有意思的概念
         </div>
       </a>
@@ -511,16 +517,16 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2021/11/09/%E6%9C%80%E8%BF%91%E8%AF%BB%E4%BA%86%E5%BE%88%E5%A4%9A%E5%8D%9A%E5%B0%94%E8%B5%AB%E6%96%AF%E7%9A%84%E5%B0%8F%E8%AF%B4/" target="_self">
           最近读了很多博尔赫斯的小说
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2021/11/09/%E6%9C%80%E8%BF%91%E8%AF%BB%E4%BA%86%E5%BE%88%E5%A4%9A%E5%8D%9A%E5%B0%94%E8%B5%AB%E6%96%AF%E7%9A%84%E5%B0%8F%E8%AF%B4/" target="_self">
+      
+      <a class="index-excerpt " href="/2021/11/09/%E6%9C%80%E8%BF%91%E8%AF%BB%E4%BA%86%E5%BE%88%E5%A4%9A%E5%8D%9A%E5%B0%94%E8%B5%AB%E6%96%AF%E7%9A%84%E5%B0%8F%E8%AF%B4/" target="_self">
         <div>
-          
           膜拜不起了属于是
         </div>
       </a>
@@ -578,16 +584,16 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2021/11/09/%E7%B3%BB%E7%BB%9F%E5%8C%96%E5%92%8C%E7%A2%8E%E7%89%87%E5%8C%96/" target="_self">
           系统化和碎片化
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2021/11/09/%E7%B3%BB%E7%BB%9F%E5%8C%96%E5%92%8C%E7%A2%8E%E7%89%87%E5%8C%96/" target="_self">
+      
+      <a class="index-excerpt " href="/2021/11/09/%E7%B3%BB%E7%BB%9F%E5%8C%96%E5%92%8C%E7%A2%8E%E7%89%87%E5%8C%96/" target="_self">
         <div>
-          
           ...
         </div>
       </a>
@@ -647,16 +653,16 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2021/11/08/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E5%88%A0%E9%99%A4%E7%AE%97%E6%B3%95/" target="_self">
           二叉搜索树删除算法
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2021/11/08/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E5%88%A0%E9%99%A4%E7%AE%97%E6%B3%95/" target="_self">
+      
+      <a class="index-excerpt " href="/2021/11/08/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E5%88%A0%E9%99%A4%E7%AE%97%E6%B3%95/" target="_self">
         <div>
-          
           终于写了一篇关于技术的哈哈哈
         </div>
       </a>
@@ -714,16 +720,16 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2021/11/06/%E5%8D%83%E4%B8%87%E4%B8%8D%E8%A6%81%E9%9A%8F%E4%BE%BF%E5%8D%B8%E8%BD%BD%E8%BD%AF%E4%BB%B6%EF%BC%81%EF%BC%81/" target="_self">
           千万不要随便卸载软件！！
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2021/11/06/%E5%8D%83%E4%B8%87%E4%B8%8D%E8%A6%81%E9%9A%8F%E4%BE%BF%E5%8D%B8%E8%BD%BD%E8%BD%AF%E4%BB%B6%EF%BC%81%EF%BC%81/" target="_self">
+      
+      <a class="index-excerpt " href="/2021/11/06/%E5%8D%83%E4%B8%87%E4%B8%8D%E8%A6%81%E9%9A%8F%E4%BE%BF%E5%8D%B8%E8%BD%BD%E8%BD%AF%E4%BB%B6%EF%BC%81%EF%BC%81/" target="_self">
         <div>
-          
           不要手动删文件夹！
         </div>
       </a>
@@ -781,16 +787,16 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2021/11/05/Reread%E3%80%8A%E9%9D%9E%E6%9A%B4%E5%8A%9B%E6%B2%9F%E9%80%9A%E3%80%8B/" target="_self">
           Reread《非暴力沟通》
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2021/11/05/Reread%E3%80%8A%E9%9D%9E%E6%9A%B4%E5%8A%9B%E6%B2%9F%E9%80%9A%E3%80%8B/" target="_self">
+      
+      <a class="index-excerpt " href="/2021/11/05/Reread%E3%80%8A%E9%9D%9E%E6%9A%B4%E5%8A%9B%E6%B2%9F%E9%80%9A%E3%80%8B/" target="_self">
         <div>
-          
           终于是重读了一次以前读过的好书
         </div>
       </a>
@@ -848,16 +854,16 @@
       </div>
     
     <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/2021/11/04/%E4%B8%80%E7%AF%87%E5%85%B3%E4%BA%8E%E5%8F%8D%E6%B4%97%E8%84%91%E7%9A%84%E5%BE%AE%E4%BF%A1%E8%AF%BB%E6%96%87%E7%9A%84%E9%9A%8F%E6%83%B3/" target="_self">
           一篇关于反洗脑的微信读文的随想
         </a>
-      </h1>
+      </h2>
 
-      <a class="index-excerpt" href="/2021/11/04/%E4%B8%80%E7%AF%87%E5%85%B3%E4%BA%8E%E5%8F%8D%E6%B4%97%E8%84%91%E7%9A%84%E5%BE%AE%E4%BF%A1%E8%AF%BB%E6%96%87%E7%9A%84%E9%9A%8F%E6%83%B3/" target="_self">
+      
+      <a class="index-excerpt " href="/2021/11/04/%E4%B8%80%E7%AF%87%E5%85%B3%E4%BA%8E%E5%8F%8D%E6%B4%97%E8%84%91%E7%9A%84%E5%BE%AE%E4%BF%A1%E8%AF%BB%E6%96%87%E7%9A%84%E9%9A%8F%E6%83%B3/" target="_self">
         <div>
-          
           由洗脑的相关知识联想到的
         </div>
       </a>
@@ -985,10 +991,11 @@
       </span>
     
     
-  
-</div>
 
   
+
+</div>
+
   
   
 </div>
@@ -1029,8 +1036,6 @@
       
     })(window, document);
   </script>
-
-
 
 
 

@@ -7,8 +7,11 @@
 
 <head>
   <meta charset="UTF-8">
+
   <link rel="apple-touch-icon" sizes="76x76" href="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/favicon.png">
   <link rel="icon" href="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/favicon.png">
+  
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -55,7 +58,7 @@
 <!-- 主题依赖的图标库，不要自行修改 -->
 <!-- Do not modify the link that theme dependent icons -->
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
 
 
 
@@ -76,7 +79,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"baokker.github.io","root":"/","version":"1.9.0","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"baokker.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null},"gtag":null,"woyaola":null,"cnzz":null},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -85,6 +88,8 @@
   </script>
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
+  
+
 
   
 <meta name="generator" content="Hexo 6.3.0"></head>
@@ -118,9 +123,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="/" target="_self">
                 <i class="iconfont icon-home-fill"></i>
-                首页
+                <span>首页</span>
               </a>
             </li>
           
@@ -130,9 +135,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
+              <a class="nav-link" href="/archives/" target="_self">
                 <i class="iconfont icon-archive-fill"></i>
-                归档
+                <span>归档</span>
               </a>
             </li>
           
@@ -142,9 +147,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/categories/">
+              <a class="nav-link" href="/categories/" target="_self">
                 <i class="iconfont icon-category-fill"></i>
-                分类
+                <span>分类</span>
               </a>
             </li>
           
@@ -154,9 +159,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
+              <a class="nav-link" href="/tags/" target="_self">
                 <i class="iconfont icon-tags-fill"></i>
-                标签
+                <span>标签</span>
               </a>
             </li>
           
@@ -166,9 +171,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
+              <a class="nav-link" href="/about/" target="_self">
                 <i class="iconfont icon-user-fill"></i>
-                关于
+                <span>关于</span>
               </a>
             </li>
           
@@ -178,9 +183,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/links/">
+              <a class="nav-link" href="/links/" target="_self">
                 <i class="iconfont icon-link-fill"></i>
-                友链
+                <span>友链</span>
               </a>
             </li>
           
@@ -188,15 +193,16 @@
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+              <i class="iconfont icon-search"></i>
             </a>
           </li>
           
         
         
           <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
           </li>
         
       </ul>
@@ -284,12 +290,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <!-- SEO header -->
-            <h1 style="display: none">我对搜索引擎的一些经验</h1>
+            <h1 id="seo-header">我对搜索引擎的一些经验</h1>
             
-            <div class="markdown-body">
-              
-              <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>写完我对整理笔记的工具的一些经验，再来写写我对搜索引擎的一些心得。</p>
+            
+              <div class="markdown-body">
+                
+                <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>写完我对整理笔记的工具的一些经验，再来写写我对搜索引擎的一些心得。</p>
 <p>受到如何正确提问这篇帖子的影响，我本人对提问一概来者不拒（尤其是高质量的问题），但对于可以通过STFW（Search The Fucking Web）解决的问题则一直不是很耐烦——你谷歌一下第一条就能查到的东西，还跑来问我，对你对我都是浪费时间精力，何苦呢？然而相处下来，发现并不是所有人都能很好地利用这个fucking web，对于搜索引擎的使用意识和使用方法都存在缺陷，并非是他们不想用，而是他们真的不会利用。</p>
 <p>在此献丑一番，讲点我对搜索引擎的经验。除了我们生活中通常定义为“搜索引擎”的那些工具之外，还有一些软件在特定用途上，因为其内容的独家性和特殊性，使用效果媲美甚至超过搜索引擎。</p>
 <h1 id="谷歌"><a href="#谷歌" class="headerlink" title="谷歌"></a>谷歌</h1><p>如果你之前使用的是必应，那么我认为谷歌可以提升你50%的使用体验；如果你之前使用的是百度，那么谷歌可以提升250%的体验。</p>
@@ -364,8 +370,9 @@
 <hr>
 <p>该图片由<a target="_blank" rel="noopener" href="https://pixabay.com/zh/users/photomix-company-1546875/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1433323">Photo Mix</a>在<a target="_blank" rel="noopener" href="https://pixabay.com/zh//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1433323">Pixabay</a>上发布</p>
 
-              
-            </div>
+                
+              </div>
+            
             <hr/>
             <div>
               <div class="post-metas my-3">
@@ -395,13 +402,13 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/ChatGPT/">#ChatGPT</a>
+        <a href="/tags/ChatGPT/" class="print-no-link">#ChatGPT</a>
       
-        <a href="/tags/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/">#搜索引擎</a>
+        <a href="/tags/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/" class="print-no-link">#搜索引擎</a>
       
-        <a href="/tags/Google/">#Google</a>
+        <a href="/tags/Google/" class="print-no-link">#Google</a>
       
-        <a href="/tags/%E5%B0%8F%E7%BA%A2%E4%B9%A6/">#小红书</a>
+        <a href="/tags/%E5%B0%8F%E7%BA%A2%E4%B9%A6/" class="print-no-link">#小红书</a>
       
     </div>
   
@@ -435,21 +442,23 @@
           <div>2023年2月16日</div>
         </div>
       
-      <div class="license-meta-item">
-        <div>许可协议</div>
-        <div>
-          
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
             
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
             
-              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
-              <span class="hint--top hint--rounded" aria-label="BY - 署名">
-                <i class="iconfont icon-by"></i>
-              </span>
-              </a>
-            
-          
+          </div>
         </div>
-      </div>
+      
     </div>
     <div class="license-icon iconfont"></div>
   </div>
@@ -483,13 +492,15 @@
             </div>
 
             
-  <article id="comments" lazyload>
-    
+  
+  
+    <article id="comments" lazyload>
+      
   <div id="waline"></div>
   <script type="text/javascript">
     Fluid.utils.loadComments('#waline', function() {
-      Fluid.utils.createCssLink('https://lib.baomitu.com/waline/2.14.1/waline.min.css')
-      Fluid.utils.createScript('https://lib.baomitu.com/waline/2.14.1/waline.min.js', function() {
+      Fluid.utils.createCssLink('https://lib.baomitu.com/waline/2.14.1/waline.css')
+      Fluid.utils.createScript('https://lib.baomitu.com/waline/2.14.1/waline.js', function() {
         var options = Object.assign(
           {"serverURL":"https://comment.baokker-blog.top/","path":"window.location.pathname","meta":["nick","mail","link"],"requiredMeta":["nick"],"lang":"zh-CN","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"],"dark":"html[data-user-color-scheme=\"dark\"]","wordLimit":0,"pageSize":10},
           {
@@ -509,7 +520,8 @@
   <noscript>Please enable JavaScript to view the comments</noscript>
 
 
-  </article>
+    </article>
+  
 
 
           </article>
@@ -521,7 +533,10 @@
       
   <aside class="sidebar" style="margin-left: -1rem">
     <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
   <div class="toc-body" id="toc-body"></div>
 </div>
 
@@ -555,6 +570,7 @@
 
 
   
+
 
 
 
@@ -624,10 +640,11 @@
       </span>
     
     
-  
-</div>
 
   
+
+</div>
+
   
   
 </div>
@@ -672,8 +689,6 @@
 
 
 
-
-
   
     <script  src="/js/img-lazyload.js" ></script>
   
@@ -689,94 +704,41 @@
     var boardCtn = jQuery('#board-ctn');
     var boardTop = boardCtn.offset().top;
 
-    window.tocbot.init({
+    window.tocbot.init(Object.assign({
       tocSelector     : '#toc-body',
       contentSelector : '.markdown-body',
-      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
       linkClass       : 'tocbot-link',
       activeLinkClass : 'tocbot-active-link',
       listClass       : 'tocbot-list',
       isCollapsedClass: 'tocbot-is-collapsed',
       collapsibleClass: 'tocbot-is-collapsible',
-      collapseDepth   : CONFIG.toc.collapseDepth || 0,
       scrollSmooth    : true,
-      headingsOffset  : -boardTop
-    });
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
     if (toc.find('.toc-list-item').length > 0) {
       toc.css('visibility', 'visible');
     }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
   });
 </script>
 
 
-  <script>
-  (function() {
-    var enableLang = CONFIG.code_language.enable && CONFIG.code_language.default;
-    var enableCopy = CONFIG.copy_btn;
-    if (!enableLang && !enableCopy) {
-      return;
-    }
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js></script>
 
-    function getBgClass(ele) {
-      return Fluid.utils.getBackgroundLightness(ele) >= 0 ? 'code-widget-light' : 'code-widget-dark';
-    }
-
-    var copyTmpl = '';
-    copyTmpl += '<div class="code-widget">';
-    copyTmpl += 'LANG';
-    copyTmpl += '</div>';
-    jQuery('.markdown-body pre').each(function() {
-      var $pre = jQuery(this);
-      if ($pre.find('code.mermaid').length > 0) {
-        return;
-      }
-      if ($pre.find('span.line').length > 0) {
-        return;
-      }
-
-      var lang = '';
-
-      if (enableLang) {
-        lang = CONFIG.code_language.default;
-        if ($pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2 && $pre.children().hasClass('hljs')) {
-          lang = $pre[0].children[0].classList[1];
-        } else if ($pre[0].getAttribute('data-language')) {
-          lang = $pre[0].getAttribute('data-language');
-        } else if ($pre.parent().hasClass('sourceCode') && $pre[0].children.length > 0 && $pre[0].children[0].classList.length >= 2) {
-          lang = $pre[0].children[0].classList[1];
-          $pre.parent().addClass('code-wrapper');
-        } else if ($pre.parent().hasClass('markdown-body') && $pre[0].classList.length === 0) {
-          $pre.wrap('<div class="code-wrapper"></div>');
-        }
-        lang = lang.toUpperCase().replace('NONE', CONFIG.code_language.default);
-      }
-      $pre.append(copyTmpl.replace('LANG', lang).replace('code-widget">',
-        getBgClass($pre[0]) + (enableCopy ? ' code-widget copy-btn" data-clipboard-snippet><i class="iconfont icon-copy"></i>' : ' code-widget">')));
-
-      if (enableCopy) {
-        Fluid.utils.createScript('https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js', function() {
-          var clipboard = new window.ClipboardJS('.copy-btn', {
-            target: function(trigger) {
-              var nodes = trigger.parentNode.childNodes;
-              for (var i = 0; i < nodes.length; i++) {
-                if (nodes[i].tagName === 'CODE') {
-                  return nodes[i];
-                }
-              }
-            }
-          });
-          clipboard.on('success', function(e) {
-            e.clearSelection();
-            e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-copy', 'icon-success');
-            setTimeout(function() {
-              e.trigger.innerHTML = e.trigger.innerHTML.replace('icon-success', 'icon-copy');
-            }, 2000);
-          });
-        });
-      }
-    });
-  })();
-</script>
+  <script>Fluid.plugins.codeWidget();</script>
 
 
   
@@ -798,6 +760,21 @@
       window.anchors.options.class = 'anchorjs-link-left';
     }
     window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
   });
 </script>
 
