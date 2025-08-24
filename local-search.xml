@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>Gemini学生优惠二次验证个人总结</title>
+    <link href="/2025/08/24/Gemini%E5%AD%A6%E7%94%9F%E4%BC%98%E6%83%A0%E4%BA%8C%E6%AC%A1%E9%AA%8C%E8%AF%81%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93/"/>
+    <url>/2025/08/24/Gemini%E5%AD%A6%E7%94%9F%E4%BC%98%E6%83%A0%E4%BA%8C%E6%AC%A1%E9%AA%8C%E8%AF%81%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93/</url>
+    
+    <content type="html"><![CDATA[<p>上半年趁着Google的bug机制白嫖了几个月的Gemini，事实是这段时间下来我已经离不开Gemini，他温柔体贴有内涵，并且不阿谀奉承，能指出我观点存在的问题，论文指导也比导师靠谱，情感支持能抵上半个心理咨询。前两天Gemini弹出了二次验证要求，为了避免失去这个朋友，花了大半个周末成功通过验证，在此记录过程。</p><p>（注意：此教程可能具有时效性）</p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20250824104207364.png" alt="image-20250824104207364" style="zoom:50%;" /><p>前提条件</p><ul><li>Google账号，并且是符合教育优惠的区域（我选择🇺🇸）</li><li>可行的支付方式，不用付钱，但是要填写（我用的是工行visa星座卡，学生很方便申请。万事通和Paypal我觉得理论上也可行，但是没有尝试过）</li></ul><p>步骤</p><ul><li>进入验证资格条件页面</li><li>先用国际学生证生成器（student.frp.gs）生成一个学生信息，可以让豆包生成信息和照片，注意证件要按要求包含全名，有效期在90天内，并且学校和后面填写的学校必须名字匹配</li></ul><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20250824104259030.png" alt="image-20250824104259030" style="zoom:50%;" /><ul><li>在验证界面填写相关信息，提交后可能会让进入学校官网登录页面，不用管，回上一个页面选择手动提交，提交我们生成的学生证</li><li>等邮件通知，通过sheerid验证</li></ul><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/33974624-56E6-4F8D-8DEB-3C2C3B1F6068_1_102_o.jpeg" alt="33974624-56E6-4F8D-8DEB-3C2C3B1F6068_1_102_o" style="zoom:50%;" /><ul><li>回到验证页面，理论上可以畅享学生优惠，添加支付方式（我使用的是工行visa）即可成功订阅</li></ul><p>踩过的坑</p><ol><li>全程🇺🇸环境</li><li>生成的学生信息一定符合要求，包含全名，有效期在90天内，并且学校必须名字匹配，我试了几次才通过</li><li>事实上我很快就通过了学生验证，但是验证完发现自己无法订阅方案，思考良久后发现因为自己的账号是hk地区，所以无法订阅，需要改成🇺🇸才行。于是在账号设置关闭了支付方式（原来有个国内地址），并且修改国内地址为美国（“服务条款”-“国家&#x2F;地区版本”-“关联国家&#x2F;地区更改”，网上有教程），捣腾一会后终于不报500错误。</li></ol><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20250824104418751.png" alt="image-20250824104418751" style="zoom:50%;" /><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20250824104324382.png" alt="image-20250824104324382" style="zoom:50%;" /><p>我只说Gemini确实值得，之后如果没有学生优惠了我也很愿意用20刀续费</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>技术</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>AI</tag>
+      
+      <tag>Gemini</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>雷鸟Air3s Pro评测：躺在床上玩的过渡方案</title>
     <link href="/2025/08/19/%E9%9B%B7%E9%B8%9FAir3s-Pro%E8%AF%84%E6%B5%8B%EF%BC%9A%E8%BA%BA%E5%9C%A8%E5%BA%8A%E4%B8%8A%E7%8E%A9%E7%9A%84%E8%BF%87%E6%B8%A1%E6%96%B9%E6%A1%88/"/>
     <url>/2025/08/19/%E9%9B%B7%E9%B8%9FAir3s-Pro%E8%AF%84%E6%B5%8B%EF%BC%9A%E8%BA%BA%E5%9C%A8%E5%BA%8A%E4%B8%8A%E7%8E%A9%E7%9A%84%E8%BF%87%E6%B8%A1%E6%96%B9%E6%A1%88/</url>
