@@ -62,6 +62,33 @@
   
   
   <entry>
+    <title>OpenClaw 颠覆了我过往所有的任务管理方式</title>
+    <link href="/2026/04/05/OpenClaw-%E9%A2%A0%E8%A6%86%E4%BA%86%E6%88%91%E8%BF%87%E5%BE%80%E6%89%80%E6%9C%89%E7%9A%84%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E6%96%B9%E5%BC%8F/"/>
+    <url>/2026/04/05/OpenClaw-%E9%A2%A0%E8%A6%86%E4%BA%86%E6%88%91%E8%BF%87%E5%BE%80%E6%89%80%E6%9C%89%E7%9A%84%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E6%96%B9%E5%BC%8F/</url>
+    
+    <content type="html"><![CDATA[<p>主包在之前发过若干篇，关于我如何使用各种软件来进行时间规划的。事情，包括使用苹果的提醒事项，进行自动化提醒。使用支笔进行备忘，把长期的月计划、年计划写到备忘录里面等等。这些计划管理有用吗？我承认是有用的。但是主包最近实在是太忙了，忙到每天有时候都没空去写规划，去想要做什么事情。事情排的实在太多了，导致我没有精力去想哪些事情是高优先级应该做的，哪些事情其实是可以低优先级拖一拖的。或者说我逐渐认识到，人生要干的活本质上是干不完的，我们每天要做的其实就是把当天必须要做的事情去完成就可以。剩下的明天再说。</p><p>而刚好我又是一个特别喜欢聊天，而且也很喜欢跟 AI 聊天的人，所以我发现我之前吃灰了很久的 OpenClaw，在这时居然可以派上大用场。之前一直装了 OpenClaw，但是处于吃灰状态，因为不知道它和我平常用的 AI 的区别在哪里。但是我现在发现，它的最大用处还是长期记忆和定时提醒功能，这非常符合任务管理所需要的各种特点。首先，它会把记忆用 Markdown 的形式存储。因此我可以把我的各种计划，包括长期的计划、年度的计划、月度的计划、周计划和每天的任务都丢给它。然后它会把这些东西结构化，整理成文档。不仅可以让我可视化审阅，也可以让它去确保不丢失记忆。其次，它可以在很短时间里帮我去梳理各种任务的优先级，我只需要语音输入去跟它说我要干什么事情，然后这些事情的优先级是怎么样的，重要性是怎么样的，它会自动帮我梳理。当然有的朋友可能会问了，这种事情一般 ai 也会做。那 global助手的优点在哪里？我的回答是，它可以和飞书等平台去绑定。我现在是在飞书上。专门建了一个任务规划群，然后把 globalbot设为了群机器人，每次我发什么信息，它都会帮我寄到安全任务规划里面，或者说。我可以让他每天定时的提醒我今天要做什么，或者这段时间要做什么。这样就相当于把我的这部分心智带宽外包了出去，让它来帮忙管理，我只需要不断地说我需要干什么活，让它去帮我沉淀，记住就可以。</p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20260405234605295.png" alt="image-20260405234605295" style="zoom:50%;" /><p>并且这套机制是可以不断延伸的。我目前还建了其他几个群，比如说审美积累群，让它每天抓一些好看的摄影的图片链接喂给我，这样我可以去养养眼睛。而且因为都是用 Markdown 来存储，我目前把我的 Workspace 里的这些文档同步到了我的 GitHub 私人仓库里面，这样哪怕哪天我想换平台了，我只要带着这些它帮我沉淀下来的我的个人知识，也可以很方便迁移，或者甚至帮我赛博永生。</p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20260405234747132.png" alt="image-20260405234747132" style="zoom:50%;" /><p>只是辛苦我的老 MacBook 了，它现在应该会一直开着咖啡因不断运作。</p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/4DF4A543-D611-4567-AA16-8B86691AC8CD_1_102_o.jpeg" alt="4DF4A543-D611-4567-AA16-8B86691AC8CD_1_102_o" style="zoom:50%;" /><hr><p>另外吐槽一句，用 GPT 当底层引擎的时候，AI 味道真的很重，但是我又用不起 Claude，而且 Claude 现在第三方也被禁了，很烦</p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20260405234352311.png" alt="image-20260405234352311" style="zoom:50%;" />]]></content>
+    
+    
+    <categories>
+      
+      <category>随想</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>OpenClaw</tag>
+      
+      <tag>任务管理</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>跟 AI 聊完天记得及时看它的回答</title>
     <link href="/2026/04/05/%E8%B7%9F-AI-%E8%81%8A%E5%AE%8C%E5%A4%A9%E8%AE%B0%E5%BE%97%E5%8F%8A%E6%97%B6%E7%9C%8B%E5%AE%83%E7%9A%84%E5%9B%9E%E7%AD%94/"/>
     <url>/2026/04/05/%E8%B7%9F-AI-%E8%81%8A%E5%AE%8C%E5%A4%A9%E8%AE%B0%E5%BE%97%E5%8F%8A%E6%97%B6%E7%9C%8B%E5%AE%83%E7%9A%84%E5%9B%9E%E7%AD%94/</url>
