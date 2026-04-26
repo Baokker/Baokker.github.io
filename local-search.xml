@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>我放心地打开了 Claude code 的skip dangerous permission</title>
+    <link href="/2026/04/26/%E6%88%91%E6%94%BE%E5%BF%83%E5%9C%B0%E6%89%93%E5%BC%80%E4%BA%86-Claude-code-%E7%9A%84skip-dangerous-permission/"/>
+    <url>/2026/04/26/%E6%88%91%E6%94%BE%E5%BF%83%E5%9C%B0%E6%89%93%E5%BC%80%E4%BA%86-Claude-code-%E7%9A%84skip-dangerous-permission/</url>
+    
+    <content type="html"><![CDATA[<p>深度使用了几个月的 Claude code，最终得出的结论是，我每次点点点，允许它查网页、调用工具、执行命令，影响我心流刷手机的伤害程度，远大于它带来了几乎不可能的对我电脑造成任何伤害的 potential risk。因此我现在毅然决然地打开了 bypass permissions on 权限，每次把任务交给他执行以后，就可以放心地玩手机，特别舒服，再也不用担心玩到一半发现他在等着让我批准时，那种时间被浪费了的感觉。AI 工作的时候刷的短视频真的特别沉浸。</p><p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20260426212735583.png" alt="image-20260426212735583"></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">alias ccd=&quot;claude --dangerously-skip-permissions&quot;<br>alias cxd=&#x27;codex --dangerously-bypass-approvals-and-sandbox&#x27;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>随想</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Claude Code</tag>
+      
+      <tag>权限</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>理工科混油皮男大学生护肤指南</title>
     <link href="/2026/04/24/%E7%90%86%E5%B7%A5%E7%A7%91%E6%B7%B7%E6%B2%B9%E7%9A%AE%E7%94%B7%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%8A%A4%E8%82%A4%E6%8C%87%E5%8D%97/"/>
     <url>/2026/04/24/%E7%90%86%E5%B7%A5%E7%A7%91%E6%B7%B7%E6%B2%B9%E7%9A%AE%E7%94%B7%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%8A%A4%E8%82%A4%E6%8C%87%E5%8D%97/</url>
