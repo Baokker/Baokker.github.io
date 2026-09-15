@@ -4,6 +4,159 @@
   
   
   <entry>
+    <title>图像生成 Skill 初尝试</title>
+    <link href="/2026/09/15/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90-Skill-%E5%88%9D%E5%B0%9D%E8%AF%95/"/>
+    <url>/2026/09/15/%E5%9B%BE%E5%83%8F%E7%94%9F%E6%88%90-Skill-%E5%88%9D%E5%B0%9D%E8%AF%95/</url>
+    
+    <content type="html"><![CDATA[<p>最近刷到了很多图像二次创作的 Skill。这几天盘点了一下，也试用了一下，各有各的风格，并且确实很有意思。这里记录三个我自己比较喜欢的。</p><h2 id="photo-abstract-editorial"><a href="#photo-abstract-editorial" class="headerlink" title="photo-abstract-editorial"></a>photo-abstract-editorial</h2><p>这个 Skill 的特点是把一张照片分成两部分，一部分保留原始的摄影图片，另一部分加上一个抽象的画板区域，同时在里面加上一些英文标题。看着挺有意思，我把之前约拍的照片拿来放进去，效果也还不错。</p><p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/ChatGPT%20Image%202026%E5%B9%B49%E6%9C%8815%E6%97%A5%2012_04_34.png"></p><blockquote><p>DS：它的逻辑其实挺克制的。它不会重画你的照片，也不做滤镜或者风格迁移，上半部分的照片就是原本的样子，下半部分的抽象面板则是从照片里提炼出来的空间关系、构图节奏和色彩关系。作者的说法是，抽象面板里的每一个元素，都应该能追溯到原照片里真实存在的空间、色彩或者结构。所以它出来的东西不会太飞，有一种把照片里说不出来的那部分，翻译成图形的感觉。</p></blockquote><p>并且我觉得这个 Skill 比较好的一点是，它除了可以在 Codex 里使用之外，还提供了一个可以直接当提示词用的版本。所以理论上说，你可以直接复制这段提示词（<a href="https://github.com/ZzzLc0405/photo-abstract-editorial/blob/main/references/photo-abstract-editorial-prompt.zh-CN.md">references&#x2F;photo-abstract-editorial-prompt.zh-CN.md</a>），然后发给其他任意支持图片生成的 AI，比如豆包或者 Gemini，或者是 GPT 网页版，而不是仅仅局限在 Codex 里，使用成本也会比较低。</p><h2 id="scenes-gathered-zine-v1-3"><a href="#scenes-gathered-zine-v1-3" class="headerlink" title="scenes-gathered-zine-v1-3"></a>scenes-gathered-zine-v1-3</h2><p>这也是我经常在 dy 上刷到的 skill，很喜欢的一点是，它生成的图片会有一种现实和虚拟交织的感觉。下面的图片是用豆包工作区结合这个 skill 生成的。</p><blockquote><p>DS：它其实是一整个系列，叫「拾景纸刊」，作者是 Zeejay0，主张是「把普通画面，变成值得停留的一页」。里面有两个互补的 skill：一个叫实景拼贴，会保留原照片的现场感，让摄影、抽象插画和手撕纸的边缘一起构图；另一个叫影像蒸馏，就完全不留原照片了，只从照片里提取情绪和张力，重新做一张独立的插画。我用的这个是前一个，所以成品里才会既有照片的真实，又有插画的想象。</p></blockquote><p>它给我的感觉是，它不太像在给照片套模板，而像先「读」一遍你的照片，找到主体、空间、色彩，还有那些没有说完的情绪，再决定怎么把这一页做出来。</p><p>把HK的随拍喂给WorkBuddy。</p><p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Vertical_3_5_paper_poster_on_w_2026-09-15T05-28-04.png"></p><h2 id="photo-relic-editorial"><a href="#photo-relic-editorial" class="headerlink" title="photo-relic-editorial"></a>photo-relic-editorial</h2><p>这个 skill 的效果是把图片分为上下两栏：上栏是真实图片，下栏是剪纸版的抽象，也很有意思。</p><blockquote><p>DS：和第一个不同的是，它的下半部分更像一幅版画。作者管它叫「纸上留影」，说是要把照片压缩成一张安静的纸上记忆。它适合那些轮廓清楚、光影和倒影比较强的照片，比如古建筑、地标、天际线、桥和塔。作者自己有一组「纸上北京」的例子，会配上四个字的中文小标题，像「天光有序」「水照宫墙」这种，味道很足。我觉得它很适合旅行时拍的城市照片。</p></blockquote><p>用雾蒙蒙的维多利亚港作为素材喂给WorkBuddy尝试了一下。</p><p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/Create_a_vertical_Photo_Relic__2026-09-15T05-01-52.png"></p><h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>1️⃣ 有任意可以生成图片的 Agent（Codex 最佳，豆包和 WorkBuddy 我都试了一下，也可以跑通，但是效果没有那么好）</p><p>2️⃣ 让 Agent 来安装 Skill</p><blockquote><p>帮我安装这些 skill：</p><ul><li><a href="https://github.com/ZzzLc0405/photo-abstract-editorial">https://github.com/ZzzLc0405/photo-abstract-editorial</a></li><li><a href="https://github.com/Zeejay0/gathered-scenes-zine-skill">https://github.com/Zeejay0/gathered-scenes-zine-skill</a></li><li><a href="https://github.com/wnby/photo-relic-editorial">https://github.com/wnby/photo-relic-editorial</a></li></ul></blockquote><p>3️⃣ 上传图片，让 AI 使用特定的 Skill 生成图片</p><p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/20260915132209680.png"></p><hr><p>审美积累ing</p><hr><p>文本使用 DeepSeek Flash 润色</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>技术</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>AI</tag>
+      
+      <tag>agent</tag>
+      
+      <tag>Codex</tag>
+      
+      <tag>Skill</tag>
+      
+      <tag>图像生成</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>小红书 AI 点点使用体验</title>
+    <link href="/2026/09/14/%E5%B0%8F%E7%BA%A2%E4%B9%A6-AI-%E7%82%B9%E7%82%B9%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/"/>
+    <url>/2026/09/14/%E5%B0%8F%E7%BA%A2%E4%B9%A6-AI-%E7%82%B9%E7%82%B9%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/</url>
+    
+    <content type="html"><![CDATA[<p>一个真正擅长使用 AI 的人，不会把工作流绑定在某个 Agent 上，而是会按照每个 AI Agent 各自的特性，分别安排不同的任务。所谓「从心所欲，不逾矩」。</p><p>对我来说，我在使用 AI 时会有非常多种用途。针对不同的用途，我都会安排我觉得最合适的 AI 来做。比如润色博客文字，我一般用 DeepSeek，因为我觉得它的成本相对便宜，而且文本风格也是我更喜欢的。像做毕业设计、开发代码这种复杂功能，我一定会用 GPT 或者 Claude 的 SOTA 模型来开发。但我并不会想着让它们去写作，因为 GPT 的防御性写作和 AI 味，我觉得还是很严重的问题。</p><p>那么小红书的 AI 我会用它来干什么呢？答案是查询信息和攻略。</p><p>我对小红书 AI 模型本身的能力并没有很大期望，毕竟是免费用的，想必参数量也不会很大，能力也不会很好。但是它查询的知识库，是我能想到的和日常生活相关的最好的。这个知识库就是小红书上成千上万由真人发布的帖子。</p><p>想要查餐厅，可以直接问点点；想要查旅游路线，也可以直接问点点；想要查护肤保养的心得，也可以直接问点点。甚至我在点点上安排了一个定时任务，让它帮我定时查询秋招有哪些公司开了。这些内容在小红书上肯定有很多博主在紧跟热点更新，而我可以通过 AI 增加一层 RSS，帮助我更快速地获取信息。这是我觉得它很方便的地方。</p><p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/8479DC13-69CB-4EA1-BF95-6029D38D5E44_1_101_o.jpeg"></p><p>它的信息来源足够高质量，同时我可以通过大模型减少自己 Browse 的成本。想到以前自己一篇一篇地读博主的各种旅游攻略，然后从各种冗余、错综复杂的信息里面提取出一条可行的路线。还有，自己为了找护肤经验和产品，看了无数个博主的帖子，捏着鼻子分辨他们到底是在推销广告，还是在分享个人经验。现在 AI 可以帮我很轻松地把这些事情快速解决，真的会感叹时代变迁。</p><p>当然，我觉得一个很重要的方面是：它生成了攻略，或者生成了信息以后，怎么样去 verify？怎么样去 review 它信息的真实性？我觉得这也是一个需要考虑的方面。比如我自己查询信息的时候，对于一些存疑的数据或者重点数据，也会打开它关联的参考帖子，看看这些帖子是真人写的，还是营销号用 AI 生成的文本，或者干脆就是广告，从而验证这条信息的可参考性。</p><hr><p>文本使用 DeepSeek Flash 润色</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>技术</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>小红书</tag>
+      
+      <tag>AI</tag>
+      
+      <tag>效率</tag>
+      
+      <tag>工具</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Fake it till you make it</title>
+    <link href="/2026/09/14/Fake-it-till-you-make-it/"/>
+    <url>/2026/09/14/Fake-it-till-you-make-it/</url>
+    
+    <content type="html"><![CDATA[<p>几个月前去小红书上刷到一段话，摘抄了下来，很喜欢：</p><blockquote><p>人生是一场自我预言、自我印证。你如何描述自己，就获得怎么样的精神状态。我永远用正面、积极、肯定、夸奖的方式描述自己，我绝不自贬，自贬的人没好日子过。</p></blockquote><p>我喜欢的其实是它背后的道理，因为我在听歌的时候也有类似的感受。听什么样的歌，可能就会决定我在这段时间里的气质是什么样的。我喜欢听苦情歌，喜欢听伤感的歌，但听得多了以后，我发现自己的思维好像确实会往最悲观、最难过的角度去想。久而久之，就会觉得生活好像真的很黯淡无光，过起来很痛苦。尤其是我确实经历过一些沉重的事情，再触景生情的时候，就很容易难受，有时甚至会觉得喘不过气。这个时候我会跟自己说，好吧，或许现在不应该去想这些事情，我们换一种音乐风格，听一些释怀的歌，听一些积极的歌，让心慢慢平复下来。</p><p>还会想到另一句我也很喜欢的话，叫 fake it till you make it。很多时候，真正做成一件事情，是先在脑海中构想出它具体的样子，然后再一步一步将它变为现实。所以脑海中思考的内容，确实会向外拓展成现实的样子。越是积极的自我预言，越能带来更加积极的为人处事，而且在这种心态的驱使下，各种言行举止，乃至是眼神，也能让其他人觉得你本来就应得如此，按照你表现出的那样来对待你。而这又会反过来加强你的自我认知，久而久之，脑海中构想的内容便真的变成了现实。</p><p>姐妹们，这就是培养配得感的重要性啊。开始懂了，快乐是选择。</p><hr><p>文本使用 DeepSeek Flash 润色</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随想</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>随想</tag>
+      
+      <tag>音乐</tag>
+      
+      <tag>自我认知</tag>
+      
+      <tag>心态</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>旅游的记忆红利</title>
+    <link href="/2026/09/14/%E6%97%85%E6%B8%B8%E7%9A%84%E8%AE%B0%E5%BF%86%E7%BA%A2%E5%88%A9/"/>
+    <url>/2026/09/14/%E6%97%85%E6%B8%B8%E7%9A%84%E8%AE%B0%E5%BF%86%E7%BA%A2%E5%88%A9/</url>
+    
+    <content type="html"><![CDATA[<p>去年 7 月开始，我几乎一直在到处旅游。最开始是把国内那些一直 mark 过、却始终没去的城市都逛了一遍。去南京喂了小鹿，去长沙看了橘子洲头，去西安看了兵马俑。一圈走下来，我发现国内的旅游景点有 80% 的内容都是雷同的，越到后面，带来的新鲜感和兴奋感就越少，有点像反复看同一部电影，你知道下一个镜头会是什么样子。</p><p>真正打开新世界大门的是日本。到了那里才反应过来，原来在世界的另一个地方，有人会按照完全不同的方式生活。不同的文字、不同的打扮、不同的礼仪，独特的地理位置和历史背景，使得各地风土人情的差异比我以前想象的大得多。那次 solo trip 之后，我开始向往更多出国出境的旅行。3 月份去了香港，打卡了许多港乐歌词中的精神圣地；6 月份去了曼谷，看到了东南亚热带人民的生存哲学。接下来准备去韩国，又会是怎样的风土人情，我不得而知。</p><p>但我可以知道的是，这些在我精力尚好、尚有心气的时候去旅游，甚至是去探险的经历，给我带来的精神滋养，确实会在很长一段时间里滋润着我。闭上眼睛，仿佛还能想起当时在从东京到京都的新干线上遇到的那一场暴雨，还能想起在利东街苦苦寻觅心目中的喜帖街、却发现只是枉然的遗憾，还能想起在曼谷吃下最正宗的咖喱蟹和最正宗的冬阴功汤时，味蕾受到的震撼。</p><p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/48B135E9-C419-4AE4-9B7A-9212DF35541C_1_105_c.jpeg"></p><p>第一次感觉「人只活在几个瞬间」这句话原来如此贴切。</p><p>之前也发布过一个小红书帖子，写自己在花 1 万块买全画幅相机和去日本旅游之间，选择了后者。现在看来，这个决定依然非常正确。买回来的东西只有慢慢腐败的过程，但鲜活的记忆却始终存在。从旅游前的期待，到旅游中的感受，再到旅游后的回味，我用敏感的神经，去品味世间的一切情感。这大概就是我说的「记忆红利」吧：一趟旅行早就结束了，它却还在不断地给我发利息。</p><p>「趁一切都正好，撮合无尽的偶然来尽兴」，《东京人寿》的含金量仍然在提升。</p><p><img src="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/A76A7038-7E4B-4668-A13E-519E602B6AE2_1_102_o.jpeg"></p><hr><p>文本使用 DeepSeek Flash 润色</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>随想</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>随想</tag>
+      
+      <tag>旅游</tag>
+      
+      <tag>记忆</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>三厨狂喜的苹果发布会🍎</title>
+    <link href="/2026/09/14/%E4%B8%89%E5%8E%A8%E7%8B%82%E5%96%9C%E7%9A%84%E8%8B%B9%E6%9E%9C%E5%8F%91%E5%B8%83%E4%BC%9A%F0%9F%8D%8E/"/>
+    <url>/2026/09/14/%E4%B8%89%E5%8E%A8%E7%8B%82%E5%96%9C%E7%9A%84%E8%8B%B9%E6%9E%9C%E5%8F%91%E5%B8%83%E4%BC%9A%F0%9F%8D%8E/</url>
+    
+    <content type="html"><![CDATA[<p>前一天还在为 18 的到来而感伤，结果听说新出的折叠屏叫 duo，直接兴奋起来了，盲猜陈奕迅的 duo 演唱会 16 年后又会火一波。</p><p>到底谁能来懂一懂我这种既喜欢苹果又喜欢陈奕迅又喜欢爱情公寓的。</p><p>速评一下：</p><ul><li>iPhone 18 Pro 的摄影性能非常好，引入了白平衡、快门，光圈等更加专业的摄影概念，更加适合用于专业摄影，摄影重度爱好者建议入。日常使用方面，我觉得体感区别不大，跟我的 iPhone Air 拉不开差距。</li><li>AirPods 5 是整个发布会最值得的一款产品。我在 24 年 AirPods 4 刚发布的时候，就很快地购入，用了两年依旧非常好用。半入耳的体验非常舒适，同时适度的降噪也可以减少一定的噪音。AirPods 5 不仅降噪效果更好，而且价格还便宜了。看着只需要 999 块就可以买，便宜太多了。如果预算低，直接买 999 的；如果预算再多一点，也可以买 1149 的升级版，有耳机柄调节音量和无线充电功能。</li><li>Apple Watch 12，区别不大，但是我一直很认可 Watch OS 每次更新时引入的健康概念，这回引入的是健康年龄和 readiness，我理解就是判断用户的状态，从而建议他去 work hard 或者放松自己，我自己手表上一直装着 Stress Watch，就是为了这样的类似功能，提醒我自己去及时地放松。</li><li>iPhone duo，很创新，很惊艳，而且 APP 的适配做得非常好，期待后续的上手体验。（但如果真让我去买的话，我可能还是更想去买 vivo X Fold 8，更便宜，而且有长焦）</li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>随想</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>iPhone</tag>
+      
+      <tag>苹果</tag>
+      
+      <tag>评测</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>效率提升的尽头，是高三</title>
     <link href="/2026/06/27/%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87%E7%9A%84%E5%B0%BD%E5%A4%B4%EF%BC%8C%E6%98%AF%E9%AB%98%E4%B8%89/"/>
     <url>/2026/06/27/%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87%E7%9A%84%E5%B0%BD%E5%A4%B4%EF%BC%8C%E6%98%AF%E9%AB%98%E4%B8%89/</url>
