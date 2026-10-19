@@ -1,0 +1,749 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/favicon.png">
+  <link rel="icon" href="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_default_imgs/favicon.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Baokker">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="被AI训练第一人">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我意识到我通过AI对自己完成了一轮SFT">
+<meta property="og:url" content="http://baokker.github.io/2026/10/19/%E6%88%91%E6%84%8F%E8%AF%86%E5%88%B0%E6%88%91%E9%80%9A%E8%BF%87AI%E5%AF%B9%E8%87%AA%E5%B7%B1%E5%AE%8C%E6%88%90%E4%BA%86%E4%B8%80%E8%BD%AESFT/index.html">
+<meta property="og:site_name" content="Baokker&#39;s Blog">
+<meta property="og:description" content="被AI训练第一人">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20261019172659229.png">
+<meta property="article:published_time" content="2026-10-19T09:21:13.000Z">
+<meta property="article:modified_time" content="2026-10-19T09:50:13.510Z">
+<meta property="article:author" content="Baokker">
+<meta property="article:tag" content="随想">
+<meta property="article:tag" content="AI">
+<meta property="article:tag" content="agent">
+<meta property="article:tag" content="自我复盘">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20261019172659229.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>我意识到我通过AI对自己完成了一轮SFT - Baokker&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"baokker.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null},"gtag":null,"woyaola":null,"cnzz":null},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Baokker&#39;s Blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://baokker-oss-blog-hangzhou.oss-cn-hangzhou.aliyuncs.com/cdn_for_blog/blog_imgs/image-20261019172659229.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="我意识到我通过AI对自己完成了一轮SFT"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2026-10-19 17:21" pubdate>
+          2026年10月19日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.9k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          16 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">我意识到我通过AI对自己完成了一轮SFT</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>某天洗澡的时候，我突然灵光一现，想到了一件挺了不得的事。</p>
+<p>大概半年前我写过一篇博客，叫<a target="_blank" rel="noopener" href="https://baokker-blog.top/2026/06/12/%E6%88%91%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87AI%E8%AE%A4%E8%AF%86%E6%88%91%E8%87%AA%E5%B7%B1/">《我如何通过AI认识我自己》</a>，讲的是我如何沉淀个人资料，并且和AI持续对话，逐渐形成对自己的认知，再用它来帮自己做复盘，有点像以前读到过的Life Coach。这半年过去，我对这件事有了新的看法，今天想把它写下来。</p>
+<h1 id="当时的思路"><a href="#当时的思路" class="headerlink" title="当时的思路"></a>当时的思路</h1><p>当时我的想法是，如果想要一个真正了解你、懂你，能根据你的实际情况给出恰当建议的Agent，至少要满足两个前提。</p>
+<p>第一，这个Agent本身要足够强。模型能力要好，Harness也要够用。不过对个人复盘来说，要处理的大多是文本文件，所以对Harness的要求没那么高，更关键的是Memory管理要做得好，比如能及时处理过期的知识，问答时又能准确检索到相关的记忆。</p>
+<p>第二，这个Agent要有足够的上下文，也就是它得足够了解你，才能帮你做比较深的复盘，而不会漏掉一些重要的条件。我最近和Deepseek聊天时就常有这种感觉，它看起来说得头头是道，我仔细一想却发现，它漏掉了很多我在意的限制。</p>
+<p>可是现实里这两点都不太容易。模型一直在进化，各家厂商你追我赶，前段时间GPT-5.6还被人称道，这阵子Claude Opus 5.5又成了很多人心中的白月光。而且不同模型的性格也不一样，就像和不同的人聊天，感受完全不同。Claude像良师益友，喜欢说些诤言，不管怎样都会给点建议和反馈，是我比较喜欢的类型。GPT和Deepseek会顺从一些。美国大豆包就更宽容了，不管我犯了多大的错，它都能帮我圆回来。另一方面，每换一个Agent聊天，就得把工作、学业、人际关系这些上下文重复说一遍，光是构建上下文就很累。</p>
+<p>所以我当时的办法是建一个自己的专属文件夹，把关于我自己的内容尽可能多地沉淀进去。可以是以前写的备忘录、小作文、Notion和Obsidian笔记、日记，也可以是让AI反问我之后沉淀下来的东西，比如我的各种状况、关键看点、改变人生的事件节点。甚至可以放一个AGENTS.md，写明我希望AI怎么回复我。这些内容全部用Markdown存在本地，之后不管用哪个Agent，只要在这个目录下和它聊天，它就能自己检索相关内容，按照已经沉淀好的东西来回答。遇到重要决策时，还可以让多个Agent基于同一个目录回答同一个问题，让它们互相battle一下。我到现在仍觉得这是一个对我很有启发的practice。</p>
+<h1 id="SFT"><a href="#SFT" class="headerlink" title="SFT"></a>SFT</h1><p>不过刚写完那篇博客时，我心里其实有一点担忧。我会不会是把本该自己思考的部分交给了AI，自己越来越依赖它，最后被它取代。</p>
+<p>半年之后，我有了不太一样的感受。最近我越来越发现，AI给我的建议已经很少再带来那种震撼的感觉了。</p>
+<p>刚开始的那段时间，我大量地和AI聊，分析过往经历的各种事情，当时的决策，当时的心路历程和感受，从里面挖出了很多自己以前没意识到的想法。这些想法可能很长一段时间里都在暗地里绊我一脚，给我带来伤害。再往后，AI开始告诉我，你这次的想法其实又落进了同一个定式，只是身上某种老程序的复现，是旧的思维模式带来的感受，仅此而已。</p>
+<p>到了现在，我仍然保持着写周记的习惯，每周用语音输入叽里咕噜说一大堆，然后发给AI听听它的看法。但我发现，在发出去之前，我已经能把它的回答猜个八九不离十了。甚至在我写周记的过程中，把脑子里的想法和在意的事细细说出来的那一刻，我就已经知道接下来该怎么做了。发给它，更多是想听听它同不同意。</p>
+<p>我才意识到，在和AI长期的对话里，我好像把它的那一套思考方式学了过来，变成了自己思维的一部分。与此同时，作为一个丰富的人，我灵光一现的能力和细腻的感受也都还在。我依然保有我认为自己身上的那些美德，也依然保有那些旧程序和旧思维，毕竟那是从小到大的经历塑造出来的行为模式，我没办法从根本上改写，就像过去的事情会一直沉在那里，不管回头多少次，它都在。</p>
+<p>区别只在于，经过这么长时间的训练对话，我好像获得了敏锐识别这些旧思维的能力。哪怕身边没有AI，我也能认出那些负面的想法，并告诉自己，其实我有办法也有能力克服它。比如我在周记里倾诉孤独的时候，心里会响起另一个声音，提醒我身边其实有很多关心我、在乎我的朋友，只是我自己的包袱太重。比如我想对AI说我觉得自己像被世界抛弃了，话还没说出口，就先意识到，在过去的很多个case里，我都让自己成了受害者，既不肯主动一点，也不肯让自己放松一点。又比如我想问AI还有没有什么额外的建议时，我已经能预想到它会说，你其实不需要再复盘那么多了，你分析自己已经分析得很清楚了，现在要做的是带着这些继续生活。</p>
+<p>所以我突然意识到，在我与AI共存、又担心被AI取代的这段时间里，我其实并没有被取代。我用针对我自己的高质量数据，通过长期的问答，对自己的大脑做了一轮SFT。它至少调整了我面对负面思维的方式，让我能在这些想法真正造成影响之前，及时意识到并且拉回来。我想这对我来说已经是一份很大的馈赠了。</p>
+<h1 id="AI替代不了的部分"><a href="#AI替代不了的部分" class="headerlink" title="AI替代不了的部分"></a>AI替代不了的部分</h1><p>话说回来，虽然最近和AI聊得越来越深，我也越来越清楚，它能帮我解决很多问题，却始终没法替我解决我自己的问题。它能帮我规划复杂的行程，帮我处理项目和求职里的难点，在我情绪不好时给我及时的安慰。可这些说到底都是工具，都是提效，是帮我处理我需要做的事，而不是我想做的事。</p>
+<p>我究竟想要什么，想做什么，这个带着点存在主义色彩的问题，始终只能由我自己去回答，由我自己去感悟，很难让AI代为思考。</p>
+<hr>
+<p>文本使用 Claude Sonnet 5.5 润色</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%9A%8F%E6%83%B3/" class="category-chain-item">随想</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E9%9A%8F%E6%83%B3/" class="print-no-link">#随想</a>
+      
+        <a href="/tags/AI/" class="print-no-link">#AI</a>
+      
+        <a href="/tags/agent/" class="print-no-link">#agent</a>
+      
+        <a href="/tags/%E8%87%AA%E6%88%91%E5%A4%8D%E7%9B%98/" class="print-no-link">#自我复盘</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>我意识到我通过AI对自己完成了一轮SFT</div>
+      <div>http://baokker.github.io/2026/10/19/我意识到我通过AI对自己完成了一轮SFT/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Baokker</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2026年10月19日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2026年10月19日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2026/10/19/%E6%88%91%E6%8E%A8%E8%8D%90%E5%AE%89%E8%A3%85%E7%9A%84MacOS%E8%BD%AF%E4%BB%B6%EF%BC%882026%E5%B9%B4%E7%89%88%EF%BC%89/" title="我推荐安装的MacOS软件（2026年版）">
+                        <span class="hidden-mobile">我推荐安装的MacOS软件（2026年版）</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="waline"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#waline', function() {
+      Fluid.utils.createCssLink('https://lib.baomitu.com/waline/2.14.1/waline.css')
+      Fluid.utils.createScript('https://lib.baomitu.com/waline/2.14.1/waline.js', function() {
+        var options = Object.assign(
+          {"serverURL":"https://comment.baokker-blog.top/","path":"window.location.pathname","meta":["nick","mail","link"],"requiredMeta":["nick"],"lang":"zh-CN","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"],"dark":"html[data-user-color-scheme=\"dark\"]","wordLimit":0,"pageSize":10},
+          {
+            el: '#waline',
+            path: window.location.pathname
+          }
+        )
+        Waline.init(options);
+        Fluid.utils.waitElementVisible('#waline .vcontent', () => {
+          var imgSelector = '#waline .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人 From 2024.7.4
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.0/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
